@@ -1,0 +1,67 @@
+<script id="page-user-in-course-details-view-template" type="text/template">
+
+    <div class="row">
+        <div class="col-lg-8">
+            <h1 class="page-header">
+                <small>
+                    <div class="course-thumb big-thumb" style="background-image:url(<%=usersDetailsInCourse.thumb.length > 8 ? usersDetailsInCourse.thumb : "" %>)"></div>
+                </small>
+                <a href="#course/<%=courseId%>">
+                    <%- usersDetailsInCourse.course_name %> 
+                </a>
+            </h1>
+            <h3>
+                <small>
+                    <div class="user-photo medium-thumb" style="background-image:url(<%=usersDetailsInCourse.photo.length > 8 ? usersDetailsInCourse.photo : "<?=asset('/css/img/default_user.png')?>" %>)"></div>
+                </small>
+                <a href="#user/<%=userType == 'app' ? 'n' : 'm'%>/<%=userId%>">
+                    <%= usersDetailsInCourse.userMail %>
+                    <small>
+                        <%- usersDetailsInCourse.username %>  
+                    </small> 
+                </a>
+            </h3>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="panel-heading text-right">
+                <a class="btn btn-success" id="open-course-preview"><i class="fa fa-play"></i> <?=Lang::get('darkanpanel.open_course')?></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="items-wrapper"></div>
+
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12 col-md-12" id="user-in-course-details-list">
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <i class="fa fa-bar-chart-o fa-fw"></i> <?=Lang::get("darkanpanel.chart_title_time_spent_on_site_by_the_user")?>
+            </div>
+            <div class="panel-body">
+                <div id="morris-user-in-course-details-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <?=Lang::get("darkanpanel.panel_title_project_variables")?>
+        </div>
+        <div class="panel-body">
+            <div id="single-course-questions-analytics-variables"></div>
+        </div>
+    </div>
+
+
+    <div id="single-course-questions-analytics"></div>
+
+    <div class="clearfix"></div>
+
+</script>

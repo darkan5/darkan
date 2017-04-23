@@ -1,0 +1,70 @@
+.window-photopea-view {
+  width: 100%;
+  height: 100%;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  background-color: rgba(0,0,0,.6);
+}
+
+.photopea-view-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+
+
+.photopea-view-overlay-content-wrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photopea-view-publish-buttons-wrapper {
+  margin: 10px 0px;
+  width: 100%;
+  text-align: center;
+  top: 10px;
+  height: 50px;
+}
+
+.photopea-view-publish-buttons {
+  position: relative;
+  width: 650px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.photopea-save-image, 
+.photopea-close
+{
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin: 0px 5px;
+  line-height: 48px;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  background: #5082A5;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  z-index: 2000;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.photopea-save-image:hover, 
+.photopea-close:hover {
+  background: #67ABD6;
+}

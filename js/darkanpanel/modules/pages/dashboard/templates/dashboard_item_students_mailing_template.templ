@@ -1,0 +1,22 @@
+<script type="text/template" id="dashboard-item-students-mailing-template">
+    <a href="#usersmailing">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-users fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge number-of-users"><%=numberOfMailingUsers%> / <%=maxMailingUsers%></div>
+                        <div><?= Lang::get('darkanpanel.dashboard_item_users_mailing')?></div>
+                    </div>
+                </div>
+            </div>
+                <div class="panel-footer">
+                    <span class="pull-left"><?= Lang::get('darkanpanel.dashboard_users_show_list')?></span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+        </div>
+    </a>
+</script>

@@ -1,0 +1,120 @@
+.window-share-view {
+	width: 740px;
+	height: 60%;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+.window-content.window-content-share {
+	overflow-y: auto;
+}
+
+.window-share-view .user-email-share-project {
+	height: 50px;
+	border: none;
+	font-size: 20px;
+	font-weight: 300;
+	color: white;
+	float: left;
+	padding: 5px 10px;
+	width: 80%;
+	background-color: rgba(0,0,0,.1);
+	color: #888;
+	text-align: center;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	  box-sizing: border-box;
+}
+
+.window-share-view .share-project-text {
+	font-size: 15px;
+	line-height: 25px;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	height: 100%;
+}
+.window-share-view .share-project-text p {
+	padding: 20px;
+}
+.window-share-view .submit-share-project {
+	height: 50px;
+	width: 70px;
+	padding: 10px;
+	text-align: center;
+	background-color: #5082A5;
+	color: #fff;
+	border: 0;
+	border-left: 0;
+	color: white;
+	cursor: pointer;
+	padding: 0;
+	vertical-align: bottom;
+	font: 300 18px "Lato", "Arial", sans-serif;
+	width: 20%;
+	margin-bottom: 15px;
+}
+
+.share-project-users {
+	list-style-type: none;
+	  list-style-type: none;
+  height: calc(100% - 110px);
+  overflow: auto;
+}
+
+.shared-user-row {
+	text-align: left;
+	padding: 3px 5px;
+}
+.shared-user-row:hover {
+	background-color: #D4E4EF;
+}
+
+.shared-user-row .username {
+	display: inline-block;
+	vertical-align: middle;
+	  min-width: 250px;
+	    min-width: calc(100% - 100px);
+}
+.shared-user-row .delete-sharing {
+	display: inline-block;
+	vertical-align: middle;
+
+	background-position: 0px -57px;
+	right: 0px;
+
+	width: 16px;
+	height: 16px;
+	background-image: url(../../../images/sprites/triggericons.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.shared-user-row .delete-sharing:hover {
+	background-position: 0px -28px;
+}
+
+.shared-user-row .photo {
+	width: 30px;
+	height: 30px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	vertical-align: middle;
+	  margin: 0px 10px;
+}
+
+.share-project-users-wrapper {
+	text-align: left;
+}
+
+.share-project-users-noshares {
+	font-size: 13px;
+	text-align: center;
+	line-height: 70px;
+	font-style: italic;
+}

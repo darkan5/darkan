@@ -1,0 +1,595 @@
+/* --------------------- GLOBAL ------------------ */
+.ex-object {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin: 2px 3px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background: url('../../images/sprites/sprite_btn_trigger.png') no-repeat;
+}
+
+.ex-object.delete-on-hover:hover:after {
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url('../../images/sprites/sprite_btn_trigger.png') no-repeat -1050px 0px;
+  opacity: .9;
+}
+
+.ex-object[componenttype="infopoint-link"], .ex-object[componenttype="drawedinfopoint-link"] { background-position: -150px 0px; }
+.ex-object[componenttype="infopoint-sound"] { background-position: 0px 0px; }
+.ex-object[componenttype="infopoint-soundrecord"] { background-position: -250px 0px; }
+.ex-object[componenttype="infopoint-gallery"] { background-position: -300px 0px; }
+.ex-object[componenttype="drawedinfopoint-popup"] { background-position: -350px 0px; }
+.ex-object[componenttype="infopoint-popup"] { background-position: -100px 0px; }
+.ex-object[componenttype="image"] { background-position: -400px 0px; }
+.ex-object[componenttype="swf"] { background-position: -800px 0px; }
+.ex-object[componenttype="infopoint-download"] { background-position: -850px 0px; }
+.ex-object[componenttype="video"] { background-position: -900px 0px; }
+.ex-object[componenttype="scroller"] { background-position: -950px 0px; }
+.ex-object[componenttype="quiz"] { background-position: -550px 0px; }
+.ex-object[componenttype="quiz-results"] { background-position: -600px 0px; }
+.ex-object[componenttype="shape"] { background-position: -700px 0px; }
+.ex-object[componenttype="text"] { background-position: -650px 0px; }
+.ex-object[componenttype="drawedinfopoint-gallery"] { background-position: -300px 0px; }
+.ex-object[componenttype="drawedinfopoint-download"] { background-position: -850px 0px; }
+.ex-object[componenttype="quiz-fillinblanks"] { background-position: -550px 0px; }
+.ex-object[componenttype="quiz-dnd"] { background-position: -1124px 0px; }
+.ex-object[componenttype="quiz-memory"] { background-position: -1274px 0px; }
+.ex-object[componenttype="iframe"] { background-position: -1000px 0px; }
+.ex-object[componenttype="form-inputtext"] { background-position: -1149px 0px; }
+.ex-object[componenttype="form-select"] { background-position: -1374px 0px; }
+.ex-object[componenttype="form-textarea"] { background-position: -1299px 0px; }
+.ex-object[componenttype="form-checkbox"] { background-position: -1324px 0px; }
+.ex-object[componenttype="form-radio"] { background-position: -1350px 0px; }
+.ex-object[componenttype="form-submit"] { background-position: -1174px 0px; }
+.ex-object[componenttype="line"] { background-position: -1075px 0px; }
+.ex-object[componenttype="page"] { background-position: -1100px 0px; }
+.ex-object[componenttype="quiz-connectlines"] { background-position: -1199px 0px; }
+.ex-object[componenttype="crossword"] { background-position: -1224px 0px; }
+.ex-object[componenttype="quiz-wordsearch"] { background-position: -1249px 0px; }
+
+.editor-window {
+	width: auto;
+	height: auto;
+	margin: auto;
+}
+
+.editor-window fieldset {
+	border: 1px solid #ccc;
+	margin: 5px 10px;
+	padding: 5px 15px;
+	box-sizing: border-box;
+}
+
+.editor-window legend {
+	display: block;
+	padding: 0;
+	font-size: 12px;
+	line-height: 20px;
+	color: #333333;
+	border: 0;
+}
+
+.editor-window label {
+	display: block;
+}
+
+.open-editors-list fieldset {
+	border: 1px solid #ccc;
+	margin: 5px 10px;
+	padding: 5px 15px;
+	box-sizing: border-box;	
+	position: relative;
+}
+
+.open-editors-list legend {
+	display: block;
+	padding: 0;
+	font-size: 12px;
+	line-height: 20px;
+	color: #333333;
+	border: 0;
+}
+
+.open-editors-list label {
+	display: block;
+	cursor: pointer;
+}
+
+.open-editors-list label:hover {
+	text-decoration: underline;
+}
+
+.note-editor-item-view,
+.sounds-editor-item-view,
+.wcag-editor-item-view,
+.score-editor-item-view
+{
+	/*height: calc(100% - 31px);*/
+	overflow-y: auto;
+	padding: 5px;
+}
+
+.score-editor-item-view table label {
+  font-size: 12px;
+  padding: 4px 0px;
+}
+
+.score-editor-item-view > div {
+	display: inline-block;
+}
+
+.score-editor-item-view table input[type="checkbox"],
+.score-editor-item-view table input[type="radio"]
+{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin: 0px 12px;
+}
+
+.open-editors-list {
+	height: 100%;
+}
+
+.properties-editor-item-view {
+	height: 100%;
+	overflow-y: auto;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.properties-editor-item-view table {
+	width: 100%;
+	text-align: center;
+	padding: 5px 0px;
+	font-size: 12px;
+	border-collapse: collapse;
+}
+
+.properties-editor-item-view thead {
+	background: #5082A5;
+	color: #fff;
+}
+
+.properties-editor-item-view thead th {
+	padding: 6px;
+}
+
+.properties-editor-item-view td {
+	position: relative;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #F0F0F0;
+}
+
+.edit-icon {
+	background: url(../../images/sprites/editoricons.png) no-repeat;
+	background-position: 0px 0px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.delete-icon {
+	background: url(../../images/sprites/editoricons.png) no-repeat;
+	background-position: 0px -32px;
+	width: 16px;
+	height: 18px;
+	cursor: pointer;
+}
+
+.delete-icon:hover {
+	background-position: 0px -66px;
+}
+
+.external-link-icon {
+	background: url(../../images/sprites/editoricons.png) no-repeat;
+	background-position: 0px -348px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.boxnotactive {
+	opacity: .5;
+}
+
+.ex-elements-box-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	height: calc(100% -  30px);
+    margin: 0px 3px 10px 3px;
+}
+
+.ex-elements-box {
+	display: inline-block;
+	vertical-align: top;
+	/*height: 100%;*/
+    border: 1px solid #DCDCDC;
+	min-width: 180px;
+}
+
+.ex-elements-box-addnew-button {
+	position: absolute;
+	border: 1px solid #fff;
+	background: #009900;
+	color: #fff;
+	padding: 2px 15px;
+	margin: 2px;
+	cursor: pointer;
+	border-radius: 3px;
+	right: 0px;
+	top: 4px;
+}
+
+.ex-elements-box-addnew-button:hover {
+	background: #01B501;
+}
+
+.ex-elements-box-list {
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+}
+
+.ex-elements-box-header {
+    padding: 10px 20px 10px 10px;
+    background: #5082A5;
+    color: #FFF;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.editor-settings-field {
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+}
+
+.editor-settings-button {
+	position: relative;
+	text-align: center;
+	padding: 5px 8px;
+	margin-bottom: 5px;
+	background-color: #67abd6;
+	color: #fff;
+	cursor: pointer;
+}
+
+.editor-settings-button:hover {
+	background-color: #6ABBEF;
+}
+
+.redbutton {
+	background-color: #CF5451;
+}
+.redbutton:hover {
+	background-color: #9B0B08;
+}
+
+a.editor-settings-button {
+	display: block;
+	text-decoration: none;
+}
+
+.feedback-edit,
+.feedback-save
+{
+	border: none;
+	background: #4BAE5C;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	top: -4px;
+	right: -10px;
+	padding: 3px 5px;
+	border-radius: 4px;
+	font-size: 11px;
+}
+
+.feedback-edit:hover,
+.feedback-save:hover
+{
+	background: #499957;
+}
+
+.editor-buttons-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px;
+}
+
+/* --------------------- DnD ------------------ */
+
+.dnd-editor-containers-wrapper {
+	float: left;
+	width: 450px;
+	height: calc(100% - 30px);
+}
+th.dnd-table-lp {
+	width: 15px;
+}
+th.dnd-tabel-containerob {
+	width: 70px;
+}
+th.dnd-table-options {
+	width: 50px;
+}
+
+.dnd-editor-draggableobjs-addobjects {
+	top: -6px;
+	left: 14px;
+}
+
+.dnd-container-edit,
+.dnd-container-delete
+{
+	margin: 0 auto;
+	display: inline-block;
+}
+
+
+/* --------------------- Connect the lines ------------------ */
+.connectlines-editor-containers-wrapper {
+	float: left;
+	width: 450px;
+	height: calc(100% - 30px);
+}
+th.connectlines-table-lp {
+	width: 15px;
+}
+th.connectlines-tabel-source {
+	width: 70px;
+}
+th.connectlines-table-options {
+	width: 50px;
+}
+.connectlines-container-edit,
+.connectlines-container-delete
+{
+	margin: 0 auto;
+	display: inline-block;
+}
+.connectlines-editor-draggableobjs-addobjects {
+	top: -6px;
+	left: 14px;
+}
+
+.connection-color-picker {
+	position: relative;
+	width: 30px;
+	height: 24px;
+	/*background: red;*/
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #565656;
+	margin: 0px 3px;
+	cursor: pointer;
+}
+
+/* ------------------  wordsearch --------------*/
+.wordsearch-table-wrapper {
+	float: left;
+	width: 450px;
+	height: calc(100% - 30px);
+}
+th.wordsearch-table-lp {
+	width: 15px;
+}
+th.wordsearch-table-picker {
+	width: 40px;
+}
+th.wordsearch-table-options {
+	width: 50px;
+}
+.wordsearch-container-edit,
+.wordsearch-container-delete
+{
+	margin: 0 auto;
+	display: inline-block;
+}
+.wordsearch-editor-draggableobjs-addobjects {
+	top: -6px;
+	left: 14px;
+}
+
+.wordsearch-letter {
+	color: #fff;
+	background: #5082A5;
+	text-transform: uppercase;
+	line-height: 25px;
+	font-size: 17px;
+	position: relative;
+	list-style: none;
+	display: inline-block;
+	margin: 2px 3px;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.wordsearch-letter.delete-on-hover:hover:after {
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url('../../images/sprites/sprite_btn_trigger.png') no-repeat -1050px 0px;
+  opacity: .9;
+}
+
+/* ------------------  Gallery infopoint --------------*/
+.image-gallery-figure {
+	display: inline-block;
+	margin: 0px 20px;
+	text-align: center;
+}
+
+/* ------------------ FORM SUBMIT --------------*/
+.formsubmit-editor-addobjects {
+	top: -6px;
+	left: 14px;
+}
+
+/* ------------------- Download infopoint ********* */
+
+.editor-video-download-file a,
+.editor-download-file-file a,
+.editor-download-sound-file a 
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+}
+
+
+/* ------------------ Image editor --------------*/
+.image-preview {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+/* ------------------ Video component --------------*/
+.video-image {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 100%;
+	height: 100%;
+	background-size: 60%;
+}
+
+
+/* ------------------ Color picker --------------*/
+
+.color-picker-wide {
+	position: relative;
+	width: 75px;
+	height: 24px;
+	/*background: red;*/
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #565656;
+	margin: 0px 3px;
+	cursor: pointer;
+}
+
+/*---------- quiz ---------*/
+
+.quiz-own-container-template {
+	float: left;
+	width: 200px;
+	height: 100px;
+}
+
+.quiz-own-container-template .quiz-body {
+	width: 100%;
+	height: 100%;
+}
+
+.quiz-own-button {
+	display: block;
+	padding: 7px 25px;
+	cursor: pointer;
+	z-index: inherit;
+}
+
+.quiz-background-color-picker,
+.quiz-text-color-picker,
+.quiz-button-background-color-picker,
+.quiz-button-text-color-picker {
+	position: relative;
+	width: 30px;
+	height: 24px;
+	/* background: red; */
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #565656;
+	margin: 0px 3px;
+	cursor: pointer;
+}
+
+input.wcag-editor-consider {
+	margin: 0px 4px 0px 25px;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+}
+
+#scoring-reqire-points-percent,
+#scoring-reqire-points-number 
+{
+	width: 38px;
+	text-align: right;
+}
+
+#quiz-multiselect-attempts {
+	width: 110px;
+	text-align: center;
+}
+
+.score-global-options{
+
+}
+
+.scoring-changevarvalue-info{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
+.counter-autostart {
+	width: 30px;
+	height: 17px;
+	vertical-align: middle;
+}
+
+.timer-time-options td{
+	border: none !important;
+}
+
+.timer-time-options input{
+	width: 50px;
+	height: 13px;
+	margin: 1px 5px;
+}
+
+.toggle-button-editor-item-view{
+	position: relative;
+	display: inline-block;
+
+	cursor: pointer;
+	margin: 5px 3px 0px 2px;
+	height: 26px;
+	width: 45px;
+	line-height: 26px;
+	color: #241414;
+	background: #D4E4EF;
+	/* position: fixed; */
+	text-align: center;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}

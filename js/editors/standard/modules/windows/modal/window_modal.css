@@ -1,0 +1,26 @@
+.window-modal{
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+
+}
+
+.window-modal-create-new-project{
+     float: left;
+     width: 200px;
+     height: 200px;
+     margin: 5px;
+     background-color: white;
+     border: 1px solid black;
+ }
+
+.window-modal-load-project{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    background-color: #c71585;
+    border: 1px solid black;
+}

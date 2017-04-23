@@ -1,0 +1,18 @@
+<script id="page-edit-group-mailing-view-template" type="text/template">
+<div class="row">
+    <div class="col-lg-12">
+
+        <form role="form" id="lms-edit-group-form">
+
+            <div class="form-group">
+                <label><?=Lang::get('darkanpanel.group_name')?></label>
+                <input class="form-control edit-group-name" placeholder="<?=Lang::get('darkanpanel.add_group_placeholder')?>" type="text" required autofocus value="<%=groupData.name%>">
+                
+            </div>
+
+            <button type="submit" class="btn btn-success lms-edit-group-button pull-right" ><?=Lang::get('darkanpanel.save')?></button>
+
+        </form>
+    </div>
+</div>
+</script>

@@ -1,0 +1,98 @@
+.auth-form {
+	border: 10px solid #4eb7a8;
+	border-radius: 4px;
+}
+
+.btn-login {
+    background-color: #007DCE;
+    border-color: #007DCE;
+    border-radius: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px solid #015C96;
+}
+
+.btn-login:active,
+.btn-login:focus
+{
+	color: #fff;
+}
+
+.btn-login:hover {
+	color: #fff;
+	border-bottom: 3px solid #3B4044;
+}
+
+.link-buttons {
+	font-size: 12px;
+}
+
+.login-dot {
+    font-size: 7px;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+
+#termsandconditions-checkbox {
+    vertical-align: sub;
+    margin: 0px 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.social-buttons-container {
+    padding: 0px;
+}
+
+.social-continer {
+    margin-top: 40px;
+}
+
+.social-continer.register-container {
+
+    margin-top: 60px;
+}
+
+.social-continer a {
+    text-decoration: none;
+}
+
+.social-button {
+    position: relative;
+    height: 35px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 15px auto;
+    opacity: .9;
+}
+.social-button a {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+}
+.social-button:hover {
+    opacity: 1;
+}
+.social-button span {
+    display: block;
+    position: relative;
+    top: 8px;
+    left: 45px;
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+    width: 160px;
+}
+
+.social-button.gplogin {
+    background: url('img/social/google_long.png') no-repeat;
+}
+.social-button.fblogin {
+    background: url('img/social/fb_long.png') no-repeat;
+}
+.social-button.inlogin {
+    background: url('img/social/in_long.png') no-repeat;
+}

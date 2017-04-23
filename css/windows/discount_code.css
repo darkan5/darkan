@@ -1,0 +1,14 @@
+.window-discount-code-view {    
+	width: 50%;
+	height: 400px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	background-color: white;
+}
+
+.window-discount-code-view .window-body {
+	text-align: center;
+}

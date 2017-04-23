@@ -1,0 +1,107 @@
+.reportErrorWrapper {
+    position: fixed;
+    top: 50%;
+    margin-top: -150px;
+    width: 100%;
+    z-index: 9000;
+    font-family: 'Segoe UI';
+}
+.reportErrorContainer {
+    position: relative;
+    border: 2px solid #ccc;
+    background: #fff;
+    width: 440px;
+    margin: 0 auto;
+}
+
+.reportErrorClose {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: -23px;
+    right: -25px;
+    background: url('../../images/sprites/sprite_main.png');
+    background-position: -582px -7px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #000;
+}
+
+.errorReportClose:hover {
+    background-position: -638px -7px;
+}
+
+.reportErrorContainerHeader {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    
+    background: #5082A5;
+    color: #fff;
+    text-indent: 20px;
+    font-size: 18px;
+}
+
+
+.reportErrorContainerBody {
+    font-size: 15px;
+    line-height: 25px;
+    width: 85%;
+    margin: 10px 20px 30px 20px;
+    padding-bottom: 20px;
+}
+
+.reportErrorContainerBody button {
+    float: left;
+    color: #000;
+    border: 1px solid #B8B8B8;
+    background: #FFF;
+    border-radius: 5px;
+    height: 32px;
+    line-height: 13px;
+    font-size: 13px;
+    margin-right: 5px;
+    min-width: 65px;
+}
+
+.reportErrorContainerBody button:hover {
+    background: #B8B8B8;
+}
+
+.reportErrorCategoryInput {
+    width: 100%;
+}
+
+.reportErrorMsgInput {
+    width: 100%;
+    height: 140px;
+    border: 1px solid #B8B8B8;
+    resize: none;
+}
+
+.reportErrorContainerBody label {
+    clear:both;
+}
+
+.errorClear {
+    clear:both;
+}
+
+.reportErrorOkInfo {
+    position: fixed;
+    top: calc(50% - 25px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #FFF;
+    background: #11B100;
+    z-index: 6000;
+}

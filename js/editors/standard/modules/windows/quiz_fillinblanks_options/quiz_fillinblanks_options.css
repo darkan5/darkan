@@ -1,0 +1,28 @@
+.window-quiz-fillinblanks-options-view{
+	width: 200px;
+	height: 200px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: 0;
+}
+
+.window-quiz-fillinblanks-options-view .window-close-button {
+	z-index: 1;
+	top: 7px;
+}
+
+.window-quiz-fillinblanks-options-view .ex-elements-box-wrapper {
+	margin: 0;
+    width: 100%;
+    height: calc(100% - 42px);
+}
+
+.window-quiz-fillinblanks-options-view .ex-elements-box-wrapper .ex-elements-box,
+.window-quiz-fillinblanks-options-view .ex-elements-box-wrapper .ex-elements-box-list
+{
+	width: 100%;
+	height: 100%;
+	border: none;
+}

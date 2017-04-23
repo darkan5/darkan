@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/advent_pro_ie_1.eot');
+  src: local('Advent Pro Regular'), local('AdventPro-Regular'), url('fonts/advent_pro_ie_1.eot') format('embedded-opentype'), url('fonts/advent_pro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/alegreya.eot');
+  src: local('Alegreya'), local('Alegreya-Regular'), url('fonts/alegreya.eot') format('embedded-opentype'), url('fonts/alegreya.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Anaheim';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/anaheim.eot');
+  src: local('Anaheim'), local('Anaheim-Regular'), url('fonts/anaheim.eot') format('embedded-opentype'), url('fonts/anaheim.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Average Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/averagesans.eot');
+  src: local('Average Sans'), local('AverageSans-Regular'), url('fonts/averagesans.eot') format('embedded-opentype'), url('fonts/averagesans.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/creteround.eot');
+  src: local('Crete Round'), local('CreteRound-Regular'), url('fonts/creteround.eot') format('embedded-opentype'), url('fonts/creteround.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Doppio One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/doppioone.eot');
+  src: local('Doppio One Regular'), local('DoppioOne-Regular'), url('fonts/doppioone.eot') format('embedded-opentype'), url('fonts/doppioone.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/lato.eot');
+  src: local('Lato Regular'), local('Lato-Regular'), url('fonts/lato.eot') format('embedded-opentype'), url('fonts/lato.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/oxygenmono.eot');
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('fonts/oxygenmono.eot') format('embedded-opentype'), url('fonts/oxygenmono.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quando';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/quando.eot');
+  src: local('Quando-Regular'), url('fonts/quando.eot') format('embedded-opentype'), url('fonts/quando.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/righteous.eot');
+  src: local('Righteous'), local('Righteous-Regular'), url('fonts/righteous.eot') format('embedded-opentype'), url('fonts/righteous.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sanchez';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/sanchez.eot');
+  src: local('Sanchez'), local('Sanchez-Regular'), url('fonts/sanchez.eot') format('embedded-opentype'), url('fonts/sanchez.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/sourcecodepro.eot');
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url('fonts/sourcecodepro.eot') format('embedded-opentype'), url('fonts/sourcecodepro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Trykker';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/trykker.eot');
+  src: local('Trykker Regular'), local('Trykker-Regular'), url('fonts/trykker.eot') format('embedded-opentype'), url('fonts/trykker.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Futura'), local('Futura'), url('fonts/futura2.eot') format('embedded-opentype'), url('fonts/futura2.woff2') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Futura'), local('Futura'), url('fonts/futura_bold.eot') format('eot');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

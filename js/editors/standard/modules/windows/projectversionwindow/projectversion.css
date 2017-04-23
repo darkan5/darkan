@@ -1,0 +1,104 @@
+.window-project-version-view {
+	width: 80%;
+	height: 70%;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+.window-project-version-view .window-content {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.window-project-version-view .project-version-description-input {
+	resize: none;
+	border: 1px solid #ccc;
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+}
+
+.window-project-version-view .project-version-list-container {
+	width: 100%;
+	height: calc(100% - 103px);
+	border: 1px solid #CCC;
+	margin-top: 10px;
+	overflow-x: auto;
+	box-sizing: border-box;
+}
+
+.window-project-version-view ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.window-project-version-view li {
+    cursor: pointer;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+
+.window-project-version-view li:hover {
+    background: #67ABD6;
+    color: #fff;
+}
+
+.window-project-version-view .PVersionRestoreButton,
+.window-project-version-view .PVersionDeleteButton 
+{
+    top: 1px;
+    position: relative;
+    float: right;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.window-project-version-view .PVersionRestoreButton:after,
+.window-project-version-view .PVersionDeleteButton:after 
+{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 23px;
+    height: 16px;
+    background: url('../../../images/sprites/sprite_main.png') no-repeat;
+}
+
+.window-project-version-view .PVersionDeleteButton:after {
+    background-position: -64px -208px;
+}
+
+.window-project-version-view .PVersionRestoreButton:after {
+    background-position: -83px -193px;
+}
+
+
+.window-project-version-view .PVersionRestoreButton:hover,
+.window-project-version-view .PVersionDeleteButton:hover 
+{
+    background: #F9F9F9;
+}
+
+.window-project-version-view .PVersionSizeAll {
+    margin: 10px 0px;
+}
+.window-project-version-view .PVersionDate {
+    float: left;
+    width: 35%;
+}
+.window-project-version-view .PVersionUser {
+    float: left;
+    width: 45%;
+}
+.window-project-version-view .PVersionButtons {
+    float: right;
+    width: 20%;
+}

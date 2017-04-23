@@ -1,0 +1,19 @@
+{
+  "name": "Darkan 3",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jquery": "*",
+    "jqueryui": "*",
+    "moment": ">=2.8.1",
+    "underscore": "*",
+    "backbone": "*",
+    "backbone.stickit": "*",
+    "backbone.controller": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": ""
+}

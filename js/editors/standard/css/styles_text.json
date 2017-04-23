@@ -1,0 +1,227 @@
+{
+
+	"simpletext-sfs-reset" : {
+		"component-styles": {
+			"text-decoration": "none",
+		    "letter-spacing": "0px",
+		    "text-shadow": "none"
+		}
+	},
+
+	"simpletext-sfs-glowred" : {
+		"component-styles": {
+			"text-shadow": " horizontal-offset vertical-offset blur color"
+		}
+	},
+
+	"simpletext-sfs-heading" : {
+		"component-styles": {
+			"text-transform": "uppercase",
+    		"text-shadow": "-1px -1px 1px #000000, 1px 1px 1px #CCCCCC"
+		}
+	},
+
+	"simpletext-sfs-adobe" : {
+		"component-styles": {
+			"text-shadow": "0 2px 3px rgba(40,41,42,0.6),0 4px 0 rgba(150,150,150,0.5),0 9px 5px rgba(0,0,0,0.5)"
+		}
+	},
+
+	"simpletext-sfs-heading2" : {
+		"component-styles": {
+			"text-align": "center",
+    		"text-shadow": "0px 2px 3px #555"
+		}
+	},
+
+	"simpletext-sfs-shadow1" : {
+		"component-styles": {
+			"text-shadow": "2px 2px 3px rgba(255,255,255,0.1)"
+		}
+	},
+
+	"simpletext-sfs-shadow2" : {
+		"component-styles": {
+			"text-shadow": "6px 6px 0px rgba(0,0,0,0.2)"
+		}
+	},
+
+	"simpletext-sfs-shadow3" : {
+		"component-styles": {
+			"text-shadow": "4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15)"
+		}
+	},
+
+	"simpletext-sfs-vintage_retro" : {
+		"component-styles": {
+			"text-shadow": "5px 5px 0px #eee, 7px 7px 0px #707070"
+		}
+	},
+
+	"simpletext-sfs-neon" : {
+		"component-styles": {
+			"text-shadow": "0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de"
+		}
+	},
+
+	"simpletext-sfs-inset" : {
+		"component-styles": {
+			"text-shadow": "0px 2px 3px #666"
+		}
+	},
+
+	"simpletext-sfs-anaglyphic" : {
+		"component-styles": {
+			"text-shadow": "8px 8px 0 rgba(255,0,180,0.5)"
+		}
+	},
+
+	"simpletext-sfs-fire" : {
+		"component-styles": {
+			"text-shadow": "0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e"
+		}
+	},
+
+	"simpletext-sfs-board_game" : {
+		"component-styles": {
+			"text-shadow": "10px 10px 0 #ffd217, 20px 20px 0 #5ac7ff, 30px 30px 0 #ffd217, 40px 40px 0 #5ac7ff"
+		}
+	},
+
+	"simpletext-sfs-3D" : {
+		"component-styles": {
+			"text-shadow": "0 1px 0 #ccc,\
+			               0 2px 0 #c9c9c9,\
+			               0 3px 0 #bbb,\
+			               0 4px 0 #b9b9b9,\
+			               0 5px 0 #aaa,\
+			               0 6px 1px rgba(0,0,0,.1),\
+			               0 0 5px rgba(0,0,0,.1),\
+			               0 1px 3px rgba(0,0,0,.3),\
+			               0 3px 5px rgba(0,0,0,.2),\
+			               0 5px 10px rgba(0,0,0,.25),\
+			               0 10px 10px rgba(0,0,0,.2),\
+			               0 20px 20px rgba(0,0,0,.15)"
+		}
+	},
+
+	"simpletext-sfs-letterpress" : {
+		"component-styles": {
+			"color": "#222",
+    		"text-shadow": "0px 2px 3px #555"
+		}
+	},
+
+	"simpletext-sfs-backshadow" : {
+		"component-styles": {
+			"text-shadow": "0px 3px 8px #2a2a2a"
+		}
+	},
+
+	"simpletext-sfs-inset_typo" : {
+		"component-styles": {
+			"text-shadow": "rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px"
+		}
+	},
+
+	"simpletext-sfs-apple_style" : {
+		"component-styles": {
+			"text-shadow": "0px 1px 1px #fff"
+		}
+	},
+
+	"simpletext-sfs-photoshop_emboss" : {
+		"component-styles": {
+			"text-shadow": "1px 1px white, -1px -1px #444"
+		}
+	},
+
+	"simpletext-sfs-drop_cap" : {
+		"component-styles": {
+			"text-shadow": "10px 10px 0 rgba(255,255,255,0.07)"
+		}
+	},
+
+	"simpletext-sfs-subtle_glow_white" : {
+		"component-styles": {
+			"text-shadow": "0px 0px 3px #fff"
+		}
+	},
+
+	"simpletext-sfs-blur" : {
+		"component-styles": {
+			"text-shadow": "#fff 0 0 100px"
+		}
+	},
+
+	"simpletext-sfs-3D_lying" : {
+		"component-styles": {
+			"text-shadow": "0 1px 0 #ccc,\
+						05 0 2px 0 #c9c9c9,\
+						06 0 3px 0 #bbb,\
+						07 0 4px 0 #b9b9b9,\
+						08 0 5px 0 #aaa,\
+						09 0 6px 1px rgba(0,0,0,.1),\
+						10 0 0 5px rgba(0,0,0,.1),\
+						11 0 1px 3px rgba(0,0,0,.3),\
+						12 0 3px 5px rgba(0,0,0,.2),\
+						13 0 5px 10px rgba(0,0,0,.25),\
+						14 0 10px 10px rgba(0,0,0,.2),\
+						15 0 20px 20px rgba(0,0,0,.15)"
+		}
+	},
+
+	"simpletext-sfs-cloudy" : {
+		"component-styles": {
+			"text-shadow": "0px 0px 10px rgba(255,255,255,0.6), 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 50px rgba(255,255,255,0.3), 0px 0px 180px rgba(255,255,255,0.3)"
+		}
+	},
+
+	"simpletext-sfs-embossed" : {
+		"component-styles": {
+			"text-shadow": "-1px -1px 1px #fff, 1px 1px 1px #000",
+    		"opacity" : "0.3"
+		}
+	},
+
+	"simpletext-sfs-another_3D" : {
+		"component-styles": {
+			"text-shadow": "0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135"
+		}
+	},
+
+	"simpletext-sfs-relief" : {
+		"component-styles": {
+			"text-shadow": "-4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27"
+		}
+	},
+
+	"simpletext-sfs-two_toned_shadow" : {
+		"component-styles": {
+			"font-weight": "900",
+		    "text-shadow":"0 1px #808d93,\
+		    		    -1px 0 #cdd2d5,\
+		    		    -1px 2px #808d93,\
+		    		    -2px 1px #cdd2d5,\
+		    		    -2px 3px #808d93,\
+		    		    -3px 2px #cdd2d5,\
+		    		    -3px 4px #808d93,\
+		    		    -4px 3px #cdd2d5,\
+		    		    -4px 5px #808d93,\
+		    		    -5px 4px #cdd2d5,\
+		    		    -5px 6px #808d93,\
+		    		    -6px 5px #cdd2d5,\
+		    		    -6px 7px #808d93,\
+		    		    -7px 6px #cdd2d5,\
+		    		    -7px 8px #808d93,\
+		    		    -8px 7px #cdd2d5"
+		}
+	},
+
+	"simpletext-sfs-stereoscopic" : {
+		"component-styles": {
+			"font-weight": "900",
+    		"text-shadow": "-0.06em 0 red, 0.06em 0 cyan"
+		}
+	}
+}

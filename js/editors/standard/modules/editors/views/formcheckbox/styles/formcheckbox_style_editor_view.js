@@ -1,0 +1,5 @@
+var FormCheckboxStyleEditorView = StyleEditorView.extend({
+
+
+
+});

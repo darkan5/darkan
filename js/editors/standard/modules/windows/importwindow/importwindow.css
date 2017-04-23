@@ -1,0 +1,63 @@
+.window-import-view {
+	width: 740px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+.import-window-list {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.import-item {
+	display: inline-block;
+	width: 140px;
+	padding: 20px 30px;
+	cursor: pointer;
+	border-radius: 5px;
+	vertical-align: top;
+	position: relative;
+}
+
+.import-item:hover {
+	background-color: #E1F0FA;
+}
+
+.import-image {
+	width: 135px;
+	height: 135px;
+	background-image: url('../../../images/sprites/import_export_sprite.png');
+	background-repeat: no-repeat;
+}
+
+.import-item > .title {
+	font-size: 18px;
+}
+
+.import-item > .extras {
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+}
+
+.import-item > .extras a {
+    color: #000;
+}
+
+.import-item > .extras a:hover {
+	text-decoration: none;
+}
+
+.import-images {
+	background-position: 4px -475px;
+}
+.import-pdf .import-image {
+	background-position: 9px -316px;
+}
+.import-psd .import-image {
+	background-position: 9px -735px;
+}
+

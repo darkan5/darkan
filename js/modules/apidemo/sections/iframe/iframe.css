@@ -1,0 +1,11 @@
+.iframe-editor{
+	width: 100%;
+	height: 800px;
+	border: 1px solid black;
+}
+
+.iframe-course{
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+}

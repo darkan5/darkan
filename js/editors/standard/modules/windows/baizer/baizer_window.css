@@ -1,0 +1,35 @@
+.baizer-window {
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 5000;
+    background-color: #eeeeee;
+}
+
+.baizer-wrapper{
+    width: 205;
+    height: 455px;
+    background-color: #ffffff;
+    margin: 15px;
+}
+
+.baizer-axis-animation {
+    position: absolute;
+    left: -29px;
+    top: 284px;
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+.baizer-axis-time {
+    position: absolute;
+    left: 101px;
+    top: 390px;
+}
+

@@ -1,0 +1,524 @@
+.projects-container {
+	min-height: 500px;
+}
+
+.buttons-container {
+	margin-bottom: 50px;
+}
+
+.folders-tree-nav {
+	display: inline-block;
+	width: 200px;
+	min-height: 500px;
+}
+
+.folders-tree-view {
+	min-width: 100%;
+	border-right: 3px solid #ccc;
+	min-height: 500px;
+}
+
+.projects-view {
+	display: inline-block;
+	width: calc(100% - 200px);
+}
+
+.projects-view,
+.folders-tree
+{
+	vertical-align: top;
+}
+
+.main-tree-item {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.main-tree-item ul {
+	margin: 0px;
+	padding-left: 20px; 
+	list-style-type: none;
+}
+
+.main-tree-item li span {
+    max-width: 140px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.projects-view {
+	width: calc(100% - 230px);
+    padding: 0px 20px;
+}
+
+.project-item {
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+    max-width: 250px;	
+}
+
+
+.project-item .name {
+    margin-left: 5px;
+}
+
+.folder {
+	color: #fff;
+	padding: 10px 20px;
+	background-color: #424242;
+    min-width: 150px;
+}
+
+.folder:hover {
+	background-color: #676767;
+}
+
+.project {
+    padding: 0px;
+}
+
+.project:hover .thumbnail {
+	background-color: #F3F2F2;
+}
+
+.folders-tree ul {
+	list-style-type: none;
+}
+
+.folders-tree > ul {
+	margin: 0;
+	padding: 0;
+}
+
+.folders-tree-ul li {
+	cursor: pointer;
+	padding: 5px;
+}
+
+.folders-tree-view li:hover span {
+	text-decoration: underline;
+}
+
+.folders-tree-view li i.folder-icon {
+	color: #7FA2B8;
+}
+
+.buttons-container button {
+	margin: 2px 20px;
+    padding: 10px 30px 10px 10px;
+}
+
+.buttons-container button i {
+    margin: 0px 10px;
+    font-size: 17px;
+}
+
+.projectlist-item .image-container {
+	position: relative;
+    width: 228px;
+    height: 130px;
+    overflow: hidden;
+}
+
+.projectlist-item .image-container .editoverlay-wrap
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+	cursor: pointer;
+	display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+     visibility: hidden; 
+}
+
+.projectlist-item .image-container .editoverlay {
+    background-color: rgba(0,0,0,.4);
+    z-index: 1;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.projectlist-item .image-container:hover .editoverlay-wrap {
+	visibility: visible;
+}
+
+.projectlist-hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.normal-folder-item
+{
+	cursor: pointer;
+	position: relative;
+	color: #fff;
+    padding: 10px 20px;
+    background-color: #424242;
+    border: 1px solid black;
+    width: 300px;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+.normal-folder-item .folder-icon {
+	vertical-align: middle;
+}
+
+.normal-folder-item .foldername {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.normal-folder-item .foldername span {
+    padding-left: 10px;
+}
+
+.normal-folder-item:hover {
+    background-color: #6B6A6A;
+}
+
+.normal-project-item,
+.share-project-item,
+.shared-to-user-project-item,
+.template-project-item
+{
+	width: 230px;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: top; 
+    text-align: center;   
+
+}
+
+.options-container {
+	margin: 0;
+}
+
+.options-container span{
+    height: 14px;
+}
+
+.projectlist-item .thumbnail {
+	padding: 0px;
+}
+
+.normal-project-item .project-button {
+	/*display: none;*/
+}
+
+.normal-breadcrumb-item {
+    float: left;
+}
+
+span.breadcrumb-arrow {
+    vertical-align: super;
+}
+
+.breadcrumb-item
+{
+    margin: 0px 4px;
+	color: #424242;
+	padding: 5px 12px;
+    max-width: 150px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+        background: #7FA2B8;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.breadcrumb-item-search{
+    background: #FF0000;
+}
+
+.breadcrumb-item:hover {
+	text-decoration: underline;
+}
+
+.breadcrumb-view .normal-breadcrumb-item:last-child .breadcrumb-arrow {
+	display: none;
+}
+
+.breadcrumb-view .search-breadcrumb-item:last-child .breadcrumb-arrow {
+    display: none;
+}
+
+.projectlist-item[itemselected="true"]{
+	/*border: 4px solid red !important;*/
+}
+
+.tree-item,
+.normal-tree-item{
+	cursor: pointer;
+	padding: 3px;
+    white-space: nowrap;
+}
+.tree-item:hover,
+.normal-tree-item:hover
+{
+	text-decoration: underline;
+}
+
+.is-showing{
+
+}
+
+.select-parents {
+	border: 2px solid blue;
+	display: inline-block;
+}
+
+.new-folder{
+	/*background-color: rgb(236, 23, 209);*/
+}
+
+.new-project{
+	/*background-color: rgb(236, 23, 209);*/
+}
+.folder-button,
+.project-button{
+	cursor: pointer;
+}
+
+.folder-button {
+	
+}
+
+
+.folder-button:hover,
+.project-button:hover{
+	text-decoration: underline;
+}
+
+.edit-folder-name input {
+	color: #000;
+}
+
+.normal-folder-item:hover .delete-folder-button{
+	display: block;
+}
+
+.delete-folder-button {
+	display: none;
+	position: absolute;
+	right: -10px;
+	bottom: 12px;
+}
+
+.edit-folder-name-button {
+	cursor: text;
+}
+
+.project-block-extras {
+	position: absolute;
+	right: 0px;
+	background: #fff;
+	color: #333;
+	padding: 4px 10px;
+	border-style: solid;
+	border-color: #ccc;
+}
+
+
+.project-block-extras.template-info {
+	bottom: 0px;
+	border-top-left-radius: 3px;
+	border-width: 1px 0px 0px 1px;
+
+}
+
+.project-block-extras.shared-info {
+	visibility: hidden;
+	top: 0px;
+    width: 105px;
+    border-bottom-left-radius: 3px;
+	border-width: 0px 0px 1px 1px;
+}
+
+.projectlist-item[ptype="userSharedProjects"] .shared-info{
+	visibility: visible;
+}
+.noshares {
+	text-align: center;
+}
+.noprojects-info {
+    text-align: center;
+    margin: 40px;
+    font-size: 16px;
+    color: #337AB7;
+}
+.noprojects-info span:hover{
+	text-decoration: underline;
+    cursor: pointer;
+}
+
+.margin150 {
+	margin: 15px 0px;
+}
+
+.drawfolder-draggablehelper{
+    background-color: #424242;
+    color: white;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.drawproject-draggablehelper{
+    background-color: #7FA2B8;
+    color: white;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.helper-image {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.helper-icon {
+    float: left;
+    padding: 7px 0px 0px 10px;
+}
+
+.helper-text {
+	padding: 10px 25px;
+    float: left;
+}
+
+.folder-state-hover,
+.project-state-hover,
+.tree-folder-state-hover,
+.tree-project-state-hover{
+	/*opacity: 0.4;*/
+}
+
+.project-state-active,
+.tree-project-state-active,
+.folder-state-active,
+.tree-folder-state-active
+{
+	background-color: #61849A;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.normal-folder-item[isdragging="true"] {
+	/*opacity: .4;*/
+}
+
+.normal-project-item[isdragging="true"] {
+	/*opacity: .4;*/
+}
+
+.shared-to-user-info {
+	visibility: hidden;
+	top: 0px;
+    max-width: 220px;
+    border-bottom-left-radius: 3px;
+	border-width: 0px 0px 1px 1px;
+    font-size: 11px;
+    background-color: #fff;
+    word-wrap: break-word;
+}
+
+.shared-to-user-project-item[fromuser="true"] .shared-to-user-info{
+	visibility: visible;
+}
+
+.new-shared-user-project{
+	background-color: #EF1515;
+}
+
+#changeazbit {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #000;
+    cursor: pointer;
+}
+
+.user-projects-info {
+    position: absolute;
+    right: 50px;
+    top: 65px;
+    height: 40px;
+    line-height: 20px;
+    color: #292C32;
+    background-color: #fff;
+    height: 55px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 12px;
+}
+
+.user-projects-info div {
+    float: left;
+    margin: 6px 16px;
+}
+
+.projects-limit{
+    color: #FF0000;
+}
+
+.publications-limit{
+    color: #FF0000;
+}
+
+.size-is-ending{
+    color: #FF0000;
+}
+
+.projects-list-search-wrapper{
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: -30px;
+}
+
+.projects-list-search-input{
+    font-size: 12px;
+    width: 200px;
+    height: 27px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 0px 26px 0px 6px;
+}
+.remove-search-value {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}

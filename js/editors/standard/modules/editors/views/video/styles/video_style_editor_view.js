@@ -1,0 +1,5 @@
+var VideoStyleEditorView = StyleEditorView.extend({
+
+
+
+});

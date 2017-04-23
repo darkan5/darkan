@@ -1,0 +1,243 @@
+
+
+
+.pages,
+#second-pages
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 1px;
+    overflow-y: hidden;
+    background: #fff;
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+}
+
+.page[active="true"]{
+    background-color: #0e90d2 !important;
+}
+
+.page {
+	position: relative;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	height: 120px;
+}
+
+.page .loaded-dropzone{
+    z-index: 100;
+}
+
+.page:hover {
+	background-color: #B7D6E5;
+}
+
+.page > .page-show,
+.page > .page-sound,
+.page > .page-notes
+{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	background-image: url('../../images/sprites/rightmenu.png');
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
+
+.page > .page-show:hover,
+.page > .page-sound:hover,
+.page > .page-notes:hover 
+{
+	background-color: #C6DFEF;
+}
+
+
+.page > .page-show {
+	background-position: 0px -504px;
+	top: 5px;
+	left: 10px;
+}
+.page > .page-hide {
+	background-position: 0px -530px;
+	top: 5px;
+	left: 10px;
+}
+.page > .page-sound {
+	background-position: 0px -382px;
+	top: 27px;
+	left: 9px;
+}
+.page > .page-sound.page-sound-on {
+	background-position: 0px -410px;
+}
+.page > .page-notes {
+	background-position: 0px -441px;
+	top: 53px;
+	left: 11px;
+}
+.page > .page-notes-on {
+	background-position: 0px -473px;
+	top: 53px;
+	left: 11px;
+}
+.page > .page-thumb {
+	width: 150px;
+	height: 87px;
+	top: 5px;
+	margin: 0 auto;
+	border: 2px solid #ccc;
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.page > .dinamic-page-thumb-wrapper {
+	display: none;
+	width: 150px;
+	height: 87px;
+	top: 5px;
+	margin: 0 auto;
+	border: 2px solid #ccc;
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+}
+
+.page > .page-counter {
+	position: absolute;
+	color: #666;
+	bottom: -1px;
+	left: 5px;
+	font-size: 11px;
+	height: 18px;
+	width: 27px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: right;
+}
+.page > .page-label {
+	position: absolute;
+	color: #666;
+	bottom: 0px;
+	left: 40px;
+	font-size: 13px;
+	height: 18px;
+	max-width: 160px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 1px 4px;
+	line-height: 18px;
+	text-align: left;
+	width: 155px;
+}
+.page > .page-label:hover {
+	background: #CCC;
+	border-radius: 5px;
+	background-image: url(../../images/sprites/editoricons.png);
+	background-position: 143px 1px;
+	background-repeat: no-repeat;
+}
+
+.page[active="true"] > .page-counter,
+.page[active="true"] > .page-label
+{
+	color: #fff;
+}
+
+.page > .page-checkbox {
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	top: 5px;
+	right: 10px;
+}
+
+.page[selected-by-miniature="true"]:before {
+    content: ' ';
+    top:-5px;
+    left: -5px;
+    position: absolute;
+    background-color: #92DACC;
+    opacity: .5;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    box-shadow: 0px 0px 15px #92DACC;
+    box-sizing: border-box;
+}
+
+.page[selected-by-trigger="true"]:before {
+    content: ' ';
+    top:-5px;
+    left: -5px;
+    position: absolute;
+    background-color: red;
+    opacity: .5;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    box-shadow: 0px 0px 15px #92DACC;
+}
+
+.page-thumb-background-image {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+}
+
+.page-selected-by{
+    position: absolute;
+    top: 20px;
+    right: 5px;
+}
+
+.page-selected-by-list{
+    list-style: none;
+    padding: 0px;
+    margin: 2px;
+}
+
+.page-selected-by-item {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 17px;
+	top: 25px;
+	font-size: 22px;
+	color: #5082A5;
+}
+
+.page[active="true"] .page-selected-by-item{
+	color: #fff;
+}
+
+.page-selected-by-number {
+	position: absolute;
+	top: 12px;
+	right: -8px;
+	color: #fff;
+	background-color: rgb(187, 55, 55);
+	font-size: 12px;
+	padding: 3px 5px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.page-item-loader-link{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+}
+
+/*.page-selected-by-item:hover:after {
+    max-width: 200px;
+}*/

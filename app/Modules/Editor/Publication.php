@@ -1,0 +1,968 @@
+<?php namespace App\Modules\Editor;
+
+use DB;
+use Auth;
+use App\User;
+use App\Modules\Models\Projects;
+use App\Modules\Models\Banners;
+use App\Modules\Ocs\Ocs;
+use App\Modules\Utils\Utils;
+use RecursiveIteratorIterator;
+use RecursiveDirectoryIterator;
+use ZipArchive;
+use DOMDocument;
+use App\Http\Controllers\PortalController;
+use stdClass;
+
+class Publication {
+
+    protected $responseData = [];
+    protected $requeresponseDatast;
+
+    public function run($request) {
+
+        $this->request = json_decode($request);
+
+        if (isset($this->request->type)) {
+
+            switch ($this->request->type) {
+
+                case 'newPublication':
+
+                    $this->newPublication();
+
+                    break;
+
+                case 'overwritePublication':
+
+                    $this->overwritePublication();
+
+                    break;
+
+                case 'deletePublication':
+
+                    $this->deletePublication();
+
+                    break;
+
+                case 'exportToScorm':
+
+                    $this->exportToScorm();
+
+                    break;
+
+                case 'exportToHTML':
+
+                    $this->exportToHTML();
+
+                    break;
+
+                case 'exportToPDF':
+
+                    $this->exportToPDF();
+
+                    break;
+
+                default:
+                    break;
+
+            }
+
+        }
+
+        return $this->sendData();
+
+    }
+
+    protected function exportToPDF() {
+
+        $projectID = (int)$this->request->projectID;
+        $projectData = Projects::find($projectID);
+
+        if ($projectData) {
+
+            $userID = $projectData->user_id;
+            $landscape = $this->request->landscape;
+            $dataPDF = $this->request->dataPDF;
+
+
+            $projectPath = config('app.projects_folder') . '/' . $userID.'/'.$projectID.'/';
+
+            $packPath = $projectPath . 'pack/';
+
+            $this->createLangFile($projectPath);
+
+            if ($landscape === 'L') {
+                $landscapeOption = '-O Landscape';
+            } else {
+                $landscapeOption = '-O Portrait';
+            }
+
+            $htmlFile = file_get_contents(storage_path('/templates/page_thumbs/index_pdf_page.html'), 0, null, null);
+
+            $files = '';
+
+
+            foreach ($dataPDF as $onePage) {
+
+                if ($onePage->activePage) {
+
+                    $newHTML = '';
+
+                    if ($onePage->activeNote) {
+                        $newHTML = str_replace('--NOTE--', $onePage->note, $htmlFile);
+                    } else {
+                        $newHTML = str_replace('--NOTE--', '', $htmlFile);
+                    }
+
+                    $imgPath = str_replace('\\', '/', realpath(config('app.projects_folder'))) . '/' . $userID . '/' . $projectID . '/pre/exported_view/' . $onePage->pageID . '/pagethumb.jpg';
+
+                    $newHTML = str_replace('--THUMBIMAGE--', $imgPath, $newHTML);
+
+                    $newHtmlTempFile = str_replace('\\', '/', realpath(config('app.projects_folder'))) . '/' . $userID . '/' . $projectID . '/pre/exported_view/' . $onePage->pageID . '/pagethumb_temp.html';
+                    file_put_contents($newHtmlTempFile, $newHTML);
+
+                    $rootPath = str_replace('\\', '/', realpath(config('app.projects_folder'))) . '/' . $userID . '/' . $projectID . '/pre/exported_view/' . $onePage->pageID . '/';
+
+                    exec('wkhtmltopdf --dpi 300 ' . $landscapeOption . ' ' . $newHtmlTempFile . ' ' . $rootPath . 'pagethumb.pdf');
+
+                    // unlink($newHtmlTempFile);
+
+                    $this->responseData['exec'] = 'wkhtmltopdf --dpi 300 ' . $landscapeOption . ' ' . $newHtmlTempFile . ' ' . $rootPath . 'pagethumb.pdf';
+                    $this->responseData['a'] = 'aaaa';
+
+                    $files .= $projectPath . 'pre/exported_view/' . $onePage->pageID . '/pagethumb.pdf ';
+                }
+
+            }
+
+            if (!file_exists($packPath)) {
+                mkdir($packPath);
+            }
+
+            exec('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/printer -sOutputFile='. $packPath .'file.pdf ' . $files);
+
+            $this->responseData['downloadLink'] = config('app.storageProjectsLink') . '/' . $userID . '/' . $projectID . '/pack/file.pdf';
+
+        }
+
+    }
+
+    protected function clearAllTempDirectories($projectPath, $tempDirectory)
+    {
+        // clear all temp directories
+        if (file_exists($projectPath .'tmp')) {
+            $this->rrmdir($projectPath .'tmp');
+        }
+        if (file_exists($projectPath .'pack')) {
+            $this->rrmdir($projectPath .'pack');
+        }
+
+        
+
+        if (!file_exists($projectPath .'tmp')) {
+            mkdir($projectPath .'tmp');
+        }
+
+        if (!file_exists($tempDirectory)) {
+            mkdir($tempDirectory);
+        }
+
+        if (!file_exists($projectPath .'pack/')) {
+            mkdir($projectPath .'pack/');
+        }
+
+        if (!file_exists($tempDirectory . 'css/')) {
+            mkdir($tempDirectory . 'css/');
+        }
+
+        if (!file_exists($tempDirectory . 'skin/')) {
+            mkdir($tempDirectory . 'skin/');
+        }
+    }
+
+    protected $nessessaryDirs = array(
+        'js',
+        'css',
+        'js/libs',
+        'js/libs/fancybox',
+        'js/libs/jplayer',
+        'js/libs/perfect-scrollbar',
+        'js/libs/utils',
+        'js/libs/video-js',
+        'js/api',
+        'js/language',
+    );
+
+    protected $nessessaryFiles = array(
+        'css/',
+        'js/libs/fancybox/',
+        'js/libs/jplayer/',
+        'js/libs/perfect-scrollbar/',
+        'js/libs/utils/',
+        'js/libs/video-js/',
+        'js/api/',
+        'js/language/',
+    );
+
+    protected function prepareExportPackage($includeScorm) {
+
+        $projectID = (int)$this->request->projectID;
+        $projectData = Projects::find($projectID);
+
+        if ($projectData) {
+
+            $userID = $projectData->user_id;
+
+            $name = strtolower(preg_replace('/([^a-zA-Z0-9.])/', "_", $this->request->name));
+            $skin = $this->request->skin;
+
+            // project directory
+            $projectPath = config('app.projects_folder') . '/' . $userID . '/' . $projectID . '/';
+
+            // temp folder directory
+            $tempDirectory = $projectPath . '/tmp/' . time() . '/';
+
+            // clear and prepare all directories
+            $this->clearAllTempDirectories($projectPath, $tempDirectory);
+
+
+            // get content_template path
+            $contentTemplatePath = config('app.public_folder') . '/js/editors/standard/content_template/';
+
+            // get path to choosen skin
+            $skinPath = config('app.public_folder') . '/js/editors/standard/skins/'. $skin . '/';
+
+            // include lang file in project
+            $this->createLangFile($projectPath);
+
+            // copy all publication files
+            $this->copyRecursive($projectPath . 'pre/', $tempDirectory);
+            
+            // $this->copyRecursive($contentTemplatePath, $tempDirectory);
+            foreach ($this->nessessaryDirs as $dirPath) {
+                @mkdir( $tempDirectory . $dirPath );
+            }
+            foreach ($this->nessessaryFiles as $filePath) {
+                $this->copyRecursive($contentTemplatePath . $filePath, $tempDirectory . $filePath);
+            }
+            copy($contentTemplatePath . 'js/yui.js', $tempDirectory . 'js/yui.js');
+            copy($contentTemplatePath . 'index.html', $tempDirectory . 'index.html');
+
+            $this->copyRecursive($skinPath . 'css/', $tempDirectory . 'css/');
+            $this->copyRecursive($skinPath . 'skin/', $tempDirectory . 'skin/');
+
+            // convert images names to min
+            $this->conversionImagesMin($tempDirectory . 'exported_view/');
+
+            // get skin template and put into temp directory
+            $this->prepareIndexTemplateAndCopyToPublicationPath($skinPath, $tempDirectory);
+
+            // prepare blank meta tags
+            $this->prepareMetaTags($tempDirectory, '',  $this->request->name, '', '');
+
+            if ($includeScorm) {
+
+                $scormVersion = $this->request->scormVersion;
+                $title = $this->request->title;
+
+                $scormPath = config('app.public_folder') . '/js/editors/standard/scorm/12/';
+
+                if ($scormVersion === '12') {
+                    $scormPath = config('app.public_folder') . '/js/editors/standard/scorm/12/';
+                } else if ($scormVersion === '2004') {
+                    $scormPath = config('app.public_folder') . '/js/editors/standard/scorm/2004/';
+                }
+
+                $this->copyRecursive($scormPath, $tempDirectory);
+
+                $doc = new DOMDocument();
+                $doc->load($tempDirectory . 'imsmanifest.xml');
+                $nodes = $doc->getElementsByTagName('title');
+
+                foreach ($nodes as $item) {
+                    $item->nodeValue = $title;
+                }
+                $doc->save($tempDirectory . 'imsmanifest.xml');
+
+            }
+
+            // zip file name
+            $zipFileName = $name . '.zip';
+
+            // make zip archive
+            $zip = new ZipArchive();
+            if ($zip->open($projectPath .'pack/'. $zipFileName, ZIPARCHIVE::CREATE) !==TRUE) {
+                exit ("nie moge zrobic pliku archiwum project.zip");
+            }
+
+            $this->zipDir($zip, $tempDirectory);
+            $zip->close();
+
+            $this->responseData['downloadLink'] = config('app.storageProjectsLink') . '/' . $userID . '/' . $projectID . '/pack/' . $zipFileName;
+
+            $this->rrmdir($tempDirectory);
+        }
+    }
+
+    protected function exportToScorm() {
+        $this->prepareExportPackage(true);
+    }
+
+    protected function exportToHTML() {
+        $this->prepareExportPackage(false);
+    }
+
+    protected function deletePublication() {
+
+        $publicationID = (int)$this->request->bannerID;
+        
+        $portalController = new PortalController();
+        $portalController->deletePublication($publicationID);
+    }
+
+    protected function getProjectModel($projectPath, $userId, $projectId){
+
+        $projectModel =  array(
+            'pages' => array(),
+            'options' => new stdClass()
+        );
+
+        $projectId = (int)$projectId;
+
+        $mapPath = $projectPath . '/sitemap/map.json';
+        $map = json_decode( file_get_contents($mapPath) );
+
+        if( $map->pages ){
+
+            foreach ($map->pages as $pageId) {
+                $pagePath = $projectPath . '/sitemap/'. $pageId .'.json';
+                $page = json_decode( file_get_contents($pagePath) );
+
+                if($page->options->active){
+                    array_push($projectModel['pages'], $page);
+                }
+            }
+        }
+
+        $optionsPath = $projectPath . '/sitemap/options.json';
+        $projectModel['options'] = $page = json_decode( file_get_contents($optionsPath) );
+
+        return $projectModel;
+    }
+
+    protected function prepareSeoJsonFile($projectPath, $userId, $projectId, $hash){
+
+        $projectModel = $this->getProjectModel($projectPath, $userId, $projectId);
+
+        $pages = array();
+
+        foreach ($projectModel['pages'] as $pageModel) {
+
+            $page = array();
+            $pageId = $pageModel->options->pageid;
+
+            foreach ($pageModel->lines as $line) {
+                foreach ($line->objects as $objectModel) {
+
+                    $object = null;
+
+                    $type = $objectModel->type;
+                    $actionkey = $objectModel->actionkey;
+                    
+
+                    switch ($type) {
+                        case 'image':
+
+                            $imageFileName = $objectModel->imageFileName;
+
+                            $ext = substr($imageFileName, count($imageFileName) - 4, 3);
+
+                            $imageFilePath = config('app.storagPublicationsLink') . $hash . '/exported_view/' . $pageId  . '/images/' . $actionkey . '/min.' . $ext;
+
+                            $object = array('type' => $objectModel->type, 'content' => $imageFilePath);
+                            break;
+
+                        case 'text':
+                            $object = array('type' => $objectModel->type, 'content' => $objectModel->contents);
+                            break;    
+                        
+                        default:
+        
+                            break;
+                    }
+
+                    if($object != null){
+                        array_push($page, $object);
+                    }
+                }
+            }
+
+            if(count($page)){
+                array_push($pages, $page);
+            }
+        }
+
+        $seomapPath = $projectPath . '/pre/seomap.json';
+        $eomapContent = json_encode($pages);
+
+        $wp = fopen($seomapPath, 'w');
+        fwrite($wp, $eomapContent);
+        fclose($wp);
+
+
+    }
+
+    protected function prepareVariablesJs($projectPath, $userId, $projectId, $hash){
+
+        $projectModel = $this->getProjectModel($projectPath, $userId, $projectId);
+
+        $variavlesPath = $projectPath . 'pre/js/variables.js';
+        $variavlesContent = 'var ProjectObject = ' . json_encode($projectModel);
+
+        $wp = fopen($variavlesPath, 'w');
+        fwrite($wp, $variavlesContent);
+        fclose($wp);
+    }
+
+    
+
+    protected function prepareConfigJsonFile($projectPath, $userId, $projectId, $hash){
+        // To override
+    }
+
+
+    protected function createPublicationHash($title)
+    {
+        for (;;) {
+
+            $hash = hash('md5', $title . time());
+
+            // $checkHashQuery = $database->query("SELECT * FROM `banners_projects` WHERE `path`='$hash' LIMIT 1");
+            $checkHashQuery = Banners::where('path', '=', $hash)->count();
+
+            if ($checkHashQuery == 0) {
+                return $hash;
+                break;
+            }
+        }
+    }
+
+    protected function isPublicationsLimitExcedeed($userId)
+    {
+        $userMaxPublications = Utils::getPlanMaxValue('banners');
+
+        $publicationsNumber = Banners::where('user_id', '=', $userId)->count();
+
+        if ($publicationsNumber >= $userMaxPublications) {
+            return true;
+        }
+
+        return false;
+    }
+
+    protected function getPublicationPath($hash)
+    {
+        return config('app.publications_folder') . '/' . $hash . '/';
+    }
+
+    protected function getOwnerUserId()
+    {
+        return Auth::user()->id;
+    }
+
+    protected function getProjectId()
+    {
+        return (int)$this->request->projectID;
+    }
+
+    protected function getTitle()
+    {
+        return $this->request->title;
+    }
+
+    protected function getDescription()
+    {
+        return $this->request->description;
+    }
+
+    protected function getSkin()
+    {
+        return $this->request->skin;
+    }
+
+    protected function getThumb()
+    {
+        return $this->request->thumb;
+    }
+
+    protected function preparePublication($isNew, $hash = '')
+    {
+        $projectID = $this->getProjectId();
+
+        $projectData = Projects::find($projectID);
+
+        if ($projectData) {
+            $userID = $projectData->user_id;
+
+            $title = $this->getTitle();
+            $description = $this->getDescription();
+            $ownUserID = $this->getOwnerUserId();
+            $thumb = $this->getThumb();
+            $skin = $this->getSkin();
+
+
+            if ( $this->isPublicationsLimitExcedeed($ownUserID) ) {
+                $this->responseData['error'] = array();
+                $this->responseData['error']['message'] = 'Limit';
+                return false;
+            }
+
+            if ($isNew) {
+                // get unique hash
+                $hash = $this->createPublicationHash($title);
+                $this->hash = $hash;
+            }
+
+            // get this project path
+            $projectPath = config('app.projects_folder') . $userID . '/' . $projectID . '/';
+
+            // get publication path
+            $publicationPath = $this->getPublicationPath($hash);
+
+            // get thumb path
+            $thumbPath = config('app.projects_folder') . '../' . $thumb;
+
+            // get content_template path
+            $contentTemplatePath = config('app.public_folder') . '/js/editors/standard/content_template/';
+
+            // get path to choosen skin
+            $skinPath = config('app.public_folder') . '/js/editors/standard/skins/'. $skin . '/';
+
+
+            // remove publication directory if exists
+            if (file_exists($publicationPath)) {
+                $this->rrmdir($publicationPath);
+            }
+
+            // create folder for publication if not exists
+            if (!file_exists($publicationPath)) {
+                //mkdir($publicationPath);
+		$old = umask(0); 
+		mkdir($publicationPath,0777); 
+		umask($old); 
+            }
+
+            // prepare seo and lang files
+            $this->prepareVariablesJs($projectPath, $userID, $projectID, $hash);
+            $this->prepareSeoJsonFile($projectPath, $userID, $projectID, $hash);
+            $this->prepareConfigJsonFile($projectPath, $userID, $projectID, $hash);
+            $this->createLangFile($projectPath);
+
+
+            // copy all required publication folders and files
+            $this->createPublicationFiles($projectPath, $publicationPath, $contentTemplatePath, $skinPath);
+            
+            
+            // prepare min image files
+            $this->conversionImagesMin($publicationPath . 'exported_view/');
+
+            // copy thumb file to publication directory
+            if (file_exists($thumbPath)) {
+
+                if (!file_exists($publicationPath . 'thumb')) {
+
+                   // mkdir($publicationPath . 'thumb');
+		    $old = umask(0);
+                    mkdir($publicationPath . 'thumb',0777);
+                    umask($old);
+                }
+
+                copy($thumbPath, $publicationPath . 'thumb/thumb.png');
+            }
+
+
+            $thumbFileName = config('app.storagPublicationsLink') . $hash . '/thumb/thumb.png';
+
+            // get publication size
+            $size = $this->sizeRecursive($publicationPath);
+
+            $publicationDirectLink = config('app.contentLink') . $hash;
+
+
+            $publicationsNumber = Banners::where('user_id', '=', $ownUserID)->count();
+
+            $data = new stdClass();
+            $data->ownUserID = $ownUserID;
+            $data->projectID = $projectID;
+            $data->title = $title;
+            $data->description = $description;
+            $data->publicationsNumber = $publicationsNumber;
+            $data->hash = $hash;
+            $data->size = $size;
+            $data->publicationDirectLink = $publicationDirectLink;
+            $data->thumbFileName = $thumbFileName;
+
+            $newPublicationId = $this->addToDatabase($data);
+
+
+            $this->addPublicationIDToProjectObject($newPublicationId , $hash);
+
+            // $this->copyPublicationController($publicationPath, $hash);
+
+            $this->changeUrlsAndMetatags($publicationPath, config('app.storagPublicationsLink') . $hash . '/' ,  $title, $description, $thumbFileName);
+	   exec ("chmod 777 /var/www/darkan/app/Modules/Editor/".$publicationDirectLink);            
+
+            $this->sendToOCS($publicationPath, $hash);
+        }
+    }
+
+    protected function changeUrlsAndMetatags($publicationPath, $publicationLink, $title, $description, $thumbFileName)
+    {
+        $this->prepareMetaTags($publicationPath, $publicationLink, $title, $description, $thumbFileName);
+    }
+
+    protected function addToDatabase($data) {
+
+
+        $requirements = json_encode( $this->request->requirements );
+        $questiondata = json_encode( $this->request->questiondata );
+
+        $newPublicationRow = Banners::firstOrNew(['path' => $data->hash]);
+        $newPublicationRow->user_id = $data->ownUserID; 
+        $newPublicationRow->project_id = $data->projectID; 
+        $newPublicationRow->name = $data->title; 
+        $newPublicationRow->summary = $data->description; 
+        $newPublicationRow->zoom = 0; 
+        $newPublicationRow->share = 0; 
+        $newPublicationRow->reset_progress = 0; 
+        $newPublicationRow->ord = $data->publicationsNumber; 
+        $newPublicationRow->path = $data->hash; 
+        $newPublicationRow->size_project = $data->size; 
+        $newPublicationRow->iframe = $data->publicationDirectLink; 
+        $newPublicationRow->size_source = 0; 
+        $newPublicationRow->date_create = date('Y_m_d_H_i_s'); 
+        $newPublicationRow->modified = date('Y_m_d_H_i_s'); 
+        $newPublicationRow->date_expiry = date('Y_m_d_H_i_s'); 
+        $newPublicationRow->last_visit = date('Y_m_d_H_i_s'); 
+        $newPublicationRow->thumb = $data->thumbFileName; 
+        $newPublicationRow->questiondata = $questiondata; 
+        $newPublicationRow->requirements = $requirements; 
+        $newPublicationRow->isold = 0; 
+        $newPublicationRow->questions = ''; 
+        $newPublicationRow->save(); 
+
+        return $newPublicationRow->id_banner;
+    }
+
+
+    public function newPublication() {
+        $this->preparePublication(true);
+    }
+
+    public function overwritePublication() {
+        $this->preparePublication(false, $this->request->hash);
+    }
+
+
+    protected function addPublicationIDToProjectObject($id, $hash) {
+
+        $publicationPath = $this->getPublicationPath($hash);
+
+        $myfile = fopen( $publicationPath . '/js/pid.js', "w");
+        $txt = "var ___pid = " . $id . ";\n";
+        $txt .= "var __lang = '" . config('app.locale') . "';\n";
+        $txt .= "var _scormServer = \"" . config('app.scormControllerRoute') . "\";\n";
+        fwrite($myfile, $txt);
+        fclose($myfile);
+    }
+
+    protected function createLangFile($projectPath) {
+
+        $myfile = fopen( $projectPath . 'pre/js/lang.js', "w");
+        $txt = "var __lang = '" . config('app.locale') . "';\n";
+        fwrite($myfile, $txt);
+        fclose($myfile);
+    }
+
+    protected function copyBannerIndexToPublicationFolder($publicationPath)
+    {
+        // get content_template_banner path
+        $contentTemplateBannerIndexPath = config('app.public_folder') . '/js/editors/standard/content_template_banner/index.html';
+        $content = file_get_contents( $contentTemplateBannerIndexPath );
+        file_put_contents($publicationPath .'index.html', $content);
+    }
+
+    protected function createPublicationFiles($projectPath, $publicationPath, $contentTemplatePath, $skinPath) {
+
+        if (file_exists($projectPath . 'pre/') &&
+            file_exists($publicationPath) &&
+            file_exists($contentTemplatePath) &&
+            file_exists($skinPath)) {
+
+            $this->copyRecursive($projectPath . 'pre/', $publicationPath);
+            $this->copyRecursive($contentTemplatePath, $publicationPath);
+
+            $this->copyBannerIndexToPublicationFolder($publicationPath);
+
+            $this->prepareIndexTemplateAndCopyToPublicationPath($skinPath, $publicationPath);
+
+            if (!file_exists($publicationPath . 'css/')) {
+                mkdir($publicationPath . 'css/');
+            }
+
+            if (!file_exists($publicationPath . 'skin/')) {
+                mkdir($publicationPath . 'skin/');
+            }
+
+            $this->copyRecursive($skinPath . 'css/', $publicationPath . 'css/');
+            $this->copyRecursive($skinPath . 'skin/', $publicationPath . 'skin/');
+
+            return true;
+        } else {
+
+            return false;
+        }
+
+    }
+
+    protected function prepareIndexTemplateAndCopyToPublicationPath($skinPath, $publicationPath) {
+        $skinContents = file_get_contents($skinPath . '/templates/template.html');
+
+        $indexContents = file_get_contents($publicationPath . 'index.html');
+
+        $indexCombinedWithSkinTemplate = str_replace('[-=TEMPLATE=-]', $skinContents, $indexContents);
+
+        $time = time();
+
+        $indexWithRandomGetsForJs = str_replace('[-=RANDOMVAL=-]', $time, $indexCombinedWithSkinTemplate);
+
+        file_put_contents($publicationPath . 'index.html', $indexWithRandomGetsForJs);
+    }
+
+    protected function prepareMetaTags($publicationPath, $projectURL, $projectTitle, $projectDescription, $projectThumb) {
+
+        if (file_exists($publicationPath . 'index.php')) {
+
+            $indexContents = file_get_contents($publicationPath . 'index.php');
+
+            
+            $indexContents = str_replace('[-=META_URL=-]', $projectURL, $indexContents);
+            $indexContents = str_replace('[-=META_TITLE=-]', $projectTitle, $indexContents);
+            $indexContents = str_replace('[-=META_DESCRIPTION=-]', $projectDescription, $indexContents);
+            $indexContents = str_replace('[-=META_THUMB=-]', $projectThumb, $indexContents);
+        }
+        
+        if(file_exists($projectThumb)){
+            list($projectThumbWidth, $projectThumbHeight) = getimagesize($projectThumb);            
+        }else{
+            $projectThumbWidth = '';
+            $projectThumbHeight = '';
+        }
+
+        if (file_exists($publicationPath . 'index.php')) {
+            $indexContents = str_replace('[-=META_THUMB_WIDTH=-]', $projectThumbWidth, $indexContents);
+            $indexContents = str_replace('[-=META_THUMB_HEIGHT=-]', $projectThumbHeight, $indexContents);
+
+            file_put_contents($publicationPath . 'index.php', $indexContents);
+
+        }
+
+
+        $indexContents = file_get_contents($publicationPath . 'index.html');
+
+        
+        $indexContents = str_replace('[-=META_URL=-]', $projectURL, $indexContents);
+        $indexContents = str_replace('[-=META_TITLE=-]', $projectTitle, $indexContents);
+        $indexContents = str_replace('[-=META_DESCRIPTION=-]', $projectDescription, $indexContents);
+        $indexContents = str_replace('[-=META_THUMB=-]', $projectThumb, $indexContents);
+
+
+        if(file_exists($projectThumb)){
+            list($projectThumbWidth, $projectThumbHeight) = getimagesize($projectThumb);            
+        }else{
+            $projectThumbWidth = '';
+            $projectThumbHeight = '';
+        }
+
+        $indexContents = str_replace('[-=META_THUMB_WIDTH=-]', $projectThumbWidth, $indexContents);
+        $indexContents = str_replace('[-=META_THUMB_HEIGHT=-]', $projectThumbHeight, $indexContents);
+
+        
+        file_put_contents($publicationPath . 'index.html', $indexContents);
+
+
+        $indexContents = file_get_contents($publicationPath . 'js/yui.js');
+        
+        $indexContents = str_replace('[-=META_URL=-]', $projectURL, $indexContents);
+
+        file_put_contents($publicationPath . 'js/yui.js', $indexContents);
+    }
+
+    // protected function copyPublicationController($publicationPath, $hash) {
+
+    //     $indexContents = file_get_contents(storage_path('/templates/publications/darkan/index.php'));
+        
+    //     $indexContents = str_replace('[-=PUBLICATION_HASH=-]', $hash, $indexContents);
+
+
+    //     file_put_contents($publicationPath . 'index.php', $indexContents);
+    // }
+
+    protected function sendToOCS($publicationPath, $hash) {
+        $ocs_container_projects = config('app.ocs_container_projects');
+        $ocs_container_banners = config('app.ocs_container_banners');
+        $status = 0;
+        $zip = new ZipArchive();
+
+        if ($zip->open($publicationPath . 'backup.zip', ZIPARCHIVE::CREATE) !==TRUE) {
+            exit ("nie mogę zrobić pliku archiwum project.zip");
+        }
+
+        //zip_dir('../../banners/'.$path, '../../banners/'.$path, '');
+
+        $this->zipDir($zip, $publicationPath);
+
+        $zip->close();
+
+        $ocs = new Ocs($ocs_container_projects, $ocs_container_banners);
+
+        $ocsret = $ocs->put($ocs->container_banners, $publicationPath . '/backup.zip', 'banners/' . $hash . '/backup.zip');
+
+        if (!$ocsret) {
+            // nie udalo sie wrzucic projektu na ocs
+
+            $status = 3;
+        }
+
+        unlink($publicationPath . 'backup.zip');
+        return $status;
+    }
+
+    protected function conversionImagesMin($path) {
+
+        foreach (
+            $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($path),
+            RecursiveIteratorIterator::SELF_FIRST) as $item
+        ) {
+        if ($item->isDir()) {
+
+            } else {
+
+                $fileName = basename($iterator->getSubPathName());
+                $_extName = explode('.', $fileName);
+                $extName = end($_extName);
+                $dirName = dirname($iterator->getSubPathName());
+
+                if (strtolower($extName) === 'png' && basename($iterator->getSubPathName(), '.' . $extName) !== 'min') {
+
+                    $minFileName = 'min' . '.' . $extName;
+                    $minFilePath = $path . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $minFileName;
+                    $ordFileName = $path . DIRECTORY_SEPARATOR . $iterator->getSubPathName();
+
+                    if (file_exists($minFilePath) && file_exists($ordFileName)) {
+                        unlink($ordFileName);
+                        // rename($minFilePath, $ordFileName);
+                    }
+                }
+
+                if (strtolower($extName) === 'jpg' && basename($iterator->getSubPathName(), '.' . $extName) !== 'min') {
+
+                    $minFileName = 'min' . '.' . $extName;
+                    $minFilePath = $path . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $minFileName;
+                    $ordFileName = $path . DIRECTORY_SEPARATOR . $iterator->getSubPathName();
+
+                    if (file_exists($minFilePath) && file_exists($ordFileName)) {
+                        unlink($ordFileName);
+                        // rename($minFilePath, $ordFileName);
+                    }
+                }
+
+                if (strtolower($extName) === 'jpeg' && basename($iterator->getSubPathName(), '.' . $extName) !== 'min') {
+
+                    $minFileName = 'min' . '.' . $extName;
+                    $minFilePath = $path . DIRECTORY_SEPARATOR . $dirName . DIRECTORY_SEPARATOR . $minFileName;
+                    $ordFileName = $path . DIRECTORY_SEPARATOR . $iterator->getSubPathName();
+
+                    if (file_exists($minFilePath) && file_exists($ordFileName)) {
+                        unlink($ordFileName);
+                        // rename($minFilePath, $ordFileName);
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    protected function zipDir($zip, $dir) {
+
+        foreach (
+            $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($dir),
+            RecursiveIteratorIterator::SELF_FIRST) as $item
+        ) {
+            if ($item->isDir()) {
+            } else {
+
+                $zip->addFile($dir . DIRECTORY_SEPARATOR . $iterator->getSubPathName(), $iterator->getSubPathName());
+
+            }
+        }
+    }
+
+    protected function rrmdir($dir)
+    {
+        if (is_dir($dir))
+        {
+            $objects = scandir($dir);
+            foreach ($objects as $object)
+            {
+                if ($object != "." && $object != "..") {
+                    if (filetype($dir."/".$object) == "dir")
+                        $this->rrmdir($dir."/".$object);
+                    else
+                        unlink($dir."/".$object);
+                }
+            }
+            reset($objects);
+            rmdir($dir);
+        }
+    }
+
+    protected function sizeRecursive($path) {
+        $size = 0;
+        if (is_dir($path)) {
+            $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+
+            foreach ($iterator as $file) {
+                $size += $file->getSize();
+            }
+        }
+        return $size;
+    }
+
+    protected function copyRecursive($source, $dest) {
+
+        foreach (
+            $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($source),
+            RecursiveIteratorIterator::SELF_FIRST) as $item
+        ) {
+        if ($item->isDir()) {
+            if (!file_exists($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName()))
+                mkdir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+            } else {
+                copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+            }
+        }
+    }
+
+    protected function sendData() {
+
+        return $this->responseData;
+
+    }
+	
+}

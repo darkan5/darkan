@@ -1,0 +1,5 @@
+var SwfStyleEditorView = StyleEditorView.extend({
+
+
+
+});

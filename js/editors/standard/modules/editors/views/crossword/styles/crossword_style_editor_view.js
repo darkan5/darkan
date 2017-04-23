@@ -1,0 +1,4 @@
+var CrosswordStyleEditorView = StyleEditorView.extend({
+
+
+});

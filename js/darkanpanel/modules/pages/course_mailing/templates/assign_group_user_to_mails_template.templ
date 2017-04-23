@@ -1,0 +1,57 @@
+<script id="assign-group-user-to-mail-template" type="text/template">
+
+
+      <div class="row">
+          <div class="col-lg-10">
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                     <?= Lang::get('darkanpanel.panel_title_dashboard_users_groups')?>
+
+                      <div class="pull-right">
+                      </div>
+                  </div>
+                  <!-- /.panel-heading -->
+                  <div class="panel-body">
+                      <div class="dataTable_wrapper">
+                          <table class="table table-responsive table-bordered table-hover">
+                              <thead>
+                                  <tr>
+                                      <th>Grupa</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <% _.each(groupsList, function(group, id) { %>
+                                      
+                                      <tr class="odd gradeX">
+                                          <td class="user-to-assign" groupid="<%=group.id%>" from="<%=group.from%>">
+                                              
+                                              <%- group.name %>
+                                              <i class="fa fa-check-circle pull-right text-success row-selected-icon"></i>
+                                          </td>
+                                      </tr>
+                                  <% }); %>
+
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <!-- /.panel-body -->
+              </div>
+              <!-- /.panel -->
+          </div>
+
+          <div class="col-lg-2 text-center">
+            <div class="btn btn-success assign-users disabled">
+              <div class="row">
+              <i class="fa fa-arrow-right fa-3x"></i>
+              </div>
+              <div class="row">
+              <?= Lang::get('darkanpanel.mailing_add_selected_groups_btn')?>
+              </div>
+            </div>
+            <hr/>
+            <button class="btn btn-danger remove-selection" >Wyczyść zaznaczenie</button>
+          </div>
+
+      </div>
+</script>

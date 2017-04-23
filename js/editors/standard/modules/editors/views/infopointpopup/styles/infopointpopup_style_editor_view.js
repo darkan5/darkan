@@ -1,0 +1,5 @@
+var InfoPointPopupStyleEditorView = ImageStyleEditorView.extend({
+
+
+
+});

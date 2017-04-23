@@ -1,0 +1,22 @@
+.window-new-folder-view {
+  width: 290px;
+  height: 190px;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  background-color: white;
+}
+
+.new-folder-name-submit, .new-folder-name-cancel {
+  /*background: #5082A5;
+  color: #fff;
+  padding: 3px 11px;
+  width: 110px;
+  margin-left: 4px;
+  margin-top: 5px;
+  position: relative;
+  float: left;
+  font-size: 12px;*/
+}

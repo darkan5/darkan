@@ -1,0 +1,11 @@
+/node_modules
+/public/storage
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+/app/editors/standard/node_server/config.js
+/js/editors/standard/content_template/js/modules/skin/f_skin_controller.js
+/js/editors/standard/modules/webservice/node/node_webservice.js
+/js/webservice/node/node_webservice.js

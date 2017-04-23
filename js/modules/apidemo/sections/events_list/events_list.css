@@ -1,0 +1,38 @@
+.events-list {
+	border: 1px solid black;
+	background-color: #FFF;
+}
+
+.events-list-items {
+	position: relative;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+
+	overflow-x: auto;
+	max-height: 200px;
+	height: auto;
+}
+
+.events-list-item{
+	width: calc(100% -10px);
+	height: 20;
+	border: 1px solid black;
+	margin: 5px;
+	background-color: #000;
+	color: #FFF;
+}
+
+.events-list-command-item{
+	color: #000;
+	background-color: #F2EF16;
+}
+
+.events-list-responce-item{
+	color: #FFF;
+	background-color: #7C0EE2;
+}
+
+.events-list-navigation{
+	margin: 5px;
+}

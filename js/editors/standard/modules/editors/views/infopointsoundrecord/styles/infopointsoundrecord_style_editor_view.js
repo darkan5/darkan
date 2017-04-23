@@ -1,0 +1,5 @@
+var InfoPointSoundRecordStyleEditorView = StyleEditorView.extend({
+
+
+
+});

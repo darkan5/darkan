@@ -1,0 +1,64 @@
+<script type="text/template" id="dashboard-item-users-list-template">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header"><?= Lang::get('darkanpanel.page_name_dashboard_users')?></h1>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                      <?= Lang::get('darkanpanel.panel_title_dashboard_users_list')?>
+
+                      <div class="pull-right">
+                      </div>
+                  </div>
+                  <!-- /.panel-heading -->
+                  <div class="panel-body">
+                      <div class="dataTable_wrapper">
+                          <table class="table table-responsive table-bordered table-hover">
+                              <thead>
+                                  <tr>
+                                      <th><?= Lang::get('darkanpanel.table_column_mail')?></th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <% var i = 1; %>
+                                  <% _.each(usersList, function(user) { %>
+                                  <tr class="odd gradeX">
+                                      <td>
+                                          <div class="user-photo" style="background-image:url(<%=user.photo.length > 8 ? user.photo : "<?=asset('/css/img/default_user.png')?>" %>)"></div>
+                                          <a href="#user/n/<%= user.id %>"> 
+                                            <%= user.login %>
+                                            <% if (user.username && user.username.length) { %>
+                                              <small> (<%- user.username %>)</small>
+                                            <% } %>
+                                          </a>
+                                      </td>
+                                  </tr>
+                                  <% }); %>
+                                  <% _.each(usersMailingList, function(user) { %>
+                                  <tr class="odd gradeX">
+                                      <td>
+                                          <div class="user-photo" style="background-image:url(<%=user.photo.length > 8 ? user.photo : "<?=asset('/css/img/default_user.png')?>" %>)"></div>
+                                          <a href="#user/m/<%= user.id %>"> 
+                                            <%= user.email %>
+                                          </a>
+                                          <small>(<?= Lang::get('darkanpanel.from_mailing') ?>)</small>
+                                      </td>
+                                  </tr>
+                                  <% }); %>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <!-- /.panel-body -->
+              </div>
+              <!-- /.panel -->
+          </div>
+          <!-- /.col-lg-12 -->
+      </div>
+
+
+</script>

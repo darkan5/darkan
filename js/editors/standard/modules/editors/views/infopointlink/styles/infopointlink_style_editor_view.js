@@ -1,0 +1,5 @@
+var InfoPointLinkStyleEditorView = ImageStyleEditorView.extend({
+
+
+
+});

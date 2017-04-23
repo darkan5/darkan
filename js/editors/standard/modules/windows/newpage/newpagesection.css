@@ -1,0 +1,202 @@
+.new-page-section-view {
+	width: 800px;
+	height: 600px;
+	background-color: rgb(230, 231, 226);
+}
+
+.new-page-section-view .window-content {
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.new-page-section-view ul {
+	clear: both;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.new-page-section-view li.template-li {
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 40px;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+.new-page-section-view li.template-li.template-li-new {
+	display: block;
+	width: 100%;
+	height: 110px;
+	background-color: red;
+}
+
+.new-page-section-view li.template-li.template-li-new .newpage-template-thumb {
+	float: none;
+	width: 149px;
+	margin: 10px auto;
+}
+
+.new-page-section-view .newpage-template-thumb, 
+.new-page-section-view .newpage-template-page-thumb 
+{
+	position: relative;
+	margin: 10px auto;
+	width: 155px;
+	height: 90px;
+	outline: 1px solid #333;
+	overflow: hidden;
+	font-size: 23px;
+	line-height: 90px;
+	text-align: center;
+	color: #B4B4B4;
+	box-sizing: border-box;
+}
+
+.new-page-section-view li.template-li:hover, 
+.new-page-section-view li.template-li:hover 
+{
+	text-decoration: underline;
+}
+
+.new-page-section-view .newpage-template-thumb-overlay, 
+.new-page-section-view .newpage-template-page-thumb-overlay 
+{
+	width: 156px;
+	height: 90px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 90px;
+	font-size: 25px;
+	font-size: bold;
+	color: #ccc;
+	cursor: pointer;
+}
+
+.new-page-section-view .new-page-item-view{
+	float: left;
+	width: 165px;
+	height: 120px;
+	margin: 5px;
+	cursor: pointer;
+	text-align: center;
+	padding: 6px;
+}
+
+.new-page-section-view .new-page-item-view:hover{
+    background-color: #F7F7F7;
+}
+
+.new-page-section-view .new-page-item-image-thumb{
+    width: 156px;
+    height: 90px;
+    border: 1px solid black;
+}
+
+.new-page-section-view .title {
+	font-size: 16px;
+	border-bottom: 2px solid #5082A5;
+	padding: 4px 10px;
+	box-sizing: border-box;
+}
+
+.new-page-section-view .no-templates-string {
+	font-size: 14px;
+	text-indent: 50px;
+	padding: 10px;
+	font-style: italic;
+	color: #797979;
+}
+
+
+.new-page-section-view .left-side {
+	width: 280px;
+	display: inline-block;
+	height: 100%;
+	border-right: 1px solid #ccc;
+	vertical-align: top;
+	text-align: center;
+}
+.new-page-section-view .right-side {
+	width: calc(100% - 300px);
+	display: inline-block;
+	height: calc( 100% - 50px );
+	margin-left: 10px;
+	vertical-align: top;
+	overflow: auto
+}
+
+.new-page-section-view .starting-page-add-blank {
+	background-image: url(../../../images/newpage.svg);
+	height: calc(100% - 60px);
+	background-size: 260px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	cursor: pointer;
+	max-width: 250px;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+
+.new-page-section-view .starting-page-add-blank .new-page-text {
+	text-align: center;
+	font-size: 20px;
+	top: calc(50% - 32px);
+	position: relative;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.new-page-section-view .starting-page-add-blank:hover {
+	background-color: #F7F7F7;
+}
+
+.new-page-section-view .starting-page-add-blank:hover .new-page-text {
+	text-decoration: underline;
+}
+
+.new-page-section-view .extras-icons {
+	position: absolute;
+	bottom: 0px;
+	left: 300px;
+	width: calc(100% - 300px);
+	height: 60px;
+	text-align: center;
+}
+
+.starting-page-icon {
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: inline-block;
+	padding: 5px 15px;
+	cursor: pointer;
+}
+.starting-page-icon:hover {
+	border-radius: 5px;
+	background-color: #F7F7F7;
+}
+
+.starting-page-icon.facebook {
+	background-image: url(../../../images/social/fb.png);
+}
+.starting-page-icon.blog {
+	background-image: url(../../../images/social/wp.png);
+}
+.starting-page-icon.youtube {
+	background-image: url(../../../images/social/yt_oval.png);
+}
+
+.starting-page-import-psd[disabled="disabled"] {
+	opacity: .4;
+}
+
+.starting-page-import-pdf[disabled="disabled"] {
+	opacity: .4;
+}

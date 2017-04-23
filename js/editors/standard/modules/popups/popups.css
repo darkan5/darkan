@@ -1,0 +1,100 @@
+.popup{
+
+    position: absolute;
+    width: auto;
+    height: auto;
+
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+
+    z-index: 6000;
+}
+
+.popup-wrapper{
+    background-color: #ffae00;
+    border: 1px solid #000000;
+}
+
+.popup-background{
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0, .5);
+    
+}
+
+.standard-popup{
+
+    
+}
+
+.popup-close-button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.popup-ok-button{
+    float: left;
+    width: 65%;
+    background: #4BAE5C;
+    color: #fff;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+}
+.popup-ok-button:hover {
+    background: #499957;
+}
+
+.popup-cancel-button{
+    float: left;
+    width: 35%;
+    background: #EE6E73;
+    color: #fff;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+}
+.popup-cancel-button:hover {
+    background: #CF666A;
+}
+
+.popup-content {
+    padding: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 100%;
+    overflow: auto;
+}
+
+.error-popup .window-top-bar {
+    background-color: #CF666A;
+}
+.error-popup  {
+    background-color: #CF666A !important;
+    color: #fff !important;
+    height: 200px !important;
+    border: 3px solid #CF666A !important;
+    box-shadow: 3px 3px 12px #CF666A !important;
+}
+.error-popup .popup-ok-button{
+    width: 100%;
+}
+.error-popup .popup-content{
+    font-size: 20px;
+    text-align: center;
+}

@@ -1,0 +1,293 @@
+.window-export-view {
+	width: 740px;
+	height: 280px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+.export-window-list {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.export-item {
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	padding: 20px 30px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.export-item:hover {
+	background-color: #E1F0FA;
+}
+
+.export-image {
+	width: 135px;
+	height: 135px;
+	background-image: url('../../../images/sprites/import_export_sprite.png');
+	background-repeat: no-repeat;
+}
+
+.export-item > .title {
+	font-size: 18px;
+}
+
+.export-zip-image {
+	background-position: 4px -475px;
+}
+.export-scorm-image {
+	background-position: 9px -600px;
+}
+.export-pdf-image {
+	background-position: 0px -316px;
+}
+
+.export-options-wrapper {
+	padding: 50px;
+	text-align: center;
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.generate-package-button {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    padding: 20px 0px !important;
+	border-radius: 3px;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+/* -------- Scorm ---------- */
+.window-export-scorm-view {
+	width: 400px;
+	height: 400px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+.export-scorm-options-wrapper {
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.export-scorm-options-wrapper .title {
+	font-size: 15px;
+	text-align: left;
+	margin: 10px 0px;
+}
+
+.package-name {
+	width: 100%;
+	height: 20px;
+	padding: 4px 6px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	border: 1px solid #cccccc;
+}
+
+
+
+/* -------- Html 5 ---------- */
+.window-export-html5-view {
+	width: 400px;
+	height: 200px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+/* -------- PDF ---------- */
+.window-export-pdf-view {
+	width: 60%;
+	height: 60%;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+.export-pdf-list-view {
+	margin: 0;
+	padding: 0;
+}
+
+.window-export-pdf-view .export-pdf-item-view {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 130px;
+}
+.window-export-pdf-view .pagethumb {
+	display: inline-block;
+	width: 150px;
+	height: 90px;
+	top: 5px;
+	/* margin: 0 auto; */
+	margin: 20px 40px;
+	border: 2px solid #ccc;
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 0px;
+}
+
+.window-export-pdf-view .select-page {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 56px;
+	left: 5px;
+}
+
+.window-export-pdf-view .page-note-label {
+	position: absolute;
+	top: 25px;
+}
+
+.window-export-pdf-view .page-note {
+	position: relative;
+	top: -14px;
+	left: 5px;
+	width: 50%;
+	height: 71px;
+}
+
+.pdf-pages-list-wrapper {
+	height: 100%;
+}
+
+.export-pdf-list-wrapper-view {
+	height: 100%;
+}
+
+.export-pdf-list {
+	height: calc(100% - 30px);
+	overflow: auto;
+}
+
+.export-pdf-buttons {
+	height: 35px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.window-export-pdf-view .generate {
+	background: #5082A5;
+	border: none;
+	padding: 6px 52px;
+	color: #fff;
+	cursor: pointer;
+	margin: 0px 9px;
+}
+
+.window-export-pdf-view .clearmessages {
+	background: #C82020;
+	border: none;
+	padding: 6px 30px;
+	color: #fff;
+	cursor: pointer;
+	margin: 0px 9px;
+}
+
+.window-export-pdf-view label.botoptionslbl {
+	border: 1px solid #ccc;
+	padding: 6px 0px 6px 10px;
+	cursor: pointer;
+	margin: 0px 2px;
+}
+.window-export-pdf-view label.botoptionslbl input {
+	vertical-align: middle;
+}
+
+
+
+.generate-pdf-progress-window {
+
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    width: auto;
+    height: auto;
+
+    z-index: 6000;
+}
+
+.generate-pdf-progress-wrapper{
+    width: 92px;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+.pdf-progress-bar {
+    height: 20px;
+    bottom: 19px;
+    top: auto;
+}
+
+.pdf-progress-bar-text {
+    top: 0px;
+    color: #000;
+    height: 100%;
+    /* left: 0px; */
+    z-index: 1;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.generate-pdf-progress-cancel {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    /* position: relative; */
+    text-align: center;
+    padding: 2px 8px;
+    /* margin-bottom: 5px; */
+    background-color: #CF5451;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+.generate-pdf-progress-cancel:hover {
+    background-color: #9B0B08;
+}
+
+.generate-pdf-progress-text {
+    font-size: 13px;
+    text-align: center;
+    height: 66px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.export-scorm-version{
+    width: 100%;
+    height: 27px;
+    padding: 3px 6px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+}

@@ -1,0 +1,140 @@
+
+
+<script id="component-template" type="text/template">
+    TEST
+</script>
+
+
+<script id="quiz-component-template" type="text/template">
+    <legend>Odpowiedzi:</legend>
+    <ul class="answers-wrapper">
+    <% _.each(answers, function(option, i) { %>
+        <li class="<%= option.goodAnswer ? 'good-ans text-success' : 'bad-ans text-danger' %>"><%- option.text %></li>
+    <% }); %>
+    </ul>
+</script>
+
+<script id="quizselectone-component-template" type="text/template">
+    <legend>Odpowiedzi:</legend>
+    <ul class="answers-wrapper">
+    <% _.each(answers, function(option, i) { %>
+        <li class="<%= option.goodAnswer ? 'good-ans text-success' : 'bad-ans text-danger' %>"><%- option.text %></li>
+    <% }); %>
+    </ul>
+</script>
+
+<script id="quizfillinblanks-component-template" type="text/template">
+    <div class="component-inner quizfillinblanks-component-inner">
+        <div class="quiz-body">
+            <% _.each(answers, function(option, i) { %>
+                <div>
+                    <label><input class="answer-checkbox" name="<%= actionkey %>" <%= option.goodAnswer ? 'checked' : '' %> it="<%= i %>"><span class="answer-text" it="<%= i %>"><%= option.text %></span></label>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+  
+</script>
+
+<script id="quizdnd-component-template" type="text/template">
+    <legend>Drad and Drop</legend>
+    <img src="css/img/analytics/dnd.png" />
+</script>
+
+<script id="quizconnectlines-component-template" type="text/template">
+    <legend>Connect Lines</legend>
+    <img src="css/img/analytics/qcl.png" />
+</script>
+
+<script id="crossword-component-template" type="text/template">
+    <div class="component-inner crossword-component-inner"><!--
+        --><% _.each(rows, function(row) { %><!--
+            --><div rowid="<%= row %>" class="crossword-row"><!--
+                --><% _.each(cols, function(col) { %><!--
+                    --><div class="crossword-cell-background" gender="<%= objs[row+'-'+col].type === 'question' ? objs[row+'-'+col].gender : '' %>"><!--
+                        --><div class="crossword-cell-password"></div><!--
+                        --><textarea class="crossword-cell <%= objs[row+'-'+col].type === 'question' ? 'crossword-cell-question' : '' %>"  <%= objs[row+'-'+col].type === 'question' ? '' : 'maxlength="1"' %> cellid="<%= row + '-' + col %>" cellx="<%= col %>" celly="<%= row %>" celltype="<%= objs[row+'-'+col].type %>"><%= objs[row+'-'+col].text %></textarea><!--
+                    --></div><!--
+                --><% }); %><!--
+            --></div><!--
+        --><% }); %><!--
+    --></div>
+</script>
+
+<script id="quizwordsearch-component-template" type="text/template">
+    <div class="quizwordsearch-component-inner"><!--
+        --><% _.each(rows, function(row) { %><!--
+            --><div rowid="<%= row %>" class="wordsearch-row"><!--
+                --><% _.each(cols, function(col) { %><!--
+                    --><div class="wordsearch-cell-background"><!--
+                        --><textarea class="wordsearch-cell"  maxlength="1" cellid="<%= row + '-' + col %>" cellx="<%= col %>" celly="<%= row %>" celltype="answers"><%= objs[row+'-'+col] %></textarea><!--
+                    --></div><!--
+                --><% }); %><!--
+            --></div><!--
+        --><% }); %><!--
+    --></div>
+</script>
+
+<script id="quizselect-component-template" type="text/template">
+    <legend>Podgląd:</legend>
+    <div class="component-inner quizselect-component-inner">
+        <select class="form-control input-sm">
+            <% _.each(formData.selectOptions, function(option, i) { %>
+                <option><%- option.option %></option>
+            <% }); %>
+        </select>
+        <div class="input-overlay"></div>
+    </div>
+</script>
+
+<script id="quizinputtext-component-template" type="text/template">
+    <legend>Text input - ankieta</legend>
+    <img src="css/img/analytics/inputtext.png" />
+</script>
+
+
+<script id="forminputtext-component-template" type="text/template">
+    <legend>Text input - ankieta</legend>
+    <img src="css/img/analytics/inputtext.png" />
+</script>
+
+<script id="formtextarea-component-template" type="text/template">
+    <legend>Textarea input - ankieta</legend>
+    <img src="css/img/analytics/inputtext.png" />
+</script>
+
+<script id="formselect-component-template" type="text/template">
+    <legend>Podgląd:</legend>
+    <div class="component-inner formselect-component-inner">
+        <select class="form-control input-sm">
+            <% _.each(formData.selectOptions, function(option, i) { %>
+                <option><%- option.option %></option>
+            <% }); %>
+        </select>
+        <div class="input-overlay"></div>
+    </div>
+</script>
+
+
+<script id="formradio-component-template" type="text/template">
+    <div class="component-inner formradio-component-inner">
+        <div class="input-wrapper" ><input type="radio" id="<%=actionkey%>"></div>
+        <label>
+            <div class="text-wrapper">
+                <%=contents%>
+            </div>
+        </label>
+    </div>
+</script>
+
+<script id="formcheckbox-component-template" type="text/template">
+    <div class="component-inner formcheckbox-component-inner">
+        <div class="input-wrapper"><input type="checkbox" id="<%=actionkey%>"></div>
+        <label>
+            <div class="text-wrapper">
+                <%=contents%>
+            </div>
+        </label>
+
+    </div>
+</script>

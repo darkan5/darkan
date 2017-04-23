@@ -1,0 +1,5 @@
+var InfoPointGalleryStyleEditorView = ImageStyleEditorView.extend({
+
+
+
+});

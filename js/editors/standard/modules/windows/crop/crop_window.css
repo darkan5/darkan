@@ -1,0 +1,15 @@
+.crop-window-view {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.image-crop-button-ok {
+	width: 60%;
+	margin: 5px auto;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.jcrop-holder {
+	margin: 0 auto;
+}

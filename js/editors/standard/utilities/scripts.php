@@ -1,0 +1,973 @@
+	<script src="modules/device/device.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/preloader/models/preloader_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/preloader/views/preloader_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/preloader/factory/preloader_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/visitors/delete_events_visitor.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/visitors/delete_page_events_visitor.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/visitors/add_events_visitor.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/api/darkaneditoraplicationapi.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/api/darkaneditorcontroller.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/state/aplication_state.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/utils/utils.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/utils/hx_overrides.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/utils/string_tools.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/utils/log.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="libs/summernote/summernote.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/watcher/models/project_watcher_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/watcher/views/project_watcher_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/watcher/views/project_watcher_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/history/models/history_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/history/collections/history_items_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/history/views/history_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/history/views/history_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+
+
+	<script src="modules/webservice/webservice.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/webservice/node/node_webservice.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/webservice/node/sockets/serversocket.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/webservice/node/sockets/serversocketio.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/webservice/php/php_webservice.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/webservice/fake/fake_webservice.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/webservice/data_access.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/capabilities/capabilities.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/image/image_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/audio/audio_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/video/video_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/pagesound/pagesound_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/pageimage/pageimage_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/swf/swf_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/file/file_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/sound/sounds_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/gallery/gallery_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/import/import_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/import/pdf/import_pdf_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/import/image/import_image_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/import/psd/import_psd_file_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/publish_icon/publish_icon_loader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/file_uploader/publish_banner_icon/publish_banner_icon_loader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/file_uploader/project/project_sound_uploader.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/item/item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/exercise_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/text/text_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/image/image_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/video/video_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/quiz/quiz_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/quizfillinblanks/quizfillinblanks_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/quizdnd/quizdnd_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/quizconnectlines/quizconnectlines_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/quizwordsearch/quizwordsearch_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/scroller/scroller_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/crossword/crossword_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/forminputtext/forminputtext_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/formupload/formupload_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/quizinputtext/quizinputtext_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/formtextarea/formtextarea_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/formcheckbox/formcheckbox_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/formradio/formradio_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/formselect/formselect_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/components/models/quizselect/quizselect_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/formsubmit/formsubmit_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/iframe/iframe_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/swf/swf_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/infopointpopup/infopointpopup_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/infopointlink/infopointlink_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/infopointsound/infopointsound_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/components/models/infopointsoundcontrol/infopointsoundcontrol_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/infopointsoundrecord/infopointsoundrecord_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/infopointgallery/infopointgallery_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/infopointdownload/infopointdownload_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/drawedinfopointlink/drawedinfopointlink_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/drawedinfopointdownload/drawedinfopointdownload_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/drawedinfopointgallery/drawedinfopointgallery_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/drawedinfopointpopup/drawedinfopointpopup_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/timer/timer_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/models/quizresult/quizresult_component_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/loaded_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/exercise_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/text/text_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/image/image_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/video/video_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quiz/quiz_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quizselectone/quizselectone_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quizfillinblanks/quizfillinblanks_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quizdnd/quizdnd_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quizconnectlines/quizconnectlines_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quizwordsearch/quizwordsearch_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/scroller/scroller_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/crossword/crossword_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/forminputtext/forminputtext_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/formupload/formupload_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quizinputtext/quizinputtext_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/formtextarea/formtextarea_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/formselect/formselect_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/components/views/quizselect/quizselect_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/formcheckbox/formcheckbox_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/formradio/formradio_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/formsubmit/formsubmit_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/iframe/iframe_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/swf/swf_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/infopointpopup/infopointpopup_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/infopointlink/infopointlink_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/infopointsound/infopointsound_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/components/views/infopointsoundcontrol/infopointsoundcontrol_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/infopointsoundrecord/infopointsoundrecord_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/infopointgallery/infopointgallery_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/infopointdownload/infopointdownload_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/drawedinfopointlink/drawedinfopointlink_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/drawedinfopointdownload/drawedinfopointdownload_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/drawedinfopointgallery/drawedinfopointgallery_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/drawedinfopointpopup/drawedinfopointpopup_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/timer/timer_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/views/quizresult/quizresult_component_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/miniature/views/component_miniature_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/collections/component_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/trigger/models/trigger_action_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/trigger/collections/trigger_actions_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/selector/models/selector_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/selector/views/selector_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/editors_views.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/exercise_editors_views.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/multiple_editors_views.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/size_and_position/size_and_position_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/size_and_position/multiple/multiple_size_and_position_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/align/align_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/timeline/timeline_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/timeline/timeline_multi_components_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/timeline/timeline_component_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/timeline/timeline_components_collection_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/timeline/timeline_row_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/timeline/timeline_stage_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/wcag/wcag_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/wcag/multiple/multiple_wcag_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/score/score_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/report/report_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/editors/views/report/multiple/multiple_report_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/score/publish_score_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/score/score_exercise_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/score/multiple/multiple_score_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/pagenote/pagenote_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/sound/sound_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/sound_uploader/loaded_sound_uploader_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/sound_uploader/sound_uploader_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/sound/multiple/multiple_sound_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/text/text_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/text/text_toolbar_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/image/image_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/video/video_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quiz/quiz_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizselectone/quizselectone_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizfillinblanks/quizfillinblanks_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizdnd/quizdnd_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizconnectlines/quizconnectlines_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizwordsearch/quizwordsearch_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/scroller/scroller_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/crossword/crossword_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/stage/stage_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/forminputtext/forminputtext_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formupload/formupload_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizinputtext/quizinputtext_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formtextarea/formtextarea_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formselect/formselect_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/editors/views/quizselect/quizselect_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formcheckbox/formcheckbox_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formradio/formradio_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formsubmit/formsubmit_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/iframe/iframe_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/swf/swf_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointpopup/infopointpopup_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointlink/infopointlink_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointsound/infopointsound_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/editors/views/infopointsoundcontrol/infopointsoundcontrol_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointsoundrecord/infopointsoundrecord_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointgallery/infopointgallery_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointdownload/infopointdownload_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointlink/drawedinfopointlink_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointdownload/drawedinfopointdownload_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointgallery/drawedinfopointgallery_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointpopup/drawedinfopointpopup_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/editors/views/parallaxe/parallaxe_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/editors/views/parallaxe/multiple/parallaxe_wcag_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/editors/views/timer/timer_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/factory/editors_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/factory/style_editors_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/image/styles/image_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/crossword/styles/crossword_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointdownload/styles/drawedinfopointdownload_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointgallery/styles/drawedinfopointgallery_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointlink/styles/drawedinfopointlink_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/drawedinfopointpopup/styles/drawedinfopointpopup_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/forminputtext/styles/forminputtext_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formupload/styles/formupload_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/editors/views/quizinputtext/styles/quizinputtext_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formselect/styles/formselect_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/editors/views/quizselect/styles/quizselect_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formcheckbox/styles/formcheckbox_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formradio/styles/formradio_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formtextarea/styles/formtextarea_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formsubmit/styles/formsubmit_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/iframe/styles/iframe_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointdownload/styles/infopointdownload_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointgallery/styles/infopointgallery_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointlink/styles/infopointlink_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointpopup/styles/infopointpopup_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointsound/styles/infopointsound_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/editors/views/infopointsoundcontrol/styles/infopointsoundcontrol_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/infopointsoundrecord/styles/infopointsoundrecord_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quiz/styles/quiz_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizselectone/styles/quizselectone_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizwordsearch/styles/quizwordsearch_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizconnectlines/styles/quizconnectlines_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizdnd/styles/quizdnd_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizfillinblanks/styles/quizfillinblanks_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/scroller/styles/scroller_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/stage/styles/stage_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/swf/styles/swf_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/text/styles/text_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/video/styles/video_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/timer/styles/timer_style_editor_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/editor_navigation_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/editors_navigation_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/editor_navigation_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/toggle_button_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/editors_navigation.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/timeline_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/properties_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/styles_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/reaports_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/sounds_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/wcag_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/note_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/parallax_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/score_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/size_and_position_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/ww_items/align_editor_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/open_editors_list.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/editors/views/editors_controller.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/color_picker/view/color_picker_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/color_picker/view/gradient_picker_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/styles/factory/styles_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/components/factory/componentfactory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/components/factory/componentfactory_not_editable.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/collections/timeline_item_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/models/timeline_row_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/collections/timeline_row_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/timeline_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/timeline_row_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/timeline_row_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/layers/layers_timeline_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/layers/layers_timeline_row_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/layers/layers_timeline_row_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/classic/classic_timeline_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/classic/classic_timeline_row_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/timeline/views/classic/classic_timeline_row_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/models/page_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/views/page_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/views/loaded_page_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/views/page_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/views/first/first_page_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/views/second/second_page_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/views/second/second_page_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/interface/interface_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/stage/stage_selector/stage_selector.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/stage/empty/empty_stage_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/stage/stage_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/stage/editable/editable_stage_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/stage/not_editable/not_editable_stage_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<!--<script src="modules/stage_controller.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>-->
+
+	<script src="modules/menu_panels/memu_panel.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/menu_panels/report/report_memu_panel.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/menu_panels/factory/menu_panels_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/main_layout/main_layout.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/pages/new_page_plus_button.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/pages/page_item.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/pages/pages_list.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/pages/editable/loaded_page_item.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/pages/editable/editable_page_item.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/pages/editable/editable_pages_list.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/pages/not_editable/not_editable_page_item.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/pages/not_editable/not_editable_pages_list.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/new_page_section.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/project/projects_list_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/projects_list_item.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/collections/existing_projects_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/projects_list_section.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/project_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/project_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/not-editable-project-view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/project_navigation_plus_button_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/projects_navigation_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/project_navigation_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/navigation/editable/editable_project_navigation_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/project/navigation/not_editable/not_editable_project_navigation_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/projects_navigation.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/open_projects_list.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/projects_controller.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/menus/top_menu/views/topmenu.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+    <script src="modules/menus/top_menu/views/browser/topmenu_browser.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+    <script src="modules/menus/top_menu/views/ipad/topmenu_ipad.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/menus/bottom_menu/bottommenu.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/menus/left_menu/leftmenu.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/menus/right_menu/rightmenu.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/window/models/window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/window/views/window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/window/views/loaded_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/modal/views/window_modal_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/imageswindow/models/imageswindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/imageswindow/views/imageswindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/testdrivewindow/models/testdrivewindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/testdrivewindow/views/testdrivewindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/timerwindow/models/timerclock_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/timerwindow/models/timerwindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/timerwindow/views/timerwindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectversionwindow/model/projectversionwindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectversionwindow/view/projectversionwindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/border/model/border_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/border/views/border_window.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/videowindow/models/videowindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/videowindow/views/videowindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/models/exportwindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/views/exportwindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/views/html/exportwindow_html_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/views/scorm/exportwindow_scorm_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/views/pdf/exportwindow_pdf_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/views/pdf/exportwindow_pdf_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/views/pdf/exportwindow_pdf_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/exportwindow/views/pdf/exportwindow_pdf_progress_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/importwindow/models/importwindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/importwindow/views/importwindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/newpage/models/new_page_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/newpage/collection/new_page_item_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/newpage/models/newpagewindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/newpage/views/newpagewindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/newpage/models/starting_newpagewindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/newpage/views/starting_newpagewindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/mailings/models/mailingwindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/mailings/views/mailingswindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/models/published_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/views/publication_options_window.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/views/publication_sharing_window.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/models/publishwindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/views/publish_project_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/views/publish_project_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/views/publish_project_to_override_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/publish/views/publishwindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/library/models/librarywindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/library/views/librarywindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectoptions/models/projectoptionswindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectoptions/views/projectoptionswindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectoptions/page_draw/page_draw_models.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectoptions/page_draw/page_draw_singlepage_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectoptions/page_draw/page_draw_singledraw_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/projectoptions/page_draw/page_draw_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/sharewindow/models/sharewindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/sharewindow/views/sharewindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/preview/models/previewwindow_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/preview/views/previewwindow_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/photopea/models/photopea_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/windows/photopea/views/photopea_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/functionnotavailable/models/functionnotavailable_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/windows/functionnotavailable/views/functionnotavailable_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/opts/models/trigger_animation_type_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/opts/models/trigger_animation_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/windows/trigger/opts/models/trigger_interaction_opts_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/animation/models/aniamation_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/animation/collections/animation_item_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/animation/models/animation_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/animation/views/animation_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/baizer/models/baizer_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/baizer/views/baizer_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/dzida/views/main_page_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/data_picker/models/data_picker_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/data_picker/views/data_picker_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/data_picker/views/simple_data_picker_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+
+
+	<script src="modules/windows/paste_components/models/paste_components_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/windows/paste_components/models/paste_components_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/windows/paste_components/collection/paste_components_items_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/paste_components/views/paste_components_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/windows/paste_components/views/paste_components_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/editors/models/editor_container_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/windows/editors/views/editor_container_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/add_multi_components/models/add_multi_components_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/windows/add_multi_components/views/add_multi_components_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+
+	<script src="modules/context_menu/models/context_menu_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/context_menu/collection/context_menu_item_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/context_menu_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/context_menu_subitem_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/components/component_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/context_menu/views/components/multi-component_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/components/specific_component_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/components/component_context_menu_view_not_editable.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/context_menu/views/components/multi-component_context_menu_view_not_editable.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/stage/stage_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/context_menu/views/stage/not_editable_stage_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/page/page_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/page/second_page_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/timeline_row/timeline_row_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/timeline_row/timeline_empty_row_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/container/context_menu_container.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/qcl/qcl_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/qcl/qcl_good_answer_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/qcl/qcl_container_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/navigation/navigation_item_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script src="modules/context_menu/views/navigation/not_editable_navigation_item_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/context_menu/views/editors/editor_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/context_menu/views/trigger/trigger_item_list_context_menu_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/popups/popup/models/popup_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/popups/popup/views/popup_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/popups/standard/views/standard-popup-view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/popups/error/views/error_popup_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/popups/create_pdf/views/create_pdf_dialog_popup.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/popups/publication/view/override_existing_publication.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/popups/factory/popups-factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/user/models/user_info.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/user/user.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/data_picker/models/data_picker_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/data_picker/views/data_picker_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/create_new_variable/models/create_new_variable_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/create_new_variable/views/create_new_variable_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	
+	<script src="modules/windows/create_new_variable/views/create_new_variable_static_variable_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/create_new_variable/collection/create_new_variable_items_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/create_new_variable/models/create_new_variable_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/create_new_variable/views/create_new_variable_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/else-option/models/trigger_else_option_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/else-option/collection/trigger_else_option_model_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/if_option/models/trigger_if_option_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/if_option/collection/trigger_if_option_model_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/subtriggers/models/trigger-subtrigger-model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/subtriggers/collection/trigger-subtrigger-collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/models/trigger_interaction_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/models/trigger_interaction_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/models/trigger_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+    <script src="modules/windows/trigger/models/trigger_interaction_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/models/trigger_interaction_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/models/trigger_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/list/views/trigger_list_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/list/views/trigger_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/section/views/trigger_section_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/section/views/subtriggers_section/trigger_subtrigger_item_view2.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/section/views/subtriggers_section/trigger_subtrigger_section_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/section/views/else_section/trigger_elseaction_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/section/views/else_section/trigger_elseaction_section_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/section/views/condition_section/trigger_condition_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/section/views/condition_section/trigger_condition_section_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/stage/views/trigger_stage_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/models/trigger-window-model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/trigger/views/trigger_window-view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/pdf/models/pdf_list_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/pdf/models/pdf_list_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/pdf/collection/pdf_list_item_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/pdf/views/pdf_list_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/pdf/views/pdf_list_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/pdf/views/pdf_list_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/add_new_page/views/add_new_page_progress_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/add_new_page/models/add_new_page_progress_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/crop/view/crop_window.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/quiz_fillinblanks_options/models/quiz_fillinblanks_options_window_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/quiz_fillinblanks_options/views/quiz_fillinblanks_options_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/windows/factory/window_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizdnd/windows/views/containereditorwindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizdnd/windows/views/allcontainereditorwindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizdnd/windows/views/dndoptionswindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/formsubmit/windows/views/formsubmitoptionswindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizconnectlines/windows/views/qclconnectioneditorwindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizconnectlines/windows/views/qclallconnectionseditorwindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizconnectlines/windows/views/qcloneconnectionseditorwindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizconnectlines/windows/views/qcloptionswindowview.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/crossword/windows/views/crossword_setting_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/editors/views/quizwordsearch/windows/views/quizwordsearch_setting_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/pages/windows/views/page_sound_setting_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/menus/right_menu/window/view/page_name_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/menus/right_menu/window/view/delete_page_window_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/app/controller/app_controller.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/project/project_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<!-- PROJECT LIST -->
+	<script type="text/javascript" src="modules/projects_list/models/projectlist_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/models/project_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/models/folder_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/models/share_user_item_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/collections/folders_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/collections/projects_collection.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/views/items/projectlist_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/views/items/folders/folder_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/folders/normal/normal_folder_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/folders/shared_template/shared_template_folder_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/views/items/projects/project_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/projects/normal/normal_project_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/projects/template/template_project_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/projects/shared_to_user/shared_to_user_project_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/views/items/share/share_user_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/share/normal/normal_share_user_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/share/noexist/no_exist_share_user_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/views/items/breadcrumb/breadcrumb_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/breadcrumb/normal/normal_breadcrumb_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/breadcrumb/search/search_breadcrumb_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/views/items/tree/tree_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/items/tree/normal/normal_tree_item_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/factory/folders_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/factory/projects_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/factory/breadcrumbs_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/factory/tree_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/factory/share_user_factory.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/models/projectlist_model.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/projectlist_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/breadcrumb_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/tree_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+	<script type="text/javascript" src="modules/projects_list/views/search_view.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script type="text/javascript" src="modules/projects_list/controller/project_list_controller.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/app/controller/app_controller2.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>
+
+	<script src="modules/app.js?r=<?php echo $CFG['v'] ?>" yui="true"></script>

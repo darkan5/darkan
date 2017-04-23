@@ -1,0 +1,35 @@
+
+
+
+######
+# Test Drive Refresh
+######
+# test drive on darkan.eu
+0 * * * * /root/cron/runonlyone.sh test_drive_cron.sh
+
+######
+# Projects OCS
+######
+# darkan.eu v2.0.0
+0,5,10,15,20,25,30,35,40,45,50,55  * * * * /root/cron/runonlyone.sh darkan2_ocs_cron.sh
+
+# darkan.eu v1.0.0 
+0,5,10,15,20,25,30,35,40,45,50,55  * * * * /root/cron/runonlyone.sh ocs_cron_darkan.sh
+
+# darkan.eu/euroforum v1.0.0
+0,5,10,15,20,25,30,35,40,45,50,55  * * * * /root/cron/runonlyone.sh ocs_cron_euroforum.sh
+
+# darkan.eu/euroforum2 v2.0.0
+0,5,10,15,20,25,30,35,40,45,50,55  * * * * /root/cron/runonlyone.sh ocs_cron_darkan2_euroforum.sh
+
+######
+# Banners OCS
+######
+# darkan.eu - banners (2:10 AM once a day)
+10 2 * * * /root/cron/runonlyone.sh cron_banner_darkan.sh
+
+######
+# Clear Temp folders
+######
+# Clear temp folders in all instances (every 15 minutes)
+0,15,30,45 * * * * /root/cron/runonlyone.sh cron_clear_tmp.sh

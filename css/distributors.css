@@ -1,0 +1,58 @@
+.buttons-container{
+	
+}
+
+.mailing-message{
+	display: none;
+}
+
+.mailing-message-loader{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url(img/loaders/25.GIF);
+    background-size: 20px 20px;
+}
+
+.distributors-user-thumb {
+	height: 20px;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+.copy-demo-label{
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    width: 32%;
+}
+
+.copy-demo-thumb {
+    position: relative;
+    width: 228px;
+    height: 130px;
+    overflow: hidden;
+}
+
+.copy-demo-name{
+	
+}
+
+.copy-demo-label .thumbnail {
+	position: relative;
+	overflow: hidden;
+
+}
+
+.project-selection-checkbox {
+	position: absolute;
+    right: -1px;
+    top: -5px;
+	width: 30px;
+	height: 30px;
+}
+.button-wrapper {
+    margin: 10px 20px;
+}

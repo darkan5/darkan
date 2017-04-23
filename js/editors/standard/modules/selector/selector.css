@@ -1,0 +1,9 @@
+.selection-box{
+    position: absolute;
+    border: 1px solid black;
+    z-index: 500;
+}
+
+.selected-draggable{
+    background-color: #000000;
+}

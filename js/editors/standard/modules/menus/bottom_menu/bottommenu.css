@@ -1,0 +1,40 @@
+#menu-bottom {
+	position: absolute;
+	bottom: 0px;
+	height: 210px;
+	width: calc(100% - 100px);
+	right: 0px;
+	border-top: 2px solid #aaaaaa;
+	z-index: 1000;
+}
+
+#bottom-menu-tabs-showhide {
+	cursor: pointer;
+	float: left;
+	margin: 5px 3px 0px 2px;
+	height: 26px;
+	width: 45px;
+	line-height: 26px;
+	color: #241414;
+	background: #D4E4EF;
+	/* position: fixed; */
+	text-align: center;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+#botmenu-parallaxe {
+	
+}
+#botmenu-parallaxe input{
+	width: 50px;
+	text-align: center;
+}
+#botmenu-parallaxe label{
+	margin: 6px 0px;
+	text-align: center;
+}

@@ -1,0 +1,64 @@
+/*.body{
+	color: #000;
+}
+
+.logo-top{
+	width: 50px;
+}
+
+.navbar-brand-extend{
+	padding-top: 2px;
+}
+*/
+.panel-big {
+	padding: 10px 15px 20px;
+}
+
+.image-container{
+	width: 100px;
+}
+
+.btn-change-letter{
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	line-height: 35px;
+}
+
+.btn-start-app{
+	width: 100px;
+	height: 80px;
+	margin: 5px;
+	line-height: 70px;
+}
+
+.btn-change-disabled{
+	opacity: 0.5;
+}
+
+.portal-settings-image{
+    cursor: pointer;
+    width: 150px;
+    height: auto;
+}
+
+.plan-version[version="1.0"]{
+	background-color: #5cb85c;
+	color: #fff;
+}
+
+.plan-version[version="2.0"]{
+	background-color: #d9534f;
+	color: #fff;
+}
+
+.plan-version[version="3.0"]{
+	background-color: #5bc0de;
+	color: #fff;
+}
+
+.portal-settings-image{
+    cursor: pointer;
+    width: 150px;
+    height: auto;
+}

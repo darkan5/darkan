@@ -1,0 +1,78 @@
+html, body {
+     overflow-x: hidden;
+     font-family: 'Lato';
+     color: #000;
+     background: #FBFBFB;
+ }
+
+.thumbnail {
+    background-color: #E8FFFF;
+}
+
+.portal-header {
+    background-color: #E8FFFF;
+}
+.portal-header *{
+    color: #FF0000;
+}
+
+.thumbnail * {
+    color: #FF0000;
+}
+
+.extra-info li {
+    color: #FF0000;
+}
+
+.btn-readmore {
+    color: #fff;
+}
+
+
+.btn-statiscics,
+.btn-statiscics:hover,
+.btn-statiscics:link{
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+.btn-logout,
+.btn-logout:hover,
+.btn-logout:link{
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+.well {
+    background-color: #E8FFFF;
+
+}
+.btn {
+    color: #ffffff;
+}
+.btn-darkan{
+    background-color: #FF0000 !important ;
+}
+
+.vertical-timeline-dot {
+    background-color: #FF0000 !important ;
+}
+.darkan-vertical-timeline:before {
+    background: #FF0000;
+}
+.auth-form {
+    border: 10px solid #FF0000 !important;
+}
+
+.btn-login {
+    background-color: #ae0000 !important;
+    border-color: #ae0000 !important;
+    border-radius: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px solid #FF0000 !important;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}

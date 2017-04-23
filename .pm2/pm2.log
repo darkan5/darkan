@@ -1,0 +1,218 @@
+2017-03-19 10:30:04: ===============================================================================
+2017-03-19 10:30:04: --- New PM2 Daemon started ----------------------------------------------------
+2017-03-19 10:30:04: Time                 : Sun Mar 19 2017 10:30:04 GMT+0100 (CET)
+2017-03-19 10:30:04: PM2 version          : 2.4.0
+2017-03-19 10:30:04: Node.js version      : 7.4.0
+2017-03-19 10:30:04: Current arch         : x64
+2017-03-19 10:30:04: PM2 home             : /var/www/.pm2
+2017-03-19 10:30:04: PM2 PID file         : /var/www/.pm2/pm2.pid
+2017-03-19 10:30:04: RPC socket file      : /var/www/.pm2/rpc.sock
+2017-03-19 10:30:04: BUS socket file      : /var/www/.pm2/pub.sock
+2017-03-19 10:30:04: Application log path : /var/www/.pm2/logs
+2017-03-19 10:30:04: Process dump file    : /var/www/.pm2/dump.pm2
+2017-03-19 10:30:04: Concurrent actions   : 2
+2017-03-19 10:30:04: SIGTERM timeout      : 1600
+2017-03-19 10:30:04: ===============================================================================
+2017-03-19 10:30:37: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:37: App name:darkan_server id:0 online
+2017-03-19 10:30:38: App [darkan_server] with id [0] and pid [11409], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:38: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:38: App name:darkan_server id:0 online
+2017-03-19 10:30:39: App [darkan_server] with id [0] and pid [11423], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:39: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:39: App name:darkan_server id:0 online
+2017-03-19 10:30:40: App [darkan_server] with id [0] and pid [11433], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:40: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:40: App name:darkan_server id:0 online
+2017-03-19 10:30:40: App [darkan_server] with id [0] and pid [11443], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:40: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:40: App name:darkan_server id:0 online
+2017-03-19 10:30:41: App [darkan_server] with id [0] and pid [11453], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:41: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:41: App name:darkan_server id:0 online
+2017-03-19 10:30:42: App [darkan_server] with id [0] and pid [11463], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:42: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:42: App name:darkan_server id:0 online
+2017-03-19 10:30:42: App [darkan_server] with id [0] and pid [11473], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:42: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:42: App name:darkan_server id:0 online
+2017-03-19 10:30:43: App [darkan_server] with id [0] and pid [11483], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:43: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:43: App name:darkan_server id:0 online
+2017-03-19 10:30:44: App [darkan_server] with id [0] and pid [11493], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:44: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:44: App name:darkan_server id:0 online
+2017-03-19 10:30:45: App [darkan_server] with id [0] and pid [11503], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:45: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:45: App name:darkan_server id:0 online
+2017-03-19 10:30:45: App [darkan_server] with id [0] and pid [11519], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:45: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:45: App name:darkan_server id:0 online
+2017-03-19 10:30:46: App [darkan_server] with id [0] and pid [11529], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:46: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:46: App name:darkan_server id:0 online
+2017-03-19 10:30:47: App [darkan_server] with id [0] and pid [11539], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:47: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:47: App name:darkan_server id:0 online
+2017-03-19 10:30:47: App [darkan_server] with id [0] and pid [11549], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:47: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:47: App name:darkan_server id:0 online
+2017-03-19 10:30:48: App [darkan_server] with id [0] and pid [11559], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:48: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 10:30:48: App name:darkan_server id:0 online
+2017-03-19 10:30:49: App [darkan_server] with id [0] and pid [11569], exited with code [1] via signal [SIGINT]
+2017-03-19 10:30:49: Script /var/www/app/editors/standard/node_server/darkan_server.js had too many unstable restarts (16). Stopped. "errored"
+2017-03-19 11:04:39: Stopping app:darkan_server id:0
+2017-03-19 11:04:39: app=darkan_server id=0 does not have a pid
+2017-03-19 11:04:54: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:04:54: App name:darkan_server id:0 online
+2017-03-19 11:04:56: App [darkan_server] with id [0] and pid [12173], exited with code [1] via signal [SIGINT]
+2017-03-19 11:04:56: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:04:56: App name:darkan_server id:0 online
+2017-03-19 11:04:56: App [darkan_server] with id [0] and pid [12183], exited with code [1] via signal [SIGINT]
+2017-03-19 11:04:56: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:04:56: App name:darkan_server id:0 online
+2017-03-19 11:04:57: App [darkan_server] with id [0] and pid [12193], exited with code [1] via signal [SIGINT]
+2017-03-19 11:04:57: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:04:57: App name:darkan_server id:0 online
+2017-03-19 11:04:58: App [darkan_server] with id [0] and pid [12203], exited with code [1] via signal [SIGINT]
+2017-03-19 11:04:58: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:04:58: App name:darkan_server id:0 online
+2017-03-19 11:04:58: App [darkan_server] with id [0] and pid [12213], exited with code [1] via signal [SIGINT]
+2017-03-19 11:04:58: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:04:58: App name:darkan_server id:0 online
+2017-03-19 11:04:59: App [darkan_server] with id [0] and pid [12223], exited with code [1] via signal [SIGINT]
+2017-03-19 11:04:59: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:04:59: App name:darkan_server id:0 online
+2017-03-19 11:05:00: App [darkan_server] with id [0] and pid [12233], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:00: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:00: App name:darkan_server id:0 online
+2017-03-19 11:05:01: App [darkan_server] with id [0] and pid [12243], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:01: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:01: App name:darkan_server id:0 online
+2017-03-19 11:05:01: App [darkan_server] with id [0] and pid [12260], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:01: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:01: App name:darkan_server id:0 online
+2017-03-19 11:05:02: App [darkan_server] with id [0] and pid [12274], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:02: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:02: App name:darkan_server id:0 online
+2017-03-19 11:05:03: App [darkan_server] with id [0] and pid [12284], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:03: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:03: App name:darkan_server id:0 online
+2017-03-19 11:05:04: App [darkan_server] with id [0] and pid [12294], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:04: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:04: App name:darkan_server id:0 online
+2017-03-19 11:05:04: App [darkan_server] with id [0] and pid [12304], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:04: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:04: App name:darkan_server id:0 online
+2017-03-19 11:05:05: App [darkan_server] with id [0] and pid [12314], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:05: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:05: App name:darkan_server id:0 online
+2017-03-19 11:05:06: App [darkan_server] with id [0] and pid [12324], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:06: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:06: App name:darkan_server id:0 online
+2017-03-19 11:05:06: App [darkan_server] with id [0] and pid [12334], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:06: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:05:06: App name:darkan_server id:0 online
+2017-03-19 11:05:07: App [darkan_server] with id [0] and pid [12344], exited with code [1] via signal [SIGINT]
+2017-03-19 11:05:07: Script /var/www/app/editors/standard/node_server/darkan_server.js had too many unstable restarts (16). Stopped. "errored"
+2017-03-19 11:11:45: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:45: App name:darkan_server id:0 online
+2017-03-19 11:11:45: App [darkan_server] with id [0] and pid [12564], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:45: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:45: App name:darkan_server id:0 online
+2017-03-19 11:11:46: App [darkan_server] with id [0] and pid [12574], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:46: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:46: App name:darkan_server id:0 online
+2017-03-19 11:11:47: App [darkan_server] with id [0] and pid [12584], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:47: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:47: App name:darkan_server id:0 online
+2017-03-19 11:11:47: App [darkan_server] with id [0] and pid [12594], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:47: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:48: App name:darkan_server id:0 online
+2017-03-19 11:11:48: App [darkan_server] with id [0] and pid [12604], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:48: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:48: App name:darkan_server id:0 online
+2017-03-19 11:11:49: App [darkan_server] with id [0] and pid [12614], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:49: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:49: App name:darkan_server id:0 online
+2017-03-19 11:11:50: App [darkan_server] with id [0] and pid [12624], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:50: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:50: App name:darkan_server id:0 online
+2017-03-19 11:11:50: App [darkan_server] with id [0] and pid [12634], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:50: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:50: App name:darkan_server id:0 online
+2017-03-19 11:11:51: App [darkan_server] with id [0] and pid [12644], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:51: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:51: App name:darkan_server id:0 online
+2017-03-19 11:11:52: App [darkan_server] with id [0] and pid [12654], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:52: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:52: App name:darkan_server id:0 online
+2017-03-19 11:11:53: App [darkan_server] with id [0] and pid [12671], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:53: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:53: App name:darkan_server id:0 online
+2017-03-19 11:11:54: App [darkan_server] with id [0] and pid [12681], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:54: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:54: App name:darkan_server id:0 online
+2017-03-19 11:11:54: App [darkan_server] with id [0] and pid [12698], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:54: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:54: App name:darkan_server id:0 online
+2017-03-19 11:11:55: App [darkan_server] with id [0] and pid [12708], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:55: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:55: App name:darkan_server id:0 online
+2017-03-19 11:11:56: App [darkan_server] with id [0] and pid [12725], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:56: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:11:56: App name:darkan_server id:0 online
+2017-03-19 11:11:57: App [darkan_server] with id [0] and pid [12735], exited with code [1] via signal [SIGINT]
+2017-03-19 11:11:57: Script /var/www/app/editors/standard/node_server/darkan_server.js had too many unstable restarts (16). Stopped. "errored"
+2017-03-19 11:12:55: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:12:55: App name:darkan_server id:0 online
+2017-03-19 11:12:56: App [darkan_server] with id [0] and pid [12778], exited with code [1] via signal [SIGINT]
+2017-03-19 11:12:56: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:12:56: App name:darkan_server id:0 online
+2017-03-19 11:12:57: App [darkan_server] with id [0] and pid [12788], exited with code [1] via signal [SIGINT]
+2017-03-19 11:12:57: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:12:57: App name:darkan_server id:0 online
+2017-03-19 11:12:57: App [darkan_server] with id [0] and pid [12798], exited with code [1] via signal [SIGINT]
+2017-03-19 11:12:57: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:12:57: App name:darkan_server id:0 online
+2017-03-19 11:12:58: App [darkan_server] with id [0] and pid [12808], exited with code [1] via signal [SIGINT]
+2017-03-19 11:12:58: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:12:58: App name:darkan_server id:0 online
+2017-03-19 11:12:59: App [darkan_server] with id [0] and pid [12818], exited with code [1] via signal [SIGINT]
+2017-03-19 11:12:59: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:12:59: App name:darkan_server id:0 online
+2017-03-19 11:12:59: App [darkan_server] with id [0] and pid [12828], exited with code [1] via signal [SIGINT]
+2017-03-19 11:12:59: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:12:59: App name:darkan_server id:0 online
+2017-03-19 11:13:00: App [darkan_server] with id [0] and pid [12838], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:00: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:00: App name:darkan_server id:0 online
+2017-03-19 11:13:01: App [darkan_server] with id [0] and pid [12848], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:01: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:01: App name:darkan_server id:0 online
+2017-03-19 11:13:01: App [darkan_server] with id [0] and pid [12858], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:01: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:01: App name:darkan_server id:0 online
+2017-03-19 11:13:02: App [darkan_server] with id [0] and pid [12872], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:02: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:02: App name:darkan_server id:0 online
+2017-03-19 11:13:03: App [darkan_server] with id [0] and pid [12882], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:03: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:03: App name:darkan_server id:0 online
+2017-03-19 11:13:04: App [darkan_server] with id [0] and pid [12899], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:04: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:04: App name:darkan_server id:0 online
+2017-03-19 11:13:05: App [darkan_server] with id [0] and pid [12909], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:05: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:05: App name:darkan_server id:0 online
+2017-03-19 11:13:05: App [darkan_server] with id [0] and pid [12919], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:05: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:05: App name:darkan_server id:0 online
+2017-03-19 11:13:06: App [darkan_server] with id [0] and pid [12929], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:06: Starting execution sequence in -fork mode- for app name:darkan_server id:0
+2017-03-19 11:13:06: App name:darkan_server id:0 online
+2017-03-19 11:13:07: App [darkan_server] with id [0] and pid [12939], exited with code [1] via signal [SIGINT]
+2017-03-19 11:13:07: Script /var/www/app/editors/standard/node_server/darkan_server.js had too many unstable restarts (16). Stopped. "errored"
+2017-03-19 11:13:42: Stopping app:darkan_server id:0
+2017-03-19 11:13:42: app=darkan_server id=0 does not have a pid

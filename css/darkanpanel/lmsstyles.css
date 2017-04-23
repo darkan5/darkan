@@ -1,0 +1,322 @@
+body,
+.navbar-default
+{
+	background-color: #406C8B;
+}
+.lms-topmenu-offset {
+	height: 70px;
+}
+#side-menu {
+	font-size: 16px;
+	margin-top: 50px;
+}
+.navbar-default {
+  border-color: #fff;
+}
+.sidebar ul li > a{
+  color: #fff;
+}
+
+.navbar-default {
+/*  background-color: #D4E4EF;
+  border-color: #fff;*/
+}
+
+.sidebar ul li {
+  /*border-bottom: 1px solid #fff;*/
+  border: none;
+}
+
+.sidebar ul li > a{
+  /*color: #fff;*/
+}
+#wrapper {
+  min-height: 100%;
+  width: 100%;
+}
+
+#page-wrapper {
+    background-color: #F0F0F0;
+}
+
+.navbar-top-links a {
+	color: #fff;
+}
+
+.nav .open>a, 
+.nav .open>a:focus, 
+.nav .open>a:hover
+{
+	background-color: #747474;
+}
+.nav>li>a:focus, 
+.nav>li>a:hover
+{
+	background-color: #747474;
+}
+
+.navbar {
+	border: 0px solid #fff;
+}
+
+@media(max-width:768px) {
+    .navbar-brand {
+        top: 0px;
+    }
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover 
+{
+	color: #EFE8E8;
+}
+
+.navbar-brand {
+	float: left;
+	height: 50px;
+	padding: 15px 54px;
+	font-size: 27px;
+	line-height: 20px;
+	z-index: 10;
+}
+
+#user-points-text {
+	font-size: 2em;
+	text-align: center;
+}
+
+#user-status-icon {
+	text-align: center;
+}
+
+.status-title {
+	font-size: 1.5em;
+}
+
+.requirements-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.user-photo,
+.course-photo,
+.course-thumb
+{
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	border-radius: 10px;
+}
+
+.user-photo {
+	background-size: contain;
+}
+.course-thumb {
+	background-size: cover;
+}
+
+.medium-thumb {
+	width: 50px;
+	height: 50px;
+}
+
+.user-photo.big-thumb {
+	width: 80px;
+	height: 80px;
+	margin-right: 20px;
+	border-radius: 10px;
+}
+
+.course-thumb.big-thumb {
+	width: 120px;
+	height: 80px;
+	margin-right: 20px;
+	border-radius: 10px;
+	border: 2px solid #fff;
+}
+
+.user-assigned,
+.course-assigned,
+.user-to-assign
+{
+	cursor: pointer;
+}
+
+.user-to-assign .row-selected-icon,
+.course-to-assign .row-selected-icon {
+	display: none;
+}
+
+.user-to-assign.success .row-selected-icon,
+.course-to-assign.success .row-selected-icon {
+	display: block;
+}
+
+
+.user-assigned .row-selected-icon,
+.course-assigned .row-selected-icon
+{
+	display: none;
+}
+.user-assigned:hover .row-selected-icon,
+.course-assigned:hover .row-selected-icon
+{
+	display: block;
+}
+
+.user-assigned:hover,
+.course-assigned:hover
+{
+	background-color: #f2dede;
+}
+ 
+.assign-users * {
+	white-space: normal;
+	text-align: center;
+}
+
+.assign-courses * {
+	white-space: normal;
+	text-align: center;
+}
+
+.panel-button {
+	margin-top: -7px;
+	border: 1px solid #E5E5E5;
+}
+
+.mailing-address{
+    width: 100%;
+}
+
+.mailing-title{
+    width: 100%;
+}
+
+.mailing-message{
+   width: 100%;
+}
+
+.mailing-button-send{
+
+}
+
+.add-mail-to-list{
+
+}
+
+.mailing-button-send[disabled="disabled"]{
+	opacity: .7;
+}
+
+.mail-return-info {
+	margin: 30px 0px;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.badge.removeuser {
+    background-color: #d9534f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-user-submit {
+	height: 120%;
+}
+
+.add-user-name {
+	border-bottom-left-radius: 0px;
+}
+.add-user-email {
+	border-bottom-left-radius: 4px !important;
+	border-top: none;
+}
+
+.assign-users-btn-padding {
+	padding: 0px 10px;
+}
+
+.assign-courses-btn-padding{
+	padding: 0px 10px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.select-user-group {
+	display: none;
+}
+.get-simple-csv-file{
+	color: #ccc;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 5px;
+
+}
+
+#certyficate-title{
+	width: 600px;
+	height: 120px;
+	padding: 5px;
+}
+
+.certyficate-table{
+	margin: 5px;
+}
+
+.form-input-radio {
+	width: 20px;
+	height: 20px;
+	margin: 3px 5px !important;
+	vertical-align: middle;
+}
+
+#portal-price {
+	width: 50px;
+}

@@ -1,0 +1,14 @@
+.lead {
+	font-size: 18px;
+}
+
+.pp-mymoney {
+	float: none;
+	margin: 0 auto;
+}
+
+.money-text .huge {
+    font-size: 3em;
+    margin: 20px 0px;
+    color: rgb(70, 136, 71);
+}

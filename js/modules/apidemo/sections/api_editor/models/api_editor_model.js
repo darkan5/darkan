@@ -1,0 +1,4 @@
+var ApiEditorModel = ApiModel.extend({
+
+
+});

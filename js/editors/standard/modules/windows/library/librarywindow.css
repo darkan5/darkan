@@ -1,0 +1,85 @@
+.window-library-view {
+	width: 80%;
+	height: 90%;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+.window-library-view .ui-tabs-nav {
+    display: block;
+    overflow: auto;
+}
+
+.library-window-search-input {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 10px;
+	border-radius: 3px;
+	border: 2px solid #5082A5;
+	text-align: center;
+}
+
+.avatar-folder,
+.bgcolor-folder {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    margin: 15px;
+    border: #ccc solid 2px;
+    background-repeat:  no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.avatar-folder:hover,
+.bgcolor-folder:hover
+{
+    border: #ccc dashed 2px;
+}
+
+.avatar-item,
+.bgcolor-item {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    margin: 20px;
+    border: #ccc solid 2px;
+    background-repeat:  no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.avatar-item:hover,
+.bgcolor-item:hover 
+{
+    border: #ccc dashed 2px !important;
+}
+
+#botmenu-styles .avatar-item,
+#botmenu-styles .avatar-folder {
+    width: 100px;
+    height: 100px;
+}
+
+#botmenu-styles .background-back {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    margin: 20px;
+    border: #ccc solid 2px;
+    background-repeat:  no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+#botmenu-styles .background-back:hover {
+    border: #ccc dashed 2px !important;
+}

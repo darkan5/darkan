@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+    
+    
+<head>
+    <meta http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <script src="../../../../../v.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+    <link rel="stylesheet" href="../../../../content_template/css/f_stage.css" />
+    <link rel="stylesheet" href="../../../../content_template/css/f_components.css" />
+
+    <link rel="stylesheet" href="../../../../content_template/css/plugins/image-templates.css" />
+    <link rel="stylesheet" href="../../../../content_template/css/plugins/question-dnd-templates.css" />
+    <link rel="stylesheet" href="../../../../content_template/css/plugins/question-multi-templates.css" />
+    <link rel="stylesheet" href="../../../../content_template/css/plugins/simpletext-fancy-styles.css" />
+    <link rel="stylesheet" href="../../../../content_template/css/plugins/template-styles.css" />
+
+
+    <link rel="stylesheet" href="../../../../content_template/js/libs/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="../../../../content_template/js/libs/fancybox/jquery.fancybox.css" />
+
+    <link rel="stylesheet" href="../../../../content_template/css/animations/animate.css" />
+    <link rel="stylesheet" href="../../../../content_template/css/animations/animations.css" />
+
+    <link rel="stylesheet" href="../../../../content_template/css/windows.css" />
+
+    <!-- <link rel="stylesheet" href="../../../../skins/default/def00/css/animsstyles.css" /> -->
+
+    <script>
+        var __meta__ = {
+            userID: 1,
+            projectID: 372
+        };
+
+        function getURLParameters()
+        {
+
+            url =  window.location.search.substring(0);
+
+            var result = {};
+                        var searchIndex = url.indexOf("?");
+                        if (searchIndex == -1 ) return result;
+            var sPageURL = url.substring(searchIndex +1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++)
+            {       
+                var sParameterName = sURLVariables[i].split('=');      
+                result[sParameterName[0]] = sParameterName[1];
+            }
+            return result;
+        }
+        var params = getURLParameters();
+        var dimentions = '';
+        var my_skin = '';
+        for (var paramName in params) {
+            if (paramName == 'dimentions')
+                dimentions = params[paramName];
+            if (paramName == 'skin') {
+                my_skin = params[paramName];
+            }
+        }
+        var fileref=document.createElement("link");
+        fileref.setAttribute("rel", "stylesheet");
+        fileref.setAttribute("type", "text/css");
+        fileref.setAttribute("href", "../../../../skins/" + dimentions + '/' + my_skin + "/css/animsstyles.css");
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+
+        var language = 'pl';
+    </script>
+
+    <script src="../../../../content_template/js/language/lang.js"></script>
+
+    <script src="../../../../content_template/js/libs/utils/html5shiv.js"></script>
+    <script src="../../../../content_template/js/libs/utils/preload.js"></script>
+    <script src="../../../../content_template/js/libs/jquery/jq11.js"></script>
+    <script src="../../../../content_template/js/libs/jquery/jqui.js"></script>
+    <script src="../../../../content_template/js/libs/jquery/jquery.swfobject.js"></script>
+    <script src="../../../../content_template/js/libs/jquery/jqueryui-touchpunch.js"></script>
+    <script src="../../../../content_template/js/libs/underscore/underscore.js"></script>
+    <script src="../../../../content_template/js/libs/backbone/backbone.js"></script>
+    <script src="../../../../content_template/js/libs/backbone/backbone.stickit.js"></script>
+    <script src="../../../../content_template/js/libs/backbone/backbone.controller.js"></script>
+    
+    <script src="../../../../content_template/js/libs/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js"></script>
+
+    <link href="../../../../content_template/js/libs/video-js/video-js.css?r=<?php echo $CFG['v'] ?>" rel="stylesheet" type="text/css">
+    <script src="../../../../content_template/js/libs/video-js/video.js"></script>
+    <script src="../../../../content_template/js/libs/video-js/vjs.youtube.js"></script>
+    <script src="../../../../content_template/js/libs/video-js/vjs.vimeo.js"></script>
+    <script> videojs.options.flash.swf = "../../../../content_template/js/libs/video-js/video-js.swf";</script>
+
+    <script src="../../../../content_template/js/libs/fancybox/jquery.fancybox.js"></script>
+
+    <script src="../../../../content_template/js/libs/connectlines/lib/jsBezier-0.6.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/mottle-0.4.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/biltong-0.2.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/util.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/browser-util.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/dom-adapter.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/jsPlumb.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/endpoint.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/connection.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/anchors.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/defaults.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/connectors-bezier.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/connectors-statemachine.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/connectors-flowchart.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/connector-editors.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/renderers-svg.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/renderers-vml.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/base-library-adapter.js"></script>
+    <script src="../../../../content_template/js/libs/connectlines/lib/jquery.jsPlumb.js"></script>
+
+
+
+    <!--[if !IE]><!--><link rel="stylesheet" href="../../../../content_template/css/fonts.css" /><!--<![endif]-->
+    <!--[if IE]><!--><link rel="stylesheet" href="../../../../content_template/css/fonts_ie.css" /><!--<![endif]-->
+    <title>Darkan</title>    
+</head>
+ 
+<body>
+   
+    <div id="skin">
+        <div class="topbar">
+            <div class="leftside"></div>
+            <div class="middle">
+                <div id="pagename"></div>
+                </div>
+            <div class="rightside"></div>
+        </div>
+        <div class="leftbar"></div>
+
+		
+        <div id="stage">
+            <div id="page-load-progress">
+                <figure>
+                    <figcaption class="page-load-progressbar-wrapper">
+                        <div class="page-load-progressbar">
+                            <div class="page-load-progressbar-inner"></div>
+                        </div>
+                    </figcaption>
+                    <figcaption class="page-load-progressbar-text">0%</figcaption>
+                </figure>
+            </div>
+
+            <div id="stage-content"></div>
+        </div>
+
+        <div class="rightbar"></div>
+
+        <div class="botbar">
+            <div class="leftside"></div>
+            <div class="middle">
+
+                <div id="menu">
+                    <div id="play"></div>
+                    <div id="pause"></div>
+                    <div id="stop"></div>
+                    <div id="previous" tabindex="100" title="przycisk wstecz"></div>
+                    <div id="counter"></div>
+                    <div id="next" tabindex="99" title="przycisk dalej"></div>
+                    <div id="progressbar"><div id="progressbar-inside"></div></div>
+                    <div id="toc"></div>
+                    <div id="status"></div>
+                    <div id="zoom" class="zoom-in"></div>
+                    <div id="fullscreen" class="fullscreen" tabindex="102" ></div>
+                    <div id="sound-slider" style="display:none"></div>
+                    <div id="zoom-slider" style="display:none"></div>
+                </div>
+
+            </div>
+            <div class="rightside"></div>
+        </div>
+
+
+    </div>
+
+
+<!-- COMPONENTS TEMPLATE -->
+    <script id="component-template" type="text/template">
+        <div name="type"></div>
+        <label>Draggable: </label><span name="draggable"></span>
+        <label>Position X: </label><div name="position-x"></div>
+        <label>Position Y: </label><div name="position-y"></div>
+    </script>
+
+    <script id="text-component-template" type="text/template">
+        <div class="text-component-inner component-inner">
+            <%= contents %>
+        </div>
+    </script>
+
+    <script id="forminputtext-component-template" type="text/template">
+        <div class="forminputtext-component-inner component-inner">
+            <input type="text" placeholder="<%= placeholder %>" value="<%= defaultValue %>" style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;">
+        </div>
+    </script>
+
+    <script id="formtextarea-component-template" type="text/template">
+        <div class="formtextarea-component-inner component-inner">
+            <textarea style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;" maxlength="<%= maxLength %>"><%= defaultValue %></textarea>
+        </div>
+    </script>
+
+    <script id="formselect-component-template" type="text/template">
+        <div class="formselect-component-inner component-inner">
+            <select class="form-select" style="font-size:<%=fontSize%>px;">
+                <% _.each(formData.selectOptions, function(option, i) { %>
+                    <option value="<%=option.option%>" it="<%=i%>" <% if(option.startValue) { %>selected<% } %> ><%=option.option%></option>
+                <% }) %>
+            </select>
+        </div>
+    </script>
+
+    <script id="formsubmit-component-template" type="text/template">
+        <div class="component-inner form-submit-component-inner"><%= buttonTitle %></div>
+    </script>
+
+    <script id="formradio-component-template" type="text/template">
+        <div class="component-inner formradio-component-inner">
+            <div class="input-wrapper"><input type="radio" name="<%=groupName%>" id="<%=actionkey%>" style="width:<%=inputSize%>px;height:<%=inputSize%>px;"></div>
+            <label for="<%=actionkey%>">
+                <div class="text-wrapper">
+                    <%=contents%>
+                </div>
+            </label>
+        </div>
+    </script>
+
+    <script id="formcheckbox-component-template" type="text/template">
+        <div class="component-inner formcheckbox-component-inner">
+            <div class="input-wrapper"><input type="checkbox" id="<%=actionkey%>" style="width:<%=inputSize%>px;height:<%=inputSize%>px;"></div>
+            <label for="<%=actionkey%>">
+                <div class="text-wrapper">
+                    <%=contents%>
+                </div>
+            </label>
+        </div>
+    </script>
+
+    <script id="iframe-component-template" type="text/template">
+        <div class="iframe-component-inner component-inner">
+            <iframe class="iframeObj" onload="this.blur()" <%= link !== '' ? 'src="' + link + '"' : '' %>></iframe>
+        </div>
+    </script>
+
+    <script id="swf-component-template" type="text/template">
+        <div class="swf-component-inner component-inner">
+            <div class="swf-wrapper"></div>
+        </div>
+    </script>
+
+    <script id="drawedinfopointlink-component-template" type="text/template">
+        <div class="drawedinfopointlink-component-inner component-inner"></div>
+    </script>
+
+    <script id="drawedinfopointdownload-component-template" type="text/template">
+        <div class="drawedinfopointdownload-component-inner component-inner">
+            <div class="snd-wrapper"></div>
+        </div>
+    </script>
+
+    <script id="drawedinfopointpopup-component-template" type="text/template">
+        <div class="drawedinfopointpopup-component-inner component-inner">
+        </div>
+    </script>
+
+    <script id="drawedinfopointgallery-component-template" type="text/template">
+        <div class="drawedinfopointgallery-component-inner component-inner">
+            <div class="snd-wrapper"></div>
+        </div>
+    </script>
+
+    <script id="infopointpopup-component-template" type="text/template">
+        <div class="infopointpopup-component-inner component-inner md-trigger" data-modal="modal-1">
+        </div>
+    </script>
+
+    <script id="infopointlink-component-template" type="text/template">
+        <div class="infopointlink-component-inner component-inner">
+        </div>
+    </script>
+
+    <script id="infopointsound-component-template" type="text/template">
+        <div class="infopointsound-component-inner component-inner">
+            <audio>
+                <source src="exported_view/<%= actionkey.split('-').pop() %>/audio/<%= actionkey %>/<%= sound %>"></source>
+            </audio>
+        </div>
+    </script>
+
+    <script id="infopointsoundrecord-component-template" type="text/template">
+        <div class="infopointsoundrecord-component-inner component-inner">
+        </div>
+    </script>
+
+    <script id="infopointgallery-component-template" type="text/template">
+        <div class="infopointgallery-component-inner component-inner">
+            <div class="snd-wrapper"></div>
+        </div>
+    </script>
+
+    <script id="infopointdownload-component-template" type="text/template">
+        <div class="infopointdownload-component-inner component-inner">
+            <a 
+                href="exported_view/<%= actionkey.split('-').pop() %>/file/<%= actionkey %>/<%= fileToDownload %>" 
+                download 
+                style="width:100%;height:100%;position:absolute;">
+            </a>
+            <div class="snd-wrapper"></div>
+        </div>
+    </script>
+
+    <script id="scroller-component-template" type="text/template">
+    </script>
+
+    <script id="quiz-component-template" type="text/template">
+        <div class="component-inner quiz-component-inner">
+            <div class="quiz-body">
+                <% _.each(answers, function(option, i) { %>
+                    <div class="answer-wrapper" style="left:<%=option.left%>px;top:<%=option.top%>px">
+                        <label><input class="answer-checkbox" name="<%= actionkey %>" type="<%= multiselect ? 'checkbox' : 'radio' %>" it="<%= i %>"><span class="answer-text"><%= option.text %></span></label>
+                    </div>
+                <% }); %>
+            </div>
+            <div class="quiz-submit-button" style="display:<%= buttonShow ? 'block' : 'none' %>;left:<%=submitButton.left%>px;top:<%=submitButton.top%>px"><%=submitButton.text%></div>
+        </div>
+    </script>
+
+    <script id="quizfillinblanks-component-template" type="text/template">
+        <div class="quizfillinblanks-component-inner component-inner">
+            <div class="quiz-body">
+                <% _.each(answers, function(option, i) { %>
+                    <div>
+                        <label><input class="answer-checkbox" name="<%= actionkey %>" type="<%= multiselect ? 'checkbox' : 'radio' %>" <%= option.goodAnswer ? 'checked' : '' %> it="<%= i %>"><span class="answer-text" it="<%= i %>"><%= option.text %></span></label>
+                    </div>
+                <% }); %>
+            </div>
+            <div class="accept-new-line-answer">Zatwierdź</div>
+            <div class="quiz-submit-button" style="display:<%= buttonShow ? 'block' : 'none' %>;">Potwierdź</div>
+        </div>
+    </script>
+
+    <script id="quizdnd-component-template" type="text/template">
+        <div class="quiz-dnd-component-inner component-inner"><%= buttonTitle %>
+        </div>
+    </script>
+
+    <script id="quizconnectlines-component-template" type="text/template">
+        <div class="quiz-connectlines-component-inner component-inner"><%= buttonTitle %>
+        </div>
+    </script>
+
+    <script id="crossword-component-template" type="text/template">
+        <div class="crossword-component-inner">
+            <% _.each(rows, function(row) { %><!--
+                --><div rowid="<%= row %>" class="crossword-row"><!--
+                    --><% _.each(cols, function(col) { %><!--
+                        --><div class="crossword-cell-background" gender="<%= objs[row+'-'+col].type === 'question' ? objs[row+'-'+col].gender : '' %>" style="<% if (objs[row+'-'+col].type === 'answer' && objs[row+'-'+col].text === '') { %>visibility:hidden;<% } %>"><!--
+                            --><div class="crossword-cell-password"></div><!--
+                            --><textarea class="crossword-cell <%= objs[row+'-'+col].type === 'question' ? 'crossword-cell-question' : '' %>"  <%= objs[row+'-'+col].type === 'question' ? '' : 'maxlength="1"' %> cellid="<%= row + '-' + col %>" cellx="<%= col %>" celly="<%= row %>" celltype="<%= objs[row+'-'+col].type %>"></textarea><!--
+                        --></div><!--
+                    --><% }); %><!--
+                --></div><!--
+                --><div class="clear"></div>
+            <% }); %>
+            <div class="crossword-component-overlay"></div>
+        </div>
+    </script>
+
+    <script id="quizwordsearch-component-template" type="text/template">
+        <div class="quizwordsearch-component-inner">
+            <% _.each(rows, function(row) { %><!--
+                --><div rowid="<%= row %>" class="wordsearch-row"><!--
+                    --><% _.each(cols, function(col) { %><!--
+                        --><div class="wordsearch-cell-background"><!--
+                            --><textarea class="wordsearch-cell"  maxlength="1" cellid="<%= row + '-' + col %>" cellx="<%= col %>" celly="<%= row %>" celltype="answers" readonly="readonly"><%= objs[row+'-'+col] %></textarea><!--
+                        --></div><!--
+                    --><% }); %><!--
+                --></div><!--
+                --><div class="clear"></div><!--
+            --><% }); %><!--
+        --></div>
+    </script>
+
+    <script id="image-component-template" type="text/template">
+        <div class="image-component-inner component-inner">
+            <div class="img-wrapper">
+                <img 
+                    src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= imageFileName %>"
+                    width="100%" 
+                    height="100%"
+                    style="opacity:<%= opacity %>;" 
+                     />
+            </div>
+        </div>
+    </script>
+
+    <script id="video-component-template" type="text/template">
+        <div class="video-component-inner component-inner">
+            <div class="video-wrapper">
+            </div>
+        </div>
+    </script>
+
+    <script id="timer-component-template" type="text/template">
+        <div>Timer</div>
+    </script>
+
+    <script id="feedback-template" type="text/template"> 
+        <div class="window-top-bar"></div>
+        <input type="button" class='window-close-button'>
+        <div class="window-content">
+            <%=content%>
+        </div>
+    </script>
+
+
+    <script id="window-template" type="text/template"> 
+        <div class="window-top-bar"><%=title%></div>
+        <input type="button" class='window-close-button'>
+        <div class="window-content">
+            <%=content%>
+        </div>
+    </script>
+
+    <!-- WINNDOWS -->
+    <script src="../../../../content_template/js/modules/windows/window_model.js"></script>
+    <script src="../../../../content_template/js/modules/windows/window_view.js"></script>
+    <!-- FEEDBACKS -->
+    <script src="../../../../content_template/js/modules/windows/feedback/feedback_model.js"></script>
+    <script src="../../../../content_template/js/modules/windows/feedback/feedback_view.js"></script>
+
+    <!-- COMPONENTS VIEWS-->
+    <script src="../../../../content_template/js/modules/components/views/f_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/text/f_text_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/image/f_image_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/video/f_video_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/quiz/f_quiz_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/quizfillinblanks/f_quizfillinblanks_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/quizdnd/f_quizdnd_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/quizconnectlines/f_quizconnectlines_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/scroller/f_scroller_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/crossword/f_crossword_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/wordsearch/f_wordsearch_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/forminputtext/f_forminputtext_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/formtextarea/f_formtextarea_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/formselect/f_formselect_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/formsubmit/f_formsubmit_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/formcheckbox/f_formcheckbox_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/formradio/f_formradio_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/iframe/f_iframe_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/swf/f_swf_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/infopointpopup/f_infopointpopup_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/infopointlink/f_infopointlink_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/infopointsound/f_infopointsound_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/infopointsoundrecord/f_infopointsoundrecord_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/infopointgallery/f_infopointgallery_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/infopointdownload/f_infopointdownload_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/drawedinfopointlink/f_drawedinfopointlink_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/drawedinfopointdownload/f_drawedinfopointdownload_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/drawedinfopointgallery/f_drawedinfopointgallery_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/drawedinfopointpopup/f_drawedinfopointpopup_component_view.js"></script>
+    <script src="../../../../content_template/js/modules/components/views/timer/f_timer_component_view.js"></script>
+
+    <!-- COMPONENTS FACTORY -->
+    <script src="../../../../content_template/js/modules/components/factory/f_componentfactory.js"></script>
+
+
+    <script src="js/variables.js"></script>
+
+    <script src="../../../../content_template/js/modules/utils/f_log.js"></script>
+    <script src="../../../../content_template/js/modules/utils/f_utils.js"></script>
+
+    <script src="../../../../content_template/js/modules/stage/f_sound_controller.js"></script>
+    <script src="../../../../content_template/js/modules/stage/f_trigger_controller.js"></script>
+
+    <script src="../../../../content_template/js/modules/models/f_componentmodel.js"></script>
+    <script src="../../../../content_template/js/modules/models/f_timelinemodel.js"></script>
+    <script src="../../../../content_template/js/modules/models/f_pagemodel.js"></script>
+    <script src="../../../../content_template/js/modules/models/f_projectmodel.js"></script>
+
+    <script src="../../../../content_template/js/modules/timeline/f_timeline.js"></script>
+    <script src="../../../../content_template/js/modules/stage/f_stageview.js"></script>
+
+    <script src="../../../../content_template/js/modules/skin/f_skin_controller.js"></script>
+    <script src="../../../../content_template/js/modules/course_controller/f_course_controller.js"></script>
+    <script src="../../../../content_template/js/modules/f_darkan.js"></script>
+
+</body>
+ 
+    
+ 
+</html>

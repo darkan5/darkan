@@ -1,0 +1,854 @@
+.topmenu-expanded:after {
+	content: ' ';
+	position: absolute;
+	top: -12px;
+	left: 34px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #fff;
+}
+
+#text-editor-image {
+    background-image: url('../../../images/sprites/texteditor_1366.png');
+    width: 526px;
+    height: 36px;
+}
+
+#menu-top #topmenu-add-new-page:after {
+	background-position: 0px -100px;
+}
+
+#menu-top .topmenu-import:after {
+	background-position: 0px -907px;
+}
+
+#menu-top #topmenu-import-files:after {
+	background-position: 0px -150px;
+}
+
+#menu-top #topmenu-savetoscorm:after {
+	background-position: 0px -1028px;
+}
+
+#menu-top #topmenu-export-to-pdf:after {
+	background-position: 0px -1079px;
+}
+
+#menu-top #topmenu-savetoscorm:after {
+	background-position: 0px -200px;
+}
+
+#menu-top #topmenu-banners:after {
+	background-position: 0px -50px;
+}
+
+#menu-top #topmenu-purge-project:after {
+	background-position: 0px -528px;
+}
+
+#menu-top #topmenu-export-expendable:after {
+	background-position: 0px -970px;
+}
+
+#menu-top #topmenu-extras-videosearch:after {
+	background-position: 0px -715px;
+}
+
+#menu-top #topmenu-extras-imagesearch:after {
+	background-position: 0px -667px;
+}
+
+#menu-top #topmenu-extras-db:after {
+	background-position: 0px -477px;
+}
+
+#menu-top #topmenu-extras-fbphoto:after {
+	background-position: 0px -764px;
+}
+
+#menu-top #help-tutorial:after {
+	background-position: 0px -429px;
+}
+
+
+#menu-top .topmenu-project-version:after {
+	background-position: 0px -1135px;
+}
+
+#menu-top #topmenu-savetozip:after {
+	background-position: 0px -1028px;
+}
+
+#menu-top #topmenu-publish-project:after {
+	background-position: 0px -49px;
+}
+
+#showhide-pagelist-button:after {
+	background-position: 0px -335px;
+}
+.topmenu-variables:after {
+	background-position: 0px -1174px;
+}
+
+#video-tutorial:after {
+	background-position: -5px -1228px;
+}
+#docs-tutorial:after {
+	background-position: 0px -100px;
+}
+
+.topmenu-back:after {
+	background-position: 0px -824px;
+}
+
+.topmenu-prev:after {
+	background-position: 0px -853px;
+}
+
+.topmenu-cut:after {
+	background-position: 0px -880px;
+}
+
+.topmenu-copy:after {
+	background-position: 0px -911px;
+}
+
+.topmenu-paste:after {
+	background-position: 0px -948px;
+}
+
+.topmenu-paste-special:after {
+	background-position: 0px -980px;
+}
+
+.topmenu-duplicate:after {
+	background-position: 0px -1013px;
+}
+
+.topmenu-move-components-to-new-layer:after {
+	background-position: 0px -1049px;
+}
+
+#menu-top {
+	position: fixed;
+	z-index: 1101;
+	top: 0px;
+	background: #D4E4EF;
+	border-bottom: 2px solid #D4E4EF;
+	left: 100px;
+	width: calc(100% - 100px );
+}
+
+#menu-top-tabs {
+	background: none;
+	border: none;
+	float: left;
+	min-width: 500px;
+	width: 100%;
+}
+
+#menu-top-tabs .topmenu-expanded {
+	display: none;
+	position: absolute;
+	left: -10px;
+	top: 100%;
+	text-align: center;
+	background: #fff;
+	margin: 0;
+	padding: 12px 10px;
+	box-sizing: content-box;
+	border-radius: 5px;
+	-webkit-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	-moz-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	-o-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	-ms-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+}
+
+.menu-top-right-pane {
+	position: absolute;
+	right: 102px;
+	top: 30px;
+	width: 400px;
+}
+
+.menu-top-right-pane > div {
+	float: right;
+}
+
+#size-and-position-container {
+	margin-top: 7px;
+}
+
+#size-and-position-container fieldset{
+	border: none;
+}
+
+#size-and-position-container input{
+	color: #888;
+	border: 1px solid #ccc;
+	width: 45px;
+	font-size: 12px;
+    margin: 0px;
+}
+.rotate-row {
+	text-align: left;
+	display: inline-block;
+}
+
+.rotateangle-label {
+	height: 14px !important;
+	width: 14px !important;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: url(rotate.png);
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.size-and-position-editor-column {
+	display: block;
+	width: 130px;
+	display: inline-block;
+}
+
+.size-and-position-editor-column-label {
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	line-height: 23px;
+	margin: 0px 2px;
+    font-size: 10px;
+}
+
+.size-and-position-editor-column.whcolumn {
+	margin-left: 0px;
+	position: relative;
+}
+
+
+/* ------------ PROFILE / view / options/ lang BOX -------------- */
+.profile-box {
+	width: 570px;
+	position: absolute;
+	right: 0px;
+	height: 25px;
+}
+
+.profile-box #view {
+	background-color: #BB3737;
+	color: #fff;
+	font-weight: bolder;
+	position: relative;
+	float: right;
+	height: 25px;
+	padding: 0px 18px 0px 22px;
+	text-indent: 11px;
+	line-height: 26px;
+	cursor: pointer;
+	margin-right: 5px;
+	background-image: url(../../../images/sprites/topmenu.png);
+	background-repeat: no-repeat;
+	background-position: 2px -106px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+
+.profile-box #lms {
+  background-color: #67ABD6;
+  color: #fff;
+  font-weight: bolder;
+  position: relative;
+  float: right;
+  height: 25px;
+  padding: 0px 10px;
+  line-height: 26px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.profile-box #view:hover,
+.profile-box #lms:hover 
+{
+	text-decoration: underline;
+}
+#view:before {
+	content: "";
+	position: absolute;
+	
+	width: 20px;
+	height: 20px;
+	float: left;
+	top: 4px;
+	left: 12px;
+	background-repeat: no-repeat;
+	background-position: -2px -434px;
+}
+
+.profile-box #share-project, 
+.profile-box #project-options 
+{
+	position: relative;
+	float: right;
+	height: 25px;
+	padding: 0px 10px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+	background-color: #88ABC4;
+	color: #fff;
+	padding: 0px 15px 0px 15px;
+	margin: 0px 1px;
+	background-image: url(../../../images/sprites/topmenu.png);
+	background-repeat: no-repeat;
+	
+}
+.profile-box #share-project {
+	background-position: 0px -74px;
+}
+.profile-box #project-options {
+	background-position: 0px -43px;
+}
+.profile-box #share-project:hover, 
+.profile-box #project-options:hover
+{
+	background-color: #5487AB;
+}
+
+#close-project {
+  background-image: url(../../../images/sprites/topmenu.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 33px;
+  height: 25px;
+  overflow: hidden;
+  text-indent: -9999px;
+  float: right;
+  cursor: pointer;
+}
+
+.change-language {
+  position: relative;
+  float: right;
+  width: 31px;
+  height: 25px;
+  padding-left: 5px;
+  background: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+}
+.change-language span {
+  line-height: 25px;
+}
+.change-language .downarrow {
+  line-height: 25px;
+}
+ul#languages-list {
+  color: #000;
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #D4E4EF;
+  top: 25px;
+  right: -1px;
+  z-index: 2000;
+  padding: 0;
+}
+ul#languages-list li {
+  cursor: pointer;
+  text-align: center;
+  line-height: 25px;
+  width: 36px;
+  height: 25px;
+  display: block;
+}
+.profile-box .profile {
+  position: relative;
+  float: right;
+  width: 216px;
+  height: 25px;
+  background: #fff;
+  -webkit-border-radius: 1px 1px 0 0;
+  -moz-border-radius: 1px 1px 0 0;
+  border-radius: 1px 1px 0 0;
+}
+.profile-box .text-box {
+  position: absolute;
+  overflow: hidden;
+  color: #a0a0a0;
+  font-size: 10px;
+  line-height: 12px;
+  top: 2px;
+  left: 5px;
+}
+.left-disk-space-text {
+  right: 12px;
+  position: absolute;
+  bottom: 4px;
+  font-size: 10px;
+}
+.left-disk-space {
+  width: 206px;
+  height: 5px;
+  background: #fff;
+  left: 00px;
+  top: 25px;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.profile .profile-menu {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 95px;
+  background: #fff;
+  border: 1px solid #D4E4EF;
+  top: 25px;
+  left: -1px;
+}
+
+.profile-picture-mini {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 15px;
+}
+
+.profile .profile-menu .profile-picture {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.profile .profile-menu .links-container {
+  width: 50%;
+  text-align: center;
+}
+.profile .profile-menu a.menu-links {
+  position: relative;
+  font-size: 11px;
+  text-align: center;
+  background: #5082A5;
+  color: #fff;
+  width: 112px;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 1px;
+  float: left;
+  top: 20px;
+  left: 2px;
+  text-decoration: none;
+}
+.profile-box .downarrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  background: #ccc;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 10px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+}
+.profile:hover .profile-menu {
+  display: block;
+}
+.change-language:hover ul#languages-list {
+  display: block;
+}
+.profile .profile-menu a.menu-links:hover {
+  background: #67ABD6;
+}
+.profile .profile-menu a.menu-links:hover,
+ul#languages-list li:hover
+{
+  background: #67ABD6;
+  color: #fff;
+}
+
+.aspectratio {
+	position: absolute;
+	left: 57px;
+    top: 9px;
+}
+
+#aspectRatioOverlay {
+	position: absolute;
+	background: #fff;
+	opacity: 0.8;
+	width: 10px;
+	height: 35px;
+	transform: rotate(270deg);
+}
+
+#aspectRatio {
+	display:none;
+}
+#aspectRatio + label {
+	cursor: pointer;
+	position: absolute;
+	background: url('../../../images/sprites/topmenu.png');
+	background-position: -14px -148px;
+	width: 10px;
+	height: 32px;
+    transform: rotate(270deg);
+}
+#aspectRatio:checked + label {
+	background-position: -5px -148px;
+}
+
+/* ---- ALIGN editor ---- */
+#align-container {
+	background: white;
+	text-align: center;
+	border-style: outset;
+	border-color: #F0F0F0;
+    margin: 3px 6px;
+    padding: 5px 10px;
+    border-width: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+}
+
+#align-container:hover {
+	border-style:  inset;
+}
+
+#align-container:hover .align-ul {
+	display:block;
+}
+.align-top-menu {
+	position: relative;
+}
+
+#align-container .align-ul ul {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 15px;
+	list-style-type: none;
+	background: #fff;
+	margin: 0;
+	padding: 10px;
+	box-sizing: content-box;
+	border-radius: 5px;
+	-webkit-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	-moz-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	-o-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	-ms-box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+	box-shadow: rgb(0, 0, 0) 0px -2px 13px -5px;
+}
+
+#align-container .align-ul ul:after {
+	content: ' ';
+	top: -8px;
+	left: 40px;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #fff;
+}
+
+#align-container .align-ul {
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	width: 90px;
+	height: 110px;
+	background-position: 0px 0px;
+	top: 100%;
+	left: calc(50% - 50px);
+}
+
+#align-container .align-li {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-image: url(../../../images/sprites/align.png);
+	background-repeat: no-repeat;
+	border-radius: 3px;
+	margin: 4px;
+	cursor: pointer;
+	padding: 5px;
+}
+
+#align-container .align-li:hover {
+	background-color: #C6DFEF;
+}
+
+#align-container .align-li[align="down"] {
+	background-position: 6px -57px;
+	top: 55px;
+	left: 35px;
+}
+
+#align-container .align-li[align="top"] {
+	background-position: 6px -93px;
+	top: 10px;
+	left: 35px;
+}
+
+#align-container .align-li[align="left"] {
+	background-position: 6px 6px;
+	top: 30px;
+	left: 8px;
+}
+
+#align-container .align-li[align="right"] {
+	background-position: 6px -26px;
+	top: 30px;
+	left: 60px;
+}
+
+#align-container .align-li[align="middlex"] {
+	background-position: 6px -157px;
+	top: 88px;
+	left: -2px;
+}
+
+#align-container .align-li[align="middley"] {
+	background-position: 6px -124px;
+	top: 88px;
+	left: 22px;
+}
+
+#align-container .align-li[align="redistributex"] {
+	background-position: 6px -185px;
+	top: 88px;
+	left: 50px;
+}
+
+#align-container .align-li[align="redistributey"] {
+	background-position: 6px -244px;
+	top: 88px;
+	left: 74px;
+}
+#restart-counter {
+	position: absolute;
+	left: 40%;
+	top: 0;
+	z-index: 99999;
+}
+
+.registerforfree {
+    background-color: #FFD700;
+    color: #4A4A4A;
+    font-weight: bolder;
+    position: relative;
+    float: right;
+    height: 25px;
+    padding: 0px 18px 0px 22px;
+    line-height: 26px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.registerforfree:hover {
+	text-decoration: underline;
+}
+
+.flip-button{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(../../../images/sprites/flips.png);
+	background-repeat: no-repeat;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.flip-x-button{
+	background-position: 0px 0px;
+}
+
+.flip-y-button{
+	background-position: 0px -19px;
+}
+
+.flip-row{
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.flip-row[disabled="disabled"]{
+	opacity: 0.4;
+}
+
+#history-wrapper{
+	display: none;
+	/*display: inline-block;*/
+	width: 50px;
+	height: 50px;
+}
+
+.topmenu-back,
+.topmenu-prev
+{
+	
+}
+
+
+/* OVERWRITE TO SMALL TOP MENU BAR */
+#size-and-position-container .rotate-row {
+	display: none;
+}
+#size-and-position-container .flip-row {
+	display: none;
+}
+#size-and-position-container input {
+	width: 45px;
+	font-size: 12px;
+    margin: 0px;
+}
+.aspectratio {
+	left: 57px;
+    top: 9px;
+}
+.menu-top-right-pane {
+    right: 12px;
+    width: 370px;
+}
+.darkan-tabs#menu-top-tabs div[role="tabpanel"] {
+	height: 40px;
+}
+
+#menu-text .btn-group > .btn-small {
+	font-size: 9px;
+}
+#menu-text .btn-small {
+    padding: 0px 9px;
+    height: 26px;
+}
+.darkan-tabs#menu-top-tabs div[role="tabpanel"] {
+    font-size: 11px;
+    background: #fff;
+    height: 40px;
+    border-radius: 0px;
+    padding: 8px 10px 5px;
+}
+#menu-text img {
+	height: 60px;
+}
+#menu-text .note-toolbar {
+    width: 620px !important;
+}
+
+#menu-text .note-table,
+#menu-text button[data-event="removeFormat"]
+{
+    display: none;
+}
+
+.button-big-with-icon {
+    height: 27px;
+    padding-left: 30px;
+    width: auto;
+    margin-right: 12px;
+    margin-top: 6px;
+    /*max-width: 65px;*/
+    word-break: break-word;
+}
+
+.button-big-with-icon:after {
+    /*display: none;*/
+    background-image: url('../../../images/sprites/bignuttonicons_1366.png');
+    width: 27px;
+    height: 23px;
+    margin: 0px;
+    margin-top: 4px;
+}
+
+.button-big-with-icon > span {
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: left;
+}
+#menu-top #topmenu-add-new-page:after {
+    background-position: 0px -65px;
+}
+#menu-top .topmenu-import:after {
+    background-position: 0px -588px;
+}
+
+#menu-top #topmenu-export-expendable:after {
+    background-position: 0px -629px;
+}
+#menu-top .topmenu-project-version:after {
+    background-position: 0px -162px;
+}
+.topmenu-variables:after {
+    background-position: 0px -763px;
+}
+#menu-top #topmenu-publish-project:after {
+    background-position: 0px -32px;
+}
+#menu-top #topmenu-extras-videosearch:after {
+    background-position: 0px -464px;
+}
+#menu-top #topmenu-extras-imagesearch:after {
+    background-position: 0px -433px;
+}
+#menu-top #topmenu-extras-db:after {
+    background-position: 0px -309px;
+}
+#menu-top #help-tutorial:after {
+    background-position: 0px -278px;
+}
+#menu-top #video-tutorial:after {
+    background-position: 1px -788px;
+}
+#menu-top #docs-tutorial:after {
+    background-position: 0px -65px;
+}
+
+.topmenu-open-existing-project{
+	
+}
+
+.online-working-status{
+
+    height: 25px;
+    width: 29px;
+    background-image: url(../../../images/sprites/workingstatus2.png);
+    background-repeat: no-repeat;
+    background-position: 2px -22px;
+    margin-left: -24px;
+}
+
+.online-working-status[status="online"]{
+	background-position: 2px -22px;
+}
+
+.online-working-status[status="offline"]{
+
+	background-position: 2px 2px;
+}

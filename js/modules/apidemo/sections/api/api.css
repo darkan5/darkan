@@ -1,0 +1,51 @@
+.api-editor-wrapper{
+    margin-top: 5px;
+}
+
+.api-view{
+    position: relative;
+	background-color: #FFF;
+
+	width: 100%;
+	height: 100%;
+}
+
+.api-window-close-button{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../../../js/editors/standard/images/sprites/popup.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.api-window-close-button:hover {
+    background-position: 0px -20px;
+}
+
+.api-window-top-bar{
+    width: 100%;
+    height: 45px;
+    line-height: 40px;
+    background: #5082A5;
+    color: #fff;
+    text-indent: 20px;
+    font-size: 18px;
+    /*cursor: move;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 35px;
+    box-sizing: border-box;
+}
+
+.api-window-content {
+    height: calc(100% - 10px);
+    height: calc(100% - 45px);
+    overflow: hidden;
+}
+

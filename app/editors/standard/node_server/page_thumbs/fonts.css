@@ -1,0 +1,142 @@
+/*Advent Pro*/
+
+/* greek */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/advent_pro.woff');
+}
+
+/*Alegreya*/
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/alegreya.woff');
+}
+
+/*Lato Bold*/
+@font-face {
+    font-family: 'Alegreya';
+    src: url('fonts/Lato-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Lato-Bold.woff'), /* Modern Browsers */
+         url('fonts/lato_chrome_1.woff2'), /* Modern Browsers */
+         url('fonts/lato_chrome_2.woff2');
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+/*Anaheim*/
+@font-face {
+  font-family: 'Anaheim';
+  font-style: normal;
+  font-weight: 400;
+  src: url('anaheim.woff');
+}
+
+/*Average Sans*/
+@font-face {
+  font-family: 'Average Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/averagesans.woff');
+}
+
+
+/*Crete Round*/
+@font-face {
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/creteround.woff');
+}
+
+
+/*Doppio One*/
+@font-face {
+  font-family: 'Doppio One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/doppioone.woff');
+}
+
+
+/*Lato*/
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/lato.woff');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/*Oxygen Mono*/
+/* latin-ext */
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/oxygenmono.woff');
+}
+
+
+/*Quando*/
+@font-face {
+  font-family: 'Quando';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/quando.woff');
+}
+
+
+/*Righteous*/
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/righteous.woff');
+}
+
+/*Sanchez*/
+@font-face {
+  font-family: 'Sanchez';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/sanchez.woff');
+}
+
+/*Source Code Pro*/
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/sourcecodepro.woff');
+}
+
+
+/*Trykker*/
+@font-face {
+  font-family: 'Trykker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Trykker Regular'), local('Trykker-Regular'), url('fonts/trykker.woff');
+}
+
+/*Lato Bold*/
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Lato-Bold.woff'), /* Modern Browsers */
+         url('fonts/lato_chrome_1.woff2'), /* Modern Browsers */
+         url('fonts/lato_chrome_2.woff2');
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,114 @@
+.object-picker-icon {
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../images/data_picker_icon.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #5C4E45;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.object-picker-icon:hover {
+    background-color: #5AB0A9;
+}
+
+.data-picker{
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    right: 0px;
+    width: 60%;
+    height: auto;
+    z-index: 6000;
+    cursor: pointer;
+}
+
+.data-picker:hover .data-picker-info-extras {
+    text-decoration: underline;
+}
+
+.data-picker-wrapper{
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    background-color: #101A47;
+    font-size: 30px;
+    color: #ffffff;
+    padding-bottom: 10px;
+}
+
+.data-picker-info-main {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+.data-picker-info-extras {
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+}
+
+.object-picker-icon[disabled="disabled"]{
+    display: none;
+}
+
+.data-picker-selector{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    height: 80px;
+    background-color: #92DACC;
+    opacity: .5;
+    box-shadow: 0px 0px 15px #92DACC;
+    display: none;
+    z-index: 6001;
+}
+
+.data-picker-position-selector{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('../../../images/celownik_small.png');
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.data-picker-position-selector:after{
+    position: absolute;
+    left: 35px;
+    top: -15px;
+    background-color: black;
+    color: white;
+    content: attr(position);
+    z-index: 1501;
+    min-width: 120px;
+    width: auto;
+    padding: 4px 4px;
+    text-overflow: ellipsis;
+}
+
+.data-picker.animated {
+    -webkit-animation: dataPickerAnimation 400ms; /* Chrome, Safari, Opera */
+    animation: dataPickerAnimation 400ms; /* Standard syntax */
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes dataPickerAnimation {
+    100%    { transform: scale(1); opacity: 1; }
+    0%      { transform: scale(0.9); opacity: 0; }
+}
+
+/* Standard syntax */
+@keyframes dataPickerAnimation {
+    100%    { transform: scale(1); opacity: 1; }
+    0%      { transform: scale(0.9); opacity: 0; }
+}

@@ -1,0 +1,4 @@
+var ApiCourseModel = ApiModel.extend({
+	
+
+});

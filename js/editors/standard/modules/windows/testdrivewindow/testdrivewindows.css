@@ -1,0 +1,96 @@
+.window-test-drive-view {
+	width: 700px;
+	height: 350px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	z-index: 10000;
+	background-image: url('../../../images/test_drive.png');
+
+	background-repeat: no-repeat;
+    background-position: 2% 80%;
+}
+
+.test-drive-header {
+	background-image: url('../../../../../assets/img/social_logos/logo_small.png');
+	background-repeat: no-repeat;
+}
+
+.test-drive-container{
+	margin: 5px;
+}
+
+.window-test-drive-view .window-top-bar{
+	display: none;
+}
+
+.window-test-drive-view .window-content {
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.test-drive-container {
+	text-align: center;
+}
+
+.window-test-drive-view h3 {
+	margin: 10px 0px;
+}
+.window-test-drive-view h1 {
+	padding: 8px;
+}
+
+.window-test-drive-view hr {
+	margin: 20px 0px;
+}
+
+.window-test-drive-view .input-text .test-drive-email-input {
+    display: inline-block;
+    width: 300px;
+    height: 19px;
+    padding: 4px 6px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-right: 0px;
+}
+.window-test-drive-view .input-text .test-drive-submit {
+    width: 65px;
+    background-color: #4085B1;
+    padding: 7px;
+    border: 0px;
+    color: #fff;
+    margin-left: -2px;
+    vertical-align: middle;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.test-drive-form input {
+	display: inline-block;
+
+}
+
+.test-drive-form {
+	margin-top: 30px;
+}
+
+.window-test-drive-view .extras-icons {
+    margin-top: 20px;
+    border: none;
+}
+
+.window-test-drive-view .extras-icons a {
+	color: #fff;
+}
+
+.window-test-drive-view .error-feedback {
+	color: #832727;
+	height: 20px;
+	line-height: 2px;
+}

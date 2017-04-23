@@ -1,0 +1,33 @@
+.window-paste-components-view{
+	width: 90%;
+	height: 90%;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	min-width: 465px;
+}
+
+.paste-components-copy-list,
+.paste-components-cut-list,
+.paste-components-delete-list {
+	padding: 10px;
+	list-style-type: none;
+}
+
+.paste-components-item{
+	width: calc(100% -10px);
+	height: auto;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.paste-components-index{
+	font-size: 15px;
+	margin: 2px;
+	padding: 2px;
+}

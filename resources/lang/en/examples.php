@@ -1,0 +1,38 @@
+<?php
+ return array (
+  'title' => 'Examples | Darkan',
+  'description' => 'See what you can achieve using Darkan.',
+  'examplesHeader' => 'See what you can achieve using Darkan.',
+  'example1' => 'Presentation',
+  'example1desc' => 'Presentations that will enliven any kind of business meeting.',
+  'example1thumb' => 'https://darkan.eu/storage/app/publications/c3b0699fe8f6e1c3689d97a787274ce8/thumb/thumb.png',
+  'example1link' => 'https://darkan.eu/content/2739189d768c9650027e4390275c803c',
+  'example2' => 'Africa',
+  'example2desc' => 'Interactive training to play and learn.',
+  'example2thumb' => 'https://darkan.eu/storage/app/publications/f4cc92274e417ca5b57fbc2c8cda893c/thumb/thumb.png',
+  'example2link' => 'https://darkan.eu/content/e6db89dbc6d41dc810811d6189e95a96',
+  'example3' => 'Newspaper bid',
+  'example3desc' => 'Sales newspaper from which you will learn a lot more.',
+  'example3thumb' => 'https://darkan.eu/storage/app/publications/62a57416629a3254683052da59a499ab/thumb/thumb.png',
+  'example3link' => 'https://darkan.eu/content/683a07be6021eec798b2fa1294ee5b0d',
+  'example4' => 'Using advanced actions (trigger)',
+  'example4desc' => 'See what can be achieved using variables and advanced actions editor in Darkan.',
+  'example4thumb' => 'https://darkan.eu/storage/app/publications/34a3ab83aae9690cb127950970e5a7b5/thumb/thumb.png',
+  'example4link' => 'https://darkan.eu/content/34a3ab83aae9690cb127950970e5a7b5',
+  'example5' => 'Camera (drag and drop)',
+  'example5desc' => 'In Darkan application you can create a variety of exercises, only imagination limits you. Take advantage of the many type of triggers and variables.',
+  'example5thumb' => 'https://darkan.eu/storage/app/publications/e9ebf03d488d6d0f20eed6b00be7d3c6/thumb/thumb.png',
+  'example5link' => 'https://darkan.eu/content/e9ebf03d488d6d0f20eed6b00be7d3c6',
+
+  'example6' => 'Match crossword',
+  'example6desc' => 'Enter correct numbers in crossword fields to discover the treasure ;)',
+  'example6thumb' => 'https://darkan.eu/storage/app/publications/53355cdb01e1bb41b7e6afafa875c8fb/thumb/thumb.jpg',
+  'example6link' => 'https://darkan.eu/content/53355cdb01e1bb41b7e6afafa875c8fb',
+
+  'example7' => 'Time limited exercise',
+  'example7desc' => 'Use counters, to limit time on each exercise. When time is up you can trigger any advanced action.',
+  'example7thumb' => 'https://darkan.eu/storage/app/publications/fb8991321b89d3a9bee28f48c1aecab7/thumb/thumb.jpg',
+  'example7link' => 'https://darkan.eu/content/fb8991321b89d3a9bee28f48c1aecab7',
+
+  'OPEN' => 'Open',
+);

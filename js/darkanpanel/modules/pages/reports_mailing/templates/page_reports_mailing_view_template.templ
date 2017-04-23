@@ -1,0 +1,240 @@
+<script id="page-reports-mailing-view-template" type="text/template">
+	<div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><i class="fa fa-users fa-fw"></i> <?=Lang::get("darkanpanel.page_name_users")?></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <?=Lang::get("darkanpanel.panel_title_users_list")?>
+                    <div class="pull-right">
+                        <select name="groups" class="form-control select-user-group">
+                            <option value=""></option>
+                            <% _.each(groupsList, function(options, i) { %>
+                                    <option value="<%- options.name %>"><%- options.name %></option>
+                            <% }); %> 
+                       </select>
+                        <button class="btn btn-success open-add-new-user-window panel-button" data-toggle="modal" data-target="#add-new-user-window" ><?=Lang::get('darkanpanel.add_new_user')?></button>
+
+                    </div>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="dataTable_wrapper">
+                        <table class="table table-responsive table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th><?=Lang::get("darkanpanel.table_column_mail")?></th>
+                                    <th><?=Lang::get("darkanpanel.table_column_courses")?></th>
+                                    <th><?=Lang::get("darkanpanel.table_column_groups")?></th>
+                                    <th><?=Lang::get("darkanpanel.table_column_options")?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% var i = 1; %>
+                                <% _.each(usersList, function(user) { %>
+
+                                    <% if (user.limit_exceeded == 0) { %>
+
+                                        <tr class="odd gradeX" ulogin="<%=user.login%>">
+                                            <td><%= i++ %></td>
+                                            <td>
+                                                <div class="user-photo" style="background-image:url(<%=user.photo != 'default' ? user.photo : "<?=asset('/css/img/default_user_small.png')?>" %>)"></div>
+                                                <a href="#user/n/<%= user.id %>"> 
+                                                    <%= user.login %> 
+                                                </a>
+                                                <% if (user.username && user.username.length) { %>
+                                                <small> (<%- user.username %>)</small>
+                                                <% } %>
+
+                                            </td>
+                                            <td><%= user.courses %></td>
+                                            <td>
+                                                <% _.each(user.groups, function(group) { %>
+
+                                                    <a href="#group/<%=group.id%>" ><%-group.name%></a>
+                                                <% }); %>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-danger removeuser" uid="<%=user.id%>"><?=Lang::get('darkanpanel.btn_delete')?></button>
+                                                <button class="btn btn-success edituser" uid="<%=user.id%>" uname="<%-user.username%>" ulogin="<%=user.login%>"  data-toggle="modal" data-target="#edit-user-window"><?=Lang::get('darkanpanel.btn_edit')?></button>
+
+                                                <% if (lmsPaid) { %>
+                                                    <% console.log(user.payment) %>
+                                                    <% if (user.payment) { %>
+                                                    <button 
+                                                        class="btn btn-warning userpayment" 
+                                                        uid="<%=user.id%>"
+                                                        >
+                                                        <?=Lang::get('darkanpanel.paymentDone')?>
+                                                    </button>
+                                                    <% } else { %>
+                                                    <button 
+                                                        class="btn btn-info userpayment" 
+                                                        uid="<%=user.id%>"
+                                                        data-toggle="modal" data-target="#markaspaid-user-window">
+                                                        <?=Lang::get('darkanpanel.setAsPaid')?>
+                                                    </button>
+                                                    <% } %>
+                                                <% } %>
+                                                
+                                            </td>
+                                        </tr>
+
+                                    <% } else { %>
+
+                                        <tr class="odd gradeX limit-exceeded danger">
+                                            <td><%= i++ %></td>
+                                            <td>
+                                                <div class="user-photo" style="background-image:url(<%=user.photo != 'default' ? user.photo : "<?=asset('/css/img/default_user_small.png')?>" %>)"></div>
+                                                <%= user.login %> 
+                                                <% if (user.username && user.username.length) { %>
+                                                <small> (<%- user.username %>)</small>
+                                                <% } %>
+
+                                                - <?=Lang::get('darkanpanel.accounts_limit_info')?>
+
+                                            </td>
+                                            <td><%= user.courses %></td>
+                                            <td>
+                                                <% _.each(user.groups, function(group) { %>
+
+                                                    <a href="#group/<%=group.id%>" ><%-group.name%></a>
+                                                <% }); %>
+                                            </td>                                            
+                                            <td>
+                                                <button class="btn btn-danger removeuser" uid="<%=user.id%>"><?=Lang::get('darkanpanel.btn_delete')?></button>
+                                                <button class="btn btn-success edituser" uid="<%=user.id%>" uname="<%-user.username%>" ulogin="<%=user.login%>"  data-toggle="modal" data-target="#edit-user-window"><?=Lang::get('darkanpanel.btn_edit')?></button>
+
+
+                                                <% if (lmsPaid) { %>
+                                                    <% if (user.payment) { %>
+                                                    <button 
+                                                        class="btn btn-warning userpayment" 
+                                                        uid="<%=user.id%>"
+                                                         >
+                                                        <?=Lang::get('darkanpanel.paymentDone')?>
+                                                    </button>
+                                                    <% } else { %>
+                                                    <button 
+                                                        class="btn btn-info userpayment" 
+                                                        uid="<%=user.id%>"
+                                                        data-toggle="modal" data-target="#markaspaid-user-window">
+                                                        <?=Lang::get('darkanpanel.setAsPaid')?>
+                                                    </button>
+                                                    <% } %>
+                                                <% } %>
+                                            </td>
+                                        </tr>
+                                    <% } %>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+   </div>
+   
+   
+
+    <div class="row">
+        <div class="col-lg-8 col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bar-chart-o fa-fw"></i> <?=Lang::get("darkanpanel.chart_title_number_of_users_on_the_course")?>
+                </div>
+                <div class="panel-body">
+                    <div id="most-popular-chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> <?=Lang::get("darkanpanel.chart_title_statuses_of_users_in_courses")?>
+                    </div>
+                    <div class="panel-body">
+                        <div id="morris-course-statuses-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="modal fade" id="add-new-user-window" usertype="app" tabindex="-1" role="dialog" aria-labelledby="add-new-user-window-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="add-new-user-window-label"><?=Lang::get('darkanpanel.add_accounts')?></h4>
+          </div>
+          <div class="modal-body">
+            <div id="addUsers"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="edit-user-window" usertype="app" tabindex="-1" role="dialog" aria-labelledby="edit-user-window-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="edit-user-window-label"><?=Lang::get('darkanpanel.add_accounts_edit_user')?></h4>
+          </div>
+          <div class="modal-body">
+
+                <div>
+                    <label><?=Lang::get('darkanpanel.add_accounts_edit_user_login')?> 
+                        
+                    </label>
+                    <span type="text" id="userlogin"></span>
+                </div>
+
+                <div>
+                    <label><?=Lang::get('darkanpanel.add_accounts_edit_user_user_name')?> 
+                        
+                    </label>
+                    <input type="text" placeholder="<?=Lang::get('darkanpanel.add_accounts_placeholder_username')?>" id="username"/>
+                </div>
+
+            <button class="btn btn-success save-edit-user" ><?=Lang::get('darkanpanel.add_accounts_edit_save')?></button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="markaspaid-user-window" usertype="app" tabindex="-1" role="dialog" aria-labelledby="edit-user-window-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="edit-user-window-label">Wybierz metodę transakcji</h4>
+          </div>
+          <div class="modal-body">
+
+
+            <button class="btn btn-success save-mark-as-paid" data-paymethod="bank-transfer">
+                Bank transfer
+            </button>
+            <button class="btn btn-success save-mark-as-paid" data-paymethod="post-office">
+                Post office
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+</script>

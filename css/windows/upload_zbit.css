@@ -1,0 +1,22 @@
+.window-upload-zbit-view {
+	width: 480px;
+	height: 180px;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	background-color: white;
+}
+
+.upload-zbit-loader{
+    width: 20px;
+    height: 20px;
+    float: right;
+    background-repeat: no-repeat;
+    background-image: url(../img/loaders/easyloader.gif);
+    background-size: 20px 20px;
+    display: none;
+    margin-top: 5px;
+    margin-left: 10px;
+}

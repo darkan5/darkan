@@ -1,0 +1,53 @@
+{
+	"dnd_default" : {
+		"component-inner": {
+		    "background": "#5082A5",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"dnd_one" : {
+		"component-inner": {
+		    "background": "#FF0000",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"dnd_two" : {
+		"component-inner": {
+		    "background": "#00BAFF",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"dnd_transparent" : {
+		"component-inner": {
+		    "background": "transparent",
+		    "color": "transparent",
+		    "border": "0px"
+		}
+	},
+
+	"dnd_green" : {
+		"component-inner": {
+		    "background": "transparent",
+		    "color": "#000",
+		    "border": "2px solid #47983D",
+		    "border-radius": "3px"
+		}
+	},
+
+	"dnd_red" : {
+		"component-inner": {
+		    "background": "transparent",
+		    "color": "#000",
+		    "border-style": "solid",
+		    "border-width": "2px",
+		    "border-color": "#CF666A",
+		    "border-radius": "3px"
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.window-projectoptions-view {
+	width: 80%;
+	height: 90%;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+.window-projectoptions-view .menu-options-group {
+	border: 1px solid #E6E6E6;
+	width: 95%;
+	font-size: 12px;
+	padding: 10px;
+	margin: 10px 0px;
+}

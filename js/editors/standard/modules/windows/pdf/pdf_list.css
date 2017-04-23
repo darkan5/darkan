@@ -1,0 +1,103 @@
+.pdf-list-window {
+    width: 80%;
+    height: 70%;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: 6000;
+}
+
+.pdf-list-wrapper{
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 90px);
+    padding-bottom: 45px;
+    background-color: #ffffff;
+    list-style-type: none;
+    text-align: center;
+}
+
+.pdf-list{
+
+}
+
+.pdf-list-item{
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    width: 158px;
+    border-radius: 1px;
+    padding: 2px 5px;
+    background: #EAA5A5;
+    opacity: .3;
+    cursor: pointer;
+    height: 246px;
+    vertical-align: top;
+}
+
+.pdf-list-item:hover {
+    outline: 3px solid #5082A5;
+}
+
+.pdf-list-item[selected="selected"] {
+    background: #D4E4EF;
+    opacity: 1;
+}
+
+.pdf-list-item-select-item-checkbox {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 7px;
+    right: 0px;
+}
+
+.pdf-thumb-wrapper {
+    width: 150px;
+    height: 210px;
+    text-align: center;
+    display: table-cell;
+    position: relative;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.pdf-list-buttons {
+    position: absolute;
+    right: 16px;
+    bottom: 0px;
+    z-index: 5;
+}
+
+.pdf-list-convert-to-pages {
+    border: 1px solid #fff;
+    background: #009900;
+    color: #fff;
+    padding: 10px 45px;
+    cursor: pointer;
+}
+.pdf-list-convert-to-pages:hover {
+  background: #01B501;
+}
+
+.pdf-list-convert-to-pages[disabled="disabled"]{
+    opacity: 0.4;
+}
+
+.pdf-list-item-select-all-lbl {
+    border: 1px solid #fff;
+    background: #5082A5;
+    color: #fff;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.pdf-list-item-select-all-lbl:hover {
+    background: #5A9FD0;
+}
+
+.pdf-list-item-select-all-checkbox {
+    margin: 2px 10px;
+    vertical-align: middle;
+}

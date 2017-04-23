@@ -1,0 +1,1 @@
+start cmd /k "node --expose-gc C:\xampp\htdocs\darkan3\app\editors\standard\node_server\darkan_server.js"

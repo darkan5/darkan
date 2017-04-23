@@ -1,0 +1,38 @@
+<script id="page-create-group-view-mailing-option-1-template" type="text/template">
+<div class="row">
+    <div class="col-lg-12">
+
+        <form role="form" class="add-user-form">
+
+                <div class="col-md-4">
+                    <legend><?=Lang::get('darkanpanel.select_option')?></legend>
+                    <div class="input-group">
+                        <input checked="checked" type="radio" name="groupname_select_option" id="groupname_select_option2a" class="form-input-radio" value="0">
+                        <label for="groupname_select_option2a"><?=Lang::get('darkanpanel.groupname_select_option_add_new_group')?></label>
+                    </div>
+                        
+                    <div class="input-group">
+                        <input type="radio" name="groupname_select_option" id="groupname_select_option2b" class="form-input-radio" value="1">
+                        <label for="groupname_select_option2b"><?=Lang::get('darkanpanel.groupname_select_option_add_to_existiong_group')?></label>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <legend><?=Lang::get('darkanpanel.groupname_group_name_label')?></legend>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control group-name-input" placeholder="<?=Lang::get('darkanpanel.groupname_group_name_placeholder')?>">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success create-group-submit" type="button">Ok!</button>
+                        </span>
+                    </div>
+
+
+                </div>
+
+
+        </form>
+
+    </div>
+</div>
+</script>

@@ -1,0 +1,4 @@
+var QuizWordsearchStyleEditorView = StyleEditorView.extend({
+
+
+});

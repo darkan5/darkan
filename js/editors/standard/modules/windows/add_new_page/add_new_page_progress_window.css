@@ -1,0 +1,58 @@
+.add-new-page-progress-window {
+
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    width: auto;
+    height: auto;
+
+    z-index: 6000;
+}
+
+.add-new-page-progress-wrapper{
+	width: 92px;
+	height: 105px;
+	background-color: #ffffff;
+}
+
+.pdf-progress-bar {
+	height: 20px;
+	bottom: 19px;
+	top: auto;
+}
+
+.pdf-progress-bar-text {
+	top: 0px;
+	color: #000;
+	height: 100%;
+	/* left: 0px; */
+	z-index: 1;
+	text-align: center;
+	text-indent: 0px;
+}
+
+.add-new-page-progress-cancel {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	left: 0px;
+	/* position: relative; */
+	text-align: center;
+	padding: 2px 8px;
+	/* margin-bottom: 5px; */
+	background-color: #CF5451;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+}
+.add-new-page-progress-cancel:hover {
+	background-color: #9B0B08;
+}
+
+.add-new-page-progress-text {
+	font-size: 13px;
+	text-align: center;
+	height: 66px;
+	vertical-align: middle;
+	display: table-cell;
+}

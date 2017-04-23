@@ -1,0 +1,261 @@
+#menu-left {
+	width: 100px;
+	background: #D4E4EF;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 1100;
+}
+
+#menu-left[disabled="disabled"]:before{
+    background-color: #808080;
+}
+
+#menu-left-overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	z-index: 2000;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons li.separator {
+	float: left;
+	width: 95%;
+	height: 2px;
+	width: 100px;
+	background: #AAA2A2;
+	margin: 2px 0px 1px 0px;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons
+{
+	top: 130px;
+	width: 100px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	z-index: 2;
+}
+
+#menu-left ul.menu-left-second-lvl {
+	position: absolute;
+	margin: 0;
+	top: -20px;
+	left: 102px;
+	padding: 0;
+	list-style: none;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons > li {
+	float: left;
+	vertical-align: top;
+	margin: 0 0 1px;
+	position: relative;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons > li > a.big-btn {
+	vertical-align: top;
+	background-color: #5082A5;
+	width: 98px;
+	height: 37px;
+	display: block;
+	margin-left: 1px;
+	margin-top: 2px;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 3px;
+	border-bottom: 3px solid #47708D;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons > li > .small-btn {
+	float: left;
+	vertical-align: top;
+	background: #5082A5;
+	width: 47px;
+	height: 35px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 0px 1px;
+	border-radius: 3px;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons > li a span {
+	overflow: hidden;
+	text-indent: -9999px;
+	display: block;
+	width: 38px;
+	height: 25px;
+	margin: 10px auto 0;
+	background-image: url(../../../images/sprites/left_menu_toolbar.png);
+	background-repeat: no-repeat;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons li > ul.menu-left-second-lvl {
+	display: none;
+	position: absolute;
+	margin: 0;
+	top: -20px;
+	left: 102px;
+	padding: 0;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons li > ul.menu-left-second-lvl a {
+	border: 1px solid #81B5C1;
+}
+
+#menu-left .small-btn-ext {
+	vertical-align: top;
+	background: #5082A5;
+	width: 200px;
+	height: 34px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+}
+#menu-left > ul.menu-left-toolbar-buttons > li > .small-btn:hover,
+#menu-left > ul.menu-left-toolbar-buttons > li > a.big-btn:hover,
+#menu-left .small-btn-ext:hover
+{
+	background: #67ABD6;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons li > ul.menu-left-second-lvl li a span {
+	margin: 10px 0px;
+	display: inline-block;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons li > ul.menu-left-second-lvl li a em {
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 2px 10px 7px;
+	font-style: normal;
+	border-left: 1px solid #91A5C0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: calc(100% - 48px);
+	white-space: nowrap;
+}
+
+#menu-left a[menu-point-attr="extend"] span.ext-icon {
+	position: absolute;
+	width: 10px;
+	height: 16px;
+	top: 5px;
+	right: 5px;
+	background: url(../../../images/sprites/sprite_main.png) no-repeat -100px -40px;
+}
+
+#menu-left a.active {
+	background-color: #67ABD6 !important;
+}
+
+#menu-left a[icon="text"] > span { background-position: 0px -366px; }
+#menu-left a[icon="image"] > span { background-position: 0px -258px; }
+#menu-left a[icon="video"] > span { background-position: 0px -1090px; }
+
+#menu-left a[icon="infopoints"] > span { background-position: 0px -794px; }
+	#menu-left a[icon="infopoints-popup"] > span { background-position: 0px -178px; }
+	#menu-left a[icon="infopoints-gallery"] > span { background-position: 0px -131px; }
+	#menu-left a[icon="infopoints-link"] > span { background-position: 0px -25px; }
+	#menu-left a[icon="infopoints-download"] > span { background-position: 0px -204px; }
+	#menu-left a[icon="infopoints-soundfile"] > span { background-position: 0px -52px; }
+	#menu-left a[icon="infopoints-soundrecorded"] > span { background-position: 0px -79px; }
+
+#menu-left a[icon="drawedinforpoints"] > span { background-position: 0px -0px; }
+	#menu-left a[icon="drawedinforpoints-popup"] > span { background-position: 0px -0px; }
+	#menu-left a[icon="drawedinforpoints-gallery"] > span { background-position: 0px -131px; }
+	#menu-left a[icon="drawedinforpoints-link"] > span { background-position: 0px -25px; }
+	#menu-left a[icon="drawedinforpoints-download"] > span { background-position: 0px -204px; }
+
+#menu-left a[icon="quiz"] > span { background-position: 0px -339px; }
+	#menu-left a[icon="quiz-multiselect"] > span { background-position: 0px -922px; }
+	#menu-left a[icon="quiz-radio"] > span { background-position: 0px -893px; }
+	#menu-left a[icon="quiz-truefalse"] > span { background-position: 0px -833px; }
+	#menu-left a[icon="quiz-fillinblanks"] > span { background-position: 0px -761px; }
+	#menu-left a[icon="quiz-dnd"] > span { background-position: 0px -864px; }
+	#menu-left a[icon="quiz-wordsearch"] > span { background-position: 0px -1150px; }
+	#menu-left a[icon="quiz-crossword"] > span { background-position: 0px -1119px; }
+	#menu-left a[icon="quiz-boardgame"] > span { background-position: 0px 0px; }
+	#menu-left a[icon="quiz-memory"] > span { background-position: 0px -950px; }
+	#menu-left a[icon="quiz-connectlines"] > span { background-position: 0px -1064px; }
+	#menu-left a[icon="quiz-selectone"] > span { background-position: 0px -1186px; }
+	#menu-left a[icon="quiz-results"] > span { background-position: 0px -520px; }
+
+#menu-left a[icon="forms"] > span { background-position: 0px -715px; }
+	#menu-left a[icon="inputtext"] > span { background-position: 0px -1005px; }
+	#menu-left a[icon="textarea"] > span { background-position: 0px -588px; }
+	#menu-left a[icon="select"] > span { background-position: 0px -682px; }
+	#menu-left a[icon="checkbox"] > span { background-position: 0px -651px; }
+	#menu-left a[icon="radio"] > span { background-position: 0px -620px; }
+	#menu-left a[icon="submit"] > span { background-position: 0px -977px; }
+
+
+#menu-left a[icon="library"] > span { background-position: 0px -474px; }
+
+#menu-left a[icon="drawimage"] > span { background-position: 0px -231px; }
+#menu-left a[icon="swf"] > span { background-position: 0px -562px; }
+#menu-left a[icon="hidebackground"] > span { background-position: 0px -285px; }
+#menu-left a[icon="scroller"] > span { background-position: 0px -1034px; }
+#menu-left a[icon="timer"] > span { background-position: 0px -1225px; }
+#menu-left a[icon="shapes"] > span { background-position: 0px -393px; }
+#menu-left a[icon="remove"] > span { background-position: 0px -420px; }
+#menu-left #toolbar-remove {
+    background-color: #BB3737;
+    border-right: 0px solid #215C86;
+    border-bottom: 0px solid #215C86;
+}
+
+#menu-left #toolbar-remove[disabled="disabled"]{
+    background-color: #E1A9B1;
+}
+
+
+/* TEMP */
+#timeline {
+	position: absolute;
+	bottom: 0px;
+	left: 150px;
+}
+
+#menu-left .tooltip {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 350px; 
+    text-align: left;
+    white-space: normal;
+}
+
+#menu-left .tooltip-inner {
+    text-align: left;
+}
+
+@media(max-height: 600px ) {
+	.menu-left-toolbar-buttons {
+		top: 100px !important;
+	}
+}
+@media(max-height: 555px ) {
+	.menu-left-toolbar-buttons {
+		top: 50px !important;
+	}
+	#main-logo {
+		display: none;
+	}
+}
+@media(max-height: 500px ) {
+	#menu-left > ul.menu-left-toolbar-buttons > li > a.big-btn {
+		height: 30px;
+	}
+	#menu-left > ul.menu-left-toolbar-buttons > li a span {
+		margin: 6px auto 0;
+	}
+}

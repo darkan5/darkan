@@ -1,0 +1,299 @@
+@extends('layouts.lms')
+
+@section('contentlms')
+
+<h1 class="page-header"><i class="fa fa-book fa-fw"></i> <?=Lang::get("darkanpanel.page_name_courses")?></h1>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <?=Lang::get("darkanpanel.panel_title_courses_list")?>
+        <div class="pull-right">
+            
+        </div>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="dataTable_wrapper">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><?=Lang::get("darkanpanel.table_column_name")?></th>
+
+                        <th><?=Lang::get("darkanpanel.table_column_users")?></th>
+                        <th><?=Lang::get("darkanpanel.table_column_size")?></th>
+                        <th><?=Lang::get("darkanpanel.table_column_requirements")?></th>
+                        <th><?=Lang::get("darkanpanel.table_column_options_icons")?></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach ($coursesList as $key => $course)
+
+                        <tr class="odd gradeX">
+                            <td>{{ $key + 1 }}</td>
+
+                            <td>
+
+                                <div title="{{ $course->summary }}">
+                                    <img style="border: 1px solid black; width: 20px;" src="{{ ($course->thumb != 'none') ? $course->thumb : asset('/css/img/play_button.png') }} ">
+                                    <a style="margin-left:5px" class="btn btn-info btn" href="{{ url('lms/publication') . '/' . $course->id_banner  }}">{{ $course->name }}</a>
+                                    
+                                    <?php
+                                        $project = $course->project;
+                                     ?>
+
+
+
+
+
+                                </div>
+                            </td>
+
+
+                            <td>{{ count($course->scormData) }}</td>
+
+                            <td class="center">{{ round($course->size_project / 1024 / 1024, 2) }}</td>
+
+                            <td class="center">
+
+                                <?php 
+
+                                    $requirements = json_decode($course->requirements);
+
+                                 ?>
+
+                                <ul class="requirements-list">
+
+                                    @if(isset($requirements->pages) && $requirements->pages == true)
+
+                                        <li>
+                                            <i class="fa fa-file-o fa-fw"></i>  <?= Lang::get('darkanpanel.table_column_requirements_pages') ?>
+                                        </li>
+
+                                    @endif
+
+                                    @if(isset($requirements->score) && $requirements->score == true)
+
+                                        <li>
+                                            <i class="fa fa-star fa-fw"></i>  <?= Lang::get('darkanpanel.table_column_requirements_score') ?> 
+                                            ({{ isset($requirements->scoreRequired) ? $requirements->scoreRequired : '' }}/{{ isset($requirements->scoreMax) ? $requirements->scoreMax : '' }})
+                                        </li>
+
+                                        
+                                    @endif
+
+                                    @if((!isset($requirements->pages) || $requirements->pages == false) && (!isset($requirements->score) || $requirements->score == false))
+                                        
+                                        <li>
+                                          <?=Lang::get('darkanpanel.no_data')?>  
+                                        </li>
+                                        
+                                    @endif
+
+                                </ul>
+                            </td>
+                            <td>
+                                <button class="btn btn-success btn edit-publication" id_banner="{{ $course->id_banner }}" name="{{ $course->name }}" summary="{{ $course->summary }}" data-toggle="modal" data-target="#edit-publication-window"><?=Lang::get('darkanpanel.edit_button')?> </button>
+                                <button class="btn btn-danger btn delete-publication" id_banner="{{ $course->id_banner }}" data-toggle="modal" data-target="#delete-publication-window"><?=Lang::get('darkanpanel.delete_button')?> </button>
+                                <a class="btn btn-success btn" href="{{ url('content', $course->path)  }}"><?=Lang::get('darkanpanel.open_button')?> </a>
+                            </td>
+
+                        </tr>
+                  
+                    @endforeach
+
+
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+        
+
+    
+
+    <div class="row">
+        <div class="col-lg-8 col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bar-chart-o fa-fw"></i> <?=Lang::get("darkanpanel.chart_title_number_of_users_on_the_course")?>
+                </div>
+                <div class="panel-body">
+                    <div id="most-popular-chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> <?=Lang::get("darkanpanel.chart_title_statuses_of_users_in_courses")?>
+                    </div>
+                    <div class="panel-body">
+                        <div id="morris-course-statuses-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="add-course-to-group-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Dodaj kurs do grupy</h4>
+            </div>
+
+            {!! Form::open(array('class' => 'form', 'method' => 'post', 'url' => 'lms/publications/addcouresetogroup')) !!}
+            {!! Form::hidden('content_id', null) !!}
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            {!! Form::label('Grupa') !!}
+                            {!! Form::select('group_id', $groupsArray, null, array('class' => 'form-control')) !!}
+                        </div>
+                    </div>
+
+            </div>
+            </div>
+            <div class="modal-footer">
+                {!! Form::submit('Ok', array('class'=>'btn btn-primary')) !!}
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="delete-course-from-group-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Usuwanie kursu z grupy</h4>
+            </div>
+
+            <div class="modal-body">
+            Czy na pewno chcesz usunąć kurs z grupy?
+            </div>
+            {!! Form::open(array('class' => 'form', 'method' => 'delete', 'url' => 'lms/publications/addcouresetogroup')) !!}
+            {!! Form::hidden('content_id', null) !!}
+            {!! Form::hidden('group_id', null) !!}
+            <div class="modal-footer">
+                {!! Form::submit('Ok', array('class'=>'btn btn-primary')) !!}
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="add-new-publication-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Dodaj nową publikację</h4>
+            </div>
+
+            {!! Form::open(array('class' => 'form', 'method' => 'post')) !!}
+            <div class="modal-body">
+
+                    <div class="form-group">
+                        {!! Form::label('name', 'Nazwa', array('class' => 'control-label')) !!}
+                        {!! Form::text('name', null, 
+                            array('required', 
+                                  'class'=>'form-control', 
+                                  'placeholder'=>'Nazwa')) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label('Opis') !!}
+                        {!! Form::textarea('summary', null, 
+                            array( 
+                                  'class'=>'form-control', 
+                                  'placeholder'=>'Opis')) !!}
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                {!! Form::submit('Ok', array('class'=>'btn btn-primary')) !!}
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="edit-publication-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Edytuj publikację</h4>
+            </div>
+
+            {!! Form::open(array('class' => 'form', 'method' => 'put')) !!}
+            {!! Form::hidden('id_banner', null) !!}
+
+            <div class="modal-body">
+
+                    <div class="form-group">
+                        {!! Form::label('name', 'Nazwa', array('class' => 'control-label')) !!}
+                        {!! Form::text('name', null, 
+                            array('required', 
+                                  'class'=>'form-control', 
+                                  'placeholder'=>'Nazwa')) !!}
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label('Opis') !!}
+                        {!! Form::textarea('summary', null, 
+                            array(
+                                  'class'=>'form-control', 
+                                  'placeholder'=>'Opis')) !!}
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                {!! Form::submit('Ok', array('class'=>'btn btn-primary')) !!}
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="delete-publication-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Usuwanie publikacji</h4>
+            </div>
+
+            <div class="modal-body">
+            Czy na pewno chcesz usunąć publikację?
+            </div>
+            {!! Form::open(array('class' => 'form', 'method' => 'delete')) !!}
+            {!! Form::hidden('id_banner', null) !!}
+            <div class="modal-footer">
+                {!! Form::submit('Ok', array('class'=>'btn btn-primary')) !!}
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+
+<script src="{{ asset('/js/lms/publications.js') }}"></script>
+
+
+@endsection

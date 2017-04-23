@@ -1,0 +1,50 @@
+.window-share-project-view {
+    width: 530px;
+    height: 350px;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-color: white;
+}
+
+.shared-users{
+    overflow-y: auto;
+    height: 155px;
+    overflow-x: hidden;
+}
+
+.window-share-project-view .window-content {
+    overflow: hidden;
+}
+
+.share-header {
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.share-user-item{
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin: 6px 20px;
+}
+
+.share-user-item:hover{
+}
+
+.normal-share-user-item{
+}
+
+.no-exist-share-user-item{
+}
+
+.share-user-remove-button{
+    margin-left: 20px;
+}
+
+.share-user-email{
+    display: inline-block;
+}

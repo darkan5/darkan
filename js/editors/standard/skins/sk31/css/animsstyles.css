@@ -1,0 +1,336 @@
+/* 
+    Document   : animsstyles
+    Created on : 2013-02-28, 14:07:16
+    Author     : Piotr
+*/
+
+root { 
+display: block;
+margin:10px;
+}
+
+.topbar,
+.botbar
+{
+    clear: both;
+    overflow: hidden;
+}
+.topbar div,
+.botbar div
+{
+    float: left;
+    vertical-align: top;
+}
+.topbar .leftside,
+.botbar .leftside
+{
+    width: 0px;
+    height: 88px;
+    background-image:url('../skin/bar_left.png');
+}
+.topbar .middle,
+.botbar .middle
+{
+    width: 862px;
+    height: 87px;
+    background-image:url('../skin/bar_middle.png');
+}
+.topbar .rightside,
+.botbar .rightside
+{
+    
+    width: 0px;
+    height: 88px;
+    background-image:url('../skin/bar_right.png');
+}
+
+.botbar div,
+.botbar .leftside,
+.botbar .middle,
+.botbar .rightside
+{
+    height: 38px;
+    background-image:url();
+}
+
+.botbar {
+    position: relative;
+    background-color: #E1E1E1;
+    border-top: 1px solid rgb(241,241,241);
+}
+
+.leftbar,
+.rightbar
+{
+    position: relative;
+    top: -4px;
+    float: left;
+    width: 0px;
+    background-repeat: repeat-y;
+}
+
+.leftbar {
+}
+.rightbar {
+}
+
+#skin {
+    position: relative;
+/*    width: 930px;
+    height: 610px;*/
+    margin: auto;
+    top: 10px;
+}
+#stage {
+    float: left;
+    position: relative; 
+    z-index: 1;
+    top: 0px;
+    border: 1px solid #ECECEC !important;
+}
+
+#menu {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    z-index: 2;
+    margin-top: 2px;
+}
+
+#pagename {
+    position: absolute;
+    top: 11px;
+    left: 30px;
+    width: 785px;
+    height: 30px;
+    line-height: 30px;
+    z-index: 2;
+    overflow: hidden;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}
+
+#previous,
+#next,
+#stop,
+#pause,
+#play,
+#counter,
+#speaker,
+#fullscreen,
+#zoom,
+#toc
+{
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 10%;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+#previous {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    background-image:url('../skin/btn_prev.png');
+}
+
+#toctop {
+  position: absolute;
+  left: 12px;
+  height: 40px;
+  width: 255px;
+  position: absolute;
+  top: 66px;
+  left: 20px;
+  height: 22px;
+  width: 100px;
+  text-indent: 15px;
+  font-size: 13px;
+  color: #000;
+  font-family: Arial;
+  cursor: pointer;
+  background-image: url('../skin/btn_toc.png');
+  background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+#toctop:hover .toc-content {
+    display: block;
+}
+.toc-content {
+    display: none;
+  position: absolute;
+  top: 21px;
+  left: 0px;
+  background: #E1E1E1;
+  width: 300px;
+  text-align: left;
+  text-indent: 21px;
+  color: #000;
+  z-index: 10000;
+    max-height: 337px;
+  overflow: auto;
+}
+.toc-content ul {
+      list-style-type: none;
+}
+.toc-content ul li {
+      padding: 5px 0px;
+      cursor: pointer;
+}
+
+.toc-content ul li:hover {
+      background-color: #ccc;
+}
+
+#closebtn {
+  position: absolute;
+  top: 66px;
+  left: 30px;
+  height: 22px;
+  width: 100px;
+  text-indent: 15px;
+  font-size: 13px;
+  color: #000;
+  font-family: Arial;
+  cursor: pointer;
+  background-image: url('../skin/close_btn.png');
+  background-repeat: no-repeat;
+}
+#closebtn:hover {
+    color: #000;
+}
+
+#helpbtn {
+  position: absolute;
+  top: 66px;
+  left: 260px;
+  height: 22px;
+  width: 80px;
+  text-indent: 15px;
+  font-size: 13px;
+  color: #000;
+  font-family: Arial;
+  cursor: pointer;
+  background-image: url('../skin/btn_help.png');
+  background-repeat: no-repeat;
+}
+#helpbtn:hover {
+    color: #000;
+}
+
+#speakerbtn {
+  position: absolute;
+  top: 66px;
+  left: 120px;
+  height: 22px;
+  width: 120px;
+  text-indent: 24px;
+  font-size: 13px;
+  color: #000;
+  font-family: Arial;
+  cursor: pointer;
+  background-image: url('../skin/btn_soundon.png');
+  background-repeat: no-repeat;
+    background-position: 3px 2px;
+}
+#speakerbtn:hover {
+    color: #000;
+}
+
+#next {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    background-image:url('../skin/btn_next.png');
+}
+
+#stop {
+    display: none;
+    background-image:url('../skin/btn_stop.png');
+}
+
+#pause {
+    display: none;
+    background-image:url('../skin/btn_pause.png');
+}
+
+#play {
+    display: none;
+    background-image:url('../skin/btn_play.png');
+}
+
+#counter {
+    right: 75px;
+    position: absolute;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+#progressbar {
+    width: 665px;
+    height: 9px;
+    background: #fff;
+    left: 70px;
+    top: 11px;
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #808285;
+}
+
+#progressbar-inside {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    background: #808285;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#zoom {
+    display: none;
+    background-image:url('../skin/btn_help.png');
+}
+
+#fullscreen {
+    display: none;
+}
+
+.fullscreen {
+    background-image: url('../skin/fullscreen.png');
+}
+
+.fullscreen-exit {
+    background-image: url('../skin/fullscreen_exit.png');
+}
+
+
+#toc {
+    display: none;
+    background-image:url('../skin/btn_toc.png');
+}
+
+/*#speaker {
+    display: none;
+    background-image:url('../skin/buttons/speakerON.png');
+}*/
+
+#logo {
+    display: none;
+}

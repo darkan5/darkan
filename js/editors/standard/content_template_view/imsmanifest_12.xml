@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="MyPlanetsCourse" version="1.2" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd  http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd  http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>1.2</schemaversion>
+	</metadata>
+	<organizations default="darkansoft">
+		<organization identifier="darkansoft" structure="hierarchical">
+			<title>test</title>
+			<item identifier="Darkansoft_1" identifierref="SCO_Darkansoft_1" isvisible="true">
+				<title>test</title>
+				<masteryscore>100</masteryscore>
+			</item>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="SCO_Darkansoft_1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+			<file href="index.html"/>
+			<dependency identifierref="ALLRESOURCES" />
+		</resource>	
+		<resource identifier="ALLRESOURCES" type="webcontent" adlcp:scormtype="asset">	
+			<file href="css/animsstyles.css"/>
+			<file href="css/flexcrollstyles.css"/>
+			<file href="css/jquerymobile.css"/>
+			<file href="css/mp3-player-button.css"/>
+			<file href="css/strony.css"/>
+			<file href="css/style.css"/>
+			<file href="css/ui-lightness/jquery-ui-1.9.2.custom.css"/>
+			<file href="css/redmond/jquery-ui-1.10.3.custom.css"/>
+			<file href="css/images/ajax-loader.gif"/>
+			
+			<file href="js/anims.js"/>
+			<file href="js/flexcroll.js"/>
+			<file href="js/html5shiv.js"/>
+			<file href="js/jquery.kinetic.min.js"/>
+			<file href="js/jquery-1.9.1.min.js"/>
+			<file href="js/jquery-ui-1.9.2.custom.js"/>
+			<file href="js/mp3-player-button.js"/>
+			<file href="js/soundmanager2-jsmin.js"/>
+			<file href="js/soundmanager2-nodebug-jsmin.js"/>
+			<file href="js/strony.js"/>
+			<file href="js/variables.js"/>
+			<file href="js/swipehandler.js"/>
+			<file href="js/source/jquery.fancybox.js"/>
+			<file href="js/source/jquery.fancybox.css"/>
+			
+			<file href="sitemap/plik.xml"/>
+			
+			<file href="skin/buttons.png"/>
+			<file href="skin/koniec.png"/>
+			<file href="skin/logo.png"/>
+			<file href="skin/menu.png"/>
+			<file href="skin/menu_buttons.png"/>
+			<file href="skin/pasek.png"/>
+			<file href="skin/skin.png"/>
+			
+			<file href="skin/buttons/next.png"/>
+			<file href="skin/buttons/play.png"/>
+			<file href="skin/buttons/previous.png"/>
+			<file href="skin/buttons/speakerOFF.png"/>
+			<file href="skin/buttons/speakerOFF.png"/>
+			<file href="skin/buttons/speakerON.png"/>
+			<file href="skin/buttons/stat.png"/>
+			<file href="skin/buttons/stop.png"/>
+			<file href="skin/buttons/table_of_content.png"/>
+			<file href="skin/buttons/zoom_in.png"/>
+			<file href="skin/buttons/zoom_out.png"/>
+			<file href="skin/buttons/counter.png"/>
+		</resource>
+		
+	</resources>
+
+</manifest>

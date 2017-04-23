@@ -1,0 +1,65 @@
+<!-- DEFAULT -->
+<script type="text/template" id="questions-analytics-item-template">
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <i class="fa fa-bar-chart-o fa-fw"></i> <%-panelTitle%> ( <%-_lang(type)%> )
+            </div>
+            <div class="panel-body">
+
+                <div class="row question-analytics-item">
+                    <!--<div class="col-md-3 item-preview" id="question-component-preview-area">-->
+                        
+                    </div>
+
+                    <div class="col-md-12" id="question-chart-area"></div>
+                    <div class="item-chart col-md-12" id="question-passed-percent-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<!-- QUIZ -->
+<script type="text/template" id="quiz-questions-analytics-item-template">
+	<legend>Quiz zwykły</legend>
+    <div class="row question-analytics-item">
+    	<div class="col-md-2 item-preview">
+    		<img src="css/img/analytics/quiz.png" />
+    	</div>
+    	<div class="col-md-2">
+    		<p>Podejścia: <%= attempts %></p>
+			<p>Odpowiedzi: </p>
+			<% _.each(answers, function(answer) { %> 
+				<p><%- answer.text %></p>
+			<% }); %>
+    	</div>
+    	<div class="col-md-8 item-chart">Wykres</div>
+    </div>
+</script>
+
+
+<!-- DnD -->
+<script type="text/template" id="dnd-questions-analytics-item-template">
+	<legend>Quiz Drag and Drop</legend>
+    <div class="row question-analytics-item">
+    	<div class="col-md-2 item-preview">
+    		<img src="css/img/analytics/dnd.png" />
+    	</div>
+    	<div class="col-md-10 item-chart">Chart</div>
+    </div>
+</script>
+
+
+<!-- Selectone -->
+<script type="text/template" id="selectone-questions-analytics-item-template">
+	<legend>Quiz Select one</legend>
+    <div class="row question-analytics-item">
+    	<div class="col-md-2 item-preview">
+    		<img src="css/img/analytics/selectone.png" />
+    	</div>
+    	<div class="col-md-10 item-chart">Chart</div>
+    </div>
+</script>

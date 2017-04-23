@@ -1,0 +1,106 @@
+
+.publication-block {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+
+.publication-block .caption > h3{
+  margin-top: 10px;
+}
+
+.publication-block .confirmation {
+  width: 140px;
+}
+
+@media (min-width: 992px) {
+	.col-md-4 {
+	    width: 32%; 
+	}	
+}
+
+.thumbnail img {
+    height: auto;
+    min-width: 50%;
+}
+
+.portal-content-image {
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    height: 120px;
+    background-size: cover !important;
+    overflow: hidden;
+    max-width: 100%;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.thumbnail .image-container {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.thumbnail {
+    overflow: hidden;
+    padding: 0px;
+}
+.thumbnail {
+
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+}
+.thumbnail:hover .play-sign {
+    display: block;
+}
+
+.play-sign {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/frontpage/play_content_portal.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,.6);
+  -webkit-animation-name: play-sign; 
+          animation-name: play-sign; 
+}
+
+@-webkit-keyframes play-sign {
+  0% { 
+    -webkit-transform: scale(1.95); 
+            transform: scale(1.95); 
+            opacity: 0;
+  }
+  100% { 
+            opacity: 1;
+    -webkit-transform: scale(1.00); 
+            transform: scale(1.00); 
+  }
+}
+
+@keyframes play-sign {
+  0% { transform: scale(1.95);opacity: 0; };
+  100%      { transform: scale(1.00); opacity: 1;}
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+         -o-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}

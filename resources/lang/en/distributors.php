@@ -1,0 +1,31 @@
+<?php
+ return array (
+  'usersList' => 'Users',
+  'userThumb' => 'Avatar',
+  'userEmail' => 'Email',
+  'createdAt' => 'Created at',
+  'updatedAt' => 'Updated at',
+  'userLastLogin' => 'Last login',
+  'countryName' => 'Country name',
+  'loginCounts' => 'Login counts',
+  'addUser' => 'Add',
+  'options' => 'Options',
+  'edit' => 'Edit',
+  'locale' => 'locale',
+  'currency' => 'currency',
+  'price' => 'price',
+  'invoiceData' => 'invoice Data',
+  'modifiedAt' => 'modifiedAt',
+  'createdAt' => 'createdAt',
+  'paymentData' => 'paymentData',
+  'paymentResult' => 'result',
+  'paymentStatus' => 'status',
+  'product' => 'product',
+  'userName' => 'user',
+  'invoiceId' => 'invoice ID',
+  'payments' => 'Payments',
+  'userList' => 'Users list',
+  'owner' => 'Owner',
+  'searchDefault' => '<< All users >>'
+  
+);

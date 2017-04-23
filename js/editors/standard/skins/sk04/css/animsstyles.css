@@ -1,0 +1,394 @@
+/* 
+    Document   : animsstyles
+    Created on : 2013-02-28, 14:07:16
+    Author     : Piotr
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+display: block;
+margin:10px;
+}
+
+
+#skin {
+    position: relative;
+    width: 900px;
+    height: 620px;
+    background-image:url('../skin/skin.png');
+    margin: auto;
+    bottom: 10px;
+}
+#stage {
+    position: absolute; 
+    top: 60px;
+    left: 20px;
+	z-index: 1;
+    height: 500px;
+}
+
+#menu {
+    position: relative;
+    width: 536px;
+    height: 60px;
+    background-image:url('../skin/menu.png');
+    top: 494px;
+    left: 182px;
+    z-index: 2;
+}
+
+#logo {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 56px;
+    background-image:url('../skin/logo.png');
+    top: 6px;
+    left: 340px;
+    z-index: 2;
+}
+
+#pagename {
+    display: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#buttons {
+
+    position: relative;
+    width: 536px;
+    height: 60px;
+}
+
+#buttons div {
+    cursor: pointer;
+}
+
+#previous {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image:url('../skin/sprite.png');
+    background-position: 0px 0px;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image:url('../skin/sprite.png');
+    background-position: 0px -30px;
+    right: 20px; 
+    top: 20px;
+    cursor: pointer;
+}
+#stop {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 90px;
+    top: 20px;
+    background-image:url('../skin/sprite.png');
+    background-position: -90px 0px;
+}
+
+#pause {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 130px;
+    top: 20px;
+    background-image:url('../skin/sprite.png');
+    background-position: -60px -30px;
+}
+
+#play {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 170px;
+    top: 20px;
+    background-image:url('../skin/sprite.png');
+    background-position: -60px 0px;
+}
+
+#counter {
+position: absolute;
+width: 20px;
+height: 30px;
+left: 258px;
+top: 25px;
+font-family: sans-serif;
+font-size: 18;
+color: #2b59a8;
+}
+
+
+#zoom {
+position: absolute;
+width: 30px;
+height: 30px;
+right: 80px;
+top: 22px;
+background-image:url('../skin/sprite.png');
+background-position: -5px -65px;
+cursor: pointer;
+/*-webkit-transition: all 100ms ease-in-out;
+-moz-transition: all 100ms ease-in-out;
+-o-transition: all 100ms ease-in-out;
+transition: all 100ms ease-in-out;*/
+}
+
+#fullscreen {
+    display: none;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 160px;
+    top: 11px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.fullscreen {
+    background-image: url('../skin/fullscreen.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.fullscreen-exit {
+    background-image: url('../skin/fullscreen_exit.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+#toc {
+position: absolute;
+width: 30px;
+height: 30px;
+right: 130px;
+top: 20px;
+background-image:url('../skin/sprite.png');
+background-position: -30px -30px;
+cursor: pointer;
+}
+
+
+#status {
+position: absolute;
+width: 30px;
+height: 30px;
+right: 170px;
+top: 20px;
+background-image:url('../skin/sprite.png');
+background-position: -30px 0px;
+cursor: pointer
+}
+    
+
+#page-wrapper {
+position: relative;
+width: 860px;
+margin: 0 auto;
+height: 500px;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+#help {
+position: absolute;
+width: 74px;
+height: 50px;
+right: 100px;
+top: -25px;
+background-image:url('../skin/sprite.png');
+background-position: 0px 0px;
+}
+
+
+#speaker {
+position: absolute;
+width: 30px;
+height: 20px;
+right: 180px;
+top: 25px;
+background-image:url('../skin/sprite.png');
+background-position: 0px 0px;
+}
+
+.passedElement{
+background: #62c462;
+border: 3px solid #62c462;
+color: #62c462;
+width: 500px;
+}
+
+
+#dialog-overlay {
+
+	/* set it to fill the whil screen */
+	width:100%; 
+	height:100%;
+	
+	/* transparency for different browsers */
+	filter:alpha(opacity=50); 
+	-moz-opacity:0.5; 
+	-khtml-opacity: 0.5; 
+	opacity: 0.5; 
+	background:#000; 
+
+	/* make sure it appear behind the dialog box but above everything else */
+	position:absolute; 
+	top:0; left:0; 
+	z-index:3000; 
+
+	/* hide it by default */
+	display:none;
+}
+
+
+#dialog-box {
+	
+	/* css3 drop shadow */
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	
+	/* css3 border radius */
+	-moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+	
+	background:#eee;
+	/* styling of the dialog box, i have a fixed dimension for this demo */ 
+	width:328px; 
+	
+	/* make sure it has the highest z-index */
+	position:absolute; 
+	z-index:5000; 
+
+	/* hide it by default */
+	display:none;
+}
+
+#dialog-box .dialog-content {
+	/* style the content */
+	text-align:left; 
+	padding:10px; 
+	margin:13px;
+	color:#666; 
+	font-family:arial;
+	font-size:11px; 
+}
+
+a.button {
+	/* styles for button */
+	margin:10px auto 0 auto;
+	text-align:center;
+	background-color: #00F;
+	display: block;
+	width:50px;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1;
+	
+	/* css3 implementation :) */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+	
+}
+
+a.button:hover {
+	background-color: #149bdf;	
+}
+
+/* extra styling */
+#dialog-box .dialog-content p {
+	font-weight:700; margin:0;
+}
+
+#dialog-box .dialog-content ul {
+	margin:10px 0 10px 20px; 
+	padding:0; 
+	height:50px;
+}
+#help-screen{
+	width: 600px;
+	height: 350px;
+}
+#toc-screen{
+	/*display: none;*/
+	/*width: 600px;*/
+	/*height: 350px;*/
+}
+
+#tog-screen-scroll {
+    /*display: none;*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 262px;
+    width: 580px;
+}
+
+.toc-gotoscreen {
+    /*display: none;*/
+    width: 540px;
+    height: 45px;
+    margin: 2px;
+    line-height: 45px;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.toc-gotoscreen:active {
+    border: 1px solid red;
+}
+
+.toc-gotoscreen:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+#status-screen-scroll {
+    display: none;
+    overflow-y: scroll;
+
+    height: 262px;
+    width: 580px;
+}
+
+.status-gotoscreen {
+    width: 540px;
+    height: 45px;
+    margin: 2px;
+    line-height: 45px;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.status-gotoscreen:active {
+    border: 1px solid red;
+}
+
+.status-gotoscreen:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+
+

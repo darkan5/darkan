@@ -1,0 +1,657 @@
+.trigger{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+
+    z-index: 5000;
+}
+
+.trigger-icon {
+    background-image: url('../../../images/sprites/trigger.png');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 25px;
+    position: absolute;
+    top: 9px;
+    left: 0px;
+}
+
+.trigger-window{
+    overflow: visible !important;
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    width: auto;
+    height: auto;
+    max-height: 500px !important;
+
+    z-index: 5000;
+}
+
+.trigger-wrapper{
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+
+    width: 400px;
+    height: 300px;
+
+    background-color: #ffae00;
+    border: 1px solid #000000;
+
+}
+
+.trigger-content{
+    width: 100%;
+    height:  calc(100% - 25px);
+
+    background-color: #ffffff;
+}
+
+.trigger-maximize-button {
+    border: none;
+    background-image: url('../../../images/sprites/trigger.png');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 35px;
+    background-color: #FFF;
+    padding: 3px 0px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.trigger-maximize-button:focus {
+    outline: none;
+}
+.trigger-maximize-button:hover {
+    background-color: #D4E4EF;
+}
+
+.trigger-action-section{
+    display: none;
+    background-color: #d3d3d3;
+}
+
+.trigger-if-section{
+    background-color: #adff2f;
+}
+
+.trigger-else-section{
+    background-color: #ffc0cb;
+}
+
+.trigger-components-container{
+    width: 220px;
+    padding: 2px;
+    min-height: 38px;
+    height: auto;
+
+    background-color: #E4E4E4;
+
+    display: inline-block;
+}
+
+.trigger-components-container[disabled="disabled"]{
+
+    display: none;
+}
+
+.trigger-navigate-to-trigger{
+
+}
+
+.trigger-navigate-to-trigger:hover{
+    color: red;
+}
+
+.ok-button-add-new-interaction{
+
+}
+
+.ok-button-add-new-interaction[disabled='disabled']{
+
+}
+
+.cancel-button-add-new-interaction{
+
+}
+
+.trigger-add-animation-to-trigger[disabled="disabled"]{
+    display: none;
+}
+
+.trigger-add-animation-to-trigger{
+    display: inline-block;
+}
+
+.trigger-if-container{
+   width: 100%;
+   height: auto;
+}
+
+.trigger-list-buttons {
+    width: 16px;
+    height: 16px;
+    background-image: url(../../../images/sprites/triggericons.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+}
+
+.trigger-condition-item .trigger-list-buttons {
+    top: 0px;
+}
+
+.trigger-copy-button{
+    background-position: 0px 0px;
+    right: 20px;
+    top: 2px;
+}
+
+.trigger-delete-trigger-button{
+    background-position: 0px -57px;
+    right: 0px;
+    top: 2px;
+}
+.trigger-delete-trigger-button:hover {
+    background-position: 0px -28px;
+}
+
+.trigger-create-new-interaction-empty{
+    font-style: italic;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin: auto;
+}
+
+.trigger-create-new-interaction-empty:hover{
+    text-decoration: underline;
+}
+
+.trigger-create-new-interaction-exist{
+
+}
+
+.trigger-action-select{
+    display: inline-block;
+}
+
+.trigger-index{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.trigger-list{
+    background-color: #fff;
+    border-color: #5082A5;
+    border-width: 0px;
+    border-style: solid;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.trigger-list-holder > .trigger-list-item {
+    min-height: 24px;
+}
+
+.trigger-list-item{
+    display: block;
+    padding: 2px 25px 2px 5px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+.trigger-list-item:last-child {
+    border-bottom: 1px solid #5082A5;
+}
+
+/*.trigger-list-item:hover {
+    background-color: #ECEEFF;
+}*/
+
+.trigger-list-item[selected-item="true"]{
+
+    background-color: #CCE2ED;
+}
+
+.trigger-list-item ul {
+    padding-left: 5px;
+}
+
+/*.trigger-list-options{*/
+    /*margin: 5px;*/
+    /*width: 150px;*/
+    /*height: 20px;*/
+    /*background-color: #0e90d2;*/
+    /*border: 1px solid #000000;*/
+/*}*/
+
+.trigger-list-holder{
+    list-style-type: none;
+    height: auto;
+    overflow-y: auto;
+    position: relative;
+    overflow-x: hidden;
+    max-height: 399px;
+}
+
+.trigger-list-item:hover .trigger-list-text.title{
+    text-decoration: underline;
+}
+
+.trigger-list-text {
+  width: 95px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.trigger-list-item{
+    list-style: none;
+}
+
+/*.trigger-list-item:hover{*/
+    /*text-decoration: underline;*/
+    /*background-color: #d3d3d3;*/
+/*}*/
+
+
+
+.trigger-stage{
+
+    float: left;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+
+
+    max-height: 425px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.trigger-subtrigger-section{
+    margin: 5px;
+    width: auto;
+    height: auto;
+    border-bottom: 3px solid #5082A5;
+    display: none;
+}
+
+.trigger-elseaction-section{
+
+    margin: 5px;
+    width: auto;
+    height: auto;
+    display: none;
+}
+
+.trigger-whendoit-section {
+    border-bottom: 3px solid #5082A5;
+    padding-bottom: 10px;
+}
+
+.trigger-condition-section{
+
+    margin: 5px;
+    width: auto;
+    height: auto;
+    border-bottom: 3px solid #5082A5;
+    display: none;
+}
+
+
+.trigger-subtrigger-item{
+    position: relative;
+     padding: 5px;
+     height: auto;
+     width: 403px;
+     min-height: 42px;
+ }
+
+.trigger-subtrigger-item[mark="true"]{
+    background-color: #ffff00;
+}
+
+.trigger-elseaction-item{
+    position: relative;
+    padding: 5px;
+    height: auto;
+    width: 403px;
+    min-height: 42px;
+}
+
+.trigger-condition-item{
+    position: relative;
+    margin: 5px;
+    width: auto;
+    height: auto;
+}
+
+
+
+.trigger-item-holder{
+    list-style-type: none;
+}
+
+.trigger-item-holder li:hover{
+      outline: 1px dashed #196D98;
+}
+
+.trigger-add-button {
+    border: none;
+    background: #009900;
+    color: #fff;
+    padding: 4px 26px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.trigger-add-button:hover {
+      background: #00C000;
+}
+
+.trigger-stage select,
+.trigger-stage input[type="text"]
+{
+    font-size: 14px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #5082A5;
+    background-color: #FFFFFF;
+}
+.trigger-title {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.whendoit-title {
+    float: left;
+}
+
+.trigger-list-title {
+  padding: 4px 4px;
+}
+
+.trigger-action-select-container {
+    float: left;
+    width: 130px;
+    text-align: center;
+}
+
+.trigger-action-select {
+      width: 120px;
+}
+
+.trigger-add-animation-to-trigger {
+    background-color: #67ABD6;
+    border: none;
+    padding: 1px 10px;
+    color: #fff;
+    margin-top: 2px;
+    margin-left: 25px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.trigger-data-picker-icon {
+    position: absolute;
+    top: 5px;
+    right: 32px;
+}
+
+.trigger-compare-value {
+    width: 100px;
+    font-size: 14px;
+    border-width: 2px;
+    border-color: #5082A5;
+    background-color: #FFFFFF;
+    border-style: solid;
+}
+
+.trigger-data-picker-text{
+    text-decoration: none;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.trigger-data-picker-text:hover{
+    text-decoration: underline;   
+}
+
+.trigger-varpicker {
+    width: 100px;
+}
+
+.trigger-varactionpicker {
+    width: 100px;
+}
+.trigger-varchange-input {
+    width: 50px;
+}
+
+.create-new-variable-delete-button {
+    border: none;
+    vertical-align: middle;
+}
+
+.trigger-on-select {
+    max-width: 200px;
+}
+
+.trigger-condition-item select {
+    max-width: 130px;
+}
+
+input.trigger-delay-input {
+    position: absolute;
+    width: 35px;
+    top: 28px;
+    left: 0px;
+    font-size: 12px;
+}
+
+.trigger-items-minimize-count{
+    position: absolute;
+    left: 22px;
+    bottom: 5px;
+    background-color: rgb(187, 55, 55);
+    padding: 0px 6px;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+.trigger-x-input,
+.trigger-y-input,
+.trigger-width-input,
+.trigger-height-input,
+.trigger-scale-input,
+.trigger-rotate-angle-input,
+.trigger-time-input,
+.trigger-opacity-input {
+    width: 50px;
+    margin: 2px;
+}
+
+.trigger-transition-section-1,
+.trigger-transition-section-2,
+.trigger-transition-section-3{
+    float: left;
+    width: 190px;
+    height: 110px;
+    display: inline-block;
+}
+
+.trigger-animation-button-play{
+    width: 30px;
+    height: 30px;
+    background-image: url('../../../images/play_btn_small.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 5px;
+    margin-right: 28px;
+    float: left;
+}
+
+.trigger-data-picker-icon-select-one-object {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../images/data_picker_icon.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #5C4E45;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+
+    margin-top: 10px;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.trigger-data-picker-icon-select-one-object[selectedparams="all"] {
+
+    background-color: #000000;
+}
+
+.trigger-data-picker-icon-select-one-object[selectedparams="positions"] {
+
+    background-color: #2A375D;
+}
+
+.trigger-data-picker-icon-select-one-object[selectedparams="dimensions"] {
+
+    background-color: #31441B;
+}
+
+.trigger-data-picker-icon-select-one-object[selectedparams="none"]{
+
+    background-color: #3859B5;
+}
+
+.trigger-transition-container{
+    width: 500px;
+    height: 125px;
+}
+
+
+
+
+.trigger-aspect-ratio-container {
+    position: absolute;
+    left: -11px;
+    top: 7px;
+}
+
+.trigger-aspect-ratio-overlay {
+    position: absolute;
+    background: #fff;
+    opacity: 0.8;
+    width: 10px;
+    height: 35px;
+}
+
+.trigger-aspect-ratio {
+    display:none;
+}
+.trigger-aspect-ratio + label {
+    cursor: pointer;
+    position: absolute;
+    background: url('../../../images/sprites/topmenu.png');
+    background-position: -14px -148px;
+    width: 10px;
+    height: 32px;
+}
+.trigger-aspect-ratio:checked + label {
+    background-position: -5px -148px;
+}
+
+.trigger-highligh-input {
+    background-color: #FFFF00;
+}
+
+.trigger-graph-baizer-previev{
+    width: 16px;
+    height: 16px;
+    background-image: url('../../../images/f.gif');
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px;
+}
+
+input.trigger-keyboard-input {
+    width: 35px;
+}
+
+input.trigger-keyboard-input[mark="true"] {
+    background-color: #ffff00;
+}
+
+.trigger-video-time-1-input,
+.trigger-video-time-2-input{
+    width: 50px;
+    margin: 2px;
+}
+
+.trigger-transition-container .size-and-position-editor-column {
+    width: 90px !important;
+}
+
+.trigger-style-container{
+    width: calc(50% - 6px);
+    display: inline-block;
+    margin-top: 2px;
+    padding: 2px;
+    vertical-align: top;
+}
+
+.border-color-picker-container{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+.trigger-border-weight-input{
+    margin-top: 2px;
+}
+
+.trigger-border-type-select{
+    margin-left: 5px;
+}
+
+.trigger-go-to-link-target-select{
+    width: 174px;
+    margin-top: 2px;
+}
+

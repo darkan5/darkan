@@ -1,0 +1,71 @@
+.function-not-avaiable-window {
+    width: 700px;
+    height: 350px;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: 10000;
+}
+
+.function-not-avaiable-window .window-content {
+	padding: 30px;
+	font-size: 20px;
+	text-align: center;
+    box-sizing: border-box;
+    overflow: auto;    
+}
+
+.function-not-avaiable-window .plans-table {
+    font-size: 14px;
+}
+
+.function-not-avaiable-window .plans-table {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.function-not-avaiable-window  .plans-table td {
+    padding: 3px;
+    border: none;
+    text-align: center;
+}
+
+.function-not-avaiable-window .goprobutton {
+    margin: 20px 0px;
+    padding: 6px 30px;
+}
+
+.function-not-avaiable-window .signupbutton {
+    margin: 28px 0px;
+    padding: 18px 130px;
+    font-size: 17px;
+    background-color: #5082A5;
+    border-color: #5082A5;
+}
+
+.function-not-avaiable-window .signupbutton:hover {
+    background-color: #6DA3CA;
+}
+
+.function-not-avaiable-window legend {
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.function-not-avaiable-window .not-available-icon {
+    vertical-align: middle;
+    text-indent: -7px;
+    margin-right: 10px;
+    background: #fff;
+    width: 18px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.function-not-avaiable-window .test-drive-fn-window-content {
+    font-size: 18px;
+}

@@ -1,0 +1,15 @@
+* {
+	user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+}
+
+.text-component * {
+	user-select: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    -o-user-select: auto;
+    -moz-user-select: auto;
+}

@@ -1,0 +1,109 @@
+function WebService(){
+
+}
+
+WebService.create = function(type){
+    switch(type){
+        case 'php':
+            return new PhpWebservice();
+            break;
+        case 'node':
+            return new NodeWebservice();
+            break;
+        case 'fake':
+            return new FakeWebservice();
+            break;
+
+        default :
+            return new FakeWebservice();
+            break;
+    }
+}
+
+
+
+WebService.prototype.connect = function(params, onResult, onFault)
+{
+    // To override
+}
+
+
+WebService.prototype.watchProject = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.loadProject = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.createBlankPage = function(params, onResult, onFault, onProgress)
+{
+    // To override
+}
+
+WebService.prototype.updatePage = function(params, onResult, onFault, onProgress)
+{
+    // To override
+}
+
+WebService.prototype.deletePage = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.copyPage = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.updatePageSort = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.saveProjectOptions = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.updateComponent = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.updateTimeline = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.updatePageOptions = function(data, onResult, onFault)
+{
+    // To override
+}
+
+WebService.prototype.saveFileOnServer = function(params, onResult, onFault, onProgress)
+{
+    // To override
+}
+
+
+
+
+WebService.prototype.updateSettings = function(settings, params)
+{
+    settings = settings || {};
+
+	for(var item in params)
+	{
+		settings[item] = params[item];
+	}
+}
+
+WebService.prototype.sendAndLoad = function (url, settings, onResult, onFault)
+{
+    // To override
+}
+
+

@@ -1,0 +1,112 @@
+﻿<html>
+<head>
+	<title></title>
+
+
+	<style type="text/css">
+
+		body{
+			position: absolute;
+			width: 794px;
+			height: 1123px;
+			margin: 30px;
+			padding: 0px;
+
+			font-family: "Times New Roman", Georgia, Serif;
+		}
+
+		.container{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.certificate-name{
+			position: absolute;
+			top: 150px;
+			right: 0px;
+			font-size: 36px;
+		}
+
+		.certificate-user-name{
+			position: absolute;
+			top: 250px;
+			right: 0px;
+			font-size: 28px;
+			text-transform: uppercase;
+		}
+
+		.certificate-title{
+			position: absolute;
+			top: 400px;
+			left: 0px;
+			font-size: 20px;
+			line-height: 10px;
+		}
+
+		.certificate-date{
+			position: absolute;
+			top: 560px;
+			left: 0px;
+			font-size: 20px;
+		}
+
+		.certificate-owner{
+			position: absolute;
+			top: 690px;
+			right: 0px;
+			font-size: 14px;
+
+		}
+
+		.certificate-footer{
+			position: absolute;
+			width: 100%;
+			bottom: 0px;
+			text-align: center;
+			font-size: 11px;
+		}
+
+
+		.logo{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<div class="container">
+
+
+		<!-- <img src="http://jerzy.pl/darkanpanel/server/php/lms_controller/certyficate/templates/template_1/img/image001.png"/> -->
+		<img src="http://mobbingidyskryminacja.pl/wp-content/uploads/2013/02/copy-logo.png"/>
+		<!-- <img src="img/image001.png"/> -->
+
+		<span class="certificate-name">CERTYFIKAT</span>
+		<span class="certificate-user-name"><i><%username%><i></span>
+		
+
+		<span class="certificate-title">
+			<i><%genderPrefix%> szkolenia e – learningowe:</i>
+			<br/>
+			<%certificateTitle%>
+		</span>
+
+		<span class="certificate-date"><i>w dniu <%courseDate%> w Warszawie</i></span>
+
+		<span class="certificate-owner">Autorki szkolenia:
+			<br/>
+			Monika Klonowska   Maria Pawłów
+		</span>
+
+		<a class="certificate-footer" href="www.mobbingidyskryminacja.pl">www.mobbingidyskryminacja.pl</a>
+
+	</div>	
+	
+</body>
+</html>

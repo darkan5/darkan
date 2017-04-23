@@ -1,0 +1,5 @@
+var InfoPointSoundStyleEditorView = ImageStyleEditorView.extend({
+
+
+
+});

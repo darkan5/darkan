@@ -1,0 +1,12 @@
+.command-line{
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #00FF00;
+	background-color: #000;
+}
+
+.command-line[error-parse="true"]{
+	color: #000;
+	background-color: #FF9E9E;
+}

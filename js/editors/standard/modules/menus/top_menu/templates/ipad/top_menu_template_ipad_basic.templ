@@ -1,0 +1,127 @@
+<script id="top-menu-template-ipad-basic" type="text/template">
+	<div class="menu-top-right-pane">
+<!-- 				<div id="showhide-pagelist-button" class="button-big-with-icon">
+			<span><?php //echo $lang['PAGE_LIST'] ?></span>
+		</div> -->
+		<div id="size-and-position-container"></div>
+		<div id="align-container"></div>
+	</div>
+
+
+	<div class="profile-box">
+
+		<a id="close-project" href="<?=url('/projects')?>"></a>
+
+		<div class="change-language">
+			<span><?= $chosenLang ?></span>
+			<p class="downarrow">▼</p>
+			<ul id="languages-list">
+				<li><span>pl</span></li>
+				<li><span>en</span></li>
+			</ul>
+		</div>
+
+		<span class="profile">
+			<div class="profile-picture-mini" style="background-image: url('<?=$userPhoto?>')"></div>
+			<div class="text-box">
+				<strong class="name"><?=$user->login;?></strong>
+			</div>
+<!--                     <div class="left-disk-space-text">30.36<strong>/</strong>20480 mb</div>
+            <div class="left-disk-space">
+                <div class="left-disk-space-inner" style="width: 0%; background: rgb(54, 88, 112);"></div>
+            </div> -->
+			<div class="downarrow">▼</div>
+
+			<div class="profile-menu">
+				<div class="profile-picture" style="background-image: url('<?=$userPhoto?>')"></div>
+				<div class="links-container">
+					<a class="menu-links" href="../../" target="_blank"><?=Lang::get("editor.MENU_HOME")?></a>
+					<div class="clear"></div>
+					<a class="menu-links" href="../" target="_blank"><?=Lang::get("editor.MENU_PROJECTLIST")?></a>
+					<div class="clear"></div>
+					<a class="menu-links my-channel" href="../../portal/" target="_blank"><?=Lang::get("editor.MENU_PORTAL")?></a>
+				</div>
+			</div>
+
+
+		</span>
+
+        <div id="share-project" title="<?=Lang::get("editor.SHARE_PROJECT_HEAD")?>"></div>
+        <div id="project-options"></div>
+        <div id="lmslink">
+        	<a id="lms" class="lms" title="<?=Lang::get("editor.TOOLTIP_0125")?>">
+        		<i class="fa fa-line-chart fa-fw"></i> <?=Lang::get("editor.MENU_LMS")?>
+        	</a>
+        </div>
+
+        <div id="view" title="<?=Lang::get("editor.TOOLTIP_0057")?>" class=""><?=Lang::get("editor.MENU_PREVIEW")?></div>
+        
+	</div>
+	
+
+	<div id="menu-top-tabs" class="darkan-tabs">
+		<ul>
+			<li><a href="#menu-project" class="menu-controls-selected"><?=Lang::get('editor.MENU_FILES')?></a></li>
+            <li><a href="#menu-text"><?=Lang::get("editor.MENU_TEXT")?></a></li>
+			<li><a href="#menu-extras"><?=Lang::get('editor.MENU_EXTRAS')?></a></li>
+			<li><a href="#menu-help"><?=Lang::get('editor.MENU_HELP')?></a></li>
+		</ul>
+
+		<div id="menu-project">
+            <a class="button-big-with-icon topmenu-newpage" id="topmenu-add-new-page" title="<?=Lang::get('editor.TOOLTIP_0023')?>">
+            	<span><?=Lang::get('editor.MENU_FILES_ADDCLEARPAGE') ?></span>
+            </a>
+
+            <div class="button-big-with-icon topmenu-import topmenu-expendable" id="topmenu-import" title="<?=Lang::get('editor.TOOLTIP_0131')?>">
+            	<span><?=Lang::get('editor.MENU_IMPORT') ?></span>
+                <div class="topmenu-expanded">
+                    <a class="button-big-with-icon" id="topmenu-import-files"  title="<?=Lang::get('editor.TOOLTIP_0024')?>">
+                        <span><?=Lang::get('editor.MENU_FILES_FILES'); ?></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="button-big-with-icon topmenu-export" id="topmenu-export-expendable" title="<?=Lang::get('editor.TOOLTIP_0025')?>">
+                <span><?=Lang::get('editor.MENU_EXPORT') ?></span>
+            </div>
+
+            <div class="button-big-with-icon topmenu-project-version" title="<?=Lang::get('editor.TOOLTIP_0084')?>">
+                <span><?=Lang::get('editor.MENU_SAVE_PROJECT') ?></span>
+            </div>  
+
+            <a class="button-big-with-icon topmenu-variables" id="topmenu-variables" title="<?=Lang::get('editor.TOOLTIP_0143')?>">
+                <span><?=Lang::get('editor.MENU_VARIABLES') ?></span>
+            </a>
+
+            <a class="button-big-with-icon topmenu-publish" id="topmenu-publish-project" title="<?=Lang::get('editor.TOOLTIP_0085')?>">
+                <span><?=Lang::get('editor.BANNER_TITLE') ?></span>
+            </a>
+
+			<!-- <a class="button-big-with-icon" id="topmenu-purge-project" title="<?//Lang::get('editor.TOOLTIP_0026')?>">
+				<span><?//Lang::get('editor.MENU_DELETE_CLEARPROJECT') ?></span>
+			</a> -->
+
+			
+
+		</div>
+
+
+        <div id="menu-text">
+            <div id="text-editor-image"></div>
+        </div>
+
+
+		<div id="menu-extras">
+            <a class="button-big-with-icon" id="topmenu-extras-videosearch"><span><?=Lang::get('editor.MENU_EXTRAS_VIDEO_SEARCH') ?></span></a>
+            <a class="button-big-with-icon" id="topmenu-extras-imagesearch"><span><?=Lang::get('editor.MENU_EXTRAS_IMAGE_SEARCH') ?></span></a>
+			<a class="button-big-with-icon" id="topmenu-extras-db" id="extras-dropbox"><span><?=Lang::get('editor.MENU_EXTRAS_DROPBOX') ?></span></a>
+			<!--<a class="button-big-with-icon" id="topmenu-extras-fbphoto" id="extras-fbphoto"><span><?//Lang::get('editor.MENU_EXTRAS_FACEBOOK') ?></span></a>-->
+		</div>
+
+		<div id="menu-help">
+			<a class="button-big-with-icon" id="help-tutorial" title="">
+				<span><?=Lang::get('editor.MENU_HELP_TUTORIAL') ?></span>
+			</a>
+		</div>
+	</div>
+</script>

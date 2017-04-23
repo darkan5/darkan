@@ -1,0 +1,4 @@
+var InfoPointDownloadStyleEditorView = ImageStyleEditorView.extend({
+
+
+});

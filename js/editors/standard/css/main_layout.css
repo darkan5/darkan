@@ -1,0 +1,421 @@
+* {
+	padding: 0px;
+	margin: 0px;
+    
+}
+
+hr {
+	display: block;
+	margin: 0.5em 0em;
+	border-style: inset;
+	border-width: 1px;
+}
+
+.tooltip{
+	z-index: 9999
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font: 12px "Lato", sans-serif;
+}
+
+.clear {
+	clear: both;
+}
+
+.margin20 {
+	margin: 20px;
+}
+.margin010 {
+	margin: 0px 10px;
+}
+.margin0auto {
+	margin: 0 auto;
+}
+.tar {
+	text-align: right;
+}
+.tal {
+	text-align: left;
+}
+.tac {
+	text-align: center;
+}
+
+.width100 {
+	width: 100%;
+}
+.width80 {
+	width: 80%;
+}
+.width50 {
+	width: 49%;
+}
+.maxwidth100 {
+	max-width: 100px
+}
+.minwidth200 {
+	min-width: 200px
+}
+.maxwidth200 {
+	max-width: 200px
+}
+.maxwidth300 {
+	max-width: 300px
+}
+.inline {
+	display: inline-block;
+}
+
+.warning-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/sprites/warning.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.error {
+	box-shadow: 3px 2px 10px #EE6E73 !important;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+#darkanapp {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #FAFAFA;
+}
+
+#load-project-modal,
+#unexpected-error-modal
+{
+	display: table;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #fff;
+	z-index: 9999;
+	text-align: center;
+	background: #FAFAFA;
+}
+
+#load-project-modal figure,
+#unexpected-error-modal figure
+{
+	vertical-align: middle;
+	display: table-cell;
+}
+
+#load-project-modal figcaption.main,
+#unexpected-error-modal figcaption.main
+{
+	font-size: 20px;
+	line-height: 45px;
+}
+
+#load-project-modal figcaption.extra,
+#unexpected-error-modal figcaption.extra
+{
+	font-size: 13px;
+	font-style: italic;
+}
+
+.refresh-page-btn {
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px !important;
+}
+
+.button-big-with-icon {
+	position: relative;
+	font-size: 11px;
+	float: left;
+	width: 80px;
+	height: 70px;
+	/* margin-top: 6px; */
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.button-big-with-icon:hover > span { 
+	text-decoration: underline;
+}
+
+.button-big-with-icon:after {
+	content: "";
+	top: 0;
+	left: -3px;
+	position: absolute;
+	background: url(../images/sprites/bignuttonicons.png);
+	width: 48px;
+	height: 40px;
+	float: left;
+	background-repeat: no-repeat;
+	margin-left: 22px;
+	cursor: pointer;
+}
+
+.button-big-with-icon > span {
+	position: absolute;
+	margin: 0 auto;
+	left: 0px;
+	height: 30px;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	color: #535353;
+}
+
+#botmenu-styles {
+	height: calc(100% - 31px);
+	overflow-y: auto;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.style-template {
+	cursor: pointer;
+}
+
+li[role="tab"][aria-disabled="true"] {
+	opacity: .4
+}
+
+/* ========== TABS ========== */
+
+.darkan-tabs > ul {
+	padding: 0;
+	background: none;
+	border: none;
+	list-style-type: none;
+	display: table;
+}
+
+.darkan-tabs {
+	background: #fff;
+	height: 100%;
+}
+
+.darkan-tabs#menu-top-tabs div[role="tabpanel"] {
+	font-size: 11px;
+	background: #fff;
+	height: 68px;
+	border-radius: 0px;
+	padding: 14px 10px 5px;
+}
+
+.darkan-tabs li[role="tab"]:focus,
+.darkan-tabs li[role="tab"] a:focus
+{
+	outline: none;
+}
+
+.darkan-tabs li.ui-tabs-active[role="tab"] a {
+	border-top: 2px solid #67ABD6 !important;
+}
+
+.darkan-tabs li[role="tab"] {
+	float: left;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #2F3B41;
+	margin: 2px 2px -2px 0px; 
+	background: #fff;
+	font-family: sans-serif; 
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	cursor: pointer;
+	font-family: sans-serif;
+}
+
+.darkan-tabs a {
+	color: #000;
+	text-decoration: none;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+
+.tabs-left { 
+    position: relative; 
+} 
+.tabs-left .ui-tabs-nav { 
+	float: left;
+    position: relative; 
+    width: 150px; 
+    height: 100%;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+} 
+.tabs-left .ui-tabs-nav li { 
+    right: 1px; 
+    width: 100%; 
+    overflow: hidden; 
+} 
+.tabs-left .ui-tabs-nav li.ui-tabs-selected, 
+.tabs-left .ui-tabs-nav li.ui-state-active { 
+    border-right: 1px solid transparent; 
+} 
+.tabs-left .ui-tabs-nav li a { 
+	float: right;
+	width: 100%;
+	padding: 17px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+} 
+.tabs-left .ui-tabs-nav li a { 
+    float: right; 
+    width: 100%; 
+    padding: 17px 0px;
+} 
+.tabs-left > div { 
+    height: 35em; 
+}
+.tabs-left div[role="tabpanel"] {
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: calc(100% - 150px);
+	box-sizing: border-box;
+	padding: 5px 0px 5px 10px;
+	overflow-y: auto;
+}
+.tabs-left li[role="tab"] {
+	border-top: none;
+	border-left: none;
+	border-right: none; 
+	border-bottom: 1px solid #ccc; 
+}
+
+.tabs-left li[role="tab"].ui-state-active {
+	border-right: none;
+}
+
+.tabs-left li.ui-tabs-active[role="tab"] a {
+	border-top: none !important;
+}
+.tabs-left li.ui-tabs-active[role="tab"] a{
+	background-color: #67ABD6;
+	color: #fff;
+}
+
+
+
+/* =========== RESIZABLE ========== */
+.ui-resizable { position: relative;}
+.ui-resizable-handle {display: none; position: absolute;font-size: 0.1px;z-index: 99999;}
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; right: -5px; bottom: -5px; }
+.ui-resizable-sw { cursor: sw-resize; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; right: -5px; top: -5px;}
+
+.ui-resizable-se,
+.ui-resizable-sw,
+.ui-resizable-nw,
+.ui-resizable-ne
+{
+
+	width: 10px;
+	height: 10px;
+	border: 1px solid #7FA2B8;
+	background: #7FA2B8;
+	opacity: .9;
+	box-sizing: border-box;
+}
+.ui-resizable-se:hover,
+.ui-resizable-sw:hover,
+.ui-resizable-nw:hover,
+.ui-resizable-ne:hover
+{
+	border: 1px solid #fff;
+}
+
+
+
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+.btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.text-warning {
+    color: #c09853;
+}
+
+.text-success {
+    color: #468847;
+}
+
+.text-danger {
+    color: #a94442;
+}
+
+._jsPlumb_endpoint {
+	z-index: 500;
+}
+._jsPlumb_connector {
+	z-index: 499;
+}

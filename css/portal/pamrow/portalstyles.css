@@ -1,0 +1,169 @@
+html, body {
+    overflow-x: hidden;
+    font-family: 'Lato';
+    color: #000;
+    background: #FB0B19;
+}
+hr {
+    display: none;
+}
+
+.play-sign {
+    background-image: url('play_content_portal.png')
+}
+
+.header-category {
+    padding: 10px 15px;
+    border-bottom: 1px solid #000;
+}
+
+.custom-page-title {
+    display: block;
+    background-image: url('customtitle.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30px;
+    background-position: 50% 50%;
+}
+
+.thumbnail .caption {
+    padding: 0px;
+}
+
+.thumbnail .caption .standard-info-block li {
+    padding: 3px 0px;
+}
+
+.thumbnail .caption .status-block {
+    text-align: right;
+    padding: 0px 5px;
+}
+
+.thumbnail .caption .status-block .status-string {
+    border-bottom: 5px solid #f00;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.thumbnail .caption h3,
+.thumbnail .caption .thumbnail-caption-shorten
+{
+    color: #f00;
+    padding: 0px 9px;
+}
+
+.thumbnail .caption .extra-info {
+    background: #000;
+    padding: 9px;
+    
+}
+.thumbnail .caption .extra-info li {
+    color: #fff;
+}
+
+.well.loggedinas {
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+    text-align: right;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.well.loggedinas span{ 
+    border-bottom: 3px solid #000;
+    padding: 5px;
+}
+
+.well {
+    background-color: #E01616;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.thumbnail {
+    background-color: #E8FFFF;
+    border: none;
+}
+
+.portal-header {
+	display: none;
+}
+.portal-header *{
+	color: #FF0000;
+}
+
+.thumbnail {
+	color: #FF0000;
+}
+
+.btn-readmore {
+	color: #fff;
+}
+
+.auth-form {
+    border: 5px solid #000 !important;
+    border-radius: 4px !important;
+    background-color: #f00;    
+}
+
+.auth-form legend {
+    display: none;
+}
+
+.auth-form .input-group-addon {
+    background: transparent;
+    border: none;
+}
+.auth-form .input-group-addon i {
+    color: #000;
+    font-size: 2em !important;
+    vertical-align: middle;
+    width: 30px;
+}
+.auth-form input.form-control {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px !important;
+    height: 38px;
+}
+
+.auth-form button.btn-login {
+    float: right;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.auth-form button.btn-login:hover {
+    text-decoration: underline;
+}
+
+.auth-form a{
+    color: #fff !important;
+}
+.cd-timeline-content {
+    color: #fff;
+}
+
+.login-text {
+    color: #fff;
+}
+
+.darkan-vertical-timeline:before,
+.vertical-timeline-dot 
+{
+    background-color: #000 !important;
+}
+
+.btn-makepayment, #send-access-request {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+

@@ -1,0 +1,343 @@
+@media(max-width: 1366px) {
+
+
+/* --------------------------- ALL ELEMENTS --------------------------- */
+.darkan-tabs li[role="tab"] {
+	font-size: 9px;
+}
+
+#main-logo {
+	width: 80px;
+}
+
+.window-top-bar {
+	font-size: 15px;
+}
+
+.trigger-title {
+	font-size: 14px;
+}
+
+/* --------------------------- SCENE --------------------------- */
+#scene-wrapper {
+    width: calc(100% - 300px);
+    top: 92px;
+}
+
+/* --------------------------- RIGHT MENU --------------------------- */
+.pages .page-show,
+.pages .page-sound,
+.pages .page-notes,
+.pages .page-show
+{
+	display: none;
+}
+#menu-right {
+	width: 200px;
+    top: 77px;
+    height: calc(100% - 70px);
+}
+.pages-list-wrapper, 
+#second-pages-list-wrapper
+{
+    width: 195px;
+}
+.page > .page-thumb,
+.page > .dinamic-page-thumb-wrapper
+{
+    margin: 0px 0px 0px 5px;
+}
+.new-page-plus-button {
+    margin: 10px;
+    width: 140px;
+}
+.page > .page-label {
+	max-width: 125px;
+	font-size: 11px;
+	height: 15px;
+	bottom: 2px;
+	line-height: 15px;
+	left: 24px;
+}
+.page > .page-counter {
+	left: 0px;
+	width: 20px;
+	bottom: 0px;
+}
+#menu-right .pagelist-buttons-wrapper {
+    width: 200px;
+}
+.edition-data-buttons-sec-proj .chosen-container {
+	width: 98px !important;
+}
+.edition-data-buttons-sec-proj .chosen-container .chosen-drop {
+	width: 135px !important;
+}
+
+/* --------------------------- LEFT MENU --------------------------- */
+#menu-left,
+.menu-left-toolbar-buttons
+{
+	width: 80px !important;
+}
+#menu-left > ul.menu-left-toolbar-buttons > li > a.big-btn {
+	height: 30px;
+}
+#menu-left > ul.menu-left-toolbar-buttons > li a span {
+	margin: 6px auto 0;
+    margin-top: 10px;
+    zoom: 0.8;
+}
+
+#menu-left > ul.menu-left-toolbar-buttons > li > a.big-btn {
+	width: 76px;
+}
+#menu-left > ul.menu-left-toolbar-buttons > li > .small-btn {
+	width: 37px;
+}
+#menu-left > ul.menu-left-toolbar-buttons li.separator {
+	width: 80px;
+}
+#menu-left > ul.menu-left-toolbar-buttons li > ul.menu-left-second-lvl {
+	left: 80px;
+}
+
+/* --------------------------- TOP MENU --------------------------- */
+#menu-top {
+	left: 80px;
+    width: calc(100% - 80px );
+}
+#text-editor-image {
+    background-image: url('../../images/sprites/texteditor_1366.png');
+    width: 526px;
+    height: 36px;
+}
+
+#size-and-position-container .rotate-row {
+	display: none;
+}
+#size-and-position-container .flip-row {
+	display: none;
+}
+
+.size-and-position-editor-column {
+    width: 130px;
+}
+#aspectRatio + label,
+#aspectRatioOverlay
+{
+    transform: rotate(270deg);
+}
+.size-and-position-editor-column.whcolumn {
+	margin-left: 0px;
+}
+
+.size-and-position-editor-column-label {
+    font-size: 10px;
+}
+#size-and-position-container input {
+	width: 45px;
+	font-size: 12px;
+    margin: 0px;
+}
+.aspectratio {
+	left: 57px;
+    top: 9px;
+}
+#align-container {
+    margin: 3px 6px;
+    padding: 5px 10px;
+    border-width: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+}
+.menu-top-right-pane {
+    width: 370px;
+}
+.darkan-tabs#menu-top-tabs div[role="tabpanel"] {
+	height: 40px;
+}
+
+.darkan-tabs#menu-top-tabs div[role="tabpanel"] {
+    font-size: 11px;
+    background: #fff;
+    height: 40px;
+    border-radius: 0px;
+    padding: 8px 10px 5px;
+}
+
+.button-big-with-icon {
+    height: 27px;
+    padding-left: 30px;
+    width: auto;
+    margin-right: 12px;
+    margin-top: 6px;
+    /*max-width: 65px;*/
+    word-break: break-word;
+}
+
+.button-big-with-icon:after {
+    /*display: none;*/
+    background-image: url('../../images/sprites/bignuttonicons_1366.png');
+    width: 27px;
+    height: 23px;
+    margin: 0px;
+    margin-top: 4px;
+}
+
+.button-big-with-icon > span {
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: left;
+}
+#menu-top #topmenu-add-new-page:after {
+    background-position: 0px -65px;
+}
+#menu-top .topmenu-import:after {
+    background-position: 0px -588px;
+}
+
+#menu-top #topmenu-export-expendable:after {
+    background-position: 0px -629px;
+}
+#menu-top .topmenu-project-version:after {
+    background-position: 0px -162px;
+}
+.topmenu-variables:after {
+    background-position: 0px -763px;
+}
+#menu-top #topmenu-publish-project:after {
+    background-position: 0px -32px;
+}
+#menu-top #topmenu-extras-videosearch:after {
+    background-position: 0px -464px;
+}
+#menu-top #topmenu-extras-imagesearch:after {
+    background-position: 0px -433px;
+}
+#menu-top #topmenu-extras-db:after {
+    background-position: 0px -309px;
+}
+#menu-top #help-tutorial:after {
+    background-position: 0px -278px;
+}
+#menu-top #video-tutorial:after {
+    background-position: 1px -788px;
+}
+#menu-top #docs-tutorial:after {
+    background-position: 0px -65px;
+}
+/* --------------------------- BOTTOM MENU --------------------------- */
+#menu-bottom {
+	width: calc(100% - 80px);
+}
+    
+#menu-bottom legend {
+    font-size: 10px;
+}
+
+#projects-controller-wrapper {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+/* --------------------------- OTHER ELEMENTS ---------------------------*/
+.profile-box #view {
+    height: 22px;
+    line-height: 22px;
+    font-size: 10px;
+    background-position: 2px -109px;
+}
+
+.profile-box #lms {
+    height: 22px;
+    line-height: 22px;
+    font-size: 10px;
+}
+.profile-box #share-project, .profile-box #project-options {
+    height: 22px;
+}
+.profile-box #project-options {
+    background-position: 0px -45px;
+}
+.profile-box #share-project {
+    background-position: 0px -77px;
+}
+.profile-box .profile {
+    height: 22px;
+}
+.change-language {
+    height: 22px;
+}
+#close-project {
+	height: 22px;
+	background-position: 0px -3px;
+}
+ul#languages-list {
+	top: 22px;
+}
+.profile .profile-menu {
+	top: 22px;
+}
+
+.view-overlay-banners, 
+.view-publish-buttons 
+.openexportwindow, 
+.view-publish-buttons, 
+.linktoblankpreview 
+{
+  font-size: 15px;
+}
+
+.view-overlay-content-wrapper {
+    width: calc(100% - 150px);
+}
+
+.window-preview-view .view-overlay-skins {
+    max-width: 150px;
+}
+
+.view-overlay-skins div.skin {
+    width: 120px;
+    height: 80px;
+    border: 1px solid #ccc;
+    margin: 10px 3px;
+}
+
+.page-selected-by {
+    right: -4px;
+}
+
+.page-selected-by .tooltip {
+    min-width: 140px;
+}
+
+.stage-view-wrapper {
+    width: calc(100% - 197px);
+}
+
+}
+
+
+
+/* TEXT MENU ALWAYS SMALL */
+#menu-text .btn-group > .btn-small {
+    font-size: 9px;
+}
+#menu-text .btn-small {
+    padding: 0px 9px;
+    height: 26px;
+}
+#menu-text img {
+    height: 60px;
+}
+#menu-text .note-toolbar {
+    width: 620px !important;
+}
+
+#menu-text .note-table,
+#menu-text button[data-event="removeFormat"]
+{
+    display: none;
+}

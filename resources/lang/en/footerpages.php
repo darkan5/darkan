@@ -1,0 +1,29 @@
+<?php
+ return array (
+  'FOOTER_COMPANY_1' => 'About us',
+  'FOOTER_COMPANY_2' => 'We’ve been creating e-learning for about 8 years now. We are a team of consultants, which cooperates with big corporations, as well as small companies in Poland, USA, Switzerland and Germany. We are experts not only in technical aspects of the e-learning courses - but in LMS platroforms in general. If you have an interesting project and need some help with its realization - feel free to contact us.',
+  'title_aboutus' => 'About us | Darkan',
+  'description_aboutus' => 'We’ve been creating e-learning for about 8 years now. We are a team of consultants, which cooperates with big corporations, as well as small companies in Poland, USA, Switzerland and Germany. We are experts not only in technical aspects of the e-learning courses - but in LMS platroforms in general. If you have an interesting project and need some help with its realization - feel free to contact us.',
+
+  'title_product' => 'Product | Darkan',
+  'description_product' => 'Darkan is perfect for creating fully interactive educative content. Animating objects is fast and intuitive, and large amount of components ensures you create exactly what you need.',
+
+  'FOOTER_PRODUCT_1' => 'Darkan is a new quality of e-learning creation',
+  'FOOTER_PRODUCT_2' => 'Our mission is to create a tool that will enhance rapid creation of e-learning. We want the creative process to happen more and more faster and the cooperation between users is as easy as possible.',
+  'FOOTER_PRODUCT_3' => 'Bet on community',
+  'FOOTER_PRODUCT_4' => 'When using Darkan platform, you are helping the creation of active user community, which are sharing content with each other. Thanks to that you will never again waste your time to create content that already exists in the cloud.',
+  'FOOTER_PRODUCT_5' => 'Publish to selected platforms',
+  'FOOTER_PRODUCT_6' => 'Darkan will let you export your projects to HTML5 or SCORM formats, and share them to social media and other applications. Thanks to that you can share your course exactly where it’s needed.',
+  'FOOTER_PRODUCT_7' => 'Create multimedia courses',
+  'FOOTER_PRODUCT_8' => 'Darkan is perfect for creating fully interactive educative content. Animating objects is fast and intuitive, and large amount of components ensures you create exactly what you need.',
+  'FOOTER_PRODUCT_9' => 'Track statistics',
+  'FOOTER_PRODUCT_10' => 'Darkan platform allows tracking even the smallest details about conducted courses. Thanks to that you have the possibility to fully monitor the educational advancements of course’s users.',
+  'FOOTER_PRODUCT_11' => 'If you have any ideas, suggestions - or think that Darkan lacks some functionality - do not hesitate and write us! Your feedback is precious, because it helps make Darkan even better experience.',
+  'FOOTER_VISION_1' => 'Vision of the product',
+  'FOOTER_VISION_2' => 'We want Darkan to become the biggest and most popular cloud-based rapid e-learning creation tool. We believe that our commitment and our innovative solutions will ensure that using the application is a pleasure.',
+  'title_vision' => 'Darkan vision',
+  'description_vision' => 'We want Darkan to become the biggest and most popular cloud-based rapid e-learning creation tool. We believe that our commitment and our innovative solutions will ensure that using the application is a pleasure.',
+  'FOOTER_DOCUMENTATION' => 'Documentation',
+  'title_documentation' => 'Documentation | Darkan',
+  'description_documentation' => 'Documentation',
+);

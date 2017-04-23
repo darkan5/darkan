@@ -1,0 +1,4 @@
+var FormUploadStyleEditorView = ImageStyleEditorView.extend({
+
+
+});

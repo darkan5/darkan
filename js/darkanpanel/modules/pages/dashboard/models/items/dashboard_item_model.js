@@ -1,0 +1,3 @@
+var DashboardItemModel = ItemModel.extend({
+
+});

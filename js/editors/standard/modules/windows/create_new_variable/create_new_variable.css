@@ -1,0 +1,39 @@
+.window-create-new-variable-view{
+	width: 50%;
+	height: 80%;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	min-width: 465px;
+}
+
+.create-new-variable-item label {
+	padding: 0px 4px;
+}
+
+.create-new-variable-item input[type="text"] {
+	width: 100px;
+	display: inline-block;
+	height: 15px;
+	padding: 2px 3px;
+	line-height: 15px;
+	border-radius: 2px;
+	border: 1px solid #cccccc;
+}
+
+li.create-new-variable-item {
+	padding: 2px 0px;
+}
+
+.user-variables-list {
+	padding: 10px;
+	list-style-type: none;
+}
+
+.variable-description{
+	font-weight: bold;
+	font-size: 13px;
+	margin: 2px 0px;
+}

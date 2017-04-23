@@ -1,0 +1,22 @@
+<?php
+ return array (
+  'title' => 'Affiliate program | Darkan',
+  'description' => 'All you have to do is promote your affiliate link. When user enters the website via your link and signs up - he will be saved to your list of registered users. Each purchase will give you 20% of the price.',
+  'PP_TITLE' => 'Affiliate program',
+  'PP_INFO_1' => 'What is our Affiliate Program? ',
+  'PP_INFO_2' => 'With it, you can promote the program Darkan by placing ads (direct link, button, or a web link) on your website. When your visitors will use a link or clicks on a button and decide to buy the program Darkan, <strong>you will receive 20% of any deposit.</strong> You can always see how many people are using the trial version of the program, and how elected to subscribe.',
+  'PP_INFO_3' => 'All you have to do is promote your affiliate link. When user enters the website via your link and signs up - he will be saved to your list of registered users. Each purchase will give you 20% of the price.',
+  'your_link' => 'Your affiliate link:',
+  'PP_LINK_1' => 'Direct link:',
+  'PP_LINK_2' => 'Anhor:',
+  'PP_LINK_3' => 'Image link:',
+  'PP_PEOPLE_1' => 'Registered accounts:',
+  'PP_PEOPLE_2' => 'Number of payments:',
+  'PP_INFO_4' => 'Log In...',
+  'MY_MONEY' => 'My money',
+  'GIVE_ME_MONEY' => 'Order paycheck (min 10 &#8364;)',
+  'PAYCHECKS_AMOUNT' => 'Paid out',
+  'GOPRO_TITLE_CURRENCY' => '&#8364;',
+  'NOACCESS' => 'Sorry, you don\'t have access to our affiliate program...',
+  'NOACCESS2' => 'If you want to become our partner or ambassador, please contact us at office@darkan.eu',
+);

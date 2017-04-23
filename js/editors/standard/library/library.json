@@ -1,0 +1,984 @@
+{
+  "avatars": {
+    "1": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "2": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "3": {
+      "tags": "avatar woman office biuro mężczyzna business biznes people ludzie"
+    },
+    "4": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "5": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "6": {
+      "tags": "avatar man woman office biuro mężczyzna business biznes people ludzie"
+    },
+    "7": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "8": {
+      "tags": "avatar man mail e-mail"
+    },
+    "9": {
+      "tags": "avatar man superhero hero"
+    },
+    "a": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "b": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "c": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "d": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "e": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "f": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "g": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "h": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "i": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "j": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "k": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    },
+    "l": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "t1": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "t2": {
+      "tags": "avatar man office biuro mężczyzna business biznes people ludzie"
+    },
+    "t3": {
+      "tags": "avatar woman office biuro kobieta business biznes people ludzie"
+    }
+  },
+  "arrows": {
+    "1": {
+      "tags": "arrow 3d strzała"
+    },
+    "2": {
+      "tags": "arrow 3d strzała"
+    },
+    "3": {
+      "tags": "arrow strzała button przycisk"
+    },
+    "a": {
+      "tags": "arrow strzała"
+    },
+    "b": {
+      "tags": "arrow icon strzała"
+    }
+  },
+  "backgrounds": {
+    "1": {
+      "tags": "background gallery showroom tło galeria wystawa"
+    },
+    "2": {
+      "tags": "background curtain tło kurtyna"
+    },
+    "3": {
+      "tags": "background abstract tło"
+    },
+    "4": {
+      "tags": "background abstract tło"
+    },
+    "5": {
+      "tags": "background abstract tło"
+    },
+    "6": {
+      "tags": "background abstract tło"
+    },
+    "7": {
+      "tags": "background abstract web tło www strona"
+    },
+    "8": {
+      "tags": "background abstract tło"
+    },
+    "9": {
+      "tags": "background abstract tło space kosmos"
+    },
+    "10": {
+      "tags": "background abstract tło"
+    },
+    "11": {
+      "tags": "background abstract tło"
+    },
+    "12": {
+      "tags": "background abstract tło"
+    },
+    "13": {
+      "tags": "background abstract tło"
+    },
+    "14": {
+      "tags": "background abstract tło jeans"
+    },
+    "15": {
+      "tags": "tło background abstract web"
+    },
+    "16": {
+      "tags": "tło background nature"
+    },
+    "17": {
+      "tags": "tło background business"
+    },
+    "a": {
+      "tags": "background abstract tło"
+    },
+    "b": {
+      "tags": "background room tło pokój"
+    },
+    "c": {
+      "tags": "background abstract tło"
+    },
+    "d": {
+      "tags": "background abstract gray tło szare"
+    }
+  },
+  "clouds": {
+    "1": {
+      "tags": "cloud text thought bubble chmura myśl wypowiedź komiks"
+    },
+    "2": {
+      "tags": "cloud text thought bubble chmura myśl wypowiedź komiks"
+    },
+    "3": {
+      "tags": "chmurka cloud myśl thought comic komiks"
+    },
+    "a": {
+      "tags": "cloud text thought black chmura myśl wypowiedź komiks"
+    },
+    "b": {
+      "tags": "cloud text thought white chmura myśl wypowiedź komiks"
+    },
+    "c": {
+      "tags": "cloud text thought white chmura myśl wypowiedź komiks"
+    },
+    "d": {
+      "tags": "cloud text chmura myśl wypowiedź komiks"
+    },
+    "e": {
+      "tags": "cloud text thought chmura myśl wypowiedź komiks"
+    }
+  },
+  "icons": {
+    "1": {
+      "tags": "icons ikony program file plik"
+    },
+    "2": {
+      "tags": "status icon ikona"
+    },
+    "3": {
+      "tags": "icon ikona"
+    },
+    "4": {
+      "tags": "point punkt home"
+    },
+    "5": {
+      "tags": "icon ikona"
+    },
+    "6": {
+      "tags": "icon ikona"
+    },
+    "7": {
+      "tags": "icon ikona"
+    },
+    "8": {
+      "tags": "icon ikona"
+    },
+    "9": {
+      "tags": "icon ikona"
+    },
+    "chrome": {
+      "tags": "icon chrome ikona ikony"
+    },
+    "color": {
+      "tags": "icon color ikona ikony"
+    },
+    "icon": {
+      "tags": "icon ikona ikony"
+    },
+    "social": {
+      "tags": "icon social media facebook twitter ikona ikony społeczność"
+    },
+    "phone": {
+      "tags": "phone telephone telefon"
+    },
+    "web": {
+      "tags": "web internet site www strona"
+    },
+    "sticker": {
+      "tags": "sticker sign znak naklejka"
+    },
+    "button": {
+      "tags": "button przycisk download ściągnij shop kup buy"
+    },
+    "flags": {
+      "tags": "flag flaga country kraj"
+    }
+  },
+  "images": {
+    "1": {
+      "tags": "office biuro"
+    },
+    "2": {
+      "tags": "book books książka książki"
+    },
+    "3": {
+      "tags": "house building shop budynek dom sklep"
+    },
+    "4": {
+      "tags": "glass cup drink coffee szklanka kubek kawa picie"
+    },
+    "5": {
+      "tags": "money tax bank wallet finance finanse pieniądz pieniądze portfel"
+    },
+    "6": {
+      "tags": "food jedzenie"
+    },
+    "7": {
+      "tags": "note book notebook notatnik notatka"
+    },
+    "8": {
+      "tags": "office biuro"
+    },
+    "9": {
+      "tags": "tree drzewo drzewa"
+    },
+    "10": {
+      "tags": "house planescape dom pejzaż krajobraz"
+    },
+    "11": {
+      "tags": "finance finanse pieniądze"
+    },
+    "12": {
+      "tags": "grass trawa"
+    },
+    "13": {
+      "tags": "grass grassline trawa"
+    },
+    "14": {
+      "tags": "leaves liść liśćie"
+    },
+    "15": {
+      "tags": "bamboo bansai plant roślina bambus"
+    },
+    "16": {
+      "tags": "bookshelf piłka piłki"
+    },
+    "17": {
+      "tags": "shelf piłka"
+    },
+    "18": {
+      "tags": "globe earth planet world glob ziemia planeta"
+    },
+    "19": {
+      "tags": "flas chemistry chemia"
+    },
+    "20": {
+      "tags": "world map mapa świat"
+    },
+    "21": {
+      "tags": "shopping bag shop zakupy torba"
+    },
+    "22": {
+      "tags": "gear mechanism wheel koło mechanizm"
+    },
+    "23": {
+      "tags": "clock time zegar czas"
+    },
+    "24": {
+      "tags": "brush paint painting malowanie piłzel"
+    },
+    "25": {
+      "tags": "pencil drawing rysunek ołówek"
+    },
+    "26": {
+      "tags": "pencil drawing rysunek ołówek"
+    },
+    "27": {
+      "tags": "wooden sign snak tablica"
+    },
+    "28": {
+      "tags": "camera photo aparat fotografia"
+    },
+    "29": {
+      "tags": "ribbon, wstążka"
+    },
+    "30": {
+      "tags": "sticker naklejka znak sign"
+    },
+    "31": {
+      "tags": "switch guzik przełącznik"
+    },
+    "32": {
+      "tags": "coursor kursor"
+    },
+    "33": {
+      "tags": "waether pogoda chmury clouds sun słońce"
+    },
+    "34": {
+      "tags": "battery bateria"
+    },
+    "35": {
+      "tags": "smile emoticon humor"
+    },
+    "36": {
+      "tags": "christmas holiday świata"
+    },
+    "37": {
+      "tags": "christmas holiday świata"
+    },
+    "38": {
+      "tags": "cd dvd"
+    },
+    "39": {
+      "tags": "light idea żarówka światło"
+    },
+    "40": {
+      "tags": "snow snowflake śnieg płatek"
+    },
+    "41": {
+      "tags": "desk biurko office biuro"
+    },
+    "42": {
+      "tags": "gearhead tool narzędzia"
+    },
+    "43": {
+      "tags": "desk office biurko biuro"
+    }
+  },
+  "items": {
+    "1": {
+      "tags": "book books office książki książki biuro"
+    },
+    "2": {
+      "tags": "office chair biuro krzesło"
+    },
+    "3": {
+      "tags": ""
+    },
+    "4": {
+      "tags": "table desk biuro"
+    },
+    "5": {
+      "tags": "billboard"
+    },
+    "6": {
+      "tags": "roadsign sign znak drogowskaz"
+    },
+    "7": {
+      "tags": "phone smartphone telefon smartfon"
+    },
+    "8": {
+      "tags": "tablet"
+    },
+    "9": {
+      "tags": "billboard"
+    },
+    "10": {
+      "tags": "board chokeboard blackboard tablica"
+    },
+    "11": {
+      "tags": "book notebook książka notatnik"
+    },
+    "12": {
+      "tags": "pine pines pinezka pinezki"
+    },
+    "13": {
+      "tags": "screen tv ekran telewizor"
+    },
+    "14": {
+      "tags": "board chokeboard blackboard tablica"
+    },
+    "15": {
+      "tags": "ipad tablet"
+    },
+    "16": {
+      "tags": "notepad note notatnik notatka notka"
+    },
+    "17": {
+      "tags": "paper note papier strona notka notatka"
+    },
+    "19": {
+      "tags": "bagde odznaka sticker"
+    },
+    "20": {
+      "tags": "button przycisk, guzik"
+    },
+    "21": {
+      "tags": "note paper papier notatka notka"
+    },
+    "22": {
+      "tags": "button przycisk, guzik"
+    },
+    "23": {
+      "tags": "notification pop-up notyfikacja"
+    },
+    "24": {
+      "tags": "card identify office"
+    },
+    "25": {
+      "tags": "box price cena"
+    },
+    "26": {
+      "tags": "note paper papier notatka notka"
+    },
+    "27": {
+      "tags": "badge odznaka sticker"
+    },
+    "28": {
+      "tags": "paper kartka list mail"
+    },
+    "29": {
+      "tags": "banner baner"
+    },
+    "30": {
+      "tags": "rama ramka frame"
+    },
+    "31": {
+      "tags": "shirt koszulka"
+    }
+  },
+  "shapes": {
+    "a": {
+      "tags": "arrow arrows strzała strzałki"
+    },
+    "b": {
+      "tags": "button circle guzik przycisk"
+    },
+    "c": {
+      "tags": "star gwiazda gwiazdy"
+    },
+    "d": {
+      "tags": "square kwadrat"
+    },
+    "e": {
+      "tags": "rectangle prostokąt"
+    },
+    "f": {
+      "tags": "exclamation wykrzyknik"
+    },
+    "g": {
+      "tags": "question pytajnik znak zapytania"
+    },
+    "h": {
+      "tags": "triangle trójkąt"
+    },
+    "i": {
+      "tags": "triangle trójkąt"
+    },
+    "j": {
+      "tags": "triangle trójkąt"
+    },
+    "k": {
+      "tags": "triangle trójkąt"
+    },
+    "l": {
+      "tags": "triangle trójkąt"
+    }
+  },
+  "clothign": {
+    "backpack": {
+      "tags": "backpack plecak"
+    },
+    "bag": {
+      "tags": "bag torba torebka"
+    },
+    "cap": {
+      "tags": "cap czapka"
+    },
+    "hat": {
+      "tags": "hat kapelusz"
+    },
+    "jeans": {
+      "tags": "jeans jeansy"
+    },
+    "shirt": {
+      "tags": "shirt koszulka"
+    }
+  },
+  "electronic": {
+    "iphone": {
+      "tags": "iphone smartfon"
+    },
+    "keyborad": {
+      "tags": "keyboard klawiatura"
+    },
+    "monitor": {
+      "tags": "monitor"
+    },
+    "laptop": {
+      "tags": "laptop notebook komputer computer"
+    }
+  },
+  "flowers": {
+    "comomile": {
+      "tags": "camomile rumianek kwiat kwiaty kwiatek"
+    },
+    "clover": {
+      "tags": "clover koniczyna"
+    },
+    "rose": {
+      "tags": "rose róża kwiat kwiaty"
+    }
+  },
+  "insects": {
+    "bee": {
+      "tags": "bee pszczoła"
+    },
+    "bug": {
+      "tags": "bug robak"
+    },
+    "butterfly": {
+      "tags": "motyl butterfly"
+    },
+    "fly": {
+      "tags": "fly mucha"
+    },
+    "ladybug": {
+      "tags": "ladybud biedronka"
+    },
+    "spider": {
+      "tags": "spider pająk"
+    }
+  },
+  "misc": {
+    "blood": {
+      "tags": "blood krew"
+    },
+    "christmas": {
+      "tags": "christmas święta boże narodzenie"
+    },
+    "gift": {
+      "tags": "gift prezent"
+    },
+    "scratch": {
+      "tags": "scratch zadrapanie rana"
+    },
+    "tatoo": {
+      "tags": "tatoo tatuaż"
+    }
+  },
+  "people": {
+    "beard": {
+      "tags": "beard broda mustache wąsy"
+    },
+    "ear": {
+      "tags": "ear ears ucho uszy"
+    },
+    "eye": {
+      "tags": "eye eyes oko oczy"
+    },
+    "fingers": {
+      "tags": "finger fingers palec palce"
+    },
+    "hands": {
+      "tags": "hands hand palm ręka dłoń"
+    },
+    "hair": {
+      "tags": "hair włosy"
+    },
+    "skeleton": {
+      "tags": "skeleton bone bones kość szkielet kości"
+    },
+    "leg": {
+      "tags": "leg legs noga nogi stopy stopa"
+    },
+    "lips": {
+      "tags": "usta lips"
+    },
+    "girl": {
+      "tags": "avatar woman kobieta people ludzie"
+    },
+    "man": {
+      "tags": "avatar man mężczyżna people ludzie"
+    },
+    "businessman": {
+      "tags": "avatar man mężczyżna business biznes people ludzie"
+    }
+  },
+  "sport": {
+    "basketball": {
+      "tags": "baskteball koszykówka piłka sport"
+    },
+    "bicycle": {
+      "tags": "bicycle rower sport"
+    },
+    "football": {
+      "tags": "football soccer piłka nożna sport"
+    },
+    "running": {
+      "tags": "running shoes buty bieganie sport"
+    }
+  },
+  "tableware": {
+    "cup": {
+      "tags": "kubek filiżanka cup"
+    },
+    "fork": {
+      "tags": "fork widelec zastawa szcztućce"
+    },
+    "plate": {
+      "tags": "plate talerz zastawa"
+    },
+    "spoon": {
+      "tags": "spoon łyżka zastawa sztućce"
+    },
+    "wineglass": {
+      "tags": "wineglass kieliszek zastawa"
+    }
+  },
+  "technics": {
+    "chain": {
+      "tags": "chain łańcuch"
+    },
+    "hammer": {
+      "tags": "hammer młot młotek nardzędzia tool"
+    },
+    "scissors": {
+      "tags": "nożyce nożyczki"
+    },
+    "screw": {
+      "tags": "screw śruba nardzędzia tool"
+    },
+    "wheel": {
+      "tags": "wheel koło felga"
+    },
+    "wrench": {
+      "tags": "wrench klucz nardzędzia tool"
+    }
+  },
+  "transport": {
+    "ship": {
+      "tags": "ship statek jacht"
+    },
+    "plane": {
+      "tags": "plane samolot"
+    }
+  },
+  "vegetables": {
+    "broccoli": {
+      "tags": "broccoli brokuł brokuły"
+    },
+    "carrpt": {
+      "tags": "carrot marchewka"
+    },
+    "corn": {
+      "tags": "corn kukurydza"
+    },
+    "cucumber": {
+      "tags": "cucumber ogórek"
+    },
+    "eggplant": {
+      "tags": "eggplant bakłażan"
+    },
+    "onion": {
+      "tags": "onion cebula"
+    },
+    "pepper": {
+      "tags": "pepper papryka"
+    },
+    "potato": {
+      "tags": "potato ziemniak pyr kartofel"
+    },
+    "salad": {
+      "tags": "salad sałata"
+    },
+    "tomato": {
+      "tags": "tomato pomidor"
+    }
+  },
+  "animals": {
+    "bear": {
+      "tags": "bear niedźwiedź miś"
+    },
+    "camel": {
+      "tags": "camel wielbłąd"
+    },
+    "cat": {
+      "tags": "cat kot"
+    },
+    "chicken": {
+      "tags": "chicken kura kurczak"
+    },
+    "cow": {
+      "tags": "cow krowa"
+    },
+    "crow": {
+      "tags": "crow kruk ptak bird"
+    },
+    "dog": {
+      "tags": "dog pies"
+    },
+    "eagle": {
+      "tags": "eagle orzeł ptak bird"
+    },
+    "fish": {
+      "tags": "fish ryba"
+    },
+    "fox": {
+      "tags": "fox lis"
+    },
+    "frog": {
+      "tags": "frog żaba"
+    },
+    "lion": {
+      "tags": "lion lew"
+    },
+    "parrot": {
+      "tags": "parrot papuga bird ptak"
+    },
+    "penguin": {
+      "tags": "penguin pingwin"
+    },
+    "pig": {
+      "tags": "pig świnia"
+    },
+    "pigeon": {
+      "tags": "piheon gołąb ptak bird"
+    },
+    "rabbit": {
+      "tags": "rabbit królik"
+    },
+    "rat": {
+      "tags": "rat mouse mysz szczur"
+    },
+    "sheep": {
+      "tags": "sheep owca"
+    },
+    "tiger": {
+      "tags": "tiger tygrys"
+    },
+    "wolf": {
+      "tags": "wolf wilk"
+    }
+  },
+  "weapons": {
+    "bullet": {
+      "tags": "bullet kula pocisk"
+    },
+    "grenade": {
+      "tags": "grenade granat"
+    },
+    "gun": {
+      "tags": "gun pistol pistolet broń"
+    },
+    "helicopter": {
+      "tags": "helicopter helikopter śmigłowiec"
+    },
+    "sword": {
+      "tags": "sword miecz szabla"
+    },
+    "tank": {
+      "tags": "tank czołg"
+    },
+    "wound": {
+      "tags": "wound rana"
+    },
+    "rifle": {
+      "tags": "rifle karabin"
+    }
+  },
+  "fantasy": {
+    "dragon": {
+      "tags": "drgon smok"
+    }
+  },
+  "food": {
+    "cheese": {
+      "tags": "cheese ser"
+    },
+    "chocolate": {
+      "tags": "chocolate czekolada"
+    },
+    "burger": {
+      "tags": "burger hamburger kanapka sandwich"
+    },
+    "egg": {
+      "tags": "egg jajko jajo"
+    },
+    "meat": {
+      "tags": "meat mięso"
+    },
+    "sausage": {
+      "tags": "sausage kiełbasa"
+    },
+    "icecream": {
+      "tags": "ice cream lody"
+    },
+    "bread": {
+      "tags": "bread chcleb"
+    }
+  },
+  "nature": {
+    "acorn": {
+      "tags": "acorn żołądź"
+    },
+    "cactus": {
+      "tags": "cactus kaktus"
+    },
+    "cloud": {
+      "tags": "cloud chmura"
+    },
+    "fir": {
+      "tags": "fir tree choinka drzewo"
+    },
+    "fire": {
+      "tags": "fire ogień płomień"
+    },
+    "grass": {
+      "tags": "grass trawa"
+    },
+    "leaves": {
+      "tags": "leaves liście liść"
+    },
+    "mushroom": {
+      "tags": "mushroom grzyb"
+    },
+    "palm": {
+      "tags": "palm tree palma drzewo"
+    },
+    "rainbow": {
+      "tags": "rainbow tęcza"
+    },
+    "smoke": {
+      "tags": "smoke dym"
+    },
+    "tree": {
+      "tags": "tree drzewo drzewa"
+    },
+    "water": {
+      "tags": "water woda"
+    }
+  },
+  "objects": {
+    "baloon": {
+      "tags": "baloon balon"
+    },
+    "book": {
+      "tags": "book books książki książki"
+    },
+    "bottle": {
+      "tags": "bottle butelka wino vine"
+    },
+    "brick": {
+      "tags": "brick cegła"
+    },
+    "bulb": {
+      "tags": "bulb lamp światło żarówka lampa light"
+    },
+    "cigarette": {
+      "tags": "cigarette papieros papierosy"
+    },
+    "clock": {
+      "tags": "clock zegar zegatrek"
+    },
+    "coins": {
+      "tags": "coin money coins monety moneta pieniądz pieniądze"
+    },
+    "glasses": {
+      "tags": "glasses okulary"
+    },
+    "guitar": {
+      "tags": "guitar music gitara muzyka"
+    },
+    "heart": {
+      "tags": "heart serce"
+    },
+    "key": {
+      "tags": "key klucz klucze"
+    },
+    "matches": {
+      "tags": "matches match zapałaka zapałki"
+    },
+    "money": {
+      "tags": "money cash pieniądz pieniądze banknoty"
+    },
+    "pencil": {
+      "tags": "pencil ołówek kredka kredki"
+    },
+    "phone": {
+      "tags": "phone telephone telefon"
+    },
+    "ribbon": {
+      "tags": "ribbon wstążka"
+    },
+    "shield": {
+      "tags": "shield tarcza"
+    },
+    "shopping": {
+      "tags": "shopping bag torba zakupy"
+    },
+    "star": {
+      "tags": "star gwiazda"
+    },
+    "tv": {
+      "tags": "tv telewizor"
+    },
+    "umbrella": {
+      "tags": "umbrella parasol parasolka"
+    },
+    "jewellery": {
+      "tags": "jewellery biżuteria pierścionek naszyjnik neclace ring"
+    },
+    "diamond": {
+      "tags": "diamond diament kamień"
+    }
+  },
+  "fruits": {
+    "apple": {
+      "tags": "apple jabłko"
+    },
+    "banana": {
+      "tags": "banana banan"
+    },
+    "cherry": {
+      "tags": "cherry wiśnia"
+    },
+    "grape": {
+      "tags": "grape winogron winogrono"
+    },
+    "kiwi": {
+      "tags": "kiwi"
+    },
+    "lemon": {
+      "tags": "lemon cytryna limonka"
+    },
+    "orange": {
+      "tags": "orange pomarańcza"
+    },
+    "pear": {
+      "tags": "pear gruszka"
+    },
+    "rasberry": {
+      "tags": "rasberry malina"
+    },
+    "strawberry": {
+      "tags": "strawberry truskawka"
+    },
+    "watermelon": {
+      "tags": "watermelon arbuz"
+    }
+  }
+}

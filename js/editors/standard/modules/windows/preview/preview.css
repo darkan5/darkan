@@ -1,0 +1,153 @@
+
+
+
+
+
+.window-preview-view {
+  width: 100%;
+  height: 100%;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  background-color: rgba(0,0,0,.6);
+}
+
+.view-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.window-preview-view .view-overlay-skins {
+  position: relative;
+  max-width: 265px;
+  height: 100%;
+  background: #000;
+  border-top: 2px solid #ccc;
+  /* white-space: nowrap; */
+  overflow-y: auto;
+  float: left;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.view-overlay-showskins {
+  display: none;
+  position: absolute;
+  background: #929292;
+  z-index: 1000;
+  width: 43px;
+  height: 100%;
+  word-spacing: 1em;
+  font-size: 20px;
+  line-height: 60px;
+  opacity: 0.7;
+  color: #fff;
+  text-align: center;
+}
+
+.view-overlay-content-wrapper {
+  position: absolute;
+  right: 0;
+  width: 85%;
+  height: 100%;
+}
+.skins-title {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  background: 000;
+}
+
+.view-overlay-skins div.skin {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 120px;
+  border: 2px solid #ccc;
+  float: left;
+  margin: 10px 20px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  background-size: 100% 100%;
+}
+
+.view-publish-buttons-wrapper {
+  margin: 10px 0px;
+  width: 100%;
+  text-align: center;
+  top: 10px;
+  height: 50px;
+}
+
+.view-publish-buttons {
+  position: relative;
+  width: 650px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.view-overlay-banners, 
+.view-publish-buttons 
+.openexportwindow, 
+.view-publish-buttons 
+.linktoblankpreview 
+{
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin: 0px 5px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  background: #5082A5;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2000;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.view-overlay-banners:hover, 
+.view-publish-buttons 
+.openexportwindow:hover, 
+.view-publish-buttons 
+.linktoblankpreview:hover {
+  background: #67ABD6;
+}
+
+.linktoblankpreview a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.view-overlay-skins div.skin:hover {
+  border: 2px solid #001135;
+  box-shadow: 0px 0px 10px 3px inset;
+}
+.view-overlay-content {
+  height: calc(100% - 90px);
+}
+
+.view-content {
+  background-color: transparent;
+}

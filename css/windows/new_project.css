@@ -1,0 +1,43 @@
+.window-new-project-view {
+  width: 400px;
+  height: 190px;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  background-color: white;
+}
+
+.add-new-project-button {
+
+}
+
+.window-new-project-view legend {
+  margin-bottom: 14px;
+}
+
+.window-new-project-view legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.projectname-input-wrapper {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.info-dialog-text {
+  font-size: 15px;
+  line-height: 25px;
+  width: 92%;
+  margin: 20px auto;
+  text-align: center;
+}

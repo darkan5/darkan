@@ -1,0 +1,5 @@
+var FormInputTextStyleEditorView = StyleEditorView.extend({
+
+
+
+});
