@@ -33,7 +33,7 @@ wszystkie funkcjonalności platformy zostaną odblokowane po założeniu
 kont nauczycieli oraz uczniów. Założenie</FONT><FONT COLOR="#1f497d"><FONT FACE="Calibri, serif">
 </FONT></FONT><FONT FACE="Calibri, serif">tych kont to tylko kilka
 kliknięć, najlepiej zrób to od razu klikając w poniższy
-link:<BR><A HREF="https://zdobywcywiedzy.pl/platforma/teacherslist">https://zdobywcywiedzy.pl/platforma/teacherslist</A><BR><BR>Wszystkie
+link:<BR><A HREF="http://zdobywcywiedzy.pl/platforma/teacherslist">http://zdobywcywiedzy.pl/platforma/teacherslist</A><BR><BR>Wszystkie
 funkcjonalności naszej platformy wraz z instrukcją obsługi znajdziesz
 tutaj </FONT><FONT COLOR="#1f497d"><FONT FACE="Calibri, serif">
 </FONT></FONT><A HREF="http://bit.ly/ZdobwycyWiedzy-InstrukcjaSzkola"><FONT FACE="Calibri, serif">http://bit.ly/ZdobwycyWiedzy-InstrukcjaSzkola</FONT></A></FONT></FONT></P>

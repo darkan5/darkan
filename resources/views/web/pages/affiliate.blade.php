@@ -81,7 +81,7 @@
 
 <div id="testcontent"></div>
 
-<!-- <script type="text/javascript" src="http://darkan.eu/test/js/api/darkan_api.js"></script> -->
+<!-- <script type="text/javascript" src="http://darkan.local/test/js/api/darkan_api.js"></script> -->
 <script type="text/javascript">
 	// DarkanApi.get({
 	// 	hash: 'ad4b872976ec0f643a77722d8e4fb3f8',

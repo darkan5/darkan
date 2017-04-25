@@ -21,7 +21,7 @@
 </div>
 
 <div style="font-family:'Calibri', serif;position:relative;padding: 20px;text-align: center;color: #000;background-color: #f00;">
-    <a style="text-decoration: none;border: none;float: right;" target="_blank" href="https://www.facebook.com/EnglishforClinicalDieteticsandNutrition/?fref=ts"><img style="padding: 0px;" src="http://englishfordietetics.com/css/img/fb_red.png">
+    <a style="text-decoration: none;border: none;float: right;" target="_blank" href="http://www.facebook.com/EnglishforClinicalDieteticsandNutrition/?fref=ts"><img style="padding: 0px;" src="http://englishfordietetics.com/css/img/fb_red.png">
     </a>
 	<a style="color: #000;" href="www.englishfordietetics.com">www.englishfordietetics.com</a>,<br/>
 	<a style="color: #000;" href="mailto:info@englishfordietetics.com">info@englishfordietetics.com</a>

@@ -40,7 +40,7 @@ dla Twojego dziecka, a to wszystko już od 8 zł miesięcznie*.
 </P>
 <P CLASS="western" STYLE="margin-bottom: 0cm">Nie czekaj, zrób
 dziecku prezent już dziś!</P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="https://zdobywcywiedzy.pl/platforma/register/registerparent">https://zdobywcywiedzy.pl/platforma/register/registerparent</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="http://zdobywcywiedzy.pl/platforma/register/registerparent">http://zdobywcywiedzy.pl/platforma/register/registerparent</A></P>
 <P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
 </P>
 <P CLASS="western" STYLE="margin-bottom: 0cm"><A NAME="_GoBack"></A>*-

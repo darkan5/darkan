@@ -15,7 +15,7 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
-    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <meta property="og:url" content="{{ Request::url() }}" />
     <meta property="og:title" content="@yield('title')" />
@@ -56,8 +56,8 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="{{ asset('/bower_components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/bower_components/jquery/dist/jqui.js') }}"></script>
@@ -210,7 +210,7 @@
                     </li>
 
                     <li class="facebook-link">
-                        <a target="_blank" href="https://www.facebook.com/Darkan-675324632508995/timeline/">
+                        <a target="_blank" href="http://www.facebook.com/Darkan-675324632508995/timeline/">
                             <div class="fb-btn-small"></div>
                         </a>
                     </li>
@@ -381,7 +381,7 @@
             <div class="col-md-3 col-sm-4">
                     <h5 class="frontpage-footer-column-header"><?= Lang::get('frontpage.community') ?></h5>
                     <p>
-                        <a href="http://darkan.eu/blog" target="_blank"><?= Lang::get('frontpage.blog') ?></a>
+                        <a href="http://darkan.local/blog" target="_blank"><?= Lang::get('frontpage.blog') ?></a>
                     </p>
                     @if(Auth::check() && Auth::user()->hasRole('affiliate'))
                     <p>

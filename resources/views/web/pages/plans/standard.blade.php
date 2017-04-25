@@ -94,7 +94,7 @@
 									?>
 
 									@if ($paypalLive)
-										<form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
+										<form method="post" action="http://www.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
 											<input type="hidden" name="button" value="buynow">
 											<input type="hidden" name="item_name" value="Darkan_standard_month">
 											<input type="hidden" name="quantity" value="1">
@@ -106,14 +106,14 @@
 											<input type="hidden" name="notify_url" value="{{ url('/paypalpayment') }}">
 											<input type="hidden" name="return" value="{{ env('PAYPAL_REDIRECT_LINK') }}">
 											<input type="hidden" name="cmd" value="_xclick">
-											<input type="hidden" name="business" value="office@darkan.eu">
+											<input type="hidden" name="business" value="office@darkan.local">
 											<input type="hidden" name="bn" value="JavaScriptButton_buynow">
 											<button type="submit" class="buybutton">
 												<?= Lang::get('pricing.GOPRO_BUY') ?>
 											</button>
 										</form>
 									@else
-										<form method="post" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
+										<form method="post" action="http://www.sandbox.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
 											<input type="hidden" name="button" value="buynow">
 											<input type="hidden" name="item_name" value="Darkan_standard_month">
 											<input type="hidden" name="quantity" value="1">
@@ -161,7 +161,7 @@
 
 
 									@if ($paypalLive)
-										<form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
+										<form method="post" action="http://www.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
 											<input type="hidden" name="button" value="buynow">
 											<input type="hidden" name="item_name" value="Darkan_standard_year">
 											<input type="hidden" name="quantity" value="1">
@@ -173,14 +173,14 @@
 											<input type="hidden" name="notify_url" value="{{ url('/paypalpayment') }}">
 											<input type="hidden" name="return" value="{{ env('PAYPAL_REDIRECT_LINK') }}">
 											<input type="hidden" name="cmd" value="_xclick">
-											<input type="hidden" name="business" value="office@darkan.eu">
+											<input type="hidden" name="business" value="office@darkan.local">
 											<input type="hidden" name="bn" value="JavaScriptButton_buynow">
 											<button type="submit" class="buybutton bestPlanButton">
 												<?= Lang::get('pricing.GOPRO_BUY') ?>
 											</button>
 										</form>
 									@else
-										<form method="post" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
+										<form method="post" action="http://www.sandbox.paypal.com/cgi-bin/webscr" class="paypal-form" target="_top">
 											<input type="hidden" name="button" value="buynow">
 											<input type="hidden" name="item_name" value="Darkan_standard_year">
 											<input type="hidden" name="quantity" value="1">

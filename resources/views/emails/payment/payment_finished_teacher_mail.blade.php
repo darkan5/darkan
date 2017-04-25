@@ -33,7 +33,7 @@ należy założyć konta dla Twoich uczniów, dzięki temu będą oni mogli
 zbierać diamenty, zdobywać odznaki i brać udział w rankingach.
 Założenie kont uczniów to tylko kilka kliknięć, najlepiej zrób to od
 razu klikając w poniższy
-link:</FONT></FONT><FONT FACE="Calibri, serif"><BR><A HREF="https://zdobywcywiedzy.pl/platforma/group">https://zdobywcywiedzy.pl/platforma/group</A><BR><BR></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Wszystkie
+link:</FONT></FONT><FONT FACE="Calibri, serif"><BR><A HREF="http://zdobywcywiedzy.pl/platforma/group">http://zdobywcywiedzy.pl/platforma/group</A><BR><BR></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Wszystkie
 funkcjonalności naszej platformy wraz z instrukcją obsługi znajdziesz
 tutaj</FONT></FONT><FONT FACE="Calibri, serif"> 
 <A HREF="http://bit.ly/ZdobwycyWiedzy-InstrukcjaSzkola">http://bit.ly/ZdobwycyWiedzy-InstrukcjaSzkola</A></FONT></FONT></FONT></P>

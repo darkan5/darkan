@@ -25,7 +25,7 @@
 
 				<p><?= Lang::get('apidocs.p_1_2') ?></p>
 				<code class="language-terminal">
-{{ htmlentities('<script type="text/javascript" src="https://darkan.eu/js/editors/standard/api/darkan_editor_api.js"></script>') }}
+{{ htmlentities('<script type="text/javascript" src="http://darkan.local/js/editors/standard/api/darkan_editor_api.js"></script>') }}
 				</code>
 
 				<p><?= Lang::get('apidocs.p_1_3') ?></p>
@@ -42,7 +42,7 @@ YOUR_API_KEY = 88e1a99e1531edad4a6c20179ffc3b575ef3aa3f
 				<div class="col-md-6">
 					<code class="language-terminal">
 <strong>Request:</strong>					
-POST: https://darkan.eu/api
+POST: http://darkan.local/api
 Params: {
 	"apikey": "YOUR_API_KEY",
 	"action": "generateToken"

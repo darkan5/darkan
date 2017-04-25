@@ -56,7 +56,7 @@
 	<div class="align-center">
 		<?php if (Auth::check()) { ?>
 			<?php if (env('paypalLive')): ?>
-				<form method="post" id="portal-form" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-form text-center" target="_top">
+				<form method="post" id="portal-form" action="http://www.paypal.com/cgi-bin/webscr" class="paypal-form text-center" target="_top">
 					<input type="hidden" name="button" value="buynow">
 					<input type="hidden" name="item_name" value="access_to:<?=$subdomainViewName?>">
 					<input type="hidden" name="quantity" value="1">
@@ -73,7 +73,7 @@
 					<button type="submit" class="paypal-button btn-makepayment paypal-confirm-payment large">{{ Lang::get('portal.customPamrowPaypalBtn') }}</button>
 				</form>
 			<?php else: ?>
-				<form method="post" id="portal-form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" class="paypal-form text-center" target="_top">
+				<form method="post" id="portal-form" action="http://www.sandbox.paypal.com/cgi-bin/webscr" class="paypal-form text-center" target="_top">
 					<input type="hidden" name="button" value="buynow">
 					<input type="hidden" name="item_name" value="access_to:<?=$subdomainViewName?>">
 					<input type="hidden" name="quantity" value="1">

@@ -459,7 +459,7 @@
 					</button>
 					<div class="plugin-required-info">
 	                	*<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-	                	<a href="http://darkan.eu/downloads/DarkanExport.zip" download>
+	                	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
 	                		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>.
 	            		</a>
 	            		<?=Lang::get('editor.PSD_PLUGIN_TUTORIAL_1')?>
@@ -518,13 +518,13 @@
 			</div>
 
 			<div class="extras-icons">
-				<a href="https://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
+				<a href="http://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
 					<div class="starting-page-icon facebook" title="<?=Lang::get('editor.WELCOMESCREEN_FB')?>"></div>
 				</a>
 				<a href="<?=$youTubeLink?>" target="_blank">
 					<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
 				</a>
-				<a href="http://darkan.eu/blog" target="_blank">
+				<a href="http://darkan.local/blog" target="_blank">
 					<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
 				</a>
 			</div>	
@@ -1611,13 +1611,13 @@
 		<div class="clear"></div>
 
 		<div class="extras-icons">
-			<a href="https://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
+			<a href="http://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
 				<div class="starting-page-icon facebook" title="<?=Lang::get('editor.WELCOMESCREEN_FB')?>"></div>
 			</a>
 			<a href="<?=$youTubeLink?>" target="_blank">
 				<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
 			</a>
-			<a href="http://darkan.eu/blog" target="_blank">
+			<a href="http://darkan.local/blog" target="_blank">
 				<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
 			</a>
 		</div>
@@ -1841,7 +1841,7 @@
                     <span class="title">PSD</span>
                     <div class="extras">
                     	<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-                    	<a href="http://darkan.eu/downloads/DarkanExport.zip" download>
+                    	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
                     		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>
                 		</a>
             		</div>
@@ -1879,7 +1879,7 @@
 					</button>
 					<div class="plugin-required-info">
 	                	*<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-	                	<a href="http://darkan.eu/downloads/DarkanExport.zip" download>
+	                	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
 	                		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>.
 	            		</a>
 	            		<?=Lang::get('editor.PSD_PLUGIN_TUTORIAL_1')?>
@@ -1938,13 +1938,13 @@
     		</div>
 
     		<div class="extras-icons">
-				<a href="https://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
+				<a href="http://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
     				<div class="starting-page-icon facebook" title="<?=Lang::get('editor.WELCOMESCREEN_FB')?>"></div>
     			</a>
     			<a href="<?=$youTubeLink?>" target="_blank">
     				<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
     			</a>
-    			<a href="http://darkan.eu/blog" target="_blank">
+    			<a href="http://darkan.local/blog" target="_blank">
     				<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
     			</a>
     		</div>
@@ -2000,7 +2000,7 @@
 					</button>
 					<div class="plugin-required-info">
 	                	*<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-	                	<a href="http://darkan.eu/downloads/DarkanExport.zip" download>
+	                	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
 	                		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>.
 	            		</a>
 	            		<?=Lang::get('editor.PSD_PLUGIN_TUTORIAL_1')?>
@@ -2059,13 +2059,13 @@
     		</div>
 
     		<div class="extras-icons">
-				<a href="https://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
+				<a href="http://www.facebook.com/pages/Darkan/675324632508995?fref=ts" target="_blank">
     				<div class="starting-page-icon facebook" title="<?=Lang::get('editor.WELCOMESCREEN_FB')?>"></div>
     			</a>
     			<a href="<?=$youTubeLink?>" target="_blank">
     				<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
     			</a>
-    			<a href="http://darkan.eu/blog" target="_blank">
+    			<a href="http://darkan.local/blog" target="_blank">
     				<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
     			</a>
     		</div>
@@ -7519,7 +7519,7 @@
     <script src="{{asset('/js/editors/standard/libs/preload/preload.js') }}?r=<?php echo config('app.version') ?>"></script>
 
     <!-- DROPBOX -->
-    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="vlm7l7me37z4nfx"></script>
+    <script type="text/javascript" src="http://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="vlm7l7me37z4nfx"></script>
 
 	<!-- FACEBOOK PHOTO CHOOSER -->
 

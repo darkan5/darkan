@@ -37,7 +37,7 @@ YOUR_API_KEY = 827a6760f90c246705b3c712fa072bd06760fab3
 				<p><?= Lang::get('apidocs.p_2_3') ?></p>
 				<div class="col-md-6">
 					<code class="language-terminal">
-POST: https://darkan.eu/api
+POST: http://darkan.local/api
 Params: {
 	"apikey": "YOUR_API_KEY",
 	"action": "generateToken"
@@ -67,7 +67,7 @@ YOUR_HASHED_API_KEY = sha1(YOUR_API_KEY + token)
 				</p>
 				<div class="col-md-6">
 					<code class="language-terminal">
-POST: https://darkan.eu/api
+POST: http://darkan.local/api
 Params: {
 	"apikey": "YOUR_HASHED_API_KEY",
 	"action": "addNewProject",

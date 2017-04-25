@@ -33,7 +33,7 @@ należy założyć konta dla Twoich dzieci, dzięki temu będą mogły
 zbierać diamenty, zdobywać odznaki i brać udział w rankingach.
 Założenie kont dzieci to tylko kilka kliknięć, najlepiej zrób to od
 razu klikając w poniższy
-link:<BR><A HREF="https://zdobywcywiedzy.pl/platforma/group">https://zdobywcywiedzy.pl/platforma/group</A><BR><BR>Wszystkie
+link:<BR><A HREF="http://zdobywcywiedzy.pl/platforma/group">http://zdobywcywiedzy.pl/platforma/group</A><BR><BR>Wszystkie
 funkcjonalności naszej platformy wraz z instrukcją obsługi znajdziesz
 tutaj <A HREF="http://bit.ly/ZdobywcyWiedzy-InstrukcjaRodzic">http://bit.ly/ZdobywcyWiedzy-InstrukcjaRodzic</A></P>
 <P CLASS="western" STYLE="margin-bottom: 0cm"><BR>

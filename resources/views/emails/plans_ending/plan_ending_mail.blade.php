@@ -39,7 +39,7 @@ przez Twoje dziecko reaktywuj konto w terminie do 7 dni.
 <P CLASS="western" STYLE="margin-bottom: 0cm">Nie czekaj dłużej!&nbsp;</P>
 <P CLASS="western" STYLE="margin-bottom: 0cm">Skorzystaj z kodu
 rabatowego: REAKT5 i zapłać 5% mniej</P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="https://zdobywcywiedzy.pl/platforma/myprofile">https://zdobywcywiedzy.pl/platforma/myprofile</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="http://zdobywcywiedzy.pl/platforma/myprofile">http://zdobywcywiedzy.pl/platforma/myprofile</A></P>
 <P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
 </P>
 <P CLASS="western" STYLE="margin-bottom: 0cm"><BR>

@@ -41,7 +41,7 @@ funkcji, nad którymi aktualnie pracujemy!</P>
 czekaj dłużej!&nbsp;Tylko dziś zapłacisz za przedłużenie o 5% mniej!</P>
 <P CLASS="western" STYLE="margin-bottom: 0cm">Skorzystaj z kodu
 rabatowego: LOJAL5</P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="https://zdobywcywiedzy.pl/platforma/myprofile">https://zdobywcywiedzy.pl/platforma/myprofile</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="http://zdobywcywiedzy.pl/platforma/myprofile">http://zdobywcywiedzy.pl/platforma/myprofile</A></P>
 <P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
 </P>
 <P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
