@@ -10,9 +10,9 @@ Header set Access-Control-Allow-Origin "*"
      RewriteCond %{HTTPS} off
      RewriteCond %{HTTP_HOST} =darkan.local [or]
      RewriteCond %{HTTP_HOST} =www.darkan.local
-     RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+   #  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
    #Redirect wildcard subdomains to HTTP
-    RewriteCond %{HTTPS} on
+    RewriteCond %{HTTPS} off
     RewriteCond %{HTTP_HOST} ^(.+)\.darkan\.local$ [NC]
     RewriteCond %{HTTP_HOST} !=www.darkan.local
     RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
