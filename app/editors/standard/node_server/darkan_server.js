@@ -3,7 +3,7 @@
 //connectionHandler = new ConnectionHandler();
 var path = require('path'),
     util = require('util'),
-    https = require('https'),
+    https = require('http'),
     fs = require('fs'),
     express = require("express"),
     Utils = require("./utils/Utils.js"),
@@ -37,9 +37,9 @@ var port = ConfigController.get('PORT', false);
 
 
 var options = {
-    key: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/cert.pem'),
-	ca: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/chain.pem')
+    //key: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/privkey.pem'),
+   // cert: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/cert.pem'),
+	//ca: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/chain.pem')
 	    
 };
 
@@ -51,7 +51,7 @@ var options = {
 
 
 
-var server = https.createServer(options, app);
+var server = https.createServer(null, app);
 var io = require('socket.io').listen(server);
 server.listen(3000);
 

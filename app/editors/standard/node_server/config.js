@@ -3,7 +3,7 @@ module.exports = Config;
 function Config(){ }
 
 // app url with trailing slash
-var url='http://darkan.local/'
+var url='192.168.1.100'
 
 
 Config.VERSION = '001';

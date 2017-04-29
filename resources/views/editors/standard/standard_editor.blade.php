@@ -3,13 +3,34 @@
     // require_once 'skins/skins.php';
 
     // require_once 'php/library_tags.php';
+function get_data($url)
+{
+    $ch = curl_init();
+    $timeout = 5;
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+    curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return $data;
+}
 
-    $stylesImageFile = file_get_contents(asset('/js/editors/standard/css/styles_image.json'), 0, null, null);
-    $stylesTextFile = file_get_contents(asset('/js/editors/standard/css/styles_text.json'), 0, null, null);
-    $stylesGradientFile = file_get_contents(asset('/js/editors/standard/css/styles_gradient.json'), 0, null, null);
-    $stylesQuestionFile = file_get_contents(asset('/js/editors/standard/css/styles_question.json'), 0, null, null);
-    $stylesDndFile = file_get_contents(asset('/js/editors/standard/css/styles_dnd.json'), 0, null, null);
-    $stylesInputTextFile = file_get_contents(asset('/js/editors/standard/css/styles_inputtext.json'), 0, null, null);
+
+$stylesImageFile = get_data('192.168.1.100/js/editors/standard/css/styles_image.json');
+
+$stylesTextFile = get_data('192.168.1.100/js/editors/standard/css/styles_text.json');
+$stylesGradientFile = get_data('192.168.1.100/js/editors/standard/css/styles_gradient.json');
+$stylesQuestionFile = get_data('192.168.1.100/js/editors/standard/css/styles_question.json');
+$stylesDndFile = get_data('192.168.1.100/js/editors/standard/css/styles_dnd.json');
+$stylesInputTextFile = get_data('192.168.1.100/js/editors/standard/css/styles_inputtext.json');
+//
+//
+//    $stylesImageFile = get_data(asset('/js/editors/standard/css/styles_image.json'), 0, null, null);
+//    $stylesTextFile = get_data(asset('/js/editors/standard/css/styles_text.json'), 0, null, null);
+//    $stylesGradientFile = get_data(asset('/js/editors/standard/css/styles_gradient.json'), 0, null, null);
+//    $stylesQuestionFile = get_data(asset('/js/editors/standard/css/styles_question.json'), 0, null, null);
+//    $stylesDndFile = get_data(asset('/js/editors/standard/css/styles_dnd.json'), 0, null, null);
+//    $stylesInputTextFile = get_data(asset('/js/editors/standard/css/styles_inputtext.json'), 0, null, null);
 
 ?>
 
@@ -46,6 +67,7 @@
     </script>
 
 	<script type="text/javascript">
+
 		var __meta__ = {
 			domain: '<?= config('app.domain') ?>',
 			projectID: <?= $projectID ?>,
@@ -67,7 +89,8 @@
 			external: <?=$external?>
 		};
 
-		var stylesImage = <?= $stylesImageFile ?>;
+
+		var stylesImage = <?php echo $stylesImageFile ?>;
 		var stylesText = <?= $stylesTextFile ?>;
 		var stylesGradient = <?= $stylesGradientFile ?>;
 		var stylesQuestion = <?= $stylesQuestionFile ?>;
@@ -105,7 +128,8 @@
     <script>
     var path_id = {
         <?php
-            $json_content = file_get_contents(asset('/js/editors/standard/library/library_categories.json'),0,null,null);
+            $json_content = '{"categories":{"0":{"id":"library-avatars","path":"avatars","name":{"pl":"Awatary","en":"Avatars"}},"1":{"id":"library-arrows","path":"arrows","name":{"pl":"Strza\u0142ki","en":"Arrows"}},"2":{"id":"library-clouds","path":"clouds","name":{"pl":"Chmury","en":"Clouds"}},"3":{"id":"library-shapes","path":"shapes","name":{"pl":"Kszta\u0142ty","en":"Shapes"}},"4":{"id":"library-images","path":"images","name":{"pl":"Obrazki","en":"Images"}},"5":{"id":"library-backgrounds","path":"backgrounds","name":{"pl":"T\u0142a","en":"Backgrounds"}},"6":{"id":"library-infographics","path":"infographics","name":{"pl":"Info grafki","en":"Infographics"}},"7":{"id":"library-items","path":"items","name":{"pl":"Przedmioty","en":"Items"}},"8":{"id":"library-icons","path":"icons","name":{"pl":"Ikony","en":"Icons"}},"9":{"id":"library-animals","path":"animals","name":{"pl":"Zwierz\u0119ta","en":"Animals"}},"10":{"id":"library-clothing","path":"clothing","name":{"pl":"Ubrania","en":"Clothing"}},"11":{"id":"library-electronics","path":"electronics","name":{"pl":"Elektronika","en":"Electronics"}},"12":{"id":"library-fantasy","path":"fantasy","name":{"pl":"Strza\u0142ki","en":"Arrows"}},"13":{"id":"library-flowers","path":"flowers","name":{"pl":"Kwiaty","en":"Flowers"}},"14":{"id":"library-food","path":"food","name":{"pl":"Jedzenie","en":"Food"}},"15":{"id":"library-fruits","path":"fruits","name":{"pl":"Owoce","en":"Fruits"}},"16":{"id":"library-insects","path":"insects","name":{"pl":"Owady","en":"Insects"}},"17":{"id":"library-misc","path":"misc","name":{"pl":"Misc","en":"Misc"}},"18":{"id":"library-nature","path":"nature","name":{"pl":"Natura","en":"Nature"}},"20":{"id":"library-people","path":"people","name":{"pl":"Ludzie","en":"People"}},"21":{"id":"library-sport","path":"sport","name":{"pl":"Sport","en":"Sport"}},"22":{"id":"library-tableware","path":"tableware","name":{"pl":"Kuchnia","en":"Tableware"}},"23":{"id":"library-technics","path":"technics","name":{"pl":"Technika","en":"Technics"}},"24":{"id":"library-transport","path":"transport","name":{"pl":"Transport","en":"Transport"}},"25":{"id":"library-vegetables","path":"vegetables","name":{"pl":"Warzywa","en":"Vegetables"}},"26":{"id":"library-weapons","path":"weapons","name":{"pl":"Bro\u0144","en":"Weapons"}}}}' ;
+
             $json_content = json_decode($json_content, true);
 
             $library_arr = $json_content['categories'];
