@@ -19,7 +19,7 @@
     <div class="centering-container">
         <div class="panel panel-primary">
             <div class="panel-heading panel-big">
-                <span>Cennik</span>
+
                 <div class="btn-group pull-right">
                     
                 </div>

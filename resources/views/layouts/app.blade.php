@@ -44,6 +44,9 @@
 
 
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/price.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('/css/bootstrap/bootstrap-select.min.css')}}" rel="stylesheet">
     <link href="{{ asset('/css/fonts.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/styles.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('/css/img/favicon/favicon.png') }}">
@@ -62,6 +65,7 @@
     <script src="{{ asset('/bower_components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/bower_components/jquery/dist/jqui.js') }}"></script>
     <script src="{{ asset('/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/js/bootstrap/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('/js/libs/underscore/underscore.js') }}"></script>
     <script src="{{ asset('/js/libs/backbone/backbone.js') }}"></script>
     <script src="{{ asset('/js/libs/backbone/backbone.stickit.js') }}"></script>

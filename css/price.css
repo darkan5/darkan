@@ -1,0 +1,51 @@
+.price-iteam {
+    background: -webkit-linear-gradient(top, #7FA2B8, #618DA9);
+    height: 90px;
+    padding-top: 5px;
+    color: white;
+}
+.price-form {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+.price-form-align {
+    text-align-last:center;
+}
+.price-header {
+    background-color: #F7814D ;
+    color:white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.price-header-one {
+    margin-left: 15px;
+}
+.price-header-two {
+     margin-right: 15px;
+}
+.price-iteam-li {
+    display: block;
+    padding: 5px;
+}
+.price-info {
+    height: 50px;
+    font-style: italic;
+}
+.ul-enterprise {
+    margin-top: -7px;
+}
+.year-learning-form {
+    padding-top: 7px;
+}
+.price-month {
+    padding-top: 10px;
+    font-size: medium;
+    font-weight: bold;
+    height: 30px;
+}
+
+
+/*ul {*/
+    /*margin-top: 5px;*/
+/*}*/
