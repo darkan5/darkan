@@ -16,13 +16,13 @@ function get_data($url)
 }
 
 
-$stylesImageFile = get_data('192.168.1.100/js/editors/standard/css/styles_image.json');
+$stylesImageFile = get_data('192.168.1.101/js/editors/standard/css/styles_image.json');
 
-$stylesTextFile = get_data('192.168.1.100/js/editors/standard/css/styles_text.json');
-$stylesGradientFile = get_data('192.168.1.100/js/editors/standard/css/styles_gradient.json');
-$stylesQuestionFile = get_data('192.168.1.100/js/editors/standard/css/styles_question.json');
-$stylesDndFile = get_data('192.168.1.100/js/editors/standard/css/styles_dnd.json');
-$stylesInputTextFile = get_data('192.168.1.100/js/editors/standard/css/styles_inputtext.json');
+$stylesTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_text.json');
+$stylesGradientFile = get_data('192.168.1.101/js/editors/standard/css/styles_gradient.json');
+$stylesQuestionFile = get_data('192.168.1.101/js/editors/standard/css/styles_question.json');
+$stylesDndFile = get_data('192.168.1.101/js/editors/standard/css/styles_dnd.json');
+$stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_inputtext.json');
 //
 //
 //    $stylesImageFile = get_data(asset('/js/editors/standard/css/styles_image.json'), 0, null, null);

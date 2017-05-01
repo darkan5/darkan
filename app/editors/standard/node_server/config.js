@@ -3,9 +3,7 @@ module.exports = Config;
 function Config(){ }
 
 // app url with trailing slash
-var url='192.168.1.100'
-
-
+var url='192.168.1.101' ;
 Config.VERSION = '001';
 
 Config.PORT = 3801;
