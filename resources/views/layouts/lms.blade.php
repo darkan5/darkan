@@ -41,7 +41,7 @@
     <!-- <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'> -->
 
     <link href="{{ asset('/bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-
+    <link href="{{ asset('/bower_components/morrisjs/morris.css') }}" rel="stylesheet">
 
 
 
@@ -67,13 +67,17 @@
     <script src="{{ asset('/js/libs/backbone/backbone.js') }}"></script>
     <script src="{{ asset('/js/libs/backbone/backbone.stickit.js') }}"></script>
     <script src="{{ asset('/js/libs/backbone/backbone.controller.js') }}"></script>
-
+    <script src="{{ asset('/js/modules/utils/utils.js') }}"></script>
     <script src="{{ asset('/js/libs/marionette/backbone.marionette.js') }}"></script>
     <script src="{{ asset('/js/libs/backbone.marionette/lib/backbone.marionette.min.js') }}"></script>
 
     <script src="{{ asset('js/datetimepicker-master/jquery.datetimepicker.js') }}"></script>
     <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="{{ asset('/bower_components/metisMenu/dist/metisMenu.min.js') }}"></script>
 
+    <!-- Morris Charts JavaScript -->
+    <script src="{{ asset('/bower_components/raphael/raphael-min.js') }}"></script>
+    <script src="{{ asset('/bower_components/morrisjs/morris.min.js') }}"></script>
     <script src="{{ asset('/js/libs/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('/js/libs/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 
@@ -90,7 +94,6 @@
     <script src="{{ asset('/js/modules/webservice/node/node_webservice.js') }}"></script>
     <script src="{{ asset('/js/modules/webservice/data_access.js') }}"></script>
 
-    
     <script src="{{ asset('/js/libs/notify/bootstrap-notify.min.js') }}"></script>
     <script src="{{ asset('/js/libs/notify/notify.js') }}"></script>
 
@@ -243,7 +246,7 @@
     @include('cookiepolicy.cookieinfo')
 @endif
 
-<script src="{{ asset('/js/modules/utils/utils.js') }}"></script>
+
 
     
 </body>

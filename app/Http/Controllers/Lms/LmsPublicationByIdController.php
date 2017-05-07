@@ -66,7 +66,8 @@ class LmsPublicationByIdController extends LmsController
         $ut = [];
 
         foreach ($userTimes as $userTime) {
-            array_push($ut, json_decode($userTime));
+            array_push($ut, json_decode(json_decode($userTime)->page_time));
+
         }
 
         return $ut;
