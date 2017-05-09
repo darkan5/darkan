@@ -110,7 +110,7 @@
 											<input type="hidden" name="notify_url" value="{{ url('/paypalpayment') }}">
 											<input type="hidden" name="return" value="{{ env('PAYPAL_REDIRECT_LINK') }}">
 											<input type="hidden" name="cmd" value="_xclick">
-											<input type="hidden" name="business" value="office@darkan.local">
+											<input type="hidden" name="business" value="office@{{env('APP_URL')}}">
 											<input type="hidden" name="bn" value="JavaScriptButton_buynow">
 											<button type="submit" class="buybutton">
 												<?= Lang::get('pricing.GOPRO_BUY') ?>
@@ -130,7 +130,7 @@
 											<input type="hidden" name="return" value="{{ env('PAYPAL_REDIRECT_LINK') }}">
 											<input type="hidden" name="env" value="www.sandbox">
 											<input type="hidden" name="cmd" value="_xclick">
-											<input type="hidden" name="business" value="pio.wiecaszek-facilitator@gmail.com">
+											<input type="hidden" name="business" value="office@{{env('APP_URL')}}">
 											<input type="hidden" name="bn" value="JavaScriptButton_buynow">
 											<button type="submit" class="buybutton">
 												Sandbox!
@@ -180,7 +180,7 @@
 											<input type="hidden" name="notify_url" value="{{ url('/paypalpayment') }}">
 											<input type="hidden" name="return" value="{{ env('PAYPAL_REDIRECT_LINK') }}">
 											<input type="hidden" name="cmd" value="_xclick">
-											<input type="hidden" name="business" value="office@darkan.local">
+											<input type="hidden" name="business" value="office@{{env('APP_URL')}}">
 											<input type="hidden" name="bn" value="JavaScriptButton_buynow">
 											<button type="submit" class="buybutton bestPlanButton">
 												<?= Lang::get('pricing.GOPRO_BUY') ?>
@@ -200,7 +200,7 @@
 											<input type="hidden" name="return" value="{{ env('PAYPAL_REDIRECT_LINK') }}">
 											<input type="hidden" name="env" value="www.sandbox">
 											<input type="hidden" name="cmd" value="_xclick">
-											<input type="hidden" name="business" value="pio.wiecaszek-facilitator@gmail.com">
+											<input type="hidden" name="business" value="office@{{env('APP_URL')}}">
 											<input type="hidden" name="bn" value="JavaScriptButton_buynow">
 											<button type="submit" class="buybutton bestPlanButton">
 												Sandbox!

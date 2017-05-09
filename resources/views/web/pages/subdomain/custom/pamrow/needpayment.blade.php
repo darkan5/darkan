@@ -86,7 +86,7 @@
 					<input type="hidden" name="return" value="<?=config('app.protocol_not_secure') . $subdomainName . '.' . config('app.domain') . config('app.folder')?>">
 					<input type="hidden" name="env" value="www.sandbox">
 					<input type="hidden" name="cmd" value="_xclick">
-					<input type="hidden" name="business" value="pio.wiecaszek-facilitator@gmail.com">
+					<input type="hidden" name="business" value="office@{{env('APP_URL')}}">
 					<input type="hidden" name="bn" value="JavaScriptButton_buynow">
 					<button type="submit" class="paypal-button btn-makepayment paypal-confirm-payment large">Sandbox!</button>
 				</form>
