@@ -2,85 +2,85 @@
 
 @section('content')
 
-<div class="topmenu-offset"></div>
+    <div class="topmenu-offset"></div>
 
-<ul>
-    @foreach($errors->all() as $error)
-        <div class="bs-example col-md-10 col-md-offset-1">
-            <div class="alert alert-warning">
-                <a href="#" class="close" data-dismiss="alert">&times;</a>
-                <strong>Uwaga!</strong> {{ $error }}
-            </div>
-        </div>
-    @endforeach
-</ul>
-
-
-
-
-
-<div class="container">
-    <div class="centering-container">
-
-
-        @if(Auth::user() && Auth::user()->hasRole('user'))
-            <div class="panel panel-primary">
-                <div class="panel-heading panel-big">
-                    <span>kupon sprzedażowy</span>
-                    <div class="btn-group pull-right">
-                        
-                    </div>
-                </div>
-
-                {!! Form::open(array('class' => 'form',  'method' => 'post', 'url' => 'payment/buyplanbysalescoupon')) !!}
-
-                <div class="panel-body ">
-
-                    <div class="form-group">
-                        {!! Form::text('code', null, 
-                            array('required', 
-                                  'class'=>'form-control', 
-                                  'placeholder'=>'kupon sprzedażowy')) !!}
-
-                       
-                    </div>
-
-                    <div>
-                        <p >Jeśli posiadasz kupon sprzedażowy, wpisz go tutaj, a następnie kliknij przycisk Dalej TERAZ poniżej.</p>
-                    </div>
-
-                </div>
-
-                <div class="panel-body ">
-                     {!! Form::submit('Dalej TERAZ', array('class'=>'btn btn-primary')) !!}
-                </div>
-
-                {!! Form::close() !!}
-            </div>
-        @endif
-
-       @if($canBayPlanOptions)
-            <div class="panel panel-primary">
-                <div class="panel-heading panel-big">
-                    <span>Dodatkowe opcje</span>
-                    <div class="btn-group pull-right">
-                        
-                    </div>
-                </div>
-                <div class="panel-body">
-
-                     <a class="btn btn-success" href="{{ url('/pricelistoptions') }}" >DoDalej opcje</a>
-
+    <ul>
+        @foreach($errors->all() as $error)
+            <div class="bs-example col-md-10 col-md-offset-1">
+                <div class="alert alert-warning">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <strong>Uwaga!</strong> {{ $error }}
                 </div>
             </div>
-        @endif
+        @endforeach
+    </ul>
+
+
+
+
+
+    <div class="container">
+        <div class="centering-container">
+
+
+            @if(Auth::user() && Auth::user()->hasRole('user'))
+                <div class="panel panel-primary">
+                    <div class="panel-heading panel-big">
+                        <span>kupon sprzedażowy</span>
+                        <div class="btn-group pull-right">
+
+                        </div>
+                    </div>
+
+                    {!! Form::open(array('class' => 'form',  'method' => 'post', 'url' => 'payment/buyplanbysalescoupon')) !!}
+
+                    <div class="panel-body ">
+
+                        <div class="form-group">
+                            {!! Form::text('code', null,
+                                array('required',
+                                      'class'=>'form-control',
+                                      'placeholder'=>'kupon sprzedażowy')) !!}
+
+
+                        </div>
+
+                        <div>
+                            <p >Jeśli posiadasz kupon sprzedażowy, wpisz go tutaj, a następnie kliknij przycisk Dalej TERAZ poniżej.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="panel-body ">
+                        {!! Form::submit('Dalej TERAZ', array('class'=>'btn btn-primary')) !!}
+                    </div>
+
+                    {!! Form::close() !!}
+                </div>
+            @endif
+
+            @if($canBayPlanOptions)
+                <div class="panel panel-primary">
+                    <div class="panel-heading panel-big">
+                        <span>Dodatkowe opcje</span>
+                        <div class="btn-group pull-right">
+
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                        <a class="btn btn-success" href="{{ url('/pricelistoptions') }}" >DoDalej opcje</a>
+
+                    </div>
+                </div>
+            @endif
 
 
             {{--<div class="panel-heading panel-big">--}}
-                {{----}}
-                {{--<div class="btn-group pull-right">--}}
-                    {{----}}
-                {{--</div>--}}
+            {{----}}
+            {{--<div class="btn-group pull-right">--}}
+            {{----}}
+            {{--</div>--}}
             {{--</div>--}}
             <div class="col-lg-6">
                 <div class="panel text-center price-header price-header-one">
@@ -101,9 +101,18 @@
                         <div class="panel-heading  text-center">
                             <h3>Standard</h3>
                         </div>
-                        <div class="text-center price-iteam"><h3>120 zł/mies.</h3>płatne za cały rok</div>
+                        <div class="text-center price-iteam" id="standard-price"><h3>120 zł/mc</h3>płatne za cały rok</div>
 
-                        <div id="year-standard" class="text-center price-month">140 zł/mies.</div>
+                        <div id="year-standard" class="text-center price-month">
+
+                            <form>
+                                <div class="choose-option choose-month "><input onchange="updatevariable1(value)" class="choose-option-input" name="choose-term1" id="stan-month" value="month" type="radio" /> za mesiąc</div>
+                                <div class="choose-option choose-year"><input onchange="updatevariable1(value)" class="choose-option-input" name="choose-term1" id="stan-year" value="year" type="radio" checked="checked" />
+                                    za rok</div>
+                            </form>
+
+
+                        </div>
                         <div class="panel-body text-center price-info">
                             <p>Dla osób chcących tworzyć kursy bądź prezentacje marketingowe</p>
                         </div>
@@ -136,9 +145,17 @@
                         <div class="panel-heading  text-center">
                             <h3>Profesional</h3>
                         </div>
-                        <div class="text-center price-iteam"><h3>250 zł/mies.</h3>płatne za cały rok</div>
+                        <div class="text-center price-iteam" id="proffesional-price"><h3>250 zł/mc</h3>płatne za cały rok</div>
 
-                        <div id="year-profesional" class="text-center price-month">300 zł/mies.</div>
+                        <div id="year-profesional" class="text-center price-month">
+                            <form>
+
+                                <div class="choose-option choose-month "><input name="choose-term2" onchange="updatevariable2(value)" class="choose-option-input" id="prof-month" value="month" type="radio" /> za mesiąc</div>
+
+                                <div class="choose-option choose-year"><input name="choose-term2" onchange="updatevariable2(value)" class="choose-option-input" id="prof-year" value="year" type="radio" checked="checked" /> za rok</div>
+                            </form>
+
+                        </div>
                         <div class="panel-body text-center price-info">
                             <p>Dla firm pracujących nad więszą ilością projektów</p>
                         </div>
@@ -174,22 +191,30 @@
                             <h3>E-learning Portal</h3>
                         </div>
                         <div class="text-center price-iteam">
-                        <div class="price-form">
-                            <form action="">
-                            <select class="form-control text-center price-form-align" onchange="updatevariable(this.value)">
-                                <option value="1">50 osób -  500 zł/mies.</option>
-                                <option value="2">100 osób - 700 zł/mies.</option>
-                                <option value="3">200 osób - 1000 zł/mies.</option>
-                                <option value="4">500 osób - 2000 zł/mies.</option>
-                                <option value="5">1000 osób - 4000 zł/mies.</option>
-                            </select>
+                            <div class="price-form" id="elearning-price">
+                                <form action="">
+                                    <select class="form-control text-center price-form-align" onchange="updatevariable(this.value)">
+                                        <option value="1">50 osób -  500 zł/mc</option>
+                                        <option value="2">100 osób - 700 zł/mc</option>
+                                        <option value="3">200 osób - 1000 zł/mc</option>
+                                        <option value="4">500 osób - 2000 zł/mc</option>
+                                        <option value="5">1000 osób - 4000 zł/mc</option>
+                                    </select>
 
-                        </form>
-                            <div class="year-learning-form">płatne za cały rok</div>
-                        </div>
+                                </form>
+                                <div class="year-learning-form">płatne za cały rok</div>
+                            </div>
                         </div>
                         <div></div>
-                        <div id="year-elearning" class="price-month">50 osób - 600 zł/mies.</div>
+                        <div id="year-elearning" class="price-month">
+                            <form>
+
+                                <div class="choose-option choose-month "><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-month" value="month" type="radio" /> za mesiąc</div>
+
+                                <div class="choose-option choose-year"><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-year" value="year"  type="radio" checked="checked" /> za rok</div>
+                            </form>
+
+                        </div>
                         <div class="panel-body text-center price-info">
                             <p>Dla firm chcących szkolić swoich pracowników lub klientów</p>
                         </div>
@@ -250,35 +275,62 @@
 
                     </div>
                 </div>
-                </div>
+            </div>
 
 
 
 
 
+        </div>
     </div>
-</div>
-<script type="text/javascript">
+    <script type="text/javascript">
+        function updatevariable1(data) {
+            if (data == 'month'){
+                $('#standard-price').html('<h3>140 zł/mc</h3>płatne co miesiąc');
+            }
+            if (data == 'year'){
+                $('#standard-price').html('<h3>120 zł/mc</h3>płatne za cały rok');
+            }
 
-    function updatevariable(data) {
+        }
+        function updatevariable2(data) {
+            if (data == 'month'){
+                $('#proffesional-price').html('<h3>300 zł/mc</h3>płatne co miesiąc');
+            }
+            if (data == 'year'){
+                $('#proffesional-price').html('<h3>250 zł/mc</h3>płatne za cały rok');
+            }
 
-        if (data == 1){
-            $('#year-elearning').text('50 osób - 600 zł/mies.');
         }
-        if (data == 2){
-            $('#year-elearning').text('100 osób - 800 zł/mies.');
-        }
-        if (data == 3){
-            $('#year-elearning').text('200 osób - 1200 zł/mies.');
-        }
-        if (data == 4){
-            $('#year-elearning').text('500 osób - 2400 zł/mies.');
-        }
-        if (data == 5){
-            $('#year-elearning').text('1000 osób - 4400 zł/mies.');
-        }
-    }
+        function updatevariable3(data) {
 
-</script>
+            if (data == 'month'){
+                $('#elearning-price').html('<form action="">' +
+                    '<select class="form-control text-center price-form-align">' +
+                    '<option value="1">50 osób -  600 zł/mc</option> ' +
+                    '<option value="2">100 osób - 800 zł/mc</option> ' +
+                    '<option value="3">200 osób - 1200 zł/mc</option> ' +
+                    '<option value="4">500 osób - 2400 zł/mc</option> ' +
+                    '<option value="5">1000 osób - 4400 zł/mc</option> ' +
+                    '</select> ' +
+                    '</form>' +
+                    '<div class="year-learning-form">płatne co miesiąc</div> ');
+            }
+            if (data == 'year'){
+                $('#elearning-price').html('<form action="">' +
+                    '<select class="form-control text-center price-form-align">' +
+                    '<option value="1">50 osób -  500 zł/mc</option> ' +
+                    '<option value="2">100 osób - 700 zł/mc</option> ' +
+                    '<option value="3">200 osób - 1000 zł/mc</option> ' +
+                    '<option value="4">500 osób - 2000 zł/mc</option> ' +
+                    '<option value="5">1000 osób - 4000 zł/mc</option> ' +
+                    '</select> ' +
+                    '</form>' +
+                    '<div class="year-learning-form">płatne za cały rok</div> ');
+            }
+
+        }
+
+    </script>
 
 @endsection
