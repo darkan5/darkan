@@ -281,7 +281,7 @@
 			<div class="col-md-3 col-sm-4">
 					<h5 class="frontpage-footer-column-header"><?= Lang::get('frontpage.community') ?></h5>
 					<p>
-						<a href="http://darkan.local/blog" target="_blank"><?= Lang::get('frontpage.blog') ?></a>
+						<a href="https://darkan.eu/blog" target="_blank"><?= Lang::get('frontpage.blog') ?></a>
 					</p>
 					@if(Auth::check() && Auth::user()->hasRole('affiliate'))
 					<p>

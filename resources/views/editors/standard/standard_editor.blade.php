@@ -16,13 +16,13 @@ function get_data($url)
 }
 
 
-$stylesImageFile = get_data('192.168.1.101/js/editors/standard/css/styles_image.json');
+$stylesImageFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_image.json');
 
-$stylesTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_text.json');
-$stylesGradientFile = get_data('192.168.1.101/js/editors/standard/css/styles_gradient.json');
-$stylesQuestionFile = get_data('192.168.1.101/js/editors/standard/css/styles_question.json');
-$stylesDndFile = get_data('192.168.1.101/js/editors/standard/css/styles_dnd.json');
-$stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_inputtext.json');
+$stylesTextFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_text.json');
+$stylesGradientFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_gradient.json');
+$stylesQuestionFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_question.json');
+$stylesDndFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_dnd.json');
+$stylesInputTextFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_inputtext.json');
 //
 //
 //    $stylesImageFile = get_data(asset('/js/editors/standard/css/styles_image.json'), 0, null, null);
@@ -483,7 +483,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
 					</button>
 					<div class="plugin-required-info">
 	                	*<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-	                	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
+	                	<a href="<?php echo env('APP_PROTOCOL').env('APP_URL') ?>/downloads/DarkanExport.zip" download>
 	                		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>.
 	            		</a>
 	            		<?=Lang::get('editor.PSD_PLUGIN_TUTORIAL_1')?>
@@ -548,7 +548,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
 				<a href="<?=$youTubeLink?>" target="_blank">
 					<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
 				</a>
-				<a href="http://darkan.local/blog" target="_blank">
+				<a href="https://darkan.eu/blog" target="_blank">
 					<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
 				</a>
 			</div>	
@@ -1641,7 +1641,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
 			<a href="<?=$youTubeLink?>" target="_blank">
 				<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
 			</a>
-			<a href="http://darkan.local/blog" target="_blank">
+			<a href="https://darkan.eu/blog" target="_blank">
 				<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
 			</a>
 		</div>
@@ -1865,7 +1865,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
                     <span class="title">PSD</span>
                     <div class="extras">
                     	<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-                    	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
+                    	<a href="https://darkan.eu/downloads/DarkanExport.zip" download>
                     		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>
                 		</a>
             		</div>
@@ -1903,7 +1903,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
 					</button>
 					<div class="plugin-required-info">
 	                	*<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-	                	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
+	                	<a href="https://darkan.eu/downloads/DarkanExport.zip" download>
 	                		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>.
 	            		</a>
 	            		<?=Lang::get('editor.PSD_PLUGIN_TUTORIAL_1')?>
@@ -1968,7 +1968,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
     			<a href="<?=$youTubeLink?>" target="_blank">
     				<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
     			</a>
-    			<a href="http://darkan.local/blog" target="_blank">
+    			<a href="https://darkan.eu/blog" target="_blank">
     				<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
     			</a>
     		</div>
@@ -2024,7 +2024,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
 					</button>
 					<div class="plugin-required-info">
 	                	*<?=Lang::get('editor.PSD_PLUGIN_NEED')?>
-	                	<a href="http://darkan.local/downloads/DarkanExport.zip" download>
+	                	<a href="<?php echo env('APP_PROTOCOL').env('APP_URL') ?>/downloads/DarkanExport.zip" download>
 	                		<?=Lang::get('editor.PSD_PLUGIN_DOWNLOAD')?>.
 	            		</a>
 	            		<?=Lang::get('editor.PSD_PLUGIN_TUTORIAL_1')?>
@@ -2089,7 +2089,7 @@ $stylesInputTextFile = get_data('192.168.1.101/js/editors/standard/css/styles_in
     			<a href="<?=$youTubeLink?>" target="_blank">
     				<div class="starting-page-icon youtube" title="<?=Lang::get('editor.WELCOMESCREEN_YT')?>"></div>
     			</a>
-    			<a href="http://darkan.local/blog" target="_blank">
+    			<a href="https://darkan.eu/blog" target="_blank">
     				<div class="starting-page-icon blog" title="<?=Lang::get('editor.WELCOMESCREEN_BLOG')?>"></div>
     			</a>
     		</div>

@@ -32,8 +32,8 @@ YOUR_API_KEY = 88e1a99e1531edad4a6c20179ffc3b575ef3aa3f
 				<div class="col-md-6">
 					<code class="language-terminal">
 <strong>Request:</strong>					
-POST: http://darkan.local/api
-Params: {
+POST: <?php echo env('APP_PROTOCOL').env('APP_URL').'/api' ?>
+						Params: {
 	"apikey": "YOUR_API_KEY",
 	"action": "generateToken"
 }
@@ -64,8 +64,9 @@ YOUR_HASHED_API_KEY = sha1(YOUR_API_KEY + token)
 				<div class="col-md-6">
 					<code class="language-terminal">
 <strong>Request:</strong>					
-POST: http://darkan.local/api
-Params: {
+POST: <?php echo env('APP_PROTOCOL').env('APP_URL').'/api' ?>
+
+						Params: {
 	"apikey": "YOUR_HASHED_API_KEY",
 	"action": "addNewProject",
 	"projectName": "Nazwa projektu",
@@ -126,8 +127,9 @@ YOUR_API_KEY = 88e1a99e1531edad4a6c20179ffc3b575ef3aa3f
 				<div class="col-md-6">
 					<code class="language-terminal">
 <strong>Request:</strong>					
-POST: http://darkan.local/api
-Params: {
+POST: <?php echo env('APP_PROTOCOL').env('APP_URL').'/api' ?>
+
+						Params: {
 	"apikey": "YOUR_API_KEY",
 	"action": "generateToken"
 }
@@ -158,8 +160,9 @@ YOUR_HASHED_API_KEY = sha1(YOUR_API_KEY + token)
 				<div class="col-md-6">
 					<code class="language-terminal">
 <strong>Request:</strong>					
-POST: http://darkan.local/api
-Params: {
+POST: <?php echo env('APP_PROTOCOL').env('APP_URL').'/api' ?>
+
+						Params: {
 	"apikey": "YOUR_HASHED_API_KEY",
 	"action": "publishProject",
 	"projectId": "35"
@@ -180,7 +183,7 @@ Params: {
 		"data":
 		{
 			"publicationId":3,
-			"link":"http://darkan.local/storage/app/
+				"link":"<?php echo env('APP_PROTOCOL').env('APP_URL').'/storage/app/' ?>
 publications_external/a41eab5a14a09e448cef86bae6ddc904.zip"
 		}
 		}

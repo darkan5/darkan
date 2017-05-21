@@ -19,7 +19,7 @@
         <div style="margin:7px;display:inline-block;" class="darkantitlewrapper"><img src="{{ asset('/css/img/frontpage/main-header_en.png') }}" alt="Darkan">
         </div>
         <div style="display:inline-block;float:right;right:30px;background-color:#EEEEEE;height:100%;width:255px;position:relative;" class="socialiconswrapper">
-            <a style="text-decoration: none;border: none;" target="_blank" href="http://darkan.local/blog/?lang=<?=Lang::get('mails.LANG_VERSION')?>"><img style="padding: 20px 17px;" src="{{ asset('/css/img/social/wp.png') }}">
+            <a style="text-decoration: none;border: none;" target="_blank" href="https://darkan.eu/blog/?lang=<?=Lang::get('mails.LANG_VERSION')?>"><img style="padding: 20px 17px;" src="{{ asset('/css/img/social/wp.png') }}">
             </a>
             <a style="text-decoration: none;border: none;" target="_blank" href="http://www.facebook.com/pages/Darkan/675324632508995?ref=ts&fref=ts"><img style="padding: 20px 17px;" src="{{ asset('/css/img/social/fb_oval.png') }}">
             </a>

@@ -246,7 +246,7 @@
 
 
 
-<script type="text/javascript" src="http://darkan.local/js/editors/standard/api/darkan_editor_api.js"></script>
+<script type="text/javascript" src="<?php echo env('APP_PROTOCOL').env('APP_URL') ?>/js/editors/standard/api/darkan_editor_api.js"></script>
 
 <!-- WEBSERVICE -->
 <script type="text/javascript" src="{{ asset('/js/modules/apidemo/webservice/webservice.js') }}"></script>
