@@ -14,15 +14,15 @@ function get_data($url)
     curl_close($ch);
     return $data;
 }
+$url = env('APP_IP_ADDRESS').'/';
 
+$stylesImageFile = get_data($url.'js/editors/standard/css/styles_image.json');
 
-$stylesImageFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_image.json');
-
-$stylesTextFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_text.json');
-$stylesGradientFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_gradient.json');
-$stylesQuestionFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_question.json');
-$stylesDndFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_dnd.json');
-$stylesInputTextFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/standard/css/styles_inputtext.json');
+$stylesTextFile = get_data($url.'js/editors/standard/css/styles_text.json');
+$stylesGradientFile = get_data($url.'js/editors/standard/css/styles_gradient.json');
+$stylesQuestionFile = get_data($url.'js/editors/standard/css/styles_question.json');
+$stylesDndFile = get_data($url.'js/editors/standard/css/styles_dnd.json');
+$stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.json');
 //
 //
 //    $stylesImageFile = get_data(asset('/js/editors/standard/css/styles_image.json'), 0, null, null);
@@ -70,8 +70,8 @@ $stylesInputTextFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/
 
 		var __meta__ = {
 			domain: '<?= config('app.domain') ?>',
-			projectID: <?= $projectID ?>,
-			userID: <?= !Auth::check() ? "-1" : $user->id;?>,
+			projectID: '<?= $projectID ?>',
+			userID: '<?= !Auth::check() ? "-1" : $user->id;?>',
 			login: '<?= !$user->email ? "undefined" : $user->email;?>',
 			loginHashed: '<?= !$user->email ? md5("undefined") : md5( $user->email);?>',
 			APP_LINK: '<?= config('app.applink'); ?>',
@@ -91,7 +91,7 @@ $stylesInputTextFile = get_data(env('APP_PROTOCOL').env('APP_URL').'/js/editors/
 
 
 		var stylesImage = <?php echo $stylesImageFile ?>;
-		var stylesText = <?= $stylesTextFile ?>;
+		var stylesText =<?= $stylesTextFile ?>;
 		var stylesGradient = <?= $stylesGradientFile ?>;
 		var stylesQuestion = <?= $stylesQuestionFile ?>;
 		var stylesDnd = <?= $stylesDndFile ?>;
