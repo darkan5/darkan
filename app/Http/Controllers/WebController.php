@@ -150,7 +150,7 @@ class WebController extends Controller {
 		return view('web.pages.aboutus');
 	}
 
-	public function changeLanguage($language)
+	public function changeLanguage($language = 'pl')
 	{
 		if(Auth::check()){
 
