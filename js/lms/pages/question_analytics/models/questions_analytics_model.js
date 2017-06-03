@@ -8,12 +8,12 @@ var QuestionsAnalyticsModel = ItemModel.extend({
     },
 
     getData: function(){
-        DataAccess.getCourseQuestionsData(
-            {courseID: this.get('courseId'), userType: 'all'},
-            this.onGetDataResult,
-            this.onGetDataFault,
-            this
-        );
+       // DataAccess.getCourseQuestionsData(
+        //    {courseID: this.get('courseId'), userType: 'all'},
+        //    this.onGetDataResult,
+        //    this.onGetDataFault,
+       //     this
+      //  );
     },
 
 });
