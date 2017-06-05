@@ -1074,8 +1074,8 @@ Route::group([] , function() {
     //////////////////////
     // Language chager
     //////////////////////
-    Route::get('/changelang/{language?}', 'WebController@changeLanguage');
-    Route::post('/editor/changelang/{language?}', 'WebController@changeLanguage');
+    Route::get('/changelang/{language}', 'WebController@changeLanguage');
+    Route::post('/editor/changelang/{language}', 'WebController@changeLanguage');
 
 
 

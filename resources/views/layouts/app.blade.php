@@ -316,7 +316,7 @@
                         </li>
                     @endif
 
-                    @if (config('app.pricing_locale') == 'pl')
+
                         <li class="hideonmobile">
                             <a type="button" class="chosen-lang-btn dropdown-toggle" data-toggle="dropdown">
                                 <span class="chosen-lang lang-lg" lang="<?=$locale?>"></span>
@@ -334,7 +334,7 @@
                                 </li>
                             </ul>
                         </li>
-                    @endif
+
 
                 </ul>
             </div>

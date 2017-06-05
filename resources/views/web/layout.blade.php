@@ -178,7 +178,7 @@
 							</li>
 
 
-							<li><a class="text-bold" href="{{ url('/projects') }}"><?= Lang::get('frontpage.projects') ?></a></li>
+							<li><a class="text-bold" href="{{ url('/projects') }}"><?= Lang::get('frontpage.projects') ?>sdsdsd</a></li>
 
 							<li>
 								<a href="#" onClick="return false;" type="button" class="dropdown-toggle" data-toggle="dropdown">
@@ -213,7 +213,7 @@
 							</li>
 						@endif
 
-						@if (config('app.pricing_locale') == 'pl')
+
 						<li class="hideonmobile">
 							<a type="button" class="chosen-lang-btn dropdown-toggle" data-toggle="dropdown">
 								<span class="chosen-lang lang-lg" lang="<?=$locale?>"></span>
@@ -231,7 +231,7 @@
 								</li>
 							</ul>
 						</li>
-						@endif
+
 
 					</ul>
 				</div>
