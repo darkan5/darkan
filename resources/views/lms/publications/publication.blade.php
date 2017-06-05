@@ -500,11 +500,23 @@ include( base_path('/js/lms/pages/single_course/templates/single_course_item_lis
 </div>
 
 
-<?php var_dump($userTimes);?>
+
 
 <script type="text/javascript">
+    var courseId = {!! json_encode($courseId) !!};
     var userTimes = {!! json_encode($userTimes) !!};
-    $('#single-course-chart').append(new SingleCourseItemChartView( { userTimes:userTimes }      ).render() );
+    var questiondata = {!! json_encode($questiondata) !!};
+    var scormdata = {!! json_encode($scormdata) !!};
+
+    console.log('courseId', courseId);
+    console.log('userTimes', userTimes);
+    console.log('questiondata', questiondata);
+    console.log('scormdata', scormdata);
+
+    $('#single-course-chart').append(new SingleCourseItemChartView( { userTimes:userTimes }  ).render() );
+
+    $('#single-course-questions-analytics').append(new QuestionsAnalyticsView( { courseId:courseId, questiondata:questiondata }  ).render() );
+    $('#single-course-questions-analytics-variables').append(new QuestionsAnalyticsVariablesView( { courseId:courseId, scormdata:scormdata }  ).render() );
 
 </script>
 

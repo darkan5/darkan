@@ -48,14 +48,18 @@ class LmsPublicationByIdController extends LmsController
     	$users = $this->getUsers($bannerId);
 
         $groupsArray = $this->getGroupsArray();
-
+        $questiondata = $this->getCourseQuestionsData($userId, $bannerId);
+        $scormdata = $this->getCourseScormData($bannerId);
         $userTimes = $this->getPublicationUsersPageTimes($bannerId, $userId); 
 
         return view('lms.publications.publication')
                         ->with('course', $course)
 		        		->with('users', $users)
                         ->with('groupsArray', $groupsArray)
-                        ->with('userTimes', $userTimes);
+                        ->with('questiondata', $questiondata)
+                        ->with('scormdata', $scormdata)
+                        ->with('userTimes', $userTimes)
+                        ->with('courseId', $bannerId);
     }
 
     protected function getPublicationUsersPageTimes($bannerId)
@@ -207,4 +211,41 @@ class LmsPublicationByIdController extends LmsController
         Session::set('isAdmin', !Session::get('isAdmin'));
     }
 
+    public function getCourseQuestionsData($userId, $courseId) {
+
+
+        $coursesQuery = Banners::where('user_id', '=', $userId)
+            ->where('id_banner', '=', $courseId)
+            ->first();
+
+        $questiondata = '';
+        if ($coursesQuery) {
+            $questiondata = $this->isJson($coursesQuery['questiondata']) ? json_decode($coursesQuery['questiondata']) : '';
+        }
+
+        return $questiondata;
+    }
+
+    public function getCourseScormData($courseId) {
+
+        $scormData = [];
+
+        $coursesQuery = ScormData::where('course_id', '=', $courseId)->get();
+
+        foreach ($coursesQuery as $coursesRet) {
+            if ($this->isJson($coursesRet['data'])) {
+                array_push( $scormData, json_decode($coursesRet['data']) );
+            }
+        }
+
+        return $scormData;
+    }
+
+    private function isJson($string) {
+        json_decode($string);
+        return (json_last_error() == JSON_ERROR_NONE);
+    }
+
 }
+
+
