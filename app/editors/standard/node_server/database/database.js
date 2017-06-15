@@ -58,8 +58,8 @@ Database.prototype.mysqlConnect = function() {
 			case 'localhost':
 				this.connection = this.mysql.createConnection({
 				     host     : 'localhost',
-				     user     : 'root',
-				     password : 'pol123',
+				     user     : 'homestead',
+				     password : 'secret',
 				     database : 'darkan_test'
 				});
 				break;
