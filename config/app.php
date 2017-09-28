@@ -239,7 +239,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
-        SocialiteProviders\Manager\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -313,7 +312,6 @@ return [
         'Carbon' => Carbon\Carbon::class,
         'CarbonInterval' => Carbon\CarbonInterval::class,
         'Location' => Stevebauman\Location\Facades\Location::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 
