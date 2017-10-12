@@ -1044,10 +1044,12 @@ Route::group([] , function() {
     Route::post('/paypalcompleted', 'Payments\PaymentsController@paymentCompletedPage');
     Route::get('/paypalcompleted', 'WebController@profile');
 
-    
+    //Route::get('/testpaypal', 'Payment\TestPaymentController@testPayPal');
+    Route::get('/getdone', 'Payment\TestPaymentController@getDone');
+    Route::get('/getcancel', 'Payment\TestPaymentController@getCancel');
 
 
-    
+
 
 
     //////////////////////
