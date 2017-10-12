@@ -1,7 +1,7 @@
-storage/*
-vendor/*
-pma/*
-.idea/*
+storage/
+vendor/
+pma/
+.idea/
 Homestead.json
 Homestead.yaml
 js/editors/standard/modules/webservice/node/node_webservice.js
@@ -10,3 +10,5 @@ app/editors/standard/node_server/darkan_server.js
 app/editors/standard/node_server/config.js
 .env
 .htaccess
+app/Http/Requests/Payment/
+logs/paypal.log
