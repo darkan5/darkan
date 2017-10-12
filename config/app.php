@@ -239,6 +239,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
+        Netshell\Paypal\PaypalServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -312,7 +313,7 @@ return [
         'Carbon' => Carbon\Carbon::class,
         'CarbonInterval' => Carbon\CarbonInterval::class,
         'Location' => Stevebauman\Location\Facades\Location::class,
-
+        'Paypal' => Netshell\Paypal\Facades\Paypal::class,
     ],
 
 ];
