@@ -10,5 +10,4 @@ app/editors/standard/node_server/darkan_server.js
 app/editors/standard/node_server/config.js
 .env
 .htaccess
-app/Http/Requests/Payment/
 logs/paypal.log
