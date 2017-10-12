@@ -1,7 +1,7 @@
-storage/
-vendor/
-pma/
-.idea/
+storage/*
+vendor/*
+pma/*
+.idea/*
 Homestead.json
 Homestead.yaml
 js/editors/standard/modules/webservice/node/node_webservice.js
