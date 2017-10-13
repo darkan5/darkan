@@ -52,5 +52,16 @@ return [
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
         'redirect' => env('LINKEDIN_REDIRECT_LINK'),
     ],
+    'paypal' => [
+        'client_id' => env('PAYPAL_CLIENT_ID', ''),
+        'secret' => env('PAYPAL_SECRET', ''),
+        'mode' => env('PAYPAL_MODE', 'live'),
+        'endpoint' => env('PAYPAL_ENDPOINT', 'https://api.paypal.com'),
+        'connection_timeout' => 30,
+        'log_enabled' => true,
+        'log_path' => storage_path('logs/paypal.log'),
+        'log_level' => 'DEBUG'
+    ],
+
 
 ];
