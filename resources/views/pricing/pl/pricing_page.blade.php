@@ -117,10 +117,12 @@
                             <p>Dla osób chcących tworzyć kursy bądź prezentacje marketingowe</p>
                         </div>
                         <div class="panel-body">
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @if (!Auth::check())
+                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('register') }}">
                                 Wypróbuj 14 dni
                             </a>
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @endif
+                            <a  id="standard-buy-button" class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}/year">
                                 Kup
                             </a>
                         </div>
@@ -160,10 +162,12 @@
                             <p>Dla firm pracujących nad więszą ilością projektów</p>
                         </div>
                         <div class="panel-body">
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @if (!Auth::check())
+                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('register') }}">
                                 Wypróbuj 14 dni
                             </a>
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @endif
+                            <a  id="profesional-buy-button" class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/profesional') }}/year">
                                 Kup
                             </a>
                         </div>
@@ -194,11 +198,11 @@
                             <div class="price-form" id="elearning-price">
                                 <form action="">
                                     <select class="form-control text-center price-form-align" onchange="updatevariable(this.value)">
-                                        <option value="1">50 osób -  500 zł/mc</option>
-                                        <option value="2">100 osób - 700 zł/mc</option>
-                                        <option value="3">200 osób - 1000 zł/mc</option>
-                                        <option value="4">500 osób - 2000 zł/mc</option>
-                                        <option value="5">1000 osób - 4000 zł/mc</option>
+                                        <option value="50">50 osób -  500 zł/mc</option>
+                                        <option value="100">100 osób - 700 zł/mc</option>
+                                        <option value="200">200 osób - 1000 zł/mc</option>
+                                        <option value="500">500 osób - 2000 zł/mc</option>
+                                        <option value="1000">1000 osób - 4000 zł/mc</option>
                                     </select>
 
                                 </form>
@@ -206,27 +210,25 @@
                             </div>
                         </div>
                         <div></div>
-                        <div id="year-elearning" class="price-month">
-                            <form>
+                        {{--<div id="year-elearning" class="price-month">--}}
+                            {{--<form>--}}
 
-                                <div class="choose-option choose-month "><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-month" value="month" type="radio" /> za mesiąc</div>
+                                {{--<div class="choose-option choose-month "><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-month" value="month" type="radio" /> za mesiąc</div>--}}
 
-                                <div class="choose-option choose-year"><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-year" value="year"  type="radio" checked="checked" /> za rok</div>
-                            </form>
+                                {{--<div class="choose-option choose-year"><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-year" value="year"  type="radio" checked="checked" /> za rok</div>--}}
+                            {{--</form>--}}
 
-                        </div>
+                        {{--</div>--}}
+                        <div class="text-center price-month"><a href="mailto:office@darkan.me">office@darkan.me</a></div>
                         <div class="panel-body text-center price-info">
                             <p>Dla firm chcących szkolić swoich pracowników lub klientów</p>
                         </div>
-
                         <div class="panel-body">
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Wypróbuj 14 dni
-                            </a>
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Kup
+                            <a id="enterprise-buy-button" class="btn btn-lg btn-block " style="border:1px solid" href="mailto:office@darkan.me">
+                                Kontakt
                             </a>
                         </div>
+
                         <ul class="list-group list-group-flush text-center listaRadio">
                             <li class="price-iteam-li">Liczba projektów 100</li>
                             <li class="price-iteam-li">Miejsce na dysku 6GB</li>
@@ -237,8 +239,7 @@
                             <li class="price-iteam-li">Export PDF</li>
                             <li class="price-iteam-li">Współdzielenie kontentu</li>
                             <li class="price-iteam-li">Import PSD</li>
-
-
+                        </ul>
                     </div>
                 </div>
 
@@ -253,10 +254,9 @@
                             <p>Masz dużą firmę, chcesz więcej niż pozwala cennik? Skontaktuj się!</p>
                         </div>
                         <div class="panel-body">
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            <a id="enterprise-buy-button" class="btn btn-lg btn-block " style="border:1px solid" href="mailto:office@darkan.me">
                                 Kontakt
                             </a>
-
                         </div>
                         <ul class="list-group list-group-flush text-center listaRadio ul-enterprise">
                             <li class="price-iteam-li">Funkcjonalności na zamówienie</li>
@@ -287,18 +287,23 @@
         function updatevariable1(data) {
             if (data == 'month'){
                 $('#standard-price').html('<h3>140 zł/mc</h3>płatne co miesiąc');
+                $('standard-buy-button').attr("href", "/pricing/standard/month")
             }
             if (data == 'year'){
                 $('#standard-price').html('<h3>120 zł/mc</h3>płatne za cały rok');
+                $('standard-buy-button').attr("href", "/pricing/standard/year")
             }
 
         }
         function updatevariable2(data) {
             if (data == 'month'){
                 $('#proffesional-price').html('<h3>300 zł/mc</h3>płatne co miesiąc');
+                $('profesional-buy-button').attr("href", "/pricing/profesional/month")
+
             }
             if (data == 'year'){
                 $('#proffesional-price').html('<h3>250 zł/mc</h3>płatne za cały rok');
+                $('profesional-buy-button').attr("href", "/pricing/profesional/year")
             }
 
         }

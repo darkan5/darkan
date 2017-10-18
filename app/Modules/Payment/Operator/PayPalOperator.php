@@ -76,7 +76,7 @@ class PayPalOperator implements OperatorInterface
         );
 
         $this->_apiContext->setConfig(array(
-            'mode' => 'sandbox',
+            'mode' => config('services.paypal.mode'),
             'service.EndPoint' => config('services.paypal.endpoint'),
             'http.ConnectionTimeOut' => config('services.paypal.connection_timeout'),
             'log.LogEnabled' => config('services.paypal.log_enabled'),
@@ -130,13 +130,12 @@ class PayPalOperator implements OperatorInterface
              * @var
              */
             $response = $this->payment->create($this->_apiContext);
-            //dump('status platnosci: '.$response->getState());
-            //dump('Cel płatności: '.$response->getIntent());
         } catch (\Exception $e){
             echo $e->getMessage();
             die;
         }
         $this->redirectLink = $response->links[1]->href;
+        return $response;
     }
 
     /**
@@ -165,7 +164,7 @@ class PayPalOperator implements OperatorInterface
         );
 
         $apiContext->setConfig(array(
-            'mode' => 'sandbox',
+            'mode' => config('services.paypal.mode'),
             'service.EndPoint' => config('services.paypal.endpoint'),
             'http.ConnectionTimeOut' => config('services.paypal.connection_timeout'),
             'log.LogEnabled' => config('services.paypal.log_enabled'),

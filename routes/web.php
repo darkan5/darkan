@@ -941,9 +941,9 @@ Route::group([], function () {
     // Pricing pages for all
     /////////////////////
     Route::get('/pricelist', 'Price\PriceController@pricingPage');
-    Route::get('/pricing/standard', 'Price\PriceController@pricingStandardPage');
-    Route::get('/pricing/profesional', 'Price\PriceController@pricingProfesionalPage');
-    Route::get('/pricing/elearning', 'Price\PriceController@pricingElearningPage');
+    Route::get('/pricing/standard/{period}', 'Price\PricingController@buyStandardPlan');
+    Route::get('/pricing/profesional/{period}', 'Price\PricingController@buyProfesionalPlan');
+    Route::get('/pricing/elearning/{period}/{amount}', 'Price\PricingController@buyElearningPlan');
 
     Route::get('/pricelistoptions', 'Price\PriceOptionsController@pricingOptionsPage');
     Route::get('/pricelistoption/{id}', 'Price\PriceOptionsController@pricingOptionPage');
