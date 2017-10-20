@@ -1,0 +1,28 @@
+<?php
+return array (
+    'title_tools' => 'Tool for creating courses',
+    'title_LMS' => 'Tool for creating courses + e-learing portal (LMS )',
+    'payforMonth' => 'payable monthly',
+    'payforYear' => 'payable for whole year',
+    'forYear' => 'for year',
+    'forMonth'  => 'for month',
+    'title1' => 'If you wants create courses or marketing presentations',
+    'title2' => 'For companies working on more projects',
+    'title3' => 'For companies wishing to train their employees or clients',
+    'title4' => 'You have a large company, want more than a price list? Contact!',
+    'option1' => 'Projects',
+    'option2' => 'Space in disk',
+    'option3' => 'Public publish content',
+    'option4' => 'Export HTML 5',
+    'option5' => 'Export SCORM 1.2',
+    'option6' => 'Export SCORM 2004',
+    'option7' => 'Export PDF',
+    'option8' => 'Sharing content',
+    'option9' => 'Import PSD',
+    'contact' => 'Contant',
+    'trial' => 'Try 14 days',
+    'buy' => 'Buy',
+    'person' => 'persons',
+    'optionEkstra' => 'Functionality on request',
+    'optionIntegration' => 'Integration with the client system'
+);

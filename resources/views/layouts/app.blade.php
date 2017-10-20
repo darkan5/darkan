@@ -255,8 +255,8 @@
                     
 
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Zaloguj się</a></li>
-                        <li><a href="{{ url('/register') }}">Zarejestruj się</a></li>
+                        <li><a href="{{ url('/login') }}"><?=Lang::get('login.loginBtn')?></a></li>
+                        <li><a href="{{ url('/register') }}"><?=Lang::get('login.registerButton')?></a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

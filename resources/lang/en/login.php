@@ -5,10 +5,13 @@
   'description_login' => 'Log In to Darkan platform and create interactive e-learning content',
   'description_register' => 'Register in Darkan platform and create interactive e-learning content',
   'usingForm' => 'Log In:',
-  'emailAddress' => 'email address...',
-  'password' => 'password',
+  'emailAddress' => 'Email',
+  'password' => 'Password',
   'passwordConfirm' => 'repeat password',
   'loginBtn' => 'Log In',
+     'registerButton' => 'Sing up',
+     'loginForm' => 'Login form',
+     'registerForm' => 'Register form',
   'registerYourself' => 'Registration:',
   'registerBtn' => 'Register',
   'registerBtnFooter' => 'Registration',
@@ -31,4 +34,5 @@
   'registerWith_IN' => 'Register via LinedIn',
   'emailnotvalid' => 'email address is not valid',
   'loginFormUserName' => 'Full name',
+     'loginRemmber' => 'Remember'
 );
