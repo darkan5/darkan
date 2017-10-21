@@ -101,7 +101,7 @@
                         <div class="panel-heading  text-center">
                             <h3>Standard</h3>
                         </div>
-                        <div class="text-center price-iteam" id="standard-price"><h3>120 zł/mc</h3><?=Lang::get('pricingPage.payforYear')?></div>
+                        <div class="text-center price-iteam" id="standard-price"><h3><?=Lang::get('pricingPage.standard_year')?></h3><?=Lang::get('pricingPage.standard_year_year')?> <?=Lang::get('pricingPage.payforYear')?></div>
 
                         <div id="year-standard" class="text-center price-month">
 
@@ -144,7 +144,7 @@
                         <div class="panel-heading  text-center">
                             <h3>Profesional</h3>
                         </div>
-                        <div class="text-center price-iteam" id="proffesional-price"><h3>250 zł/mc</h3><?=Lang::get('pricingPage.payforYear')?></div>
+                        <div class="text-center price-iteam" id="proffesional-price"><h3><?=Lang::get('pricingPage.prof_year')?></h3><?=Lang::get('pricingPage.prof_year_year')?><?=Lang::get('pricingPage.payforYear')?></div>
 
                         <div id="year-profesional" class="text-center price-month">
                             <form>
@@ -193,11 +193,11 @@
                             <div class="price-form" id="elearning-price">
                                 <form action="">
                                     <select class="form-control text-center price-form-align" onchange="updatevariable(this.value)">
-                                        <option value="1">50 <?=Lang::get('pricingPage.person')?> -  500 zł/mc</option>
-                                        <option value="2">100 <?=Lang::get('pricingPage.person')?> - 700 zł/mc</option>
-                                        <option value="3">200 <?=Lang::get('pricingPage.person')?>- 1000 zł/mc</option>
-                                        <option value="4">500 <?=Lang::get('pricingPage.person')?> - 2000 zł/mc</option>
-                                        <option value="5">1000 <?=Lang::get('pricingPage.person')?> - 4000 zł/mc</option>
+                                        <option value="1"><?=Lang::get('pricingPage.portal_year_50')?></option>
+                                        <option value="2"><?=Lang::get('pricingPage.portal_year_100')?></option>
+                                        <option value="3"><?=Lang::get('pricingPage.portal_year_200')?></option>
+                                        <option value="4"><?=Lang::get('pricingPage.portal_year_500')?></option>
+                                        <option value="5"><?=Lang::get('pricingPage.portal_year_1000')?></option>
                                     </select>
 
                                 </form>
@@ -285,19 +285,20 @@
     <script type="text/javascript">
         function updatevariable1(data) {
             if (data == 'month'){
-                $('#standard-price').html('<h3>140 zł/mc</h3><?=Lang::get('pricingPage.payforMonth')?>');
+                $('#standard-price').html('<h3><?=Lang::get('pricingPage.standard_month')?></h3><?=Lang::get('pricingPage.standard_month_year')?><?=Lang::get('pricingPage.payforMonth')?>');
             }
             if (data == 'year'){
-                $('#standard-price').html('<h3>120 zł/mc</h3><?=Lang::get('pricingPage.payforYear')?>');
+                $('#standard-price').html('<h3><?=Lang::get('pricingPage.standard_year')?></h3><?=Lang::get('pricingPage.standard_year_year')?><?=Lang::get('pricingPage.payforYear')?>');
+
             }
 
         }
         function updatevariable2(data) {
             if (data == 'month'){
-                $('#proffesional-price').html('<h3>300 zł/mc</h3><?=Lang::get('pricingPage.payforMonth')?>');
+                $('#proffesional-price').html('<h3><?=Lang::get('pricingPage.prof_month')?></h3><?=Lang::get('pricingPage.prof_month_year')?><?=Lang::get('pricingPage.payforMonth')?>');
             }
             if (data == 'year'){
-                $('#proffesional-price').html('<h3>250 zł/mc</h3><?=Lang::get('pricingPage.payforYear')?>');
+                $('#proffesional-price').html('<h3><?=Lang::get('pricingPage.prof_year')?></h3><?=Lang::get('pricingPage.prof_year_year')?><?=Lang::get('pricingPage.payforYear')?>');
             }
 
         }
@@ -306,11 +307,11 @@
             if (data == 'month'){
                 $('#elearning-price').html('<form action="">' +
                     '<select class="form-control text-center price-form-align">' +
-                    '<option value="1">50 osób -  600 zł/mc</option> ' +
-                    '<option value="2">100 osób - 800 zł/mc</option> ' +
-                    '<option value="3">200 osób - 1200 zł/mc</option> ' +
-                    '<option value="4">500 osób - 2400 zł/mc</option> ' +
-                    '<option value="5">1000 osób - 4400 zł/mc</option> ' +
+                    '<option value="1"><?=Lang::get('pricingPage.portal_month_50')?></option> ' +
+                    '<option value="2"><?=Lang::get('pricingPage.portal_month_100')?></option> ' +
+                    '<option value="3"><?=Lang::get('pricingPage.portal_month_200')?></option> ' +
+                    '<option value="4"><?=Lang::get('pricingPage.portal_month_500')?></option> ' +
+                    '<option value="5"><?=Lang::get('pricingPage.portal_month_1000')?></option> ' +
                     '</select> ' +
                     '</form>' +
                     '<div class="year-learning-form"><?=Lang::get('pricingPage.payforMonth')?></div> ');
@@ -318,11 +319,11 @@
             if (data == 'year'){
                 $('#elearning-price').html('<form action="">' +
                     '<select class="form-control text-center price-form-align">' +
-                    '<option value="1">50 osób -  500 zł/mc</option> ' +
-                    '<option value="2">100 osób - 700 zł/mc</option> ' +
-                    '<option value="3">200 osób - 1000 zł/mc</option> ' +
-                    '<option value="4">500 osób - 2000 zł/mc</option> ' +
-                    '<option value="5">1000 osób - 4000 zł/mc</option> ' +
+                    '<option value="1"><?=Lang::get('pricingPage.portal_year_50')?></option> ' +
+                    '<option value="2"><?=Lang::get('pricingPage.portal_year_100')?></option> ' +
+                    '<option value="3"><?=Lang::get('pricingPage.portal_year_200')?></option> ' +
+                    '<option value="4"><?=Lang::get('pricingPage.portal_year_500')?></option> ' +
+                    '<option value="5"><?=Lang::get('pricingPage.portal_year_1000')?></option> ' +
                     '</select> ' +
                     '</form>' +
                     '<div class="year-learning-form"><?=Lang::get('pricingPage.payforYear')?></div> ');
