@@ -1,7 +1,7 @@
 <?php
 return array (
     'standard_month' => '35$ / monthly',
-    'standard_month_year' => '420$',
+    'standard_month_year' => '420$ ',
     'standard_year' => '30$ / monthly',
     'standard_year_year' => '360$ ',
     'prof_month' => '50$ / monthly',
