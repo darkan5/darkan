@@ -4,7 +4,7 @@ return array (
     'title_LMS' => 'Narzędzie do tworzenia kursów + Portal do pulikacji treści (LMS)',
     'payforMonth' => 'płatne co miesiąc',
     'payforYear' => 'płatne za cały rok',
-    'foryear' => 'za rok',
+    'forYear' => 'za rok',
     'forMonth'  => 'za miesiąc',
     'title1' => 'Dla osób chcących tworzyć kursy bądź prezentacje marketingowe',
     'title2' => 'Dla firm pracujących nad więszą ilością projektów',
