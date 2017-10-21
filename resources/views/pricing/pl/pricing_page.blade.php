@@ -246,7 +246,7 @@
                         <div class="panel-heading  text-center">
                             <h3>Enterprise</h3>
                         </div>
-                        <div class="text-center price-iteam"><h3>Kontakt</h3></div>
+                        <div class="text-center price-iteam"><h3><?=Lang::get('pricingPage.contact')?></h3></div>
                         <div class="text-center price-month"><a href="mailto:office@darkan.me">office@darkan.me</a></div>
                         <div class="panel-body text-center price-info">
                             <p><?=Lang::get('pricingPage.title4')?></p>

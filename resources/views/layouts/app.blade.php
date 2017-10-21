@@ -170,7 +170,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand navbar-brand-extend" href="{{ url('/') }}">
-                    <img class="logo-top" src="{{ asset('/css/img/new_web/logo.png') }}">
+                    <img class="logo-top" src="{{ asset('/css/img/new_web/logo_white.png') }}">
                 </a>
             </div>
 

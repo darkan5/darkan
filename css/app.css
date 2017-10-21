@@ -94,7 +94,8 @@ img {
 }
 
 .topmenu {
-    background-color: transparent;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0px 0px 13px -4px;
     border: none;
     padding: 20px 40px;
     -webkit-transition: padding 300ms ease-in-out;
@@ -107,6 +108,9 @@ img {
     background-color: #fff;
     padding: 10px 30px;
     box-shadow: 0px 0px 13px -4px;
+}
+.logo-top.scrolled {
+    content: url("img/new_web/logo.png");
 }
 
 .navbar-default .navbar-nav>li>a {
