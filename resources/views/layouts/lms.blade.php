@@ -24,7 +24,7 @@
     <meta property="fb:app_id" content="{{ env('FB_CLIENT_ID') }}"/>
     <meta property="og:image" content="{{ asset('/css/img/social_logos/fb_featured_image1.png') }}" />
 
-    <meta property="og:image:width" content="470" /> 
+    <meta property="og:image:width" content="470" />
     <meta property="og:image:height" content="246" />
 
     <meta name="_token" content="{{ csrf_token() }}">
@@ -81,12 +81,12 @@
     <script src="{{ asset('/js/libs/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('/js/libs/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 
-    
+
     <script src="{{ asset('/public/messages.js') }}"></script>
     <script src="{{ asset('/js/modules/utils/log.js') }}"></script>
 
     <script src="{{ asset('/js/config.js') }}"></script>
-    
+
     <!-- WEBSERVICE -->
     <script src="{{ asset('/js/modules/webservice/webservice.js') }}"></script>
     <script src="{{ asset('/js/modules/webservice/fake/fake_webservice.js') }}"></script>
@@ -97,7 +97,7 @@
     <script src="{{ asset('/js/libs/notify/bootstrap-notify.min.js') }}"></script>
     <script src="{{ asset('/js/libs/notify/notify.js') }}"></script>
 
-    
+
 
     <!-- Scripts -->
     <script>
@@ -116,7 +116,7 @@
     </script>
 
     <link href="{{ asset('/css/responsive.css') }}" rel="stylesheet">
-    
+
 </head>
 <body>
 
@@ -248,8 +248,7 @@
 
 
 
-    
+
 </body>
 </html>
 
-    
