@@ -11,7 +11,7 @@
 
 <!-- /.row -->
 <div class="row">
-    <div class="col-lg-4 col-md-4" id="allCoursesCounter">
+    <div class="col-lg-6 col-md-6" id="allCoursesCounter">
          <a href="{{ url('lms/publications') }}">
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -34,7 +34,7 @@
         </a>
     </div>
 
-    <div class="col-lg-4 col-md-4" id="allUsersCounter">
+    <div class="col-lg-6 col-md-6" id="allUsersCounter">
        <a href="{{ url('lms/elearning/users') }}">
             <div class="panel panel-success">
                 <div class="panel-heading">
@@ -85,7 +85,7 @@
 </div>
 
 <div class="row">
-    <div class="col-lg-4 col-md-4" id="courseList">
+    <div class="col-lg-6 col-md-6" id="courseList">
 
         <div class="row">
             <div class="col-lg-12">
@@ -146,7 +146,7 @@
         </div>
     </div>
 
-    <div class="col-lg-4 col-md-4" id="usersEmearningList">
+    <div class="col-lg-6 col-md-6" id="usersEmearningList">
 
         <div class="row">
           <div class="col-lg-12">

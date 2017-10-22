@@ -7,7 +7,7 @@
   'usingForm' => 'Log In:',
   'emailAddress' => 'Email',
   'password' => 'Password',
-  'passwordConfirm' => 'repeat password',
+  'passwordConfirm' => 'Repeat password',
   'loginBtn' => 'Log In',
      'registerButton' => 'Sing up',
      'loginForm' => 'Login form',
