@@ -18,8 +18,10 @@ return array (
     'portal_year_500' => '500 persons - 170$ /mc',
     'portal_month_1000' => '1000 osób - 500$ /mc',
     'portal_year_1000' => '1000 osób -  400$ /mc',
-    'title_tools' => 'Tool for creating courses',
-    'title_LMS' => 'Tool for creating courses + e-learing portal (LMS )',
+    'priceForUser' => '4$ for users',
+    'monthlyLang' => 'monthly',
+    'title_tools' => 'Authoring Tool for e-learning',
+    'title_LMS' => 'Authoring Tool + E-learing Portal',
     'payforMonth' => 'payable for year',
     'payforYear' => 'payable for year',
     'forYear' => 'pay annually',
@@ -43,4 +45,5 @@ return array (
     'person' => 'persons',
     'optionEkstra' => 'Functionality on request',
     'optionIntegration' => 'Integration with the client system'
+
 );

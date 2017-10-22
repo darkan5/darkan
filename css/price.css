@@ -4,6 +4,17 @@
     padding-top: 5px;
     color: white;
 }
+.orange {
+    height: 670px;
+    background-color: white;
+    border-left: 1px solid #ddd ;
+    border-right: 1px solid #ddd ;
+    border-bottom: 1px solid #ddd ;
+}
+
+.grey {
+    background-color: #eee;
+}
 .price-form {
     padding-left: 15px;
     padding-right: 15px;
@@ -65,6 +76,17 @@
 input.choose-option-input {
     position: relative;
     left:-2px ;
+}
+@media (max-width: 1200px) {
+.price-header-one {
+    display: none;
+}
+    .price-header-two {
+        display: none;
+    }
+    .orange {
+        height: 1400px;
+    }
 }
 
 /*ul {*/
