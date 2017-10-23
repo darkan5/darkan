@@ -36,7 +36,7 @@ interface OperatorInterface
      * Obsługa pojedynczej płatności
      * @return mixed
      */
-    public function makeSinglePayment();
+    public function makeSinglePayment($currency, $description, $price);
 
     /**
      * Zwraca link przekierowujący do operatora płatności

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Price;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Controller;
@@ -10,6 +11,7 @@ use App\Modules\Models\Plans;
 use App\Modules\Models\PlansCosts;
 use App\Modules\Models\Payments;
 use Paypal\Api\Payment;
+use App\Modules\Utils\Utils;
 
 class PricingController extends Controller
 {
@@ -19,8 +21,17 @@ class PricingController extends Controller
         'USD' => 3
     ];
 
+    protected function getCurrencyByLocale() {
+        $lang = Utils::getLocale();
+    }
+
     public function buyStandardPlan($period, $currency = 'USD')
     {
+        $lang = Utils::getLocale();
+        dump($lang);
+        dump(Carbon::getLocale());
+        die;
+
         $user = Auth::user();
         if(!$user){
             return Redirect::back()->withErrors(['Aby móc kupić plan musisz się zalogować']);
@@ -47,10 +58,7 @@ class PricingController extends Controller
         }
         // stworzenie i obsługa obiektu płatności dla PayPal
         $payment = PaymentManager::findByName('paypal');
-        $payment->setCurrency($currency);
-        $payment->setDescription($plan->description);
-        $payment->setPrice($planCost);
-        $response = $payment->makeSinglePayment();
+        $response = $payment->makeSinglePayment($currency, $plan->description, $planCost);
         $url = $payment->getRedirectUrl();
 
         // obiekt płatności do zapisu danych płatności po naszej stronie w bazie
@@ -76,7 +84,7 @@ class PricingController extends Controller
 
     }
 
-    public function buyProfesionalPlan($period)
+    public function buyProfesionalPlan($period, $currency = 'USD')
     {
         $user = Auth::user();
         if(!$user){
@@ -85,6 +93,44 @@ class PricingController extends Controller
         if (!in_array($period, ['month', 'year'])) {
             return Redirect::back()->withErrors(['Niepoprawny okres docelowy planu']);
         }
+
+        $planId = config("plans.standard_$period");
+        $plan = Plans::where('id', '=', config("plans.profesional_$period"))
+            ->where('active', '=', 1)
+            ->first();
+
+        if(!$plan){
+            return Redirect::back()->withErrors(['Wybrany plan nie jest już aktywny']);
+        }
+
+        $planCost = PlansCosts::where('plan_id', '=', $planId )
+            ->where('version_id', '=', 1)
+            ->where('currency_id', '=', 1)
+            ->first()->cost;
+        if(!$planCost){
+            return Redirect::back()->withErrors(['Plan w wybranej walucie jest chwilowo niedostępny']);
+        }
+        // stworzenie i obsługa obiektu płatności dla PayPal
+        $payment = PaymentManager::findByName('paypal');
+        $response = $payment->makeSinglePayment($currency, $plan->description, $planCost);
+        $url = $payment->getRedirectUrl();
+
+        // obiekt płatności do zapisu danych płatności po naszej stronie w bazie
+        Payments::create([
+            'invoice_id' => '12345',
+            'year' => (int)date('Y'),
+            'user_id' => $user->id,
+            'product' => $plan->description,
+            'payment_result' => $response->getState(),
+            'payment_data' => 'plan_'.$planId,  // tu lepiej dać json_encode z wawrtościami dla users_plan
+            'hash' => $response->getState(),
+            'invoice_data' => $response->getState(),
+            'price' => $planCost,
+            'currency' => $currency,
+            'locale' => 'en',
+            'txn_id' => $response->getId(),
+            'modified' =>  date('Y-m-d H:i:s')
+        ]);
     }
 
     public function buyElearningPlan($period, $amount)

@@ -287,23 +287,23 @@
         function updatevariable1(data) {
             if (data == 'month'){
                 $('#standard-price').html('<h3>140 zł/mc</h3>płatne co miesiąc');
-                $('standard-buy-button').attr("href", "/pricing/standard/month")
+                $('#standard-buy-button').attr("href", "/pricing/standard/month")
             }
             if (data == 'year'){
                 $('#standard-price').html('<h3>120 zł/mc</h3>płatne za cały rok');
-                $('standard-buy-button').attr("href", "/pricing/standard/year")
+                $('#standard-buy-button').attr("href", "/pricing/standard/year")
             }
 
         }
         function updatevariable2(data) {
             if (data == 'month'){
                 $('#proffesional-price').html('<h3>300 zł/mc</h3>płatne co miesiąc');
-                $('profesional-buy-button').attr("href", "/pricing/profesional/month")
+                $('#profesional-buy-button').attr("href", "/pricing/profesional/month")
 
             }
             if (data == 'year'){
                 $('#proffesional-price').html('<h3>250 zł/mc</h3>płatne za cały rok');
-                $('profesional-buy-button').attr("href", "/pricing/profesional/year")
+                $('#profesional-buy-button').attr("href", "/pricing/profesional/year")
             }
 
         }
