@@ -34,7 +34,7 @@ class FbUserRepository extends UserRepository {
         
         $newUser = User::create([
             'email' => $data->email,
-            'name' => $data->name or '';
+            'name' => $data->name,
             'provider_id' => $data->id,
             'password' => bcrypt($generatedPassword),
             'user_plans' => Utils::getTrialUserPlans(),
@@ -64,7 +64,7 @@ class FbUserRepository extends UserRepository {
             'email' => $newUser->email,
             'pass' => $generatedPassword
         );
-        //$this->sendRegistrationMail($registrationData, $newUser->email);
+        $this->sendRegistrationMail($registrationData, $newUser->email);
 
         return $newUser;
     }

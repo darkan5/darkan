@@ -161,7 +161,7 @@ class UserRepository {
     }
 
     protected function getRegistrationPlanId() {
-        return 3; // Demo plan na 2 miesiące
+        return 1; // Demo plan na 2 miesiące
     }   
 
     private function margePlansOptions($plan) {
