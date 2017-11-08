@@ -241,6 +241,7 @@ return [
         Stevebauman\Location\LocationServiceProvider::class,
         Netshell\Paypal\PaypalServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
          * Package Service Providers...
