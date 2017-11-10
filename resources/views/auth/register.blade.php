@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Rejestracja</div>
+                <div class="panel-heading"><?= Lang::get('login.registerForm') ?></div>
                 <div class="panel-body">
 
 
@@ -50,7 +50,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-3 control-label">Imię i nazwisko</label>
+                                <label for="name" class="col-md-3 control-label"><?=Lang::get('login.loginFormUserName')?></label>
 
                                 <div class="input-group">
                                     <span class="input-group-addon" id="email-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -65,7 +65,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-3 control-label">Adres email</label>
+                                <label for="email" class="col-md-3 control-label"><?=Lang::get('login.emailAddress')?></label>
 
                                 <div class="input-group">
                                     <span class="input-group-addon" id="email-addon"><i class="fa fa-envelope"></i></span>
@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-3 control-label">Hasło</label>
+                                <label for="password" class="col-md-3 control-label"><?=Lang::get('login.password')?></label>
 
                                 <div class="input-group">
                                     <span class="input-group-addon" id="password-addon"><i class="fa fa-lock" style="font-size:20px"></i></span>
@@ -95,7 +95,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                                <label for="password-confirm" class="col-md-3 control-label">Powtórz hasło</label>
+                                <label for="password-confirm" class="col-md-3 control-label"><?=Lang::get('login.passwordConfirm')?></label>
 
                                 <div class="input-group">
                                     <span class="input-group-addon" id="password-addon"><i class="fa fa-lock" style="font-size:20px"></i></span>
@@ -119,7 +119,7 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Zarejestruj się
+                                        <?=Lang::get('login.registerButton')?>
                                     </button>
 
                                     <a class="btn btn-link" href="{{ url('/password/reset') }}">

@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Logowanie</div>
+                <div class="panel-heading"><?=Lang::get('login.loginForm')?></div>
                 <div class="panel-body">
 
 
@@ -50,7 +50,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-2 control-label">Adres email</label>
+                                <label for="email" class="col-md-2 control-label"><?=Lang::get('login.emailAddress')?></label>
 
                                 <div class="input-group">
                                     <span class="input-group-addon" id="email-addon"><i class="fa fa-envelope"></i></span>
@@ -66,7 +66,7 @@
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
-                                <label for="password" class="col-md-2 control-label">Hasło</label>
+                                <label for="password" class="col-md-2 control-label"><?=Lang::get('login.password')?></label>
 
                                 <div class="input-group">
                                     <span class="input-group-addon" id="password-addon"><i class="fa fa-lock" style="font-size:20px"></i></span>
@@ -85,11 +85,11 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
                                     <button type="submit" class="btn btn-primary">
-                                        Zaloguj się
+                                        <?=Lang::get('login.loginBtn')?>
                                     </button>
 
                                     <label>
-                                        <input type="checkbox" name="remember"> Zapamiętaj mnie
+                                        <input type="checkbox" name="remember"> <?=Lang::get('login.loginRemmber')?>
                                     </label>
 
                                 </div>
