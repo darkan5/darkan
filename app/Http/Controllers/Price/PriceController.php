@@ -7,7 +7,7 @@ use Auth;
 use Session;
 use Input;
 use Redirect;
-use Request;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Modules\Models\PlansToPriceList;
 use App\Modules\Models\PriceTypes;
