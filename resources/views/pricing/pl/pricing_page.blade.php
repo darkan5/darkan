@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@inject('LangByLoc', 'App\Modules\Utils\LangByLock')
 
     <div class="topmenu-offset"></div>
 
@@ -82,223 +83,203 @@
             {{----}}
             {{--</div>--}}
             {{--</div>--}}
-            <div class="col-lg-6">
-                <div class="panel text-center price-header price-header-one">
-                    <h4>Narzędzie do tworzenia kursów</h4>
-                </div>
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active grey"><a data-toggle="tab" href="#tab1"><h4><?=Lang::get('pricingPage.title_tools')?></h4></a></li>
+                    <li class="grey"><a data-toggle="tab" href="#tab2"><h4><?=Lang::get('pricingPage.title_LMS')?></h4></a></li>
+
+                </ul>
+
+
             </div>
-            <div class="col-lg-6">
-                <div class="panel text-center price-header price-header-two">
-                    <h4>Narzędzie do tworzenia kursów + Portal do pulikacji treści (LMS)</h4>
-                </div>
-            </div>
-            <div class="panel-body">
+            <div class="tab-content orange">
+                <br/>
 
-
-
-                <div class="col-lg-3">
+                <div id="tab1" class="tab-pane fade in active">
+                <div class="col-lg-6">
                     <div class="panel price panel-red">
                         <div class="panel-heading  text-center">
                             <h3>Standard</h3>
                         </div>
-                        <div class="text-center price-iteam" id="standard-price"><h3>120 zł/mc</h3>płatne za cały rok</div>
+                        <div class="text-center price-iteam" id="standard-price"><h3><?=$LangByLock::get('pricingPage.standard_year')?></h3><?=$LangByLock::get('pricingPage.standard_year_year')?> <?=Lang::get('pricingPage.payforYear')?></div>
 
                         <div id="year-standard" class="text-center price-month">
 
                             <form>
-                                <div class="choose-option choose-month "><input onchange="updatevariable1(value)" class="choose-option-input" name="choose-term1" id="stan-month" value="month" type="radio" /> za mesiąc</div>
+                                <div class="choose-option choose-month "><input onchange="updatevariable1(value)" class="choose-option-input" name="choose-term1" id="stan-month" value="month" type="radio" /> <?=Lang::get('pricingPage.forMonth')?></div>
                                 <div class="choose-option choose-year"><input onchange="updatevariable1(value)" class="choose-option-input" name="choose-term1" id="stan-year" value="year" type="radio" checked="checked" />
-                                    za rok</div>
+                                    <?=Lang::get('pricingPage.forYear')?></div>
                             </form>
 
 
                         </div>
                         <div class="panel-body text-center price-info">
-                            <p>Dla osób chcących tworzyć kursy bądź prezentacje marketingowe</p>
+                            <p><?=Lang::get('pricingPage.title1')?></p>
                         </div>
                         <div class="panel-body">
                             <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Wypróbuj 14 dni
+                                <?=Lang::get('pricingPage.trial')?>
                             </a>
                             <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Kup
+                                <?=Lang::get('pricingPage.buy')?>
                             </a>
                         </div>
                         <ul class="list-group list-group-flush text-center listaRadio">
-                            <li class="price-iteam-li">Liczba projektów 20</li>
-                            <li class="price-iteam-li">Miejsce na dysku 0.5GB</li>
-                            <li class="price-iteam-li">Publiczne publikowanie treści</li>
-                            <li class="price-iteam-li">Export HTML 5</li>
-                            <li class="price-iteam-li">Export SCORM 1.2</li>
-                            <li class="price-iteam-li"><s>Export SCORM 2004</s></li>
-                            <li class="price-iteam-li"><s>Export PDF</s></li>
-                            <li class="price-iteam-li"><s>Współdzielenie kontentu</s></li>
-                            <li class="price-iteam-li"><s>Import PSD</s></li>
-
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option1')?> 20</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option2')?> 0.5GB</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option3')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option4')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option5')?></li>
+                            <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option6')?></s></li>
+                            <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option7')?></s></li>
+                            <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option8')?></s></li>
+                            <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option9')?></s></li>
                         </ul>
 
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-6">
                     <div class="panel price panel-red">
                         <div class="panel-heading  text-center">
                             <h3>Profesional</h3>
                         </div>
-                        <div class="text-center price-iteam" id="proffesional-price"><h3>250 zł/mc</h3>płatne za cały rok</div>
+                        <div class="text-center price-iteam" id="proffesional-price"><h3><?=$LangByLock::get('pricingPage.prof_year')?></h3><?=$LangByLock::get('pricingPage.prof_year_year')?><?=Lang::get('pricingPage.payforYear')?></div>
 
                         <div id="year-profesional" class="text-center price-month">
                             <form>
 
-                                <div class="choose-option choose-month "><input name="choose-term2" onchange="updatevariable2(value)" class="choose-option-input" id="prof-month" value="month" type="radio" /> za mesiąc</div>
+                                <div class="choose-option choose-month "><input name="choose-term2" onchange="updatevariable2(value)" class="choose-option-input" id="prof-month" value="month" type="radio" /> <?=Lang::get('pricingPage.forMonth')?></div>
 
-                                <div class="choose-option choose-year"><input name="choose-term2" onchange="updatevariable2(value)" class="choose-option-input" id="prof-year" value="year" type="radio" checked="checked" /> za rok</div>
+                                <div class="choose-option choose-year"><input name="choose-term2" onchange="updatevariable2(value)" class="choose-option-input" id="prof-year" value="year" type="radio" checked="checked" /> <?=Lang::get('pricingPage.forYear')?></div>
                             </form>
 
                         </div>
                         <div class="panel-body text-center price-info">
-                            <p>Dla firm pracujących nad więszą ilością projektów</p>
+                            <p><?=Lang::get('pricingPage.title2')?></p>
                         </div>
                         <div class="panel-body">
                             <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Wypróbuj 14 dni
+                                <?=Lang::get('pricingPage.trial')?>
                             </a>
                             <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Kup
+                                <?=Lang::get('pricingPage.buy')?>
                             </a>
                         </div>
                         <ul class="list-group list-group-flush text-center listaRadio">
-                            <li class="price-iteam-li">Liczba projektów 100</li>
-                            <li class="price-iteam-li">Miejsce na dysku 6GB</li>
-                            <li class="price-iteam-li">Publiczne publikowanie treści</li>
-                            <li class="price-iteam-li">Export HTML 5</li>
-                            <li class="price-iteam-li">Export SCORM 1.2</li>
-                            <li class="price-iteam-li">Export SCORM 2004</li>
-                            <li class="price-iteam-li">Export PDF</li>
-                            <li class="price-iteam-li">Współdzielenie kontentu</li>
-                            <li class="price-iteam-li">Import PSD</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option1')?> 100</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option2')?> 6GB</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option3')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option4')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option5')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option6')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option7')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option8')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option9')?></li>
 
 
                         </ul>
 
                     </div>
                 </div>
-
-
-                <div class="col-lg-3">
+                </div>
+                <div id="tab2" class="tab-pane fade">
+                <div class="col-lg-6">
                     <div class="panel price panel-red text-center">
                         <div class="panel-heading  text-center">
                             <h3>E-learning Portal</h3>
                         </div>
                         <div class="text-center price-iteam">
-                            <div class="price-form" id="elearning-price">
-                                <form action="">
-                                    <select class="form-control text-center price-form-align" onchange="updatevariable(this.value)">
-                                        <option value="1">50 osób -  500 zł/mc</option>
-                                        <option value="2">100 osób - 700 zł/mc</option>
-                                        <option value="3">200 osób - 1000 zł/mc</option>
-                                        <option value="4">500 osób - 2000 zł/mc</option>
-                                        <option value="5">1000 osób - 4000 zł/mc</option>
-                                    </select>
 
-                                </form>
-                                <div class="year-learning-form">płatne za cały rok</div>
-                            </div>
+                               <h3><?=Lang::get('pricingPage.priceForUser')?></h3><?=Lang::get('pricingPage.monthlyLang')?>
+
                         </div>
                         <div></div>
-                        <div id="year-elearning" class="price-month">
-                            <form>
 
-                                <div class="choose-option choose-month "><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-month" value="month" type="radio" /> za mesiąc</div>
-
-                                <div class="choose-option choose-year"><input name="choose-term3" onchange="updatevariable3(value)" class="choose-option-input" id="elearning-year" value="year"  type="radio" checked="checked" /> za rok</div>
-                            </form>
-
-                        </div>
                         <div class="panel-body text-center price-info">
-                            <p>Dla firm chcących szkolić swoich pracowników lub klientów</p>
+                            <p><?=Lang::get('pricingPage.title3')?></p>
                         </div>
 
                         <div class="panel-body">
                             <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Wypróbuj 14 dni
+                                <?=Lang::get('pricingPage.trial')?>
                             </a>
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Kup
+                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="">
+                                <?=Lang::get('pricingPage.contact')?>
                             </a>
+
                         </div>
                         <ul class="list-group list-group-flush text-center listaRadio">
-                            <li class="price-iteam-li">Liczba projektów 100</li>
-                            <li class="price-iteam-li">Miejsce na dysku 6GB</li>
-                            <li class="price-iteam-li">LMS - Portal zarządzania wiedzą</li>
-                            <li class="price-iteam-li">Export HTML 5</li>
-                            <li class="price-iteam-li">Export SCORM 1.2</li>
-                            <li class="price-iteam-li">Export SCORM 2004</li>
-                            <li class="price-iteam-li">Export PDF</li>
-                            <li class="price-iteam-li">Współdzielenie kontentu</li>
-                            <li class="price-iteam-li">Import PSD</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option1')?> 100</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option2')?> 6GB</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option3')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option7')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option8')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option9')?></li>
+                            <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option4')?></s></li>
+                            <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option5')?></s></li>
+                            <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option6')?></s></li>
 
 
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-6">
                     <div class="panel price panel-red">
                         <div class="panel-heading  text-center">
                             <h3>Enterprise</h3>
                         </div>
-                        <div class="text-center price-iteam"><h3>Kontakt</h3></div>
-                        <div class="text-center price-month"><a href="mailto:office@darkan.me">office@darkan.me</a></div>
+                        <div class="text-center price-iteam"><h3><?=Lang::get('pricingPage.contact')?></h3></div>
                         <div class="panel-body text-center price-info">
-                            <p>Masz dużą firmę, chcesz więcej niż pozwala cennik? Skontaktuj się!</p>
+                            <p><?=Lang::get('pricingPage.title4')?></p>
                         </div>
                         <div class="panel-body">
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
-                                Kontakt
+                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="">
+                                <?=Lang::get('pricingPage.contact')?>
                             </a>
 
                         </div>
                         <ul class="list-group list-group-flush text-center listaRadio ul-enterprise">
-                            <li class="price-iteam-li">Funkcjonalności na zamówienie</li>
-                            <li class="price-iteam-li">Integracja z systemem klienta</li>
-                            <li class="price-iteam-li">Liczba projektów ∞</li>
-                            <li class="price-iteam-li">Miejsce na dysku ∞</li>
-                            <li class="price-iteam-li">LMS - Portal zarządzania wiedzą</li>
-                            <li class="price-iteam-li">Export HTML 5</li>
-                            <li class="price-iteam-li">Export SCORM 1.2</li>
-                            <li class="price-iteam-li">Export SCORM 2004</li>
-                            <li class="price-iteam-li">Export PDF</li>
-                            <li class="price-iteam-li">Współdzielenie kontentu</li>
-                            <li class="price-iteam-li">Import PSD</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.optionEkstra')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.optionIntegration')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option1')?> ∞</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option2')?> ∞</li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option3')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option4')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option5')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option6')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option7')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option8')?></li>
+                            <li class="price-iteam-li"><?=Lang::get('pricingPage.option9')?></li>
 
                         </ul>
 
                     </div>
                 </div>
+               </div>
             </div>
 
 
 
 
-
         </div>
-    </div>
+
     <script type="text/javascript">
         function updatevariable1(data) {
             if (data == 'month'){
-                $('#standard-price').html('<h3>140 zł/mc</h3>płatne co miesiąc');
+                $('#standard-price').html('<h3><?=$LangByLock::get('pricingPage.standard_month')?></h3><?=$LangByLock::get('pricingPage.standard_month_year')?><?=Lang::get('pricingPage.payforMonth')?>');
             }
             if (data == 'year'){
-                $('#standard-price').html('<h3>120 zł/mc</h3>płatne za cały rok');
+                $('#standard-price').html('<h3><?=$LangByLock::get('pricingPage.standard_year')?></h3><?=$LangByLock::get('pricingPage.standard_year_year')?><?=Lang::get('pricingPage.payforYear')?>');
+
             }
 
         }
         function updatevariable2(data) {
             if (data == 'month'){
-                $('#proffesional-price').html('<h3>300 zł/mc</h3>płatne co miesiąc');
+                $('#proffesional-price').html('<h3><?=$LangByLock::get('pricingPage.prof_month')?></h3><?=$LangByLock::get('pricingPage.prof_month_year')?><?=Lang::get('pricingPage.payforMonth')?>');
             }
             if (data == 'year'){
-                $('#proffesional-price').html('<h3>250 zł/mc</h3>płatne za cały rok');
+                $('#proffesional-price').html('<h3><?=$LangByLock::get('pricingPage.prof_year')?></h3><?=$LangByLock::get('pricingPage.prof_year_year')?><?=Lang::get('pricingPage.payforYear')?>');
             }
 
         }
@@ -307,26 +288,26 @@
             if (data == 'month'){
                 $('#elearning-price').html('<form action="">' +
                     '<select class="form-control text-center price-form-align">' +
-                    '<option value="1">50 osób -  600 zł/mc</option> ' +
-                    '<option value="2">100 osób - 800 zł/mc</option> ' +
-                    '<option value="3">200 osób - 1200 zł/mc</option> ' +
-                    '<option value="4">500 osób - 2400 zł/mc</option> ' +
-                    '<option value="5">1000 osób - 4400 zł/mc</option> ' +
+                    '<option value="1"><?=Lang::get('pricingPage.portal_month_50')?></option> ' +
+                    '<option value="2"><?=Lang::get('pricingPage.portal_month_100')?></option> ' +
+                    '<option value="3"><?=Lang::get('pricingPage.portal_month_200')?></option> ' +
+                    '<option value="4"><?=Lang::get('pricingPage.portal_month_500')?></option> ' +
+                    '<option value="5"><?=Lang::get('pricingPage.portal_month_1000')?></option> ' +
                     '</select> ' +
                     '</form>' +
-                    '<div class="year-learning-form">płatne co miesiąc</div> ');
+                    '<div class="year-learning-form"><?=Lang::get('pricingPage.payforMonth')?></div> ');
             }
             if (data == 'year'){
                 $('#elearning-price').html('<form action="">' +
                     '<select class="form-control text-center price-form-align">' +
-                    '<option value="1">50 osób -  500 zł/mc</option> ' +
-                    '<option value="2">100 osób - 700 zł/mc</option> ' +
-                    '<option value="3">200 osób - 1000 zł/mc</option> ' +
-                    '<option value="4">500 osób - 2000 zł/mc</option> ' +
-                    '<option value="5">1000 osób - 4000 zł/mc</option> ' +
+                    '<option value="1"><?=Lang::get('pricingPage.portal_year_50')?></option> ' +
+                    '<option value="2"><?=Lang::get('pricingPage.portal_year_100')?></option> ' +
+                    '<option value="3"><?=Lang::get('pricingPage.portal_year_200')?></option> ' +
+                    '<option value="4"><?=Lang::get('pricingPage.portal_year_500')?></option> ' +
+                    '<option value="5"><?=Lang::get('pricingPage.portal_year_1000')?></option> ' +
                     '</select> ' +
                     '</form>' +
-                    '<div class="year-learning-form">płatne za cały rok</div> ');
+                    '<div class="year-learning-form"><?=Lang::get('pricingPage.payforYear')?></div> ');
             }
 
         }

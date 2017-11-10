@@ -22,9 +22,9 @@
 	?>
 
 		@if (!$mobile)
-		<video autoplay loop cover="{{asset('/screencast/cover.png')}}">
-			<source src="{{ asset('/screencast/darkan_screencast_1_pl.mp4') }}">
-		</video>
+
+			<img src="{{ asset('/css/img/frontpage/background.jpg') }}">
+
 		@endif
 	</div>
 	<div class="text-center frontpage-welcome">
