@@ -43,8 +43,8 @@ class PriceController extends Controller
 
 	
     public function pricingPage(){
-
-        $canBayPlanOptions = false;
+	
+	$canBayPlanOptions = false;
 
         if(Auth::user()){
             $userPlan = UserPlanModule::getUserPlan();
