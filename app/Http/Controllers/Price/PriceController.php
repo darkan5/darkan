@@ -42,7 +42,6 @@ class PriceController extends Controller
         return view('pricing.pl.pricing_rules');
     }
 
-	
     public function pricingPage(Request $request ){
 
         $canBayPlanOptions = false;
