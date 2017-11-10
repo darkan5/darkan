@@ -7,6 +7,7 @@ use Auth;
 use Session;
 use Input;
 use Redirect;
+use Request;
 use App\Http\Controllers\Controller;
 use App\Modules\Models\PlansToPriceList;
 use App\Modules\Models\PriceTypes;
@@ -41,10 +42,9 @@ class PriceController extends Controller
         return view('pricing.pl.pricing_rules');
     }
 
-	
-    public function pricingPage(){
-	
-	$canBayPlanOptions = false;
+    public function pricingPage(Request $request ){
+
+        $canBayPlanOptions = false;
 
         if(Auth::user()){
             $userPlan = UserPlanModule::getUserPlan();
@@ -56,7 +56,7 @@ class PriceController extends Controller
             }
         }
 
-		return view('pricing.pl.pricing_page')->with('canBayPlanOptions', $canBayPlanOptions);
+		return view('pricing.pl.pricing_page')->with('canBayPlanOptions', $canBayPlanOptions)->with('userIp', $request->ip());
     }
 
     private function checkIfCanUsePlanUserToBayPlansOptions($userPlan){
