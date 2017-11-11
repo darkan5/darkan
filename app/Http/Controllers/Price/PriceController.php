@@ -11,6 +11,7 @@ use Location;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Modules\Models\PlansToPriceList;
+use App\Modules\Utils\LangByLock;
 use App\Modules\Models\PriceTypes;
 use App\Modules\Models\PlansCosts;
 use App\Modules\Models\Plans;
@@ -58,10 +59,10 @@ class PriceController extends Controller
         }
 
         $userCountryRaw = Location::get($request->getClientIp())->countryCode;
-        $userCountry = strtolower($userCountryRaw);
+        $userCountryForPyaments = LangByLock::getCountryForPayments($userCountryRaw);
 		return view('pricing.pl.pricing_page')
             ->with('canBayPlanOptions', $canBayPlanOptions)
-            ->with('userCountry', $userCountry);
+            ->with('userCountry', $userCountryForPyaments);
     }
 
     private function checkIfCanUsePlanUserToBayPlansOptions($userPlan){
