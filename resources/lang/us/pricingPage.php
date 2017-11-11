@@ -18,7 +18,7 @@ return array (
     'portal_year_500' => '500 persons - 170$ /mc',
     'portal_month_1000' => '1000 osób - 500$ /mc',
     'portal_year_1000' => '1000 osób -  400$ /mc',
-    'priceForUser' => '4$ for users',
+    'priceForUser' => '3$ for users',
     'monthlyLang' => 'monthly',
     'title_tools' => 'Authoring Tool for e-learning',
     'title_LMS' => 'Authoring Tool + E-learing Portal',

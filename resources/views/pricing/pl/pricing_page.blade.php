@@ -192,7 +192,7 @@
                         </div>
                         <div class="text-center price-iteam">
 
-                               <h3><?=Lang::get('pricingPage.priceForUser')?></h3><?=Lang::get('pricingPage.monthlyLang')?>
+                               <h3><?=Lang::get('pricingPage.priceForUser', [], $userCountry)?></h3><?=Lang::get('pricingPage.monthlyLang')?>
 
                         </div>
                         <div></div>

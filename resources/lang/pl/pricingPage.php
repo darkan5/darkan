@@ -18,7 +18,7 @@ return array (
     'portal_year_500' => '500 osób - 2000 zł/mc',
     'portal_month_1000' => '1000 osób - 4000 zł/mc',
     'portal_year_1000' => '1000 osób - 4400 zł/mc',
-    'priceForUser' => '10zł za użytkownika',
+    'priceForUser' => '5zł za użytkownika',
     'monthlyLang' => 'co miesiąć',
     'title_tools' => 'Narzędzie do tworzenia kursów',
     'title_LMS' => 'Narzędzie do tworzenia kursów + Portal do pulikacji treści (LMS)',
