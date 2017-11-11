@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@inject('LangByLoc', 'App\Modules\Utils\LangByLock')
+@inject('LangByLoc', 'Lang')
 
     <div class="topmenu-offset"></div>
 
@@ -100,8 +100,10 @@
                         <div class="panel-heading  text-center">
                             <h3>Standard</h3>
                         </div>
-                        <div class="text-center price-iteam" id="standard-price"><h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.standard_year')?></h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.standard_year_year')?> <?=Lang::get('pricingPage.payforYear')?></div>
-
+                        <div class="text-center price-iteam" id="standard-price">
+                            <h3><?= Lang::get('pricingPage.standard_year', [], $userCountry)?></h3>
+                            <?= Lang::get('pricingPage.standard_year_year', [], $userCountry)?>
+                            <?=Lang::get('pricingPage.payforYear')?></div>
                         <div id="year-standard" class="text-center price-month">
 
                             <form>
@@ -143,7 +145,7 @@
                         <div class="panel-heading  text-center">
                             <h3>Profesional</h3>
                         </div>
-                        <div class="text-center price-iteam" id="proffesional-price"><h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.prof_year')?></h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.prof_year_year')?><?=Lang::get('pricingPage.payforYear')?></div>
+                        <div class="text-center price-iteam" id="proffesional-price"><h3><?= Lang::get('pricingPage.prof_year', [], $userCountry)?></h3><?= Lang::get('pricingPage.prof_year_year', [], $userCountry)?><?=Lang::get('pricingPage.payforYear')?></div>
 
                         <div id="year-profesional" class="text-center price-month">
                             <form>
@@ -266,20 +268,20 @@
     <script type="text/javascript">
         function updatevariable1(data) {
             if (data == 'month'){
-                $('#standard-price').html('<h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.standard_month')?></h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.standard_month_year')?><?=Lang::get('pricingPage.payforMonth')?>');
+                $('#standard-price').html('<h3><?= Lang::get('pricingPage.standard_month', [], $userCountry)?></h3><?= Lang::get('pricingPage.standard_month_year', [], $userCountry)?><?=Lang::get('pricingPage.payforMonth')?>');
             }
             if (data == 'year'){
-                $('#standard-price').html('<h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.standard_year')?></h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.standard_year_year')?><?=Lang::get('pricingPage.payforYear')?>');
+                $('#standard-price').html('<h3><?= Lang::get('pricingPage.standard_year', [], $userCountry)?></h3><?= Lang::get('pricingPage.standard_year_year', [], $userCountry)?><?=Lang::get('pricingPage.payforYear')?>');
 
             }
 
         }
         function updatevariable2(data) {
             if (data == 'month'){
-                $('#proffesional-price').html('<h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.prof_month')?></h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.prof_month_year')?><?=Lang::get('pricingPage.payforMonth')?>');
+                $('#proffesional-price').html('<h3><?= Lang::get('pricingPage.prof_month', [], $userCountry)?></h3><?= Lang::get('pricingPage.prof_month_year', [], $userCountry)?><?=Lang::get('pricingPage.payforMonth')?>');
             }
             if (data == 'year'){
-                $('#proffesional-price').html('<h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.prof_year')?></h3><?= App\Modules\Utils\LangByLock::get($userIp, 'pricingPage.prof_year_year')?><?=Lang::get('pricingPage.payforYear')?>');
+                $('#proffesional-price').html('<h3><?= Lang::get('pricingPage.prof_year', [], $userCountry)?></h3><?= Lang::get('pricingPage.prof_year_year', [], $userCountry)?><?=Lang::get('pricingPage.payforYear')?>');
             }
 
         }

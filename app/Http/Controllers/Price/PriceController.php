@@ -7,6 +7,7 @@ use Auth;
 use Session;
 use Input;
 use Redirect;
+use Location;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Modules\Models\PlansToPriceList;
@@ -56,7 +57,11 @@ class PriceController extends Controller
             }
         }
 
-		return view('pricing.pl.pricing_page')->with('canBayPlanOptions', $canBayPlanOptions)->with('userIp', $request->ip());
+        $userCountryRaw = Location::get($request->getClientIp())->countryCode;
+        $userCountry = strtolower($userCountryRaw);
+		return view('pricing.pl.pricing_page')
+            ->with('canBayPlanOptions', $canBayPlanOptions)
+            ->with('userCountry', $userCountry);
     }
 
     private function checkIfCanUsePlanUserToBayPlansOptions($userPlan){
