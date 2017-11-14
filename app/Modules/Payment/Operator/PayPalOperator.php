@@ -10,6 +10,16 @@
 namespace App\Modules\Payment\Operator;
 
 use Netshell\Paypal\Paypal;
+use PayPal\Api\Amount;
+use PayPal\Api\CreditCard;
+use PayPal\Api\Details;
+use PayPal\Api\FundingInstrument;
+use PayPal\Api\Item;
+use PayPal\Api\ItemList;
+use PayPal\Api\Payer;
+use PayPal\Api\Payment;
+use PayPal\Api\Transaction;
+
 
 /**
  * Klasa obsługi płatności typu PayPal
@@ -69,6 +79,9 @@ class PayPalOperator implements OperatorInterface
         $this->transaction = $this->PayPal->transaction();
         $this->redirectUrls = $this->PayPal->redirectUrls();
         $this->payment = $this->PayPal->payment();
+        $this->item = new Item();
+
+
 
         $this->_apiContext = $this->PayPal->apiContext(
             config('services.paypal.client_id'),
@@ -76,7 +89,7 @@ class PayPalOperator implements OperatorInterface
         );
 
         $this->_apiContext->setConfig(array(
-            'mode' => 'sandbox',
+            'mode' => config('services.paypal.mode'),
             'service.EndPoint' => config('services.paypal.endpoint'),
             'http.ConnectionTimeOut' => config('services.paypal.connection_timeout'),
             'log.LogEnabled' => config('services.paypal.log_enabled'),
@@ -93,6 +106,7 @@ class PayPalOperator implements OperatorInterface
      */
     public function setPrice($price)
     {
+        $this->item->setPrice($price);
         $this->amount->setTotal($price);
         $this->transaction->setAmount($this->amount);
     }
@@ -104,6 +118,8 @@ class PayPalOperator implements OperatorInterface
      */
     public function setDescription($description)
     {
+        $this->item->setName($description);
+        $this->item->setDescription($description);
         $this->transaction->setDescription($description);
     }
 
@@ -112,8 +128,16 @@ class PayPalOperator implements OperatorInterface
      * @return mixed
      *
      */
-    public function makeSinglePayment()
+    public function makeSinglePayment($currency, $description, $price)
     {
+        $this->setCurrency($currency);
+        $this->setDescription($description);
+        $this->item->setQuantity(1);
+        $this->setPrice($price);
+
+        $itemList = new ItemList();
+        $itemList->setItems(array($this->item));
+        $this->transaction->setItemList($itemList);
         $this->payer->setPaymentMethod('paypal');
 
         $redirectUrls = $this->PayPal->redirectUrls();
@@ -130,13 +154,12 @@ class PayPalOperator implements OperatorInterface
              * @var
              */
             $response = $this->payment->create($this->_apiContext);
-            //dump('status platnosci: '.$response->getState());
-            //dump('Cel płatności: '.$response->getIntent());
         } catch (\Exception $e){
             echo $e->getMessage();
             die;
         }
         $this->redirectLink = $response->links[1]->href;
+        return $response;
     }
 
     /**
@@ -153,6 +176,7 @@ class PayPalOperator implements OperatorInterface
      */
     public function setCurrency($currency)
     {
+        $this->item->setCurrency($currency);
         $this->amount->setCurrency($currency);
     }
 
@@ -165,7 +189,7 @@ class PayPalOperator implements OperatorInterface
         );
 
         $apiContext->setConfig(array(
-            'mode' => 'sandbox',
+            'mode' => config('services.paypal.mode'),
             'service.EndPoint' => config('services.paypal.endpoint'),
             'http.ConnectionTimeOut' => config('services.paypal.connection_timeout'),
             'log.LogEnabled' => config('services.paypal.log_enabled'),

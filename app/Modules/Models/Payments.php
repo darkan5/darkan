@@ -11,6 +11,7 @@ class Payments extends Model {
 
 	private $userId = 0;
 
+    protected $guarded = array();
 
     public function user()
     {

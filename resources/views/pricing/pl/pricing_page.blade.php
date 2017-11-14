@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@inject('LangByLoc', 'Lang')
 
     <div class="topmenu-offset"></div>
 
@@ -118,10 +117,12 @@
                             <p><?=Lang::get('pricingPage.title1')?></p>
                         </div>
                         <div class="panel-body">
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @if (!Auth::check())
+                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('register') }}">
                                 <?=Lang::get('pricingPage.trial')?>
                             </a>
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @endif
+                            <a  id="standard-buy-button" class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}/year">
                                 <?=Lang::get('pricingPage.buy')?>
                             </a>
                         </div>
@@ -160,10 +161,12 @@
                             <p><?=Lang::get('pricingPage.title2')?></p>
                         </div>
                         <div class="panel-body">
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @if (!Auth::check())
+                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('register') }}">
                                 <?=Lang::get('pricingPage.trial')?>
                             </a>
-                            <a  class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/standard') }}">
+                            @endif
+                            <a  id="profesional-buy-button" class="btn btn-lg btn-block " style="border:1px solid" href="{{ url('pricing/profesional') }}/year">
                                 <?=Lang::get('pricingPage.buy')?>
                             </a>
                         </div>
@@ -220,8 +223,7 @@
                             <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option4')?></s></li>
                             <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option5')?></s></li>
                             <li class="price-iteam-li"><s><?=Lang::get('pricingPage.option6')?></s></li>
-
-
+                        </ul>
                     </div>
                 </div>
 
@@ -238,7 +240,6 @@
                             <a  class="btn btn-lg btn-block " style="border:1px solid" href="">
                                 <?=Lang::get('pricingPage.contact')?>
                             </a>
-
                         </div>
                         <ul class="list-group list-group-flush text-center listaRadio ul-enterprise">
                             <li class="price-iteam-li"><?=Lang::get('pricingPage.optionEkstra')?></li>
@@ -269,19 +270,23 @@
         function updatevariable1(data) {
             if (data == 'month'){
                 $('#standard-price').html('<h3><?= Lang::get('pricingPage.standard_month', [], $userCountry)?></h3><?= Lang::get('pricingPage.standard_month_year', [], $userCountry)?><?=Lang::get('pricingPage.payforMonth')?>');
+                $('#standard-buy-button').attr("href", "/pricing/standard/month")
             }
             if (data == 'year'){
                 $('#standard-price').html('<h3><?= Lang::get('pricingPage.standard_year', [], $userCountry)?></h3><?= Lang::get('pricingPage.standard_year_year', [], $userCountry)?><?=Lang::get('pricingPage.payforYear')?>');
-
+                $('#standard-buy-button').attr("href", "/pricing/standard/year")
             }
 
         }
         function updatevariable2(data) {
             if (data == 'month'){
                 $('#proffesional-price').html('<h3><?= Lang::get('pricingPage.prof_month', [], $userCountry)?></h3><?= Lang::get('pricingPage.prof_month_year', [], $userCountry)?><?=Lang::get('pricingPage.payforMonth')?>');
+                $('#profesional-buy-button').attr("href", "/pricing/profesional/month")
+
             }
             if (data == 'year'){
                 $('#proffesional-price').html('<h3><?= Lang::get('pricingPage.prof_year', [], $userCountry)?></h3><?= Lang::get('pricingPage.prof_year_year', [], $userCountry)?><?=Lang::get('pricingPage.payforYear')?>');
+                $('#profesional-buy-button').attr("href", "/pricing/profesional/year")
             }
 
         }
