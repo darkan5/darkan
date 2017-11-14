@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Auth;
+use Input;
 use Socialite;
 use Location;
 use Carbon\Carbon;
 
 use App\Modules\Models\UserLogin;
+use App\Modules\User\FbUserRepository;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -60,10 +62,6 @@ class LoginController extends Controller
             return redirect('login/' . $provider);
         }
 
-        if(!Utils::validateEmail($user->email)){
-          return redirect('/auth/login')
-                        ->withErrors(Lang::get('login.emailnotvalid'))->withInput();
-        }
         
         $FbUser = new FbUserRepository();
         $newUser = $FbUser->findOrCreateUser($user);

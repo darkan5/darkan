@@ -240,6 +240,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
         Netshell\Paypal\PaypalServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -314,6 +316,7 @@ return [
         'CarbonInterval' => Carbon\CarbonInterval::class,
         'Location' => Stevebauman\Location\Facades\Location::class,
         'Paypal' => Netshell\Paypal\Facades\Paypal::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
