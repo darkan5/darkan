@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Price;
 
+use Lang;
+use Location;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -10,27 +12,30 @@ use App\Modules\Payment\PaymentManager;
 use App\Modules\Models\Plans;
 use App\Modules\Models\PlansCosts;
 use App\Modules\Models\Payments;
-use Paypal\Api\Payment;
 use App\Modules\Utils\Utils;
+use Paypal\Api\Payment;
+use App\Modules\Utils\LangByLock;
+use Illuminate\Http\Request;
 
 class PricingController extends Controller
 {
     protected $currencyMap = [
         'PLN' => 1,
         'EUR' => 2,
-        'USD' => 3
+        'USD' => 3,
+        'GBP' => 4,
     ];
 
     protected function getCurrencyByLocale() {
         $lang = Utils::getLocale();
     }
 
-    public function buyStandardPlan($period, $currency = 'USD')
+    public function buyStandardPlan(Request $request, $period)
     {
-        $lang = Utils::getLocale();
-        dump($lang);
-        dump(Carbon::getLocale());
-        die;
+
+        $userCountry = Location::get($request->getClientIp())->countryCode;
+        $currencyCode = LangByLock::getCurrencyByCountryCode($userCountry);
+        $currencyId = $this->currencyMap[$currencyCode];
 
         $user = Auth::user();
         if(!$user){
@@ -51,14 +56,14 @@ class PricingController extends Controller
 
         $planCost = PlansCosts::where('plan_id', '=', $planId )
             ->where('version_id', '=', 1)
-            ->where('currency_id', '=', 1)
+            ->where('currency_id', '=', $currencyId)
             ->first()->cost;
         if(!$planCost){
             return Redirect::back()->withErrors(['Plan w wybranej walucie jest chwilowo niedostępny']);
         }
         // stworzenie i obsługa obiektu płatności dla PayPal
         $payment = PaymentManager::findByName('paypal');
-        $response = $payment->makeSinglePayment($currency, $plan->description, $planCost);
+        $response = $payment->makeSinglePayment($currencyCode, $plan->description, $planCost);
         $url = $payment->getRedirectUrl();
 
         // obiekt płatności do zapisu danych płatności po naszej stronie w bazie
@@ -72,7 +77,7 @@ class PricingController extends Controller
             'hash' => $response->getState(),
             'invoice_data' => $response->getState(),
             'price' => $planCost,
-            'currency' => $currency,
+            'currency' => $currencyCode,
             'locale' => 'en',
             'txn_id' => $response->getId(),
             'modified' =>  date('Y-m-d H:i:s')
@@ -84,8 +89,12 @@ class PricingController extends Controller
 
     }
 
-    public function buyProfesionalPlan($period, $currency = 'USD')
+    public function buyProfesionalPlan(Request $request, $period)
     {
+        $userCountry = Location::get($request->getClientIp())->countryCode;
+        $currencyCode = LangByLock::getCurrencyByCountryCode($userCountry);
+        $currencyId = $this->currencyMap[$currencyCode];
+
         $user = Auth::user();
         if(!$user){
             return Redirect::back()->withErrors(['Aby móc kupić plan musisz się zalogować']);
@@ -105,14 +114,14 @@ class PricingController extends Controller
 
         $planCost = PlansCosts::where('plan_id', '=', $planId )
             ->where('version_id', '=', 1)
-            ->where('currency_id', '=', 1)
+            ->where('currency_id', '=', $currencyId)
             ->first()->cost;
         if(!$planCost){
             return Redirect::back()->withErrors(['Plan w wybranej walucie jest chwilowo niedostępny']);
         }
         // stworzenie i obsługa obiektu płatności dla PayPal
         $payment = PaymentManager::findByName('paypal');
-        $response = $payment->makeSinglePayment($currency, $plan->description, $planCost);
+        $response = $payment->makeSinglePayment($currencyCode, $plan->description, $planCost);
         $url = $payment->getRedirectUrl();
 
         // obiekt płatności do zapisu danych płatności po naszej stronie w bazie
@@ -126,7 +135,7 @@ class PricingController extends Controller
             'hash' => $response->getState(),
             'invoice_data' => $response->getState(),
             'price' => $planCost,
-            'currency' => $currency,
+            'currency' => $currencyCode,
             'locale' => 'en',
             'txn_id' => $response->getId(),
             'modified' =>  date('Y-m-d H:i:s')

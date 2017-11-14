@@ -68,4 +68,17 @@ class LangByLock
             'GB'
         ];
     }
+
+    public static function getCurrencyByCountryCode($countryCode)
+    {
+        if(in_array($countryCode, self::getEuroCountries())) {
+            return 'EUR';
+        } else if (in_array($countryCode, self::getPoundCountries())) {
+            return 'GBP';
+        } else if (in_array($countryCode, self::getUsdCountries())) {
+            return 'USD';
+        } else if ($countryCode === 'PL') {
+            return 'PLN';
+        } else return 'USD';
+    }
 }
