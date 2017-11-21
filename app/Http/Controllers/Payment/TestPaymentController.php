@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers\Payment;
 
+use App\Modules\Models\PlansPeroidTypes;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -59,10 +60,9 @@ class TestPaymentController extends Controller
                 ->where('active', '=', 1)
                 ->first();
             $options = $this->mergePlansOptions($plan);
-            $period = $plan->period;
+            $periodType = PlansPeroidTypes::findOrFail($plan->plans_period_type_id)->name;
+
             Carbon::setLocale('pl');
-
-
             $input = [];
             $input['user_id'] = Auth::user()->id;
             $input['promo_code_id'] = 1;
@@ -75,7 +75,7 @@ class TestPaymentController extends Controller
             $input['session_id'] = 1;
             $input['plan_id'] = $planId;
             $input['start_date'] = Carbon::now()->format('Y-m-d H:i:s');
-            $input['expiration_date'] = Carbon::now()->addDays($period)->format('Y-m-d H:i:s');
+            $input['expiration_date'] = $this->getExpirationDateByPeriodType($periodType, $plan->period);
             $input['currency_id'] = 3;
             $input['plan_cost_to_pay'] = 0;
 
@@ -124,5 +124,28 @@ class TestPaymentController extends Controller
             $options = (object)array_merge((array)$options, (array)$currentOptions);
         }
         return $options;
+    }
+
+    /**
+     * @param $periodType
+     * @param $period
+     * @return string
+     */
+    protected function getExpirationDateByPeriodType($periodType, $period) {
+        switch ($periodType) {
+            case 'days':
+                $expirationDate = Carbon::now()->addDays($period)->format('Y-m-d H:i:s');
+                break;
+            case 'weeks':
+                $expirationDate = Carbon::now()->addWeeks($period)->format('Y-m-d H:i:s');
+                break;
+            case 'months':
+                $expirationDate = Carbon::now()->addMonths($period)->format('Y-m-d H:i:s');
+                break;
+            case 'years':
+                $expirationDate = Carbon::now()->addYears($period)->format('Y-m-d H:i:s');
+                break;
+        }
+        return $expirationDate;
     }
 }
