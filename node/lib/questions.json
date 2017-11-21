@@ -1,0 +1,6 @@
+{"questions":[
+	{"question": "Pytanie 1", "choices": ["1", "2", "3", "4"], "correctAnswer":0},
+	{"question": "Pytanie 2", "choices": ["1", "2"], "correctAnswer":1},
+	{"question": "Pytanie 3", "choices": ["1", "2", "3", "4"], "correctAnswer":0},
+	{"question": "Pytanie 4", "choices": ["1", "2","3","4"], "correctAnswer":1}
+]}

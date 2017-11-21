@@ -1,13 +1,11 @@
 storage/
 vendor/
 pma/
+docs/
+blog/
 .idea/
 Homestead.json
 Homestead.yaml
-js/editors/standard/modules/webservice/node/node_webservice.js
-app/editors/standard/node_server/database/database.js
-app/editors/standard/node_server/darkan_server.js
-app/editors/standard/node_server/config.js
 .env
 .htaccess
 logs/paypal.log

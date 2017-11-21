@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "backbone": "*",
+    "backbone.controller": "*",
+    "backbone.stickit": "*",
+    "dotenv": "^4.0.0",
     "jquery": "*",
     "jqueryui": "*",
     "moment": ">=2.8.1",
-    "underscore": "*",
-    "backbone": "*",
-    "backbone.stickit": "*",
-    "backbone.controller": "*"
+    "underscore": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

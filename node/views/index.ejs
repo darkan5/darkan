@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/stylesheets/flipclock.css">
+
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script type='text/javascript' src='/js/flipclock.js'></script>
+        <script>
+            Array.prototype.contains = function ( needle ) {
+                for (i in this) {
+                    if (this[i] == needle) return true;
+                }
+                return false;
+            }
+            function startClock(){
+                clock = $('.myClock').FlipClock(10, {
+                    clockFace: 'MinuteCounter',
+                    countdown: true,
+                    callbacks: {
+                        stop: function() {
+                            socket.emit('nextQuestion',"new",currentQuestion);
+                        }
+                    }
+                });
+            }
+        </script>
+    <script>
+        var socket = io.connect('http://localhost:3000');
+        var connected = false;
+        var myUsername ;
+        var questions;
+        var idUser ;
+        var actuallQuestionChecked  ;
+        var currentQuestion = 0 ; // actuall question
+        var currentPoint = 0 ; //
+        var allQuestion // all question
+
+        socket.on('connect', function () {
+
+        });
+
+        socket.on('newUserList', function (data) {
+            $(".connectedUsers").html('');
+            $.each(data.userList, function (i, user) {
+                $(".connectedUsers").append("<div id='" + user + "'>" + user + "</div>");
+            });
+
+        });
+
+        socket.on('updateUserList', function (data) {
+
+            if (data.connectionType == 'add') {
+                $(".connectedUsers").append("<div id='" + data.user + "'>" + data.user + "</div>");
+            } else {
+                $("#" + data.user).remove();
+            }
+            numberOfUser = $(".connectedUsers > div").length ;
+
+            if (numberOfUser == 1){
+                $(".mr1").css("display","block");
+
+            }
+            if (numberOfUser == 2){
+                $(".mr1").css("display","block");
+                $(".mr2").css("display","block");
+            }
+            if (numberOfUser == 3){
+                $(".mr1").css("display","block");
+                $(".mr2").css("display","block");
+                $(".mr3").css("display","block");
+            }
+            if (numberOfUser == 4){
+                $(".mr1").css("display","block");
+                $(".mr2").css("display","block");
+                $(".mr3").css("display","block");
+                $(".mr4").css("display","block");
+            }
+
+            if (idUser == null){
+                idUser = $(".connectedUsers > div").length  ;
+                console.log(idUser);
+            }
+
+
+        });
+        socket.on('startCounter', function(){
+            startClock();
+            socket.emit('loadFile');
+        } );
+
+        socket.on('updatePoint', function (data,point) {
+            currentPoint = point ;
+            console.log("current" + point);
+            $('#'+data).text(data +" ("+ currentPoint +")");
+
+        });
+
+
+        socket.on('sendQuestions', function (data) {
+            $(".show_index").fadeOut('slow', function () {
+                location.replace("#1");
+                question = get_question(0);
+                $(".show_questions").fadeIn('slow');
+            });
+
+            console.log(data);
+            questions = data.questions;
+//            $.each(questions, function (n, item) {
+//                i = n + 1;
+//                $(".questions_pagination").append("<li><a href='javascript:;' class='new_question' data-id='" + i + "' id='question_" + i + "'>" + i + "</a></li>");
+//            });
+
+
+
+        });
+//        $(".new_question").on('click', function () {
+//            var id = $(this).data('id');
+//            id = id - 1;
+//            location.replace("#" + id);
+//            get_question(id);
+//        });
+
+        function get_question(number) {
+            var question = questions[number];
+            $("#question_title").text("").text(question.question);
+           // $("#question_options").html("");
+//            $.each(question.choices, function (i, item) {
+//                $("#question_options").append("<div><input class='quertionInput' type='checkbox' value='" + i + "'/> " + item + "</div>");
+//
+//            });
+
+//            $("input").change(function (event) {
+//                if (event.target.checked) {
+//                    actuallQuestionChecked = event.target.value;
+//                    socket.emit('changeQuestion',event.target.value,event.target.checked);
+//                }
+//                else {
+//                    actuallQuestionChecked = undefined ;
+//                }
+//                console.log(actuallQuestionChecked);
+//
+//
+//                });
+            $(".question_options").append('<input type="text" size="20" />');
+            $(".next-question").click(function(event){
+
+
+                console.log("dobra odpowiedz:"+ question.choices);
+                correctAnsers = question.choices ;
+                console.log("aktualna odpowiedz:"+ $("#questionAnswerInput").val());
+                correctAns = $("#questionAnswerInput").val() ;
+                if (correctAnsers.contains(correctAns)){
+                    console.log("good");
+                    currentPoint = currentPoint + 1 ;
+                    console.log( " " + currentPoint);
+                    console.log(myUsername);
+                    socket.emit('addPointToUser',myUsername,currentPoint);
+                } else {
+                    curretMr = $(".mr"+idUser+1).css("left");
+                    console.log(curretMr);
+                   $(".mr"+idUser+1).css("left",curretMr + 120);
+                }
+
+
+                socket.emit('nextQuesation',"new",currentQuestion);
+                if (question.correctAnswer == actuallQuestionChecked){
+                    currentPoint = currentPoint + 1 ;
+                    console.log( " " + currentPoint);
+                    console.log(myUsername);
+                    socket.emit('addPointToUser',myUsername,currentPoint);
+
+                }
+            });
+
+        }
+
+
+        $(document).ready(function () {
+          // clock
+
+
+         //   new BugController({'minBugs':10, 'maxBugs':50, 'mouseOver':'die'});
+            $('#btnJoin').on('click', function () {
+                var username = prompt("Dodaj użytkownika");
+                if (username != '') {
+                    myUsername = username ;
+                    socket.emit('addUser', username);
+                    connected = true;
+                } else {
+                    alert("USERNAME PLEASE!");
+                }
+                setTimeout(function(){
+                    numberOfUser = $(".connectedUsers > div").length ;
+
+                    if (numberOfUser == 1){
+                        $("#btnStart").css("display","block");
+                        $("#btnJoin").css("display","none");
+                    }else {
+                        $("#btnJoin").css("display","none");
+                    }
+
+                },100);
+
+            });
+
+            $('#btnStart').on('click', function () {
+                socket.emit('startCount');
+                $('#btnStart').css("display","none");
+
+
+            });
+
+
+            /// check question
+            socket.on('changeQuestionInAll', function (data, state) {
+              //  console.log(data + " " + state);
+
+
+                $("input[value='" + data + "']").attr('checked', state);
+            });
+
+
+
+        });
+        socket.on('nextQuestionChange', function (data, state) {
+            clock.setTime(10);
+            clock.start();
+            console.log("work time");
+            console.log("-------------------------");
+           // console.log(data + " " + state);
+            currentQuestion = state ;
+            get_question(state);
+            curretMr = $(".mr"+idUser).css("left");
+            console.log(curretMr);
+            $(".mr"+idUser).css("left", 120*state);
+
+        });
+    </script>
+</head>
+<body>
+
+<div class="mr-background">
+    <div class="myClock"></div>
+<div class="mr1"></div>
+
+<div class="mr2"></div>
+    <div class="mr3"></div>
+    <div class="mr4"></div>
+
+    <div class="cake"></div>
+</div>
+
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='span12'>
+
+        </div>
+    </div>
+    <div class='row'>
+        <div class='span4'>
+            <div class='well'>
+                <h3>Użytkownicy</h3>
+                <div class='connectedUsers'>
+
+                </div>
+            </div>
+        </div>
+
+        <div class='span8'>
+            <div class='hero-unit'>
+                <button id='btnStart' class='btn btn-primary'>Start</button>
+                <div class="show_index">
+
+                    <p>
+
+                    </p>
+                    <button id='btnJoin' class='btn btn-primary'>Dołącz do gry</button>
+
+
+
+                </div>
+                <div class='show_questions' style='display:none;'>
+                    <h2>Pytania</h2>
+                    <div class="pagination">
+                        <ul class='questions_pagination'>
+                            <!-- filled using jQuery -->
+                        </ul>
+                    </div>
+                    <div id='question'>
+                        <h3 id='question_title'></h3>
+                        <div id='question_options'>
+                            <input class="inputForm" id="questionAnswerInput" type="text" size="20" />
+
+                        </div>
+                        <button class='btn btn-success next-question'>Odpowiedz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

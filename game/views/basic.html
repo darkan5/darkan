@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Basic JSON Editor Example</title>
+    <script src="js/jsoneditor.js"></script>
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div class="col-md-10">
+    <div id='editor_holder'></div>
+    <button id='submit'>Wyślij</button>
+  </div>
+    
+    <script>
+      // Initialize the editor with a JSON schema
+      var editor = new JSONEditor(document.getElementById('editor_holder'),{
+          theme: 'bootstrap3',
+          iconlib: 'bootstrap3',
+          disable_collapse: true ,
+          disable_edit_json: true ,
+          disable_properties: true ,
+        schema: {
+          type: "object",
+          title: "Gra w mrówrki",
+          properties: {
+              "Nazwa gry": {
+                  type: "string"
+              },
+            "Typ gry" : {
+              type: "string",
+              enum: [
+                "Jeden na wszystkich",
+                "Wszyscy na jednego"
+              ]
+            },
+              "Pytania": {
+
+                  "type": "array",
+                  "title": "Pytania",
+                  "items": {
+                      "type": "object",
+
+                      "title": "Pytanie",
+                      "properties": {
+
+                          "Treść pytania": {
+                              "type": "string"
+
+                          }, "Odpowiedź 1": {
+                              "type": "string"
+                          }, "Odpowiedź 2 ": {
+                              "type": "string"
+                          }, "Odpowiedź 3": {
+                              "type": "string"
+                          }
+
+                      }
+
+                  },
+
+              },
+              "imgData": {
+                  "title": "Wybierz obrazek",
+                  "type": "string",
+                  "media": {
+                      "binaryEncoding": "base64",
+                      "type": "image/png"
+                  }
+              }
+          }
+        }
+      });
+      
+      // Hook up the submit button to log to the console
+      document.getElementById('submit').addEventListener('click',function() {
+        // Get the value from the editor
+        console.log(editor.getValue());
+      });
+    </script>
+  </body>
+</html>

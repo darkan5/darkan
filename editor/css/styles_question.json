@@ -1,0 +1,466 @@
+{
+	"question_default" : {
+
+		"quiz-body": {
+			"background": "rgba(0, 0, 0, 0.7)",
+		    "border-radius": "10px",
+		    "color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#5082A5",
+		    "color": "#fff",
+		    "border": "none"
+		}
+	},
+
+	"question_first" : {
+
+		"quiz-body": {
+			"background": "#FF0000",
+    		"color":" #fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#FF0000",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"question_second" : {
+
+		"quiz-body": {
+			"background": "#00BAFF",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#00BAFF",
+		    "color":" #fff",
+		    "border": "0px"
+		}
+	},
+
+	"question_third" : {
+
+		"quiz-body": {
+			"background": "#0f9c00",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#0f9c00",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"question_fourth" : {
+
+		"quiz-body": {
+			"background": "#5f0095",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#5f0095",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"question_fifth" : {
+
+		"quiz-body": {
+			"background": "#ffae00",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#ffae00",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"question_sixth" : {
+
+		"quiz-body": {
+			"background": "#FF0000",
+    		"color": "#404040"
+		},
+
+		"quiz-submit-button": {
+			"background": "#FF0000",
+		    "color": "#404040",
+		    "border": "0px"
+		}
+	},
+
+	"question_seventh" : {
+
+		"quiz-body": {
+			"background": "#00BAFF",
+    		"color": "#404040"
+		},
+
+		"quiz-submit-button": {
+			"background": "#00BAFF",
+		    "color": "#404040",
+		    "border": "0px"
+		}
+	},
+
+	"question_eighth" : {
+
+		"quiz-body": {
+			"background": "#0f9c00",
+    		"color": "#404040"
+		},
+
+		"quiz-submit-button": {
+			"background": "#0f9c00",
+		    "color": "#404040",
+		    "border": "0px"
+		}
+	},
+
+	"question_ninth" : {
+
+		"quiz-body": {
+			"background": "#5f0095",
+    		"color": "#404040"
+		},
+
+		"quiz-submit-button": {
+			"background": "#5f0095",
+		    "color": "#404040",
+		    "border": "0px"
+		}
+	},
+
+	"question_tenth" : {
+
+		"quiz-body": {
+			"background": "#ffae00",
+    		"color": "#404040"
+		},
+
+		"quiz-submit-button": {
+			 "background": "#ffae00",
+		    "color": "#404040",
+		    "border": "0px"
+		}
+	},
+
+	"question_eleventh" : {
+
+		"quiz-body": {
+			"background": "#E2E2E2",
+		    "color": "#FF0000",
+		    "border-bottom": "solid 1px #FF0000"
+		},
+
+		"quiz-submit-button": {
+			"background": "#E2E2E2",
+		    "color": "#FF0000",
+		    "border": "solid 1px #FF0000"
+		}
+	},
+
+	"question_twelfth" : {
+
+		"quiz-body": {
+			"background": "#E2E2E2",
+		    "color": "#00BAFF",
+		    "border-bottom": "solid 1px #00BAFF"
+		},
+
+		"quiz-submit-button": {
+			"background": "#E2E2E2",
+		    "color": "#00BAFF",
+		    "border": "solid 1px #00BAFF"
+		}
+	},
+
+	"question_thirteenth" : {
+
+		"quiz-body": {
+			"background": "#E2E2E2",
+		    "color": "#0f9c00",
+		    "border-bottom": "solid 1px #0f9c00"
+		},
+
+		"quiz-submit-button": {
+			"background": "#E2E2E2",
+		    "color": "#0f9c00",
+		    "border": "solid 1px #0f9c00"
+		}
+	},
+
+	"question_fourteenth" : {
+
+		"quiz-body": {
+			"background": "#E2E2E2",
+		    "color": "#5f0095",
+		    "border-bottom": "solid 1px #5f0095"
+		},
+
+		"quiz-submit-button": {
+			"background": "#E2E2E2",
+		    "color": "#5f0095",
+		    "border": "solid 1px #5f0095"
+		}
+	},
+
+	"question_fifteenth" : {
+
+		"quiz-body": {
+			"background": "#E2E2E2",
+		    "color": "#ffae00",
+		    "border-bottom": "solid 1px #ffae00"
+		},
+
+		"quiz-submit-button": {
+			"background": "#E2E2E2",
+		    "color": "#ffae00",
+		    "border": "solid 1px #ffae00"
+		}
+	},
+
+	"question_sixteenth" : {
+
+		"quiz-body": {
+			"background": "#FF0000",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#FF0000",
+		    "border": "0px"
+		}
+	},
+
+	"question_seventeenth" : {
+
+		"quiz-body": {
+			"background": "#00BAFF",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#00BAFF",
+		    "border": "0px" 
+		}
+	},
+
+	"question_eighteenth" : {
+
+		"quiz-body": {
+			"background": "#0f9c00",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#0f9c00",
+		    "border": "0px"
+		}
+	},
+
+	"question_nineteenth" : {
+
+		"quiz-body": {
+			"background": "#5f0095",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#5f0095",
+		    "border": "0px"
+		}
+	},
+
+	"question_twentieth" : {
+
+		"quiz-body": {
+			"background": "#ffae00",
+    		"color": "#fff"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#ffae00",
+		    "border": "0px"
+		}
+	},
+
+	"question_twenty_firs" : {
+
+		"quiz-body": {
+			"background": "#fff",
+		    "color": "#FF0000",
+		    "border-bottom": "solid 1px #FF0000"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#FF0000",
+		    "border": "solid 1px #FF0000"
+		}
+	},
+
+	"question_twenty_second" : {
+
+		"quiz-body": {
+			"background": "#fff",
+		    "color": "#00BAFF",
+		    "border-bottom": "solid 1px #00BAFF"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#00BAFF",
+		    "border": "solid 1px #00BAFF"
+		}
+	},
+
+	"question_twenty_third" : {
+
+		"quiz-body": {
+			"background": "#fff",
+		    "color":" #0f9c00",
+		    "border-bottom": "solid 1px #0f9c00"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#0f9c00",
+		    "border": "solid 1px #0f9c00"
+		}
+	},
+
+	"question_twenty_fourth" : {
+
+		"quiz-body": {
+			"background": "#fff",
+		    "color": "#5f0095",
+		    "border-bottom": "solid 1px #5f0095"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#5f0095",
+		    "border": "solid 1px #5f0095"
+		}
+	},
+
+	"question_twenty_fifth" : {
+
+		"quiz-body": {
+			"background": "#fff",
+		    "color": "#ffae00",
+		    "border-bottom": "solid 1px #ffae00"
+		},
+
+		"quiz-submit-button": {
+			"background": "#fff",
+		    "color": "#ffae00",
+		    "border": "solid 1px #ffae00"
+		}
+	},
+
+	"question_twenty_sixth" : {
+
+		"quiz-body": {
+			"background": "#000",
+		    "color": "#FF0000",
+		    "border-bottom": "solid 1px #FF0000"
+		},
+
+		"quiz-submit-button": {
+			"background": "#000",
+		    "color": "#FF0000",
+		    "border": "solid 1px #FF0000"
+		}
+	},
+
+	"question_twenty_seventh" : {
+
+		"quiz-body": {
+			"background": "#000",
+		    "color": "#00BAFF",
+		    "border-bottom": "solid 1px #00BAFF"
+		},
+
+		"quiz-submit-button": {
+			"background": "#000",
+		    "color": "#00BAFF",
+		    "border": "solid 1px #00BAFF"
+		}
+	},
+
+	"question_twenty_eighth" : {
+
+		"quiz-body": {
+			"background": "#000",
+		    "color": "#0f9c00",
+		    "border-bottom": "solid 1px #0f9c00"
+		},
+
+		"quiz-submit-button": {
+			"background":" #000",
+		    "color": "#0f9c00",
+		    "border": "solid 1px #0f9c00"
+		}
+	},
+
+	"question_twenty_ninth" : {
+
+		"quiz-body": {
+			"background":" #000",
+		    "color":" #5f0095",
+		    "border-bottom": "solid 1px #5f0095"
+		},
+
+		"quiz-submit-button": {
+			"background": "#000",
+		    "color": "#5f0095",
+		    "border": "solid 1px #5f0095"
+		}
+	},
+
+	"question_thirtieth" : {
+
+		"quiz-body": {
+			"background": "#000",
+		    "color": "#ffae00",
+		    "border-bottom": "solid 1px #ffae00"
+		},
+
+		"quiz-submit-button": {
+			"background": "#000",
+		    "color": "#ffae00",
+		    "border": "solid 1px #ffae00"
+		}
+	},
+
+	"question_junkers" : {
+
+		"quiz-body": {
+			"background":" #fff",
+    		"color": "#000"
+		},
+
+		"quiz-submit-button": {
+			"background": "#FFC53F",
+		    "color": "#000",
+		    "border": "solid 1px #FFC53F"
+		}
+	},
+
+}

@@ -1,0 +1,53 @@
+{
+	"inputtext_default" : {
+		"quizinputtext-input": {
+		    "background": "#5082A5",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"inputtext_one" : {
+		"quizinputtext-input": {
+		    "background": "#FF0000",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"inputtext_two" : {
+		"quizinputtext-input": {
+		    "background": "#00BAFF",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"inputtext_transparent" : {
+		"quizinputtext-input": {
+		    "background": "transparent",
+		    "color": "#fff",
+		    "border": "0px"
+		}
+	},
+
+	"inputtext_green" : {
+		"quizinputtext-input": {
+		    "background": "transparent",
+		    "color": "#000",
+		    "border": "2px solid #47983D",
+		    "border-radius": "3px"
+		}
+	},
+
+	"inputtext_red" : {
+		"quizinputtext-input": {
+		    "background": "transparent",
+		    "color": "#000",
+		    "border-style": "solid",
+		    "border-width": "2px",
+		    "border-color": "#CF666A",
+		    "border-radius": "3px"
+		}
+	}
+}
