@@ -59,21 +59,22 @@
                 </div>
             @endif
 
-            @if($canBayPlanOptions)
-                <div class="panel panel-primary">
-                    <div class="panel-heading panel-big">
-                        <span>Dodatkowe opcje</span>
-                        <div class="btn-group pull-right">
 
-                        </div>
-                    </div>
-                    <div class="panel-body">
+            {{--@if($canBayPlanOptions)--}}
+                {{--<div class="panel panel-primary">--}}
+                    {{--<div class="panel-heading panel-big">--}}
+                        {{--<span>Dodatkowe opcje</span>--}}
+                        {{--<div class="btn-group pull-right">--}}
 
-                        <a class="btn btn-success" href="{{ url('/pricelistoptions') }}" >DoDalej opcje</a>
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="panel-body">--}}
 
-                    </div>
-                </div>
-            @endif
+                        {{--<a class="btn btn-success" href="{{ url('/pricelistoptions') }}" >DoDalej opcje</a>--}}
+
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--@endif--}}
 
 
             {{--<div class="panel-heading panel-big">--}}
