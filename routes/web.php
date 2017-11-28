@@ -930,7 +930,11 @@ Route::group(['middleware' => ['auth', 'user']], function () {
 
 });
 
-
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/pricing/standard/{period}', 'Price\PricingController@buyStandardPlan');
+    Route::get('/pricing/profesional/{period}', 'Price\PricingController@buyProfesionalPlan');
+    Route::get('/pricing/elearning/{period}/{amount}', 'Price\PricingController@buyElearningPlan');
+});
 
 //////////////////////
 // Wszyscy użytkownicy
@@ -941,9 +945,7 @@ Route::group([], function () {
     // Pricing pages for all
     /////////////////////
     Route::get('/pricelist', 'Price\PriceController@pricingPage');
-    Route::get('/pricing/standard/{period}', 'Price\PricingController@buyStandardPlan');
-    Route::get('/pricing/profesional/{period}', 'Price\PricingController@buyProfesionalPlan');
-    Route::get('/pricing/elearning/{period}/{amount}', 'Price\PricingController@buyElearningPlan');
+
 
     Route::get('/pricelistoptions', 'Price\PriceOptionsController@pricingOptionsPage');
     Route::get('/pricelistoption/{id}', 'Price\PriceOptionsController@pricingOptionPage');
