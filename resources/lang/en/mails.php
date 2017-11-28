@@ -30,7 +30,7 @@
   'LOGIN_MAIL_INFO_2' => 'Every user got an email with information about account creation and login credentials.',
   'INVOICE_SUBJECT' => 'Payment Completed!',
   'INVOICE_HEADER' => 'Darkan payment completed!',
-  'INVOICE_MESSAGE' => 'Thanks for doing bissness with us! You will find invoice in attachment.',
+  'INVOICE_MESSAGE' => 'Thanks for doing bissness with us!',
 
   'REGISTER_MAIL_SUBJECT_FROM_DEALER' => 'Darkan platform account',
   'REGISTER_MAIL_CONTENT_FROM_DEALER' => '<p>Hello,</p><p>Below are yours credentials to Darkan platform. If you have any questions, please contact us.</p><p>Best regards.</p>',

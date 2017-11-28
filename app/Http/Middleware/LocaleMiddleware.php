@@ -38,9 +38,7 @@ class LocaleMiddleware {
         }elseif(Cookie::has('darkanlocale')){
             app()->setLocale(Cookie::get('darkanlocale'));
         } else {
-            $countryCode = Location::get()->countryCode;
-
-
+            $countryCode = Location::get($request->getClientIp())->countryCode;
             $lang = Utils::getLocaleByCode($countryCode);
 
             app()->setLocale($lang);

@@ -24,6 +24,9 @@ use App\Modules\Models\Payments;
 use App\Modules\Models\PlansUsers;
 use App\Modules\Models\Plans;
 use Carbon\Carbon;
+use Mail;
+use Lang;
+use Auht;
 
 
 class TestPaymentController extends Controller
@@ -62,6 +65,29 @@ class TestPaymentController extends Controller
             $options = $this->mergePlansOptions($plan);
             $periodType = PlansPeroidTypes::findOrFail($plan->plans_period_type_id)->name;
 
+            // deaktywowanie planu trial jeśli istnieje
+            $trialPlan = PlansUsers::where('plan_id', '=', config("plans.standard_trial"))
+                ->where('user_id', '=', Auth::user()->id)
+                ->where('active', '=', 1)
+                ->first();
+            if($trialPlan) {
+                $trialPlan->active = 0;
+                $trialPlan->save();
+            }
+
+            // jeżeli użytkownik posiada jakieś plany zwracamy ten który wygaśnie najpóźniej z aktywnych
+            $latestActivePlan = PlansUsers::where('user_id', '=', Auth::user()->id)
+                ->where('active', '=', 1)
+                ->orderBy('expiration_date', 'DESC')
+                ->first();
+
+            if($latestActivePlan) {
+                $startDate = Carbon::parse($latestActivePlan->expiration_date)->addSecond();
+            } else {
+                $startDate = Carbon::now();
+            }
+
+
             Carbon::setLocale('pl');
             $input = [];
             $input['user_id'] = Auth::user()->id;
@@ -74,13 +100,21 @@ class TestPaymentController extends Controller
             $input['plan_options'] = json_encode($options);
             $input['session_id'] = 1;
             $input['plan_id'] = $planId;
-            $input['start_date'] = Carbon::now()->format('Y-m-d H:i:s');
-            $input['expiration_date'] = $this->getExpirationDateByPeriodType($periodType, $plan->period);
+            $input['start_date'] = $startDate->format('Y-m-d H:i:s');
+            $input['expiration_date'] = $this->getExpirationDateByPeriodType($startDate, $periodType, $plan->period);
             $input['currency_id'] = 3;
             $input['plan_cost_to_pay'] = 0;
 
             PlansUsers::create($input);
-            //jeszcze usuwanie triala
+            $mailData = [];
+            $receiver = Auth::user()->email;
+            Mail::send('emails.planbought', $mailData, function($message) use ($mailData, $receiver) {
+                $message->from('no-reply@darkan.eu', 'Darkan');
+                $message->to($receiver)->subject(Lang::get('mails.INVOICE_SUBJECT'));
+            });
+
+
+
 
             return view('payment.done');
         } else {
@@ -131,19 +165,19 @@ class TestPaymentController extends Controller
      * @param $period
      * @return string
      */
-    protected function getExpirationDateByPeriodType($periodType, $period) {
+    protected function getExpirationDateByPeriodType($startDate, $periodType, $period) {
         switch ($periodType) {
             case 'days':
-                $expirationDate = Carbon::now()->addDays($period)->format('Y-m-d H:i:s');
+                $expirationDate = $startDate->addDays($period)->format('Y-m-d H:i:s');
                 break;
             case 'weeks':
-                $expirationDate = Carbon::now()->addWeeks($period)->format('Y-m-d H:i:s');
+                $expirationDate = $startDate->addWeeks($period)->format('Y-m-d H:i:s');
                 break;
             case 'months':
-                $expirationDate = Carbon::now()->addMonths($period)->format('Y-m-d H:i:s');
+                $expirationDate = $startDate->addMonths($period)->format('Y-m-d H:i:s');
                 break;
             case 'years':
-                $expirationDate = Carbon::now()->addYears($period)->format('Y-m-d H:i:s');
+                $expirationDate = $startDate->addYears($period)->format('Y-m-d H:i:s');
                 break;
         }
         return $expirationDate;

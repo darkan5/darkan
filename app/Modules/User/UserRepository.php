@@ -127,9 +127,7 @@ class UserRepository {
     public function addRegistrationPlan($user){
 
         $registerPlanId = $this->getRegistrationPlanId();
-
         $plan = $this->getPlan($registerPlanId);
-
         if(!$plan){
             return Redirect::back()->withErrors(['Wybrany plan nie jest już aktywny']);
         }
@@ -161,7 +159,7 @@ class UserRepository {
     }
 
     protected function getRegistrationPlanId() {
-        return 1; // Demo plan na 2 miesiące
+        return (int)config("plans.standard_trial"); // plan trial na 2 miesiące
     }   
 
     private function margePlansOptions($plan) {
