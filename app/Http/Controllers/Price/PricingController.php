@@ -140,6 +140,7 @@ class PricingController extends Controller
             'txn_id' => $response->getId(),
             'modified' =>  date('Y-m-d H:i:s')
         ]);
+        return redirect($url);
     }
 
     public function buyElearningPlan($period, $amount)
