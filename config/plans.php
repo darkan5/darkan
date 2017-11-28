@@ -16,5 +16,5 @@ return [
     'standard_trial' => 21,
     'profesional_month' => 5,
     'profesional_year' => 11,
-    'profesional_trial' => 21,
+    'profesional_trial' => 20,
 ];
