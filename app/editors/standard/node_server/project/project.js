@@ -2289,7 +2289,7 @@ Project.prototype.changeStageBackgroundLibrary = function( data, onResult, onFau
         var statuses = [];
         var errors = [];
 
-
+console.log(itemDir);
         var userID = this.socket.ownerId.toString();
         var projectID = this.socket.myRoom.toString();
         var pageID = data.pageID.toString();
@@ -2312,7 +2312,7 @@ Project.prototype.changeStageBackgroundLibrary = function( data, onResult, onFau
 
 
 
-
+console.log(imageFileDir);
         fs.mkdirRecursiveSync(imageFileDir);
 
         if (oldFileName !== '') {
