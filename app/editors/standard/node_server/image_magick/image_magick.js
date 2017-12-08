@@ -11,7 +11,7 @@ var ConfigController = require('../config_controller/config_controller.js');
 var im = require('imagemagick');
 var exec = require('child_process').exec;
 
-var pngquant = require('node-pngquant-native');
+//var pngquant = require('node-pngquant-native');
 
 
 function ImageMagick(socket) {
@@ -116,11 +116,11 @@ ImageMagick.prototype.resizeImage = function( data, onResult, onFault ) {
                         if (err) {
                             return;
                         }
-                        var resBuffer = pngquant.compress(buffer, {
-                            "speed": 1 //1 ~ 11
-                        });
+                        // var resBuffer = pngquant.compress(buffer, {
+                        //     "speed": 1 //1 ~ 11
+                        // });
 
-                        fs.writeFile(fileMinPath, resBuffer, {
+                        fs.writeFile(fileMinPath, buffer, {
                             flags: 'wb'
                         }, function(err){});
                     });
@@ -238,10 +238,10 @@ ImageMagick.prototype.copyLibraryFileToImage = function( data, onResult, onFault
                             if(extFileName == 'png'){
 
                                 var buffer = fs.readFileSync(file);
-                                var resBuffer = pngquant.compress(buffer, {
-                                    "speed": 1 //1 ~ 11
-                                });
-                                fs.writeFileSync(file, resBuffer);
+                                // var resBuffer = pngquant.compress(buffer, {
+                                //     "speed": 1 //1 ~ 11
+                                // });
+                                fs.writeFileSync(file, buffer);
                             }
 
                             fs.copy(file, minFile);
