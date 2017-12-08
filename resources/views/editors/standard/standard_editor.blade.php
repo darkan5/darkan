@@ -533,7 +533,6 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 						<% _.each(detailsCollection, function(item, i) {  %>
 							<li class="new-page-item-view new-page-item-add" item='<%= JSON.stringify( item ) %>' >
 								<img class="new-page-item-image-thumb" src="<%= item.src %>"/>
-								<span><%= item.pageId %><span>
 							</li>
 						<% }); %>	
 					</ul>
