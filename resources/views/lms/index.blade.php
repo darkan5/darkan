@@ -158,8 +158,7 @@
           <div class="col-lg-12">
               <div class="panel panel-primary">
                   <div class="panel-heading">
-                      Użytkownicy
-                      <small>(elearning)</small>
+                      <?= Lang::get('darkanpanel.page_name_dashboard_users')?>
 
                       <div class="pull-right">
                       </div>

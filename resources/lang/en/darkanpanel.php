@@ -220,7 +220,7 @@
   'edit_button' => 'Edit',
      'page_primary' => 'Home',
      'panel_primary' => 'Primary panel',
-     'publicaton' => 'Publications',
+     'publication' => 'Publications',
      'users' => 'Users'
 
 
