@@ -222,4 +222,8 @@ return [
   'open_button' => 'Otwórz',
   'delete_button' => 'Usuń',
   'edit_button' => 'Edytuj',
+    'page_primary' => 'Strona główna',
+    'panel_primary' => 'Panel główny',
+    'publication' => 'Publikacje',
+    'users' => 'Użytkownicy'
 ];

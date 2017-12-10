@@ -218,5 +218,12 @@
   'open_button' => 'Open',
   'delete_button' => 'Delete',
   'edit_button' => 'Edit',
+     'page_primary' => 'Home',
+     'panel_primary' => 'Primary panel',
+     'publicaton' => 'Publications',
+     'users' => 'Users'
+
+
+
 
 );

@@ -172,7 +172,7 @@
 </ul>
 
 <div class="container-fluid">
-    <div class="col-md-2">
+    <div class="col-md-2" style="top: 40px">
         <div class="panel">
             <div class="panel-heading panel-big">
                 <div class="btn-group pull-right">
@@ -185,10 +185,10 @@
                     <ul class="sidebar-nav">
 
                         <li class="sidebar-brand">
-                            <a href="{{ url('/') }}">Strona główna</a>
+                            <a href="{{ url('/') }}"><?=Lang::get("darkanpanel.page_primary")?></a>
                         </li>
                         <li class="sidebar-brand">
-                            <a href="{{ url('/lms') }}">Panel główny </a>
+                            <a href="{{ url('/lms') }}"><?=Lang::get("darkanpanel.panel_primary")?></a>
                         </li>
                         {{--
                         <li>
@@ -196,10 +196,10 @@
                         </li>
                         --}}
                         <li>
-                            <a href="{{ url('lms/publications') }}">Publikacje</a>
+                            <a href="{{ url('lms/publications') }}"><?=Lang::get("darkanpanel.publication")?></a>
                         </li>
                         <li>
-                            <a href="{{ url('lms/elearning/users') }}">Użytkownicy (elearning)</a>
+                            <a href="{{ url('lms/elearning/users') }}"><?=Lang::get("darkanpanel.users")?></a>
                         </li>
                         {{--
                         <li>
