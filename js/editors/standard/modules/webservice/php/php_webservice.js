@@ -72,6 +72,7 @@ PhpWebservice.prototype.shareProjectToUser = function(data, onResult, onFault) {
 };
 
 PhpWebservice.prototype.loginExternal = function(data, onResult, onFault) {
+
     var request = {
         request: 1,
         data: data,
