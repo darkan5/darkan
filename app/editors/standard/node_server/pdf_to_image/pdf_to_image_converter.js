@@ -218,8 +218,8 @@ PdfToImageConverter.prototype.createPageThumb = function(imageThumbDir, thumbFil
 
     this.DIRNAME = Project.DIRNAME;
 
-    var indexFile = path.join(__dirname, '..', 'page_thumbs', 'index.html');
 
+    var indexFile = path.join(__dirname, '..', 'page_thumbs', 'index.html');
     console.log('createPageThumb pageWidth', pageWidth);
     console.log('createPageThumb pageHeight', pageHeight);
     console.log('createPageThumb indexFile', indexFile);

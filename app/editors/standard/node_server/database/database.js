@@ -601,14 +601,19 @@ Database.prototype.getTemplatesProjectsList = function(data, onResult, onFault) 
     var userID = this.socket.ownerId.toString();
 
     var shareTemplateProjectDataQuery = squel.select()
-            .from('share', 't1')
-	        .left_join('projects', 't2', 't1.project_id = t2.project_id')
-	        .where(squel.expr().or('t1.user_id = ?').or( 't1.user_id = ?').toString(), '3', userID)
-	        .where('t2.template = ?', '1')
-	        .where('t2.version = ?', '2.0.0')
-	        .where('t2.editor_id != ?', '1')
-	        .toString();
-
+ //           .from('share', 't1')
+//	        .left_join('projects', 't2', 't1.project_id = t2.project_id')
+//	        .where(squel.expr().or('t1.user_id = ?').or( 't1.user_id = ?').toString(), '3', userID)
+//	        .where('t2.template = ?', '1')
+//	        .where('t2.version = ?', '2.0.0')
+//	        .where('t2.editor_id != ?', '1')
+//	        .toString();
+.from('projects', 'prj')
+        .where('prj.user_id = ?', '3' )
+        .where('prj.template = ?', '1')
+        .where('prj.version = ?', '2.0.0')
+        .where('prj.editor_id != ?', '1')
+        .toString();
     _that.query(shareTemplateProjectDataQuery, function(shareTemplateProjectData) {
 
 

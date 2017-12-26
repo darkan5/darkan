@@ -98,7 +98,7 @@ class Publication {
                 $landscapeOption = '-O Portrait';
             }
 
-            $htmlFile = file_get_contents(storage_path('/templates/page_thumbs/index_pdf_page.html'), 0, null, null);
+            $htmlFile = file_get_contents(storage_path('templates/page_thumbs/index_pdf_page.html'), 0, null, null);
 
             $files = '';
 

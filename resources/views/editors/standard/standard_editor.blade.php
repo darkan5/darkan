@@ -75,6 +75,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 			login: '<?= !$user->email ? "undefined" : $user->email;?>',
 			loginHashed: '<?= !$user->email ? md5("undefined") : md5( $user->email);?>',
 			APP_LINK: '<?= config('app.applink'); ?>',
+			APP_URL: '<?= config('app.applink'); ?>',
 			app_folder: "<?= config('app.app_folder'); ?>",
 			projects_link: "<?= config('app.projects_link'); ?>",
 			publications_link: "<?= config('app.storagPublicationsLink'); ?>",
@@ -404,7 +405,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 
 		<input type="checkbox" class="page-checkbox" <%= isSelected ? 'checked' : '' %>>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -1526,7 +1527,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 				<div id="image-window-upload">
 					<div class="drop-image-area">
 				    	<div class="progress-bar">
-				    		<div class="progress-bar-text">0%</div>
+				    		<div class="progress-bar-text"></div>
 				    		<div class="progress-bar-inner-wrapper">
 								<div class="progress-bar-inner"></div>
 				    		</div>
@@ -1686,7 +1687,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 				<div id="video-window-upload">
 					<div class="drop-video-area">
 				    	<div class="progress-bar">
-				    		<div class="progress-bar-text">0%</div>
+				    		<div class="progress-bar-text"></div>
 				    		<div class="progress-bar-inner-wrapper">
 								<div class="progress-bar-inner"></div>
 				    		</div>
@@ -1871,7 +1872,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
                 </div>
             </div>
             <div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -2241,7 +2242,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 	                        <div class="row">
 	                            <div class="edit-project-icon-preview" style="">
 	                            	<div class="progress-bar">
-						    		<div class="progress-bar-text">0%</div>
+						    		<div class="progress-bar-text"></div>
 						    		<div class="progress-bar-inner-wrapper">
 										<div class="progress-bar-inner"></div>
 						    		</div>
@@ -2292,7 +2293,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 			<div class="published-project-thumb-wrapper">
     			<div class="published-project-thumb toedit" style="background-image: url('<%=thumb%>')">
 	    			<div class="progress-bar">
-			    		<div class="progress-bar-text">0%</div>
+			    		<div class="progress-bar-text"></div>
 			    		<div class="progress-bar-inner-wrapper">
 							<div class="progress-bar-inner"></div>
 			    		</div>
@@ -3796,7 +3797,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 
 			<input type="checkbox" class="page-checkbox" <%= isSelected ? 'checked' : '' %>>
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -3837,7 +3838,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="delete-page-sound-button editor-settings-button"><?=Lang::get('editor.MENU_ADDSOUND_DELETE') ?></div>
     	<% } %>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -3929,7 +3930,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="text-component-handle"></div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -3942,7 +3943,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<input type="text" placeholder="<%= placeholder %>" value="<%- defaultValue %>" style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;">
     		<div class="input-overlay"></div>
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -3956,7 +3957,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 		<div class="component-styles">
 			<div class="component-inner image-component-inner form-upload-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -3981,7 +3982,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 	    		<input type="text" class="quizinputtext-input" placeholder="<%= placeholder %>" value="<%- defaultValue %>" style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;">
 	    		<div class="input-overlay"></div>
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -3996,7 +3997,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<textarea style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;" maxlength="<%= maxLength %>"><%- defaultValue %></textarea>
     		<div class="input-overlay"></div>
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4015,7 +4016,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		</select>
     		<div class="input-overlay"></div>
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4034,7 +4035,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		</select>
     		<div class="input-overlay"></div>
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4051,7 +4052,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="text-component-handle"></div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4068,7 +4069,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="text-component-handle"></div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4085,7 +4086,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="text-component-handle"></div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4098,7 +4099,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<iframe class="iframeObj" onload="this.blur()" <%= link !== '' ? 'src="' + link + '"' : '' %>></iframe>
     		<div class="iframe-overlay"></div>
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4110,7 +4111,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     <script id="swf-component-template" type="text/template">
     	<div class="component-inner swf-component-inner">
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4124,7 +4125,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     <script id="drawedinfopointlink-component-template" type="text/template">
     	<div class="component-inner drawedinfopointlink-component-inner">
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4136,7 +4137,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     <script id="drawedinfopointdownload-component-template" type="text/template">
     	<div class="component-inner drawedinfopointdownload-component-inner">
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4150,7 +4151,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 			<div class="component-inner drawedinfopointpopup-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4164,7 +4165,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 	    	<div class="component-inner drawedinfopointgallery-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4179,7 +4180,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 	    <div class="component-styles">
 			<div class="component-inner image-component-inner infopointpopup-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4200,7 +4201,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 			<div class="component-inner image-component-inner infopointlink-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4221,7 +4222,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 			<div class="component-inner image-component-inner infopointsound-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4282,7 +4283,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 
             </div>
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4299,7 +4300,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 			<div class="component-inner image-component-inner infopointsoundrecord-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4320,7 +4321,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 			<div class="component-inner image-component-inner infopointgallery-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4341,7 +4342,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 			<div class="component-inner image-component-inner infopointdownload-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4369,7 +4370,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	</div>
     	<div class="text-component-handle"></div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4393,7 +4394,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 			<div class="quiz-component-handle"><input type="button" class="edit-component-button"></div>
 		</div>
 		<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4413,7 +4414,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 		</div>
 		<div class="quiz-component-handle"><input type="button" class="edit-component-button"></div>
 		<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4434,7 +4435,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="change-to-textarea change-to-interactive" inter="textarea">Tekst area</div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4450,7 +4451,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="text-component-handle"></div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4467,7 +4468,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="text-component-handle"></div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4489,7 +4490,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		--><% }); %><!--
 		--></div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4510,7 +4511,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		--><% }); %><!--
 		--></div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -4522,7 +4523,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<div class="component-styles">
 	    	<div class="component-inner image-component-inner">
 		    	<div class="progress-bar">
-		    		<div class="progress-bar-text">0%</div>
+		    		<div class="progress-bar-text"></div>
 		    		<div class="progress-bar-inner-wrapper">
 						<div class="progress-bar-inner"></div>
 		    		</div>
@@ -4542,7 +4543,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     <script id="video-component-template" type="text/template">
     	<div class="component-inner video-component-inner">
 	    	<div class="progress-bar">
-	    		<div class="progress-bar-text">0%</div>
+	    		<div class="progress-bar-text"></div>
 	    		<div class="progress-bar-inner-wrapper">
 					<div class="progress-bar-inner"></div>
 	    		</div>
@@ -4562,7 +4563,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     		<div class="text-component-handle"></div>
     	</div>
     	<div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>
@@ -6916,7 +6917,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	</div>
 
         <div class="progress-bar">
-    		<div class="progress-bar-text">0%</div>
+    		<div class="progress-bar-text"></div>
     		<div class="progress-bar-inner-wrapper">
 				<div class="progress-bar-inner"></div>
     		</div>

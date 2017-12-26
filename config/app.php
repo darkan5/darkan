@@ -68,6 +68,7 @@ return [
     'public_folder' => '/var/www/darkan/',
     'app_folder' => env('APP_PROTOCOL').env('APP_URL').'/app/',
     'applink' => env('APP_PROTOCOL').env('APP_URL').'/editor/',
+    'appurl' => env('APP_PROTOCOL').env('APP_URL').'/',
     'serverlink' => env('APP_PROTOCOL').env('APP_URL').'/',
     'storageProjectsLink' => env('APP_PROTOCOL').env('APP_URL').'/storage/app/projects/',
     'storagPublicationsLink' => env('APP_PROTOCOL').env('APP_URL').'/storage/app/publications/',

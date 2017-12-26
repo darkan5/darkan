@@ -72,7 +72,6 @@ PhpWebservice.prototype.shareProjectToUser = function(data, onResult, onFault) {
 };
 
 PhpWebservice.prototype.loginExternal = function(data, onResult, onFault) {
-
     var request = {
         request: 1,
         data: data,
@@ -83,15 +82,41 @@ PhpWebservice.prototype.loginExternal = function(data, onResult, onFault) {
 };
 
 PhpWebservice.prototype.editPhotopeaImage = function(data, onResult, onFault) {
-    this.sendAndLoad(__meta__.APP_LINK + 'photopea', data, onResult, onFault);
-};
+    this.sendAndLoad2(__meta__.APP_LINK + 'photopea', data, onResult, onFault);
 
+};
+PhpWebservice.prototype.editPhotopeaImageSave = function(data, onResult, onFault) {
+    this.sendAndLoad(__meta__.APP_LINK + 'photopea', data, onResult, onFault);
+
+};
 PhpWebservice.prototype.sendAndLoad = function (url, settings, onResult, onFault, async)
 {
     var async = async || true;
     $.ajax(
         {
             type: 'POST',
+            url:url,
+            cache: false,
+            //dataType: 'text',
+            dataType: 'text',
+            data: settings,
+            async: async,
+            success: function(data)
+            {
+                onResult(data);
+            },
+            error: function()
+            {
+                onFault();
+            }
+        });
+};
+PhpWebservice.prototype.sendAndLoad2 = function (url, settings, onResult, onFault, async)
+{
+    var async = async || true;
+    $.ajax(
+        {
+            type: 'GET',
             url:url,
             cache: false,
             //dataType: 'text',
