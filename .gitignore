@@ -3,8 +3,8 @@ vendor/
 pma/
 docs/
 blog/
-js/editors/standard/library
-editor/library
+js/editors/standard/library/
+editor/library/
 .idea/
 Homestead.json
 Homestead.yaml
