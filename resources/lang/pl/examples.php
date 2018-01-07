@@ -5,11 +5,11 @@ return [
 	'title' => 'Przykłady | Darkan',
 	'description' => 'Zobacz, co możesz osiągnąć za pomocą programu Darkan.',
 
-	'examplesHeader' => 'Zobacz, co możesz osiągnąć za pomocą programu Darkan.',
+	'examplesHeader' => 'Bezpieczeństwo transakcji w internecie ',
 	'example1' => 'Prezentacja ofertowa',
-	'example1desc' => 'Prezentacje, które ożywią każde biznesowe spotkanie.',
-	'example1thumb' => 'https://darkan.eu/storage/app/publications/c3b0699fe8f6e1c3689d97a787274ce8/thumb/thumb.png',
-	'example1link' => 'https://darkan.eu/content/c3b0699fe8f6e1c3689d97a787274ce8',
+	'example1desc' => 'Prezentacja poświęcona bezpieczeństwu i dobrym praktykom związanym z transakcjami elektronicznymi.',
+	'example1thumb' => 'https://darkan.eu/content/06aa353d758feea7714418077b0c20e6/thumb/thumb.png',
+	'example1link' => 'https://darkan.eu/content/06aa353d758feea7714418077b0c20e6',
 
 	'example2' => 'Afryka',
 	'example2desc' => 'Interaktywne szkolenia, które bawią i uczą.',

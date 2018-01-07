@@ -22,27 +22,110 @@
 
 	<hr/>
 
-	@foreach ($publications as $key => $publication)
 
-		<section class="col-md-4 publication-block">
-			<div class="thumbnail visible">
-				<div class="image-container">
-					<a target="_blank" href="{{ url('content', $publication->path) }}">
-						<img src="{{ $publication->thumb }}" class="portal-content-image visible">
-						<div class="play-sign showonhover animated fadeIn"></div>
-					</a>
-				</div>
-				<div class="caption">
-					<h3><?=Lang::get('examples.example1')?></h3>
-					<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example1desc')?></p>
-					<p class="options-container text-right">
-						<a target="_blank" href="{{ url('content', $publication->path) }}" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
-					</p>
-				</div>
+	<section class="col-md-4 publication-block">
+		<div class="thumbnail visible">
+			<div class="image-container">
+				<a target="_blank" href="<?=Lang::get('examples.example1link')?>">
+					<img src="<?=Lang::get('examples.example1thumb')?>" class="portal-content-image visible">
+					<div class="play-sign showonhover animated fadeIn"></div>
+				</a>
 			</div>
-		</section>
+			<div class="caption">
+				<h3><?=Lang::get('examples.example1')?></h3>
+				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example1desc')?></p>
+				<p class="options-container text-right">
+					<a target="_blank" href="<?=Lang::get('examples.example1link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="col-md-4 publication-block">
+		<div class="thumbnail visible">
+			<div class="image-container">
+				<a target="_blank" href="<?=Lang::get('examples.example2link')?>">
+					<img src="<?=Lang::get('examples.example2thumb')?>" class="portal-content-image visible">
+					<div class="play-sign showonhover animated fadeIn"></div>
+				</a>
+			</div>
+			<div class="caption">
+				<h3><?=Lang::get('examples.example2')?></h3>
+				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example2desc')?></p>
+				<p class="options-container text-right">
+					<a target="_blank" href="<?=Lang::get('examples.example1link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="col-md-4 publication-block">
+		<div class="thumbnail visible">
+			<div class="image-container">
+				<a target="_blank" href="<?=Lang::get('examples.example3link')?>">
+					<img src="<?=Lang::get('examples.example3thumb')?>" class="portal-content-image visible">
+					<div class="play-sign showonhover animated fadeIn"></div>
+				</a>
+			</div>
+			<div class="caption">
+				<h3><?=Lang::get('examples.example3')?></h3>
+				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example3desc')?></p>
+				<p class="options-container text-right">
+					<a target="_blank" href="<?=Lang::get('examples.example1link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="col-md-4 publication-block">
+		<div class="thumbnail visible">
+			<div class="image-container">
+				<a target="_blank" href="<?=Lang::get('examples.example4link')?>">
+					<img src="<?=Lang::get('examples.example1thumb')?>" class="portal-content-image visible">
+					<div class="play-sign showonhover animated fadeIn"></div>
+				</a>
+			</div>
+			<div class="caption">
+				<h3><?=Lang::get('examples.example4')?></h3>
+				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example4desc')?></p>
+				<p class="options-container text-right">
+					<a target="_blank" href="<?=Lang::get('examples.example4link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="col-md-4 publication-block">
+		<div class="thumbnail visible">
+			<div class="image-container">
+				<a target="_blank" href="<?=Lang::get('examples.example5link')?>">
+					<img src="<?=Lang::get('examples.example5thumb')?>" class="portal-content-image visible">
+					<div class="play-sign showonhover animated fadeIn"></div>
+				</a>
+			</div>
+			<div class="caption">
+				<h3><?=Lang::get('examples.example5')?></h3>
+				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example5desc')?></p>
+				<p class="options-container text-right">
+					<a target="_blank" href="<?=Lang::get('examples.example5link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="col-md-4 publication-block">
+		<div class="thumbnail visible">
+			<div class="image-container">
+				<a target="_blank" href="<?=Lang::get('examples.example6link')?>">
+					<img src="<?=Lang::get('examples.example6thumb')?>" class="portal-content-image visible">
+					<div class="play-sign showonhover animated fadeIn"></div>
+				</a>
+			</div>
+			<div class="caption">
+				<h3><?=Lang::get('examples.example6')?></h3>
+				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example6desc')?></p>
+				<p class="options-container text-right">
+					<a target="_blank" href="<?=Lang::get('examples.example6link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+				</p>
+			</div>
+		</div>
+	</section>
 
-	@endforeach
 
 	<div class="clearfix"></div>
 
