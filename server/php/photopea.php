@@ -5,7 +5,6 @@
  * Date: 25.12.2017
  * Time: 13:38
  */
-define('UPLOAD_DIR', './images/');
 $img = $_POST['p'];
 $img = str_replace('data:image/png;base64,', '', $img);
 $img = str_replace(' ', '+', $img);
