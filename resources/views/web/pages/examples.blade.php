@@ -52,7 +52,7 @@
 				<h3><?=Lang::get('examples.example2')?></h3>
 				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example2desc')?></p>
 				<p class="options-container text-right">
-					<a target="_blank" href="<?=Lang::get('examples.example1link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+					<a target="_blank" href="<?=Lang::get('examples.example2link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
 				</p>
 			</div>
 		</div>
@@ -69,7 +69,7 @@
 				<h3><?=Lang::get('examples.example3')?></h3>
 				<p class="thumbnail-caption-shorten"><?=Lang::get('examples.example3desc')?></p>
 				<p class="options-container text-right">
-					<a target="_blank" href="<?=Lang::get('examples.example1link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
+					<a target="_blank" href="<?=Lang::get('examples.example3link')?>" class="btn btn-success btn"><?=Lang::get('examples.OPEN')?></a>
 				</p>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 		<div class="thumbnail visible">
 			<div class="image-container">
 				<a target="_blank" href="<?=Lang::get('examples.example4link')?>">
-					<img src="<?=Lang::get('examples.example1thumb')?>" class="portal-content-image visible">
+					<img src="<?=Lang::get('examples.example4thumb')?>" class="portal-content-image visible">
 					<div class="play-sign showonhover animated fadeIn"></div>
 				</a>
 			</div>

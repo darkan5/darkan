@@ -24,6 +24,7 @@
   'title_vision' => 'Darkan vision',
   'description_vision' => 'We want Darkan to become the biggest and most popular cloud-based rapid e-learning creation tool. We believe that our commitment and our innovative solutions will ensure that using the application is a pleasure.',
   'FOOTER_DOCUMENTATION' => 'Documentation',
+     'FOOTER_DOCUMENTATION_LINK' => 'https://darkan.eu/docs/en/',
   'title_documentation' => 'Documentation | Darkan',
   'description_documentation' => 'Documentation',
 );

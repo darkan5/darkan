@@ -358,10 +358,10 @@
                         <a href="{{ url('/aboutproduct') }}"><?= Lang::get('frontpage.product') ?></a>
                     </p>
                     <p>
-                        <a href="{{ url('/productvision') }}"><?= Lang::get('frontpage.productVision') ?></a>
+                        <a target="_blank" href="{{ url('/productvision') }}"><?= Lang::get('frontpage.productVision') ?></a>
                     </p>
                     <p>
-                        <a href="{{ url('/documentation') }}"><?= Lang::get('frontpage.documentation') ?></a>
+                        <a href="<?= Lang::get('footerpages.FOOTER_DOCUMENTATION_LINK') ?>"><?= Lang::get('frontpage.documentation') ?></a>
                     </p>
             </div>
             <div class="col-md-3 col-sm-4">
