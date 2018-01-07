@@ -123,7 +123,7 @@ var PhotopeaWindowView = WindowView.extend({
                 token
             ],
             server: {
-                url: __meta__.APP_LINK + "server/php/photopea.php?t=" + token,
+                url: __meta__.APP_LINK + "server/php/photopea.php",
                 formats: [extt]
             }
         }
