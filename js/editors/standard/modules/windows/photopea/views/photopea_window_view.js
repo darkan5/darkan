@@ -123,7 +123,7 @@ var PhotopeaWindowView = WindowView.extend({
                 token
             ],
             server: {
-                url: "https://darkan.eu/server/php/photopea.php",
+                url: "https://darkan.eu/server/php/photopea.php" ,
                 formats: [extt]
             }
         }
