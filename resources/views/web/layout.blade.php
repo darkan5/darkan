@@ -143,7 +143,7 @@
 							</a>
 						</li>
 
-						<li><a href="{{ url('/') }}"><i class="fa fa-home fa-2x home-icon"></i></a></li>
+						<li><a href="{{ url('/home') }}"><i class="fa fa-home fa-2x home-icon"></i></a></li>
 						<li><a href="{{ url('/examples') }}"><?= Lang::get('frontpage.examples') ?></a></li>
 						<li><a href="{{ url('/pricing') }}"><?= Lang::get('frontpage.pricing') ?></a></li>
 
