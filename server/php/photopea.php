@@ -6,6 +6,8 @@
  * Time: 13:38
  */
 $img = $_POST['p'];
+echo(POST['p']);
+die();
 $img = str_replace('data:image/png;base64,', '', $img);
 $img = str_replace(' ', '+', $img);
 $data = base64_decode($img);
