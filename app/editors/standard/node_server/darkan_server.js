@@ -50,10 +50,9 @@ var port = ConfigController.get('PORT', false);
 
 if (process.env.APP_STATUS == "server") {
     options = {
-         key: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/privkey.pem'),
-         cert: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/cert.pem'),
-         ca: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/chain.pem')
-
+        key: fs.readFileSync(process.env.APP_SSL_KEY),
+        cert: fs.readFileSync(process.env.APP_SSL_CERT),
+        ca: fs.readFileSync(process.env.APP_SSL_CA)
     }
 }
 if (process.env.APP_STATUS == "local"){
