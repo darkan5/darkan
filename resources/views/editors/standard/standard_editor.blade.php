@@ -7543,7 +7543,7 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     <script src="{{asset('/js/editors/standard/libs/preload/preload.js') }}?r=<?php echo config('app.version') ?>"></script>
 
     <!-- DROPBOX -->
-    <script type="text/javascript" src="http://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="vlm7l7me37z4nfx"></script>
+    {{--<script type="text/javascript" src="http://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="vlm7l7me37z4nfx"></script>--}}
 
 	<!-- FACEBOOK PHOTO CHOOSER -->
 
