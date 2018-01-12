@@ -157,7 +157,7 @@
     </script>
 
     <nav class="navbar topmenu navbar-default navbar-fixed-top scrolled">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -173,7 +173,12 @@
                     <img class="logo-top" src="{{ asset('/css/img/new_web/logo_white.png') }}">
                 </a>
             </div>
-
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">

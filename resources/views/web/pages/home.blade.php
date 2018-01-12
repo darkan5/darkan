@@ -27,21 +27,31 @@
 
 		@endif
 	</div>
-	<div class="text-center frontpage-welcome">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-10 text-center frontpage-welcome">
 		<h1 class="welcome-main"><?= Lang::get('frontpage.mainTitle') ?></h1>
 		<h3 class="welcome-extra"><?= Lang::get('frontpage.mainTitleExtra') ?></h3>
+		<div class="col-lg2"></div>
+
 		<div class="row test-drive-row">
+			<div class="col-lg-4"></div>
 			<!-- Large modal -->
+			<div class="col-lg-2" style="height: 60px">
 			<a href="{{ url('/testdrive') }}" class="test-drive">
 				<i class="fa fa-car"></i> <?= Lang::get('frontpage.testDrive') ?>
 			</a>
+			</div>
+				<div class="col-lg-2" style="height: 60px">
 			<a href="#" class="watchvideobtn btn-danger" data-toggle="modal" data-target=".darkan-movie-modal">
 				<i class="fa fa-play"></i> <?= Lang::get('frontpage.watchVideo') ?>
 			</a>
+			</div>
+			<div class="col-lg-4"></div>
+			<div class="row test-drive-text col-lg-12">
+				<i class="fa fa-arrow-up"></i> <?= Lang::get('frontpage.testDriveExtras') ?>
+			</div>
 		</div>
-		<div class="row test-drive-text">
-			<i class="fa fa-arrow-up"></i> <?= Lang::get('frontpage.testDriveExtras') ?>
-		</div>
+
 	</div>
 </div>
 

@@ -19,7 +19,7 @@
 
 
     </div>
-    <div class="tab-content orange" style="height:900px">
+    <div class="tab-content sizer" >
         <br/>
 
         <div id="tab1" class="tab-pane fade in active">
@@ -57,6 +57,7 @@
             </div>
             <div class="col-md-12  text-center"><br/><br/><br/><br/>
                 <iframe style="border: 10px outset #ddd;" width="600" height="300" src="<?=Lang::get('home.youtubeLink')?>" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                <br/><br/><br/><br/>
             </div>
         </div>
         <div id="tab2" class="tab-pane fade">
@@ -66,6 +67,6 @@
 
 
 
-
+<div class="four"></div>
 </div>
 @endsection

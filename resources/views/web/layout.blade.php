@@ -129,6 +129,7 @@
 					</a>
 				</div>
 				<div>
+
 					<ul class="nav navbar-nav navbar-right">
 
 						<li class="yt-link">
@@ -234,6 +235,7 @@
 
 
 					</ul>
+					</nav>
 				</div>
 			</div>
 		</nav>
