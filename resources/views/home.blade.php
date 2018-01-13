@@ -61,12 +61,29 @@
             </div>
         </div>
         <div id="tab2" class="tab-pane fade">
-
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="{{ url('css/img/home/wikipedia.png')}}" alt="ALT NAME" class="img-responsive" />
+                    <div class="caption">
+                        <p align="center"><a href="<?=Lang::get('home.wikipedialink')?>" class="btn btn-primary btn-block"><?=Lang::get('home.wikipedia')?></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="{{ url('css/img/home/youtube.png')}}" alt="ALT NAME" class="img-responsive" />
+                    <div class="caption">
+                        <p align="center"><a href="https://www.youtube.com/channel/UCCpw1swP1Lyq3LLLNi_4F0w" target="_blank" class="btn btn-primary btn-block"><?=Lang::get('home.youtube')?></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 
 
-<div class="four"></div>
+
 </div>
 @endsection

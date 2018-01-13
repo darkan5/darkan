@@ -6,8 +6,11 @@ return [
     'createProject' => 'Create project',
     'lmsView' => 'LMS View',
     'setChannelSetting' => 'Settings',
-    'administrationLMS' => 'Administraction LMS',
+    'administrationLMS' => 'Administration LMS',
     'contact' => 'Contact' ,
-    'youtubeLink' => 'https://www.youtube.com/embed/OEnpLDTfhDU'
+    'youtubeLink' => 'https://www.youtube.com/embed/OEnpLDTfhDU',
+    'youtube' => 'Youtube',
+    'wikipedia' => 'Wikipedia',
+    'wikipedialink' => 'https://darkan.eu/docs/en/'
 
 ];
