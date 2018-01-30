@@ -15,7 +15,7 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
-    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <meta property="og:url" content="{{ Request::url() }}" />
     <meta property="og:title" content="@yield('title')" />
