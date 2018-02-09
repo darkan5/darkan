@@ -691,6 +691,10 @@ DataAccess.editPhotopeaImage = function(data, onResult, onFault)
 {
     this.phpWebService.editPhotopeaImage(data, onResult, onFault);
 }
+DataAccess.editPhotopeaImageSave = function(data, onResult, onFault)
+{
+    this.phpWebService.editPhotopeaImageSave(data, onResult, onFault);
+}
 
 
 

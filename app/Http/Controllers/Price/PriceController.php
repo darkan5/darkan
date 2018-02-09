@@ -8,6 +8,7 @@ use Session;
 use Input;
 use Redirect;
 use Location;
+use Mail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Modules\Models\PlansToPriceList;

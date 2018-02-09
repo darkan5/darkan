@@ -12,10 +12,6 @@ var im = require('imagemagick');
 var exec = require('child_process').exec;
 
 //var pngquant = require('node-pngquant-native');
-//Użuć innej biblioteki niż pngquant
-var pngquant = {};
-
-var Jimp = require("jimp");
 
 
 function ImageMagick(socket) {
@@ -41,86 +37,48 @@ ImageMagick.prototype.cropImage = function( data, onResult, onFault ) {
     var cropCoords = data.cropCoords;
     var cropCoordsString = cropCoords.w + 'x' + cropCoords.h + '+' + cropCoords.x + '+' + cropCoords.y;
 
+    im.convert([filePath, '-crop', cropCoordsString, filePath],
+        function(err, stdout){
+            if (!err){
 
-    Jimp.read(filePath, function (err, image) {
+                try{
 
-        if(err){
-            onFault({ error: 'Crop image fault crop', err:err });
-        }
+                    var extension = path.extname(filePath);
+                    var name = path.basename(filePath, extension);
+                    var dir = path.dirname(filePath);
 
-        console.log('Start crop image', cropCoords);
+                    var newFileName = new Date().getTime().toString() + extension;
+                    var newFilePath =  path.join(dir, newFileName);
 
-        image.crop( cropCoords.x, cropCoords.y, cropCoords.w, cropCoords.h );
+                    console.log('rename file');
+                    console.log('filePath', filePath);
+                    console.log('newFilePath', newFilePath);
 
-        image.write(filePath, function(){
+                    fse.renameSync(filePath, newFilePath);
 
-            // On save
+                    onResult({ cropCoordsString: cropCoordsString, newFileName:newFileName });
 
-            var extension = path.extname(filePath);
-            var name = path.basename(filePath, extension);
-            var dir = path.dirname(filePath);
+                }catch(ex){
+                    onFault({ error: 'Crop image fault rename', ex:ex });
+                }
 
-            var newFileName = new Date().getTime().toString() + extension;
-            var newFilePath =  path.join(dir, newFileName);
-
-            console.log('rename file');
-            console.log('filePath', filePath);
-            console.log('newFilePath', newFilePath);
-
-            fse.renameSync(filePath, newFilePath);
-
-            onResult({ cropCoordsString: cropCoordsString, newFileName:newFileName }); 
-
-        }); 
-
-        
-    });
-    
-
-    
-
-    // im.convert([filePath, '-crop', cropCoordsString, filePath],
-    //     function(err, stdout){
-    //         if (!err){
-
-    //             try{
-
-    //                 var extension = path.extname(filePath);
-    //                 var name = path.basename(filePath, extension);
-    //                 var dir = path.dirname(filePath);
-
-    //                 var newFileName = new Date().getTime().toString() + extension;
-    //                 var newFilePath =  path.join(dir, newFileName);
-
-    //                 console.log('rename file');
-    //                 console.log('filePath', filePath);
-    //                 console.log('newFilePath', newFilePath);
-
-    //                 fse.renameSync(filePath, newFilePath);
-
-    //                 onResult({ cropCoordsString: cropCoordsString, newFileName:newFileName });
-
-    //             }catch(ex){
-    //                 onFault({ error: 'Crop image fault rename', ex:ex });
-    //             }
-
-    //         }else{
-    //             onFault({ error: 'Crop image fault crop', err:err });
-    //         }
-    //     });
+            }else{
+                onFault({ error: 'Crop image fault crop', err:err });
+            }
+        });
 
 };
 
 ImageMagick.prototype.copyFileToHistory = function(filePath){
-    
+
     try{
-    
+
         var sourcePath = filePath;
         var destPath = filePath.replace('pre', 'history');
 
         if(!fs.existsSync(destPath)){
             fse.copySync(sourcePath, destPath);
-        }  
+        }
 
     }catch(ex){
 
@@ -136,8 +94,8 @@ ImageMagick.prototype.resizeImage = function( data, onResult, onFault ) {
     var fileName = data.fileName;
     var extFileName = fileName.split('.').pop().toLowerCase();
 
-    var width = parseInt(data.width);
-    var height = parseInt(data.height);
+    var width = data.width;
+    var height = data.height;
 
     var fileDir = path.join(this.DIRNAME, userID, projectID, 'pre', 'exported_view', pageID, 'images', actionkey);
     var filePath = path.join(fileDir, fileName);
@@ -147,70 +105,42 @@ ImageMagick.prototype.resizeImage = function( data, onResult, onFault ) {
 
     // onResult({});
 
-    // if(extFileName == 'png'){
-
-    //     im.convert([filePath, '-resize', width + 'x' + height + '\!', fileMinPath],
-
-    //         function(err, stdout){
-    //             if (!err){
-  
-    //                 fs.readFile(fileMinPath, function (err, buffer) {
-    //                     if (err) {
-    //                         return;
-    //                     }
-    //                     var resBuffer = pngquant.compress(buffer, {
-    //                         "speed": 1 //1 ~ 11 
-    //                     });
-
-    //                     fs.writeFile(fileMinPath, resBuffer, {
-    //                       flags: 'wb'
-    //                     }, function(err){});
-    //                 });
-
-    //                 onResult({});
-    //             }
-    //     });
-
-    // }else{
-
-    //     im.convert([filePath, '-resize', width + 'x' + height + '\!', fileMinPath],
-
-    //         function(err, stdout){
-    //             if (!err){
-    //                 onResult({});
-    //             }
-    //     });
-    // }
-
-    var minFile = fileMinPath;
-
     if(extFileName == 'png'){
 
-        Jimp.read(minFile).then(function (lenna) {
-            lenna.resize(width, height)
-                 .quality(60)                 // set JPEG quality 
-                 .write(minFile); // save 
+        im.convert([filePath, '-resize', width + 'x' + height + '\!', fileMinPath],
 
-                 onResult({});
+            function(err, stdout){
+                if (!err){
 
-        }).catch(function (err) {
-            console.error(err);
-        });
+                    fs.readFile(fileMinPath, function (err, buffer) {
+                        if (err) {
+                            return;
+                        }
+                        // var resBuffer = pngquant.compress(buffer, {
+                        //     "speed": 1 //1 ~ 11
+                        // });
+
+                        fs.writeFile(fileMinPath, buffer, {
+                            flags: 'wb'
+                        }, function(err){});
+                    });
+
+                    onResult({});
+                }
+            });
 
     }else{
 
-        Jimp.read(minFile).then(function (lenna) {
-            lenna.resize(width, height)
-                 .write(minFile); // save 
+        im.convert([filePath, '-resize', width + 'x' + height + '\!', fileMinPath],
 
-                 onResult({});
-
-        }).catch(function (err) {
-            console.error(err);
-        });
+            function(err, stdout){
+                if (!err){
+                    onResult({});
+                }
+            });
     }
 
-    
+
 };
 
 ImageMagick.prototype.getImageSize = function( data, onResult, onFault ) {
@@ -230,18 +160,18 @@ ImageMagick.prototype.getImageSize = function( data, onResult, onFault ) {
 
     try {
         im.identify(['-format', '%[fx:w]x%[fx:h]', filePath],
-        function(err, stdout){
-            if (!err){
+            function(err, stdout){
+                if (!err){
 
-                console.log('size: ' + stdout);
-                onResult({ size: stdout });
-            }
-        });
+                    console.log('size: ' + stdout);
+                    onResult({ size: stdout });
+                }
+            });
     } catch(err) {
         console.log('err');
         console.log(err);
     }
-};  
+};
 
 ImageMagick.prototype.copyLibraryFileToImage = function( data, onResult, onFault ){
     var _that = this;
@@ -282,75 +212,52 @@ ImageMagick.prototype.copyLibraryFileToImage = function( data, onResult, onFault
             if(fs.existsSync(oldFileNamePath)){
                 fs.unlinkSync(oldFileNamePath);
             }
-            
+
         }
 
-        var file = imageFilePathl
-        var extFileName = file.split('.').pop().toLowerCase();
-        var pathN = path.dirname(file);
-        var minFile = path.join(pathN, 'min.' + extFileName);
+        fs.copy(libraryFilePath, imageFilePath, { replace: true }, function(err) {
+            if (err) {
 
-        if(extFileName == 'png'){
+                console.log('Error copy image ', err);
+                onFault({error:'error', err:err });
 
-            Jimp.read(file).then(function (lenna) {
-                lenna.resize(width, height)
-                    .quality(60)                 // set JPEG quality 
-                     .write(file); // save 
-            }).catch(function (err) {
-                console.error(err);
-            });
+            } else {
 
-            fse.copySync(file, minFile);
+                //onResult({ fileName: fileName });
 
-        }else{
-            fs.copy(file, minFile);
-        }
+                im.identify(['-format', '%[fx:w]x%[fx:h]', imageFilePath],
+                    function(err, stdout){
+                        if (!err){
 
-        onResult({ fileName: fileName, size: 0 });
+                            var file = imageFilePath;
 
-    //     fs.copy(libraryFilePath, imageFilePath, { replace: true }, function(err) {
-    //         if (err) {
-
-    //             console.log('Error copy image ', err);
-    //             onFault({error:'error', err:err });
-
-    //         } else {
-
-    //             //onResult({ fileName: fileName });
-
-    //             im.identify(['-format', '%[fx:w]x%[fx:h]', imageFilePath],
-    //                 function(err, stdout){
-    //                     if (!err){
-
-    //                         var file = imageFilePath;
-
-    //                         var pathN = path.dirname(file);
-    //                         var minFile = path.join(pathN, 'min.' + extFileName);
+                            var pathN = path.dirname(file);
+                            var minFile = path.join(pathN, 'min.' + extFileName);
 
 
-    //                         if(extFileName == 'png'){
-                                
-    //                             var buffer = fs.readFileSync(file);  
-    //                             var resBuffer = pngquant.compress(buffer, {
-    //                                 "speed": 1 //1 ~ 11 
-    //                             });
-    //                             fs.writeFileSync(file, resBuffer);
-    //                         }
+                            if(extFileName == 'png'){
 
-    //                         fs.copy(file, minFile);
+                                var buffer = fs.readFileSync(file);
+                                // var resBuffer = pngquant.compress(buffer, {
+                                //     "speed": 1 //1 ~ 11
+                                // });
+                                fs.writeFileSync(file, buffer);
+                            }
 
-    //                         onResult({ fileName: fileName, size: stdout });
+                            fs.copy(file, minFile);
 
-    //                         console.log('----------------end copy library to image');
+                            onResult({ fileName: fileName, size: stdout });
 
-    //                     } else {
-    //                         console.log('ERROR copyLibraryFileToImage');
-    //                         console.log(err);
-    //                     }
-    //                 });
-                
-    //         }
-    //     });
+                            console.log('----------------end copy library to image');
+
+                        } else {
+                            console.log('ERROR copyLibraryFileToImage');
+                            console.log(err);
+                        }
+                    });
+
+            }
+        });
 
     } catch(e) {
         onFault({error:'error', errorData:e});

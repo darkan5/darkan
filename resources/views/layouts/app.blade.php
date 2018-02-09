@@ -15,7 +15,7 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
-    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <meta property="og:url" content="{{ Request::url() }}" />
     <meta property="og:title" content="@yield('title')" />
@@ -157,7 +157,7 @@
     </script>
 
     <nav class="navbar topmenu navbar-default navbar-fixed-top scrolled">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -173,7 +173,12 @@
                     <img class="logo-top" src="{{ asset('/css/img/new_web/logo_white.png') }}">
                 </a>
             </div>
-
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
@@ -219,7 +224,7 @@
                         </a>
                     </li>
 
-                    <li><a href="{{ url('/') }}"><i class="fa fa-home fa-2x home-icon"></i></a></li>
+                    <li><a href="{{ url('/home') }}"><i class="fa fa-home fa-2x home-icon"></i></a></li>
                     <li><a href="{{ url('/examples') }}"><?= Lang::get('frontpage.examples') ?></a></li>
                     <li><a href="{{ url('/pricelist') }}"><?= Lang::get('frontpage.pricing') ?></a></li>
 
@@ -358,10 +363,10 @@
                         <a href="{{ url('/aboutproduct') }}"><?= Lang::get('frontpage.product') ?></a>
                     </p>
                     <p>
-                        <a href="{{ url('/productvision') }}"><?= Lang::get('frontpage.productVision') ?></a>
+                        <a  href="{{ url('/productvision') }}"><?= Lang::get('frontpage.productVision') ?></a>
                     </p>
                     <p>
-                        <a href="{{ url('/documentation') }}"><?= Lang::get('frontpage.documentation') ?></a>
+                        <a target="_blank" href="<?= Lang::get('footerpages.FOOTER_DOCUMENTATION_LINK') ?>"><?= Lang::get('frontpage.documentation') ?></a>
                     </p>
             </div>
             <div class="col-md-3 col-sm-4">

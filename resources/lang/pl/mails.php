@@ -41,7 +41,7 @@ return [
 
 	'INVOICE_SUBJECT' => 'Zakupy w Darkan zakończone z powodzeniem!',
 	'INVOICE_HEADER' => 'Płatność zakończona powodzeniem!',
-	'INVOICE_MESSAGE' => 'Dziękujemy za zakup naszej aplikacji! W załączniku znajduje się faktura.',
+	'INVOICE_MESSAGE' => 'Dziękujemy za zakup naszej aplikacji!',
 
 	'REGISTER_MAIL_SUBJECT_FROM_DEALER' => 'Utworzenie konta w aplikacji Darkan',
     'REGISTER_MAIL_CONTENT_FROM_DEALER' => '<p>Dzień dobry,</p><p>Przekazuję dane do logowania w aplikacji Darkan. W razie pytań proszę o kontakt.</p><p>Pozdrawiam serdecznie.</p>',

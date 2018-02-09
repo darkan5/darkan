@@ -32,6 +32,7 @@ return [
 'description_vision' => 'Pragniemy aby platforma Darkan stała się najbardziej popularnym i największym narzędziem do tworzenia e-learningu dostępnym w chmurze. Wierzymy, że nasze zaangażowanie i innowacyjność rozwiązań sprawią, iż korzystanie z programu będzie dla Ciebie przyjemnością.',
 
 'FOOTER_DOCUMENTATION' => 'Dokumentacja',
+    'FOOTER_DOCUMENTATION_LINK' => 'https://darkan.eu/docs/pl/',
   'title_documentation' => 'Dokumentacja | Darkan',
   'description_documentation' => 'Dokumentacja',
 ];

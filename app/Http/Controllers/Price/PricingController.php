@@ -103,7 +103,7 @@ class PricingController extends Controller
             return Redirect::back()->withErrors(['Niepoprawny okres docelowy planu']);
         }
 
-        $planId = config("plans.standard_$period");
+        $planId = config("plans.profesional_$period");
         $plan = Plans::where('id', '=', config("plans.profesional_$period"))
             ->where('active', '=', 1)
             ->first();

@@ -94,8 +94,10 @@ var PhotopeaWindowView = WindowView.extend({
         var photopeaJson = this.getPhotopeaJson(data);
 
         var photopeaIFrame = this.getPhotopeaIfarame();
-        var src = 'http://www.photopea.com?p=' + JSON.stringify(photopeaJson);
+        var src = 'https://www.photopea.com?p=' + JSON.stringify(photopeaJson);
+
         photopeaIFrame.attr('src', src);
+        console.log(src);
     },
 
     afterRender: function() {
@@ -114,14 +116,14 @@ var PhotopeaWindowView = WindowView.extend({
         var pageId = stageView.model.get('options').get('pageid'); 
         var extt = imageFileName.split('.').pop().toLowerCase();
 
-        var token = __meta__.APP_LINK + "projects/" + __meta__.ownerID + '/' + __meta__.projectID + '/pre/exported_view/' + pageId + '/images/' + actionkey + '/' + imageFileName;
+        var token = __meta__.APP_URL + "storage/app/projects/" + __meta__.ownerID + '/' + __meta__.projectID + '/pre/exported_view/' + pageId + '/images/' + actionkey + '/' + imageFileName;
 
         var photopeaJson = {
             files: [
                 token
             ],
             server: {
-                url: __meta__.APP_LINK + "server/php/photopea.php?t=" + data.token,
+                url: "https://darkan.eu/server/php/photopea.php" ,
                 formats: [extt]
             }
         }
@@ -175,6 +177,7 @@ var PhotopeaWindowView = WindowView.extend({
     },
 
     saveImage: function() {
+        console.log("save");
         this.saveToServer();
     },
 

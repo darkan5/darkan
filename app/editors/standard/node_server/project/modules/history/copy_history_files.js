@@ -2,6 +2,7 @@ var Model = require('../../../libs/Model.js');
 var Utils = require('../../../utils/Utils.js');
 var path = require('path');
 var fs = require('fs.extra');
+var fsi = require('fs');
 var fse = require('fs-extra');
 var _ = require('underscore');
 var nodeDir = require('node-dir');
@@ -23,8 +24,40 @@ CopyHistoryFiles.prototype = new Model();
 
 
 CopyHistoryFiles.prototype.copySitemaps = function(action, actions, params, meta){
+    dirPath = "../storage/app/projects/"+meta.userID+"/"+meta.projectID+"/history/" ;
+    function getDirectories(path) {
+        return fsi.readdirSync(path).filter(function (file) {
+            return fsi.statSync(path+'/'+file).isDirectory();
+        });
+    }
+    var dirHistoryElements = getDirectories(dirPath);
+    var dirHistoryElementsCount = dirHistoryElements.length ;
 
-	// var _that = this;
+
+
+    rmDir = function(dirPath, removeSelf) {
+        if (removeSelf === undefined)
+            removeSelf = true;
+        try { var files = fsi.readdirSync(dirPath); }
+        catch(e) { return; }
+        if (files.length > 0)
+            for (var i = 0; i < files.length; i++) {
+                var filePath = dirPath + '/' + files[i];
+                if (fsi.statSync(filePath).isFile())
+                    fsi.unlinkSync(filePath);
+                else
+                    rmDir(filePath);
+            }
+        if (removeSelf)
+            fsi.rmdirSync(dirPath);
+    };
+
+    //
+    if (dirHistoryElementsCount > 5) {
+        rmDir(dirPath+dirHistoryElements[0], true);
+    }
+
+    // var _that = this;
 
 	// this._copySitemaps(
 	// 	actions.length,

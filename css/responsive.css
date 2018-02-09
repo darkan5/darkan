@@ -169,75 +169,75 @@
     }
 }
 
-@media (max-width: 660px) {
+/*@media (max-width: 660px) {*/
 
-    .navbar-nav>li>a {
-        padding: 10px 6px;
-        font-size: 12px;
-    }
-}  
+    /*.navbar-nav>li>a {*/
+        /*padding: 10px 6px;*/
+        /*font-size: 12px;*/
+    /*}*/
+/*}  */
 
-@media (max-width: 560px) {
+/*@media (max-width: 560px) {*/
 
-    .nav>li>a {
-        padding: 10px 6px;
-        font-size: 12px;
-    }
-}   
+    /*.nav>li>a {*/
+        /*padding: 10px 6px;*/
+        /*font-size: 12px;*/
+    /*}*/
+/*}   */
 
-@media (max-width: 420px) {
+/*@media (max-width: 420px) {*/
 
-    .nav>li>a {
-        padding: 10px 5px;
-        font-size: 9px;
-    }
-    .lang-lg, .chosen-lang {
-        width: 20px !important;
-        min-width: 20px !important;
-        height: 20px !important;
-    }
-    .lang-lg {
-        height: 20px;
-        min-height: 20px;
-        max-height: 20px;
-    }
-    .hideonmobile {
-        display: none !important;
-    }
-    .movie-container,
-    .movie
-    {
-        height: 500px !important;
-    }
-    .welcome-main {
-        font-size: 20px;
-    }
-    .welcome-extra {
-        font-size: 13px;
-    }
-    .test-drive {
-        padding: 10px 35px;
-        font-size: 12px;
-    }
-    .topmenu {
-        padding: 15px 2px;
-    }
-    .topmenu.scrolled {
-        padding: 10px 0px;
-    }
-    .topmenu .usermail {
-        max-width: 60px;
-    }
-    .navbar-nav .open .dropdown-menu .dropdown-header, 
-    .navbar-nav .open .dropdown-menu>li>a 
-    {
-        padding: 3px 9px 3px 9px;
-        font-size: 10px;
-    }
-    ul.profile-menu.dropdown-menu {
-        left: -30px;
-    }
-    .profile-menu li span {
-        font-size: 10px;
-    }
-}   
+    /*.nav>li>a {*/
+        /*padding: 10px 5px;*/
+        /*font-size: 9px;*/
+    /*}*/
+    /*.lang-lg, .chosen-lang {*/
+        /*width: 20px !important;*/
+        /*min-width: 20px !important;*/
+        /*height: 20px !important;*/
+    /*}*/
+    /*.lang-lg {*/
+        /*height: 20px;*/
+        /*min-height: 20px;*/
+        /*max-height: 20px;*/
+    /*}*/
+    /*.hideonmobile {*/
+        /*display: none !important;*/
+    /*}*/
+    /*.movie-container,*/
+    /*.movie*/
+    /*{*/
+        /*height: 500px !important;*/
+    /*}*/
+    /*.welcome-main {*/
+        /*font-size: 20px;*/
+    /*}*/
+    /*.welcome-extra {*/
+        /*font-size: 13px;*/
+    /*}*/
+    /*.test-drive {*/
+        /*padding: 10px 35px;*/
+        /*font-size: 12px;*/
+    /*}*/
+    /*.topmenu {*/
+        /*padding: 15px 2px;*/
+    /*}*/
+    /*.topmenu.scrolled {*/
+        /*padding: 10px 0px;*/
+    /*}*/
+    /*.topmenu .usermail {*/
+        /*max-width: 60px;*/
+    /*}*/
+    /*.navbar-nav .open .dropdown-menu .dropdown-header, */
+    /*.navbar-nav .open .dropdown-menu>li>a */
+    /*{*/
+        /*padding: 3px 9px 3px 9px;*/
+        /*font-size: 10px;*/
+    /*}*/
+    /*ul.profile-menu.dropdown-menu {*/
+        /*left: -30px;*/
+    /*}*/
+    /*.profile-menu li span {*/
+        /*font-size: 10px;*/
+    /*}*/
+/*}*/

@@ -70,7 +70,7 @@ class LoginController extends Controller
 
         $this->addToUserLogin(Auth::user()->id);
  
-        return redirect()->intended('/projects');
+        return redirect()->intended('/home');
     }
 
     public function addToUserLogin($userOwnerId)

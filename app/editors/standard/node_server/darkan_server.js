@@ -1,5 +1,8 @@
 //var ConnectionHandler = require('./connection_handler');
-require('dotenv').config({path: '../.env'})
+
+require('dotenv').config({path: '../.env'});
+
+
 
 var protocol = "https" ;
 
@@ -7,10 +10,14 @@ if (process.env.APP_STATUS == "local"){
     protocol = "http" ;
 
 }
+console.log('--------------');
+console.log(process.env.APP_STATUS);
+console.log('--------------');
+
 //connectionHandler = new ConnectionHandler();
 var path = require('path'),
     util = require('util'),
-    https = require('https'),
+    https = require(protocol),
     fs = require('fs'),
     express = require("express"),
     Utils = require("./utils/Utils.js"),
@@ -38,16 +45,14 @@ var ErrorMailer = require('./error_mailer/error_mailer.js');
 
 
 
-
 var app = express();
 var port = ConfigController.get('PORT', false);
 
 if (process.env.APP_STATUS == "server") {
     options = {
-         key: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/privkey.pem'),
-         cert: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/cert.pem'),
-         ca: fs.readFileSync('/etc/letsencrypt/live/darkan.eu/chain.pem')
-
+        key: fs.readFileSync(process.env.APP_SSL_KEY),
+        cert: fs.readFileSync(process.env.APP_SSL_CERT),
+        ca: fs.readFileSync(process.env.APP_SSL_CA)
     }
 }
 if (process.env.APP_STATUS == "local"){

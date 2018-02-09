@@ -11,10 +11,10 @@
     |
     */
 return [
-    'standard_month' => 4,
-    'standard_year' => 10,
-    'standard_trial' => 21,
-    'profesional_month' => 5,
-    'profesional_year' => 11,
-    'profesional_trial' => 20,
+    'standard_month' => env('standard_month_id'),
+    'standard_year' => env('standard_year_id'),
+    'standard_trial' => env('standard_trial_id'),
+    'profesional_month' => env('profesional_month_id'),
+    'profesional_year' => env('profesional_year_id'),
+    'profesional_trial' => env('profesional_trial_id'),
 ];

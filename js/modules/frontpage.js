@@ -1,5 +1,5 @@
 // speed up video
-$('.movie video')[0].playbackRate = 3.0;
+// $('.movie video')[0].playbackRate = 3.0;
 var videoStarted = false;
 $(window).on("touchstart", function() {
 	if (!videoStarted) {
