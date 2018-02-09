@@ -82,19 +82,19 @@ class PayPalOperator implements OperatorInterface
         $this->item = new Item();
 
 
-
+        $mode = env('PAYPAL_MODE');
         $this->_apiContext = $this->PayPal->apiContext(
-            config('services.paypal.client_id'),
-            config('services.paypal.secret')
+            config("services.paypal_$mode.client_id"),
+            config("services.paypal_$mode.secret")
         );
 
         $this->_apiContext->setConfig(array(
-            'mode' => config('services.paypal.mode'),
-            'service.EndPoint' => config('services.paypal.endpoint'),
-            'http.ConnectionTimeOut' => config('services.paypal.connection_timeout'),
-            'log.LogEnabled' => config('services.paypal.log_enabled'),
-            'log.FileName' => config('services.paypal.log_path'),
-            'log.LogLevel' =>  config('services.paypal.log_level'),
+            'mode' => config("services.paypal_$mode.mode"),
+            'service.EndPoint' => config("services.paypal_$mode.endpoint"),
+            'http.ConnectionTimeOut' => config("services.paypal_$mode.connection_timeout"),
+            'log.LogEnabled' => config("services.paypal_$mode.log_enabled"),
+            'log.FileName' => config("services.paypal_$mode.log_path"),
+            'log.LogLevel' =>  config("services.paypal_$mode.log_level"),
         ));
 
     }
@@ -182,19 +182,20 @@ class PayPalOperator implements OperatorInterface
 
     public static function getApiContext()
     {
+        $mode = env('PAYPAL_MODE');
         $Paypal = new Paypal();
         $apiContext = $Paypal->apiContext(
-            config('services.paypal.client_id'),
-            config('services.paypal.secret')
+            config("services.paypal_$mode.client_id"),
+            config("services.paypal_$mode.secret")
         );
 
         $apiContext->setConfig(array(
-            'mode' => config('services.paypal.mode'),
-            'service.EndPoint' => config('services.paypal.endpoint'),
-            'http.ConnectionTimeOut' => config('services.paypal.connection_timeout'),
-            'log.LogEnabled' => config('services.paypal.log_enabled'),
-            'log.FileName' => config('services.paypal.log_path'),
-            'log.LogLevel' =>  config('services.paypal.log_level'),
+            'mode' => config("services.paypal_$mode.mode"),
+            'service.EndPoint' => config("services.paypal_$mode.endpoint"),
+            'http.ConnectionTimeOut' => config("services.paypal_$mode.connection_timeout"),
+            'log.LogEnabled' => config("services.paypal_$mode.log_enabled"),
+            'log.FileName' => config("services.paypal_$mode.log_path"),
+            'log.LogLevel' =>  config("services.paypal_$mode.log_level"),
         ));
 
         return $apiContext;
