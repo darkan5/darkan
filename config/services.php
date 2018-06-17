@@ -52,16 +52,25 @@ return [
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
         'redirect' => env('LINKEDIN_REDIRECT_LINK'),
     ],
-    'paypal' => [
-        'client_id' => env('PAYPAL_CLIENT_ID', ''),
-        'secret' => env('PAYPAL_SECRET', ''),
-        'mode' => env('PAYPAL_MODE', 'live'),
-        'endpoint' => env('PAYPAL_ENDPOINT', 'https://api.paypal.com'),
+    'paypal_sandbox' => [
+        'client_id' => 'AYdrFRj8di66HE4Y-4arGha2thyQnAzmfFH_yKJvSNUXh0xhPb85gR18a4Thz2ak-zTEKUiuWFdDT98d',
+        'secret' => 'EM5iSs6W9XO8FDZyfOhaT3ylW8tzLAgXzKysEag8xYKfOvRwXZG3GYQjGNQFf26WJ3TgNwikKXhLs7kc',
+        'mode' => 'sandbox',
+        'endpoint' => 'https://api.sandbox.paypal.com',
         'connection_timeout' => 30,
         'log_enabled' => true,
         'log_path' => storage_path('logs/paypal.log'),
         'log_level' => 'DEBUG'
     ],
-
+    'paypal_live' => [
+        'client_id' => 'AdZ2jv8Z_HJvnLZe53F9SSlIh7p16CKgbP5PpIDcPwJ9UEwkGQPgO8RNT7RsZ3zooyqTjUQOqkRhLW_n',
+        'secret' => 'EIPQiKf72di11li6zH3qW_I3dL8ydV9MzKIYgJWvgRw-jnyxJzzVSoTeWIkZ17uKZ2zFnBCHOBjEcK9-',
+        'mode' => 'sandbox',
+        'endpoint' => 'https://api.paypal.com',
+        'connection_timeout' => 30,
+        'log_enabled' => true,
+        'log_path' => storage_path('logs/paypal.log'),
+        'log_level' => 'DEBUG'
+    ],
 
 ];
