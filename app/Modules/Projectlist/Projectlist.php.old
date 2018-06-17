@@ -138,7 +138,7 @@ class Projectlist {
                 $res7 = DB::select(DB::raw("SELECT * FROM `users` WHERE `id`='$login_id_r'"))[0];
                 $dane_user_name = $res7;
 
-                $dane_share_project->fromuser = $dane_user_name->email;
+                $dane_share_project->fromuser = $dane_user_name->login;
                 $dane_share_project->pType = "sharedToUserProjects";
                 $dane_share_project->folder = 0;
 

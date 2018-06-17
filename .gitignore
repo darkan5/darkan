@@ -1,5 +1,6 @@
 storage/
 vendor/
+game/node_modules/
 pma/
 docs/
 blog/

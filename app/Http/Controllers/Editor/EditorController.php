@@ -66,8 +66,12 @@ class EditorController extends Controller
         	return view('editors.editor_project_not_exist');
         }
 
-        $project = $project or $share->project;
-
+        if (isset($share->project))
+	{
+	    $project = $share->project;
+	}
+	//$project = $project or $share->project;
+	
         if(!$project){
         	return view('editors.editor_project_not_exist');
         }
