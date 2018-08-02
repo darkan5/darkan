@@ -4,6 +4,9 @@
 .uploadzbit {
 display: none ;
 }
+.download-project-button {
+display: none ;
+}
 .buttons-container {
 	margin-bottom: 50px;
 }
