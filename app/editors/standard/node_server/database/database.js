@@ -417,7 +417,7 @@ Database.prototype.verifyAccessToProject = function(projectID, userID, callback)
 
 		console.log(projectData);
 
-        if (!projectData || projectData.length === 0) {
+        if (!projectData || projectData.length == 0) {
         	console.log('projekt nie istnieje');
         	callback('notexist');
         	return;
@@ -451,11 +451,14 @@ Database.prototype.verifyAccessToProject = function(projectID, userID, callback)
 					var sharedProjectsQuery = squel.select()
 											.from('share')
 											.where('project_id = ?', projectID)
-											.toString();
-
+.toString()
+											;
+console.log('userID: ' );
+console.log(userID);
+console.log(sharedProjectsQuery);
 					_that.query(sharedProjectsQuery, function(sharedProjectsData) {
 						for (var i = sharedProjectsData.length - 1; i >= 0; i--) {
-							if (sharedProjectsData[i].user_id === userID) {
+							if (sharedProjectsData[i].user_id == userID) {
 								callback(true, projectOwner);
 								return;
 							}
