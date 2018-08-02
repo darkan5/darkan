@@ -1,7 +1,9 @@
 .projects-container {
 	min-height: 500px;
 }
-
+.uploadzbit {
+display: none ;
+}
 .buttons-container {
 	margin-bottom: 50px;
 }
