@@ -819,6 +819,9 @@ ul#languages-list li:hover
 }
 #menu-top #topmenu-extras-db:after {
     background-position: 0px -309px;
+
+}
+#topmenu-extras-db {
 	display:none ;
 }
 #menu-top #help-tutorial:after {
