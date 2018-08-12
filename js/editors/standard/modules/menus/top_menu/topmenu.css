@@ -511,7 +511,7 @@ ul#languages-list li:hover
 	cursor: pointer;
 	position: absolute;
 	background: url('../../../images/sprites/topmenu.png');
-	background-position: -14px -148px;
+	background-position: -14px -147px;
 	width: 10px;
 	height: 32px;
     transform: rotate(270deg);
