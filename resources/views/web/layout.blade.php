@@ -22,7 +22,7 @@
 
 	<meta name="_token" content="{{ csrf_token() }}">
 	<meta name="_appLink" content="{{ url('/') }}">
-
+    <meta name="google-site-verification" content="EQJHf3L85w8Wxz_1XC38WOGevxbqzlaPZcWv5Ku8ag4" />
 	<link href="{{ asset('/bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/bower_components/jquery/dist/jqueryui_styles.css') }}" rel="stylesheet">
 
