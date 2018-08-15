@@ -252,13 +252,6 @@ var toolbarItemsCollection = new LeftMenuItemCollection([
 					title: _lang('TOOLTIP_0010')
 				}),
 				new LeftMenuItemModel({
-					componentName: 'form-upload',
-					prettyName: 'Wgraj plik',
-					icon: 'upload',
-					className: 'small-btn-ext',
-					title: _lang('')
-				}),
-				new LeftMenuItemModel({
 					componentName: 'infopoint-sound',
 					prettyName: _lang('COMPONENTNAME_AUDIO'),
 					icon: 'infopoints-soundfile',
