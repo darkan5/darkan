@@ -777,7 +777,7 @@ return [
   "TOOLTIP_0147" => "<b>Kopiuj obiekt (crtl-c)</b>",
   "TOOLTIP_0148" => "<b>Wklej obiekt (ctrl-v)</b>",
   "TOOLTIP_0149" => "<b>Wlekj obiekt spcjelanie (crtl-b)</b>",
-  "TOOLTIP_0150" => "<b>Duplikuj obiekt na nową wartswe (ctrl-q)</b>",
+  "TOOLTIP_0150" => "<b>Duplikuj obiekt na tą samą warstwę (ctrl-q)</b>",
   "TOOLTIP_0151" => "<b>Przenieś obiekt na nową warstwe (ctrl-spacja)</b>",
   "TOOLTIP_0152" => "<b>Połączenie</b>",
   "EXPORTPDF_TITLE" => "Eksport do PDF",

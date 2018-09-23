@@ -511,13 +511,14 @@ ul#languages-list li:hover
 	cursor: pointer;
 	position: absolute;
 	background: url('../../../images/sprites/topmenu.png');
-	background-position: -14px -148px;
+	background-position: -14px -147px;
 	width: 10px;
 	height: 32px;
+	left: 10px ;
     transform: rotate(270deg);
 }
 #aspectRatio:checked + label {
-	background-position: -5px -148px;
+	background-position: -5px -147px;
 }
 
 /* ---- ALIGN editor ---- */
@@ -819,6 +820,10 @@ ul#languages-list li:hover
 }
 #menu-top #topmenu-extras-db:after {
     background-position: 0px -309px;
+
+}
+#topmenu-extras-db {
+	display:none ;
 }
 #menu-top #help-tutorial:after {
     background-position: 0px -278px;

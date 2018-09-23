@@ -1,7 +1,12 @@
 .projects-container {
 	min-height: 500px;
 }
-
+.uploadzbit {
+display: none ;
+}
+.download-project-button {
+display: none ;
+}
 .buttons-container {
 	margin-bottom: 50px;
 }
