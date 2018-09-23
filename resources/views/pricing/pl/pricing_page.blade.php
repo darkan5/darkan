@@ -145,7 +145,7 @@
                 <div class="col-lg-6">
                     <div class="panel price panel-red">
                         <div class="panel-heading  text-center">
-                            <h3>Profesional</h3>
+                            <h3>Professional</h3>
                         </div>
                         <div class="text-center price-iteam" id="proffesional-price"><h3><?= Lang::get('pricingPage.prof_year', [], $userCountry)?></h3><?= Lang::get('pricingPage.prof_year_year', [], $userCountry)?><?=Lang::get('pricingPage.payforYear')?></div>
 
