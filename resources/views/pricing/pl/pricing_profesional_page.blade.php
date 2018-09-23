@@ -29,7 +29,7 @@
                 <div class="col-lg-3">
                     <div class="panel price panel-red">
                         <div class="panel-heading  text-center">
-                            <p>Profesional</p>
+                            <p>Professional</p>
                         </div>
                         <div class="panel-body text-center">
                             <p>Doskonałe dla małych i średnich firm, pracujących nad więszą ilością projektów</p>
@@ -48,7 +48,7 @@
                 <div class="col-lg-9">
                     <div class="panel">
                         <div class="panel-heading text-center">
-                            <h3>Profesional Plan</h3>
+                            <h3>Professional Plan</h3>
                         </div>
                         <div class="panel-body text-center">
                             <p class="lead"><strong>Doskonałe dla małych i średnich firm, pracujących nad więszą ilością projektów</strong></p>
@@ -126,24 +126,24 @@
                         
                         </div>
 
-                        <div class="row text-center ">
-                            <br/>
+                        {{--<div class="row text-center ">--}}
+                            {{--<br/>--}}
 
-                            <p>Jeśli posiadasz kod rabatowy, wpisz go tutaj, a następnie kliknij przycisk KUP TERAZ powyżej.</p>
-      
-                            <div class="col-md-3 col-xs-3"></div>
+                            {{--<p>Jeśli posiadasz kod rabatowy, wpisz go tutaj, a następnie kliknij przycisk KUP TERAZ powyżej.</p>--}}
+      {{----}}
+                            {{--<div class="col-md-3 col-xs-3"></div>--}}
 
-                           
-                            <div class="form-inline form-group kodRabatowy col-xs-6">
-                                
-                                <div style="margin: 10px 10px 10px 10px">
+                           {{----}}
+                            {{--<div class="form-inline form-group kodRabatowy col-xs-6">--}}
+                                {{----}}
+                                {{--<div style="margin: 10px 10px 10px 10px">--}}
 
-                                    <label for="kodRabatowy"><b>Kod rabatowy:&nbsp;</b></label>
-                                    <input class="form-control promo-code" style="text-align: center" size="32" placeholder="zostaw puste pole jeśli nie posiadasz" id="kodRabatowy" type="text" />
-                                </div>
-                                </div>
-                            <div class="col-xs-3"></div>
-                        </div>
+                                    {{--<label for="kodRabatowy"><b>Kod rabatowy:&nbsp;</b></label>--}}
+                                    {{--<input class="form-control promo-code" style="text-align: center" size="32" placeholder="zostaw puste pole jeśli nie posiadasz" id="kodRabatowy" type="text" />--}}
+                                {{--</div>--}}
+                                {{--</div>--}}
+                            {{--<div class="col-xs-3"></div>--}}
+                        {{--</div>--}}
                         
                     </div>
                 </div>
