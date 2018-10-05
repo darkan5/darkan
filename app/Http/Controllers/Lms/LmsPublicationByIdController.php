@@ -214,7 +214,7 @@ class LmsPublicationByIdController extends LmsController
     public function getCourseQuestionsData($userId, $courseId) {
 
 
-        $coursesQuery = Banners::where('user_id', '=', $userId)
+        $coursesQuery = Banners::where('user_id', '=', Auth::user()->id)
             ->where('id_banner', '=', $courseId)
             ->first();
 

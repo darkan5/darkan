@@ -6,13 +6,13 @@ Utils.getURLParam = function()
     url =  window.location.search.substring(0);
 
     var result = {};
-                var searchIndex = url.indexOf("?");
-                if (searchIndex == -1 ) return result;
+    var searchIndex = url.indexOf("?");
+    if (searchIndex == -1 ) return result;
     var sPageURL = url.substring(searchIndex +1);
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++)
-    {    	
-        var sParameterName = sURLVariables[i].split('=');      
+    {
+        var sParameterName = sURLVariables[i].split('=');
         result[sParameterName[0]] = sParameterName[1];
     }
     return result;
@@ -31,14 +31,14 @@ Backbone.Model.prototype.toJSON = function() {
     var json = _.clone(this.attributes);
     for(var attr in json) {
         if((json[attr] instanceof Backbone.Model) || (json[attr] instanceof Backbone.Collection)) {
-            json[attr] = json[attr].toJSON();   
+            json[attr] = json[attr].toJSON();
         }
     }
     return json;
 };
 
 function isFirefox() {
-  return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 }
 
 Utils.isFirefox = function() {
@@ -72,7 +72,7 @@ Utils.getInternetExplorerVersion = function()
 
 Utils.selectWholeText = function(el){
     if (isFirefox()) {
-      return Utils.placeCaretAtEnd($(el).closest('.note-editable')[0]);
+        return Utils.placeCaretAtEnd($(el).closest('.note-editable')[0]);
     }
     var sel, range;
     if (window.getSelection && document.createRange) {
@@ -144,10 +144,10 @@ Utils.reduce = function(arr) {
 
 Utils.rgb2hex = function(rgb) {
     var isHexColor = /^#[0-9A-F]{6}$/i.test(rgb);
-    
-    
+
+
     if (!isHexColor && rgb.length != 4){
-        
+
         if (rgb.substr(0, 3) == 'rgb' && rgb.substr(0, 4) != 'rgba'){
             rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
         } else if (rgb.substr(0, 4) == 'rgba'){
@@ -155,14 +155,34 @@ Utils.rgb2hex = function(rgb) {
         } else {
             rgb = new Array();
         }
-        
+
         function hex(x) {
             return ("0" + parseInt(x).toString(16)).slice(-2);
         }
-        
+
         return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-        
+
     } else {
         return rgb;
     }
+}
+Utils.reduce = function(arr) {
+    arr.reduce(function(a, b){return (a === b)?a:"";});
+}
+
+Utils.escapeHtml = function(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+Utils.ObjectLength = function(obj) {
+    var length = 0;
+    for (var o in obj) {
+        length++;
+    }
+    return length;
 }

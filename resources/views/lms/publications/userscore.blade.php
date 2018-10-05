@@ -2,51 +2,79 @@
 
 @section('contentlms')
 
-<h1 class="page-header"><i class="fa fa-group fa-fw"></i>Wyniki <small>elearning</small></h1>
+    <h1 class="page-header"><i class="fa fa-group fa-fw"></i>Wyniki <small>elearning</small></h1>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <span>Użytkownik</span>
-        <div class="pull-right">
-           
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span>Użytkownik</span>
+            <div class="pull-right">
+
+            </div>
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <a href="{{ url('lms/elearning/user/') . '/' . $user->id }}">{{ $user->name }} ({{ $user->email }})</a>
         </div>
     </div>
-    <!-- /.panel-heading -->
-    <div class="panel-body">
-        <a href="{{ url('lms/elearning/user/') . '/' . $user->id }}">{{ $user->name }} ({{ $user->email }})</a>
-    </div>
-</div>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <span>Publikacja</span>
-        <div class="pull-right">
-           <a href="{{ url('') }}" class="btn btn-success" id="open-course-preview"><i class="fa fa-play"></i> <?=Lang::get('darkanpanel.open_course')?></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span>Publikacja</span>
+            <div class="pull-right">
+                <a href="{{ url('') }}" class="btn btn-success" id="open-course-preview"><i class="fa fa-play"></i> <?=Lang::get('darkanpanel.open_course')?></a>
+            </div>
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <a href="{{ url('lms/publication' . '/' . $course->id_banner ) }}">{{ $course->name }}</a>
+            <div>{{ $course->description }}</div>
         </div>
     </div>
-    <!-- /.panel-heading -->
-    <div class="panel-body">
-        <a href="{{ url('lms/publication' . '/' . $course->id_banner ) }}">{{ $course->name }}</a>
-        <div>{{ $course->description }}</div>
-    </div>
-</div>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <span>Wyniki</span>
-        <div class="pull-right">
-           
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span>Zmienne</span>
+
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <table class="table table-striped table-hover">
+                <tbody>
+
+                @foreach ($vars as $var)
+                    <tr class="odd gradeX">
+
+                        <td>
+                            {{$var['pvarname']}}
+                        </td>
+                        <td>
+                            {{$var['pvarvalue']}}
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
-    <!-- /.panel-heading -->
-    <div class="panel-body">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span>Wyniki</span>
+            <div class="pull-right">
 
-        <table class="table table-striped table-hover">
-            <tbody>
+            </div>
+        </div>
+        <!-- /.panel-heading -->
 
-                <?php 
-                    $requirements = json_decode($course->requirements);
-                 ?>
+
+        <div class="panel-body">
+
+            <table class="table table-striped table-hover">
+                <tbody>
+
+                <?php
+                $requirements = json_decode($course->requirements);
+                ?>
 
                 <tr class="odd gradeX">
                     <td> <?=Lang::get("darkanpanel.course_status")?>  </td>
@@ -99,7 +127,7 @@
                             @if(isset($requirements->score))
 
                                 <li>
-                                    <i class="fa fa-star fa-fw"></i>  <?= Lang::get('darkanpanel.table_column_requirements_score') ?> 
+                                    <i class="fa fa-star fa-fw"></i>  <?= Lang::get('darkanpanel.table_column_requirements_score') ?>
                                     ({{ isset($requirements->scoreRequired) ? $requirements->scoreRequired : '' }}/{{ isset($requirements->scoreMax) ? $requirements->scoreMax : '' }})
                                 </li>
 
@@ -113,10 +141,10 @@
                     </td>
                 </tr>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
 
+        </div>
     </div>
-</div>
 
 @endsection
