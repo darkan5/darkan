@@ -1007,10 +1007,10 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     	<input type="button" class="window-close-button">
     	<fieldset>
     		<legend><?=Lang::get("editor.DND_EDIT_ANSWERS")?></legend>
-    		<label>
+    		<!--<label>
     			<input name="mark-questions" type="checkbox" <%= markQuestions ? 'checked' : '' %>>
                 <span><?=Lang::get('editor.QUIZ_MARK_QUESTIONS')?></span>  
-            </label>
+            </label> -->
     		<label>
     			<input type="checkbox" name="revertobjects" <%= opts.revertObjects ? 'checked' : '' %>>
     			<span><?=Lang::get("editor.revertObjects")?></span>

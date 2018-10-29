@@ -1331,7 +1331,7 @@ return [
   "TRIGGER_TRANSITION_PONIT_TIME" => "Czas: ",
   "TRIGGER_TRANSITION_PONIT_ANIMATION_TYPE" => "Typ animacji: ",
   "TRIGGER_TRANSITION_PONIT_ANCHOR_POINT" => "Punkt zaczepienia: ",
-  "TRIGGER_TRANSITION_PONIT_ROTATION_DEG" => "stopni",
+  "TRIGGER_TRANSITION_PONIT_ROTATION_DEG" => "Stopni",
   "DND_DELETE_CONTAINER" => "Usuń kontener",
   "DND_EDIT_CONTAINERS" => "Edytuj kontenery",
   "DND_EDIT_ANSWERS" => "Edytuj odpowiedzi",
