@@ -1148,10 +1148,10 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
     			<input type="checkbox" name="onlysourcetarget" <%= opts.onlySourceTarget ? 'checked' : '' %>>
     			<span><?=Lang::get("editor.QCL_ALLOW_CONNECTIONS")?></span>
     		</label>
-    		<label>
+    		<!--<label>
     			<input type="checkbox" name="allowbadanswer" <%= opts.allowBadAnswer ? 'checked' : '' %>>
     			<span><?=Lang::get("editor.QCL_ALLOW_BADASNWERS")?></span>
-    		</label>
+    		</label>-->
     		<label>
     			<span><?=Lang::get("editor.QCL_AFTER_BAD_ANSWER")?></span>
     			<select class="after-bad-answer">
