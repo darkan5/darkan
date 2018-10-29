@@ -5903,10 +5903,10 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 				                    <td><label for="quiz-multiselect-feedbacks"><?=Lang::get('editor.MULTISELECTQUIZ_FEEDBACK_SWITCHER')?>:</label></td>
 				                    <td><input name="feedback-show" id="quiz-multiselect-feedbacks" type="checkbox" class="margin010"></td>
 				                </tr>
-				                <tr>
-				                    <td><label for="quiz-multiselect-fsign"><?=Lang::get('editor.MULTISELECTQUIZ_FEEDBACK_SIGN_SWITCHER')?>:</label></td>
-				                    <td><input name="feedback-sign" id="quiz-multiselect-fsign" type="checkbox" class="margin010"></td>
-				                </tr>
+				                {{--<tr>--}}
+				                    {{--<td><label for="quiz-multiselect-fsign"><?=Lang::get('editor.MULTISELECTQUIZ_FEEDBACK_SIGN_SWITCHER')?>:</label></td>--}}
+				                    {{--<td><input name="feedback-sign" id="quiz-multiselect-fsign" type="checkbox" class="margin010"></td>--}}
+				                {{--</tr>--}}
 				                <tr>
 				                    <td><label for="quiz-multiselect-showbutton"><?=Lang::get('editor.MULTISELECTQUIZ_FEEDBACK_SUBMIT_SWITCHER')?>:</label></td>
 				                    <td><input name="button-show" id="quiz-multiselect-showbutton" type="checkbox" class="margin010"></td>
