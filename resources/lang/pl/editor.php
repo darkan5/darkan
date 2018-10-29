@@ -1401,7 +1401,7 @@ return [
   "QCL_ALLOW_CONNECTIONS" => "Tylko połączenia źródło - cel",
   "QCL_ALLOW_BADASNWERS" => "Pozwól na łączenie złych odpowiedzi",
   "QCL_AFTER_BAD_ANSWER" => "Po złej odpowiedzi",
-  "QCL_AFTER_BAD_ANSWER_DONOTHING" => "Nie nie rób",
+  "QCL_AFTER_BAD_ANSWER_DONOTHING" => "Nic nie rób",
   "QCL_AFTER_BAD_ANSWER_REMOVEBAD" => "Usuń złe odpowiedzi",
   "QCL_AFTER_BAD_ANSWER_REMOVEALL" => "Usuń wszystkie odpowiedzi",
   "TopCenter" => "Góra środek",
