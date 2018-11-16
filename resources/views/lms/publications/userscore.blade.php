@@ -30,7 +30,16 @@
             <div>{{ $course->description }}</div>
         </div>
     </div>
+ <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span>Czasy na stronach</span>
 
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            {{$scoremData->page_time}}
+        </div>
+    </div>
 
     <div class="panel panel-primary">
         <div class="panel-heading">
