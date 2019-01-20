@@ -1,17 +1,21 @@
 //var ConnectionHandler = require('./connection_handler');
 
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({path: '/var/www/darkan/.env'});
 
 
 
-var protocol = "https" ;
+var protocol = "http" ;
 
 if (process.env.APP_STATUS == "local"){
     protocol = "http" ;
 
 }
+if (process.env.APP_STATUS == "server"){
+    protocol = "https" ;
+
+}
 console.log('--------------');
-console.log(process.env.APP_STATUS);
+console.log("env",process.env.APP_STATUS);
 console.log('--------------');
 
 //connectionHandler = new ConnectionHandler();

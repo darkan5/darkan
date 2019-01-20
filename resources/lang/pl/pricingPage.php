@@ -21,7 +21,7 @@ return array (
     'priceForUser' => '5zł za użytkownika',
     'monthlyLang' => 'co miesiąć',
     'title_tools' => 'Narzędzie do tworzenia kursów',
-    'title_LMS' => 'Narzędzie do tworzenia kursów + Portal do pulikacji treści (LMS)',
+    'title_LMS' => 'Narzędzie do tworzenia kursów + Portal do publikacji treści (LMS)',
     'payforMonth' => 'płatne za rok',
     'payforYear' => 'płatne za rok',
     'forYear' => 'rocznie',
