@@ -15,11 +15,11 @@ class RegistrationMail {
 	}
 
     public function sendRegistrationMail($data, $receiver){
-        Mail::send('emails.registration', $data, function($message) use ($receiver)
-		{
-		    $message->from('no-reply@darkan.eu', 'Darkan');
-		    $message->to($receiver)->subject(Lang::get('mails.registrationSubject'));
-		});
+//        Mail::send('emails.registration', $data, function($message) use ($receiver)
+//		{
+//		    $message->from('no-reply@darkan.eu', 'Darkan');
+//		    $message->to($receiver)->subject(Lang::get('mails.registrationSubject'));
+//		});
     }
 
     public function sendSubdomainRegistrationMail($data, $receiver, $lmsInfoData){

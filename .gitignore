@@ -12,3 +12,4 @@ Homestead.yaml
 .env
 .htaccess
 logs/paypal.log
+node_modules/
