@@ -2,6 +2,7 @@ storage/
 vendor/
 game/node_modules/
 pma/
+wpt/
 docs/
 blog/
 js/editors/standard/library/
