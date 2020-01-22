@@ -89,12 +89,13 @@ var PdfListView = Backbone.View.extend({
     convertToPages: function(){
 
         this.$el.trigger('close-window', {}, this);
+       
     },
 
     getSelectedItemsIds: function(){
 
         var results =  _.pluck( _.where(this.collection.toJSON(), {selected: true}),'id');
-
+        console.log('id',results);
         return results;
     }
 
