@@ -45,7 +45,7 @@ var PreviewWindowView = WindowView.extend({
         ProjectModel.instance.get('options').set('dimentions', dimentionsFolder);
         ProjectModel.instance.get('options').set('skin', skinName);
         ProjectModel.instance.saveProjectOptions(ProjectModel.instance.get('options'));
-
+        console.log(skinName); 
         this.showPreview();
     },
 
@@ -65,7 +65,7 @@ var PreviewWindowView = WindowView.extend({
         DataAccess.preparePreview(
             {skin:skin},
             function(data) {
-
+                console.log("ok-2");
                 var viewContent = _that.$el.find('.view-content');
 
                 viewContent.on('load', function(){
