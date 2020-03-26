@@ -144,7 +144,7 @@
                 <legend><?=Lang::get('profile.EDIT_PROFILE_SUBDOMAIN'); ?></legend>
                 <form id="changesubdomainform">
 	                <div class="subdomain-change-helper">
-		                http:// <input class="form-control profile-subdomain" type="text" value="<?= Auth::user()->subdomain.".".env('APP_URL') ?>"/>
+		                http:// <input class="form-control profile-subdomain" type="text" value="<?= Auth::user()->subdomain ?>"/> <?= ".".env('APP_URL') ?>
 		            </div>
 	                <button type="submit" class="btn btn-primary btn-darkan-color save-profile save-profile-subdomain"><?=Lang::get('profile.EDIT_PROFILE_SAVE'); ?></button>
                 </form>
