@@ -6,10 +6,15 @@
     "backbone": "*",
     "backbone.controller": "*",
     "backbone.stickit": "*",
-    "dotenv": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "jquery": "*",
     "jqueryui": "*",
     "moment": ">=2.8.1",
+<<<<<<< HEAD
+=======
+    "natives": "^1.1.6",
+>>>>>>> 511582a292906a3e84e95e52c64084d2d7d3e1b6
     "socket.io": "^2.3.0",
     "underscore": "*"
   },

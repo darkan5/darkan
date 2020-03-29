@@ -130,15 +130,15 @@ trait ProjectCreator
             mkdir($projectDirectory);
         }
             
-        mkdir($projectDirectory . '/pack');
-        mkdir($projectDirectory . '/pdf');
-        mkdir($projectDirectory . '/pre');
-        mkdir($projectDirectory . '/sitemap');
-        mkdir($projectDirectory . '/pre/js');
+        mkdir($projectDirectory . '/pack',0775);
+        mkdir($projectDirectory . '/pdf',0775);
+        mkdir($projectDirectory . '/pre',0775);
+        mkdir($projectDirectory . '/sitemap',0775);
+        mkdir($projectDirectory . '/pre/js',0775);
         file_put_contents($projectDirectory . '/pre/js/lang.js', '');
-        mkdir($projectDirectory . '/pre/exported');
+        mkdir($projectDirectory . '/pre/exported',0775);
         file_put_contents($projectDirectory . '/pre/exported/thumbs', '');
-        mkdir($projectDirectory . '/pre/exported_view');
+        mkdir($projectDirectory . '/pre/exported_view',0775);
         file_put_contents($projectDirectory . '/pre/exported_view/thumbs', '');
 
         // tworzymy plik json z mapa szkolenia w sitemap/map.json
