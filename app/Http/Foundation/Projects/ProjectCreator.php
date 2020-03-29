@@ -123,11 +123,11 @@ trait ProjectCreator
         $projectDirectory = $this->getProjectDirectory($userDirectory, $project);
 
         if (!file_exists($userDirectory)) {
-            mkdir($userDirectory);
+            mkdir($userDirectory,0775);
         }
 
         if (!file_exists($projectDirectory)) {
-            mkdir($projectDirectory);
+            mkdir($projectDirectory,0775);
         }
             
         mkdir($projectDirectory . '/pack',0775);
