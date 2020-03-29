@@ -422,7 +422,7 @@ var EditablePagesList = PagesList.extend({
             function(data){
                 _log('Duplicate pages fault:', data, _log.dataaccessOutFault);
 
-                _that.showPupup({ content:_lang('DUPLICATE_PAGES_FAULT'), title: _lang('MODAL_INFO_ERROR') }, _that);
+              //  _that.showPupup({ content:_lang('DUPLICATE_PAGES_FAULT'), title: _lang('MODAL_INFO_ERROR') }, _that);
 
                 _that.enableButtons();
             }
@@ -742,7 +742,7 @@ var EditablePagesList = PagesList.extend({
             function(data){
                 _log('Copy page fault:', data, _log.dataaccessOutFault);
 
-                _that.showPupup({ content:_lang('DUPLICATE_PAGES_FAULT'), title: _lang('MODAL_INFO_ERROR') }, _that);
+            //    _that.showPupup({ content:_lang('DUPLICATE_PAGES_FAULT'), title: _lang('MODAL_INFO_ERROR') }, _that);
 
                 _that.enableButtons();
             }

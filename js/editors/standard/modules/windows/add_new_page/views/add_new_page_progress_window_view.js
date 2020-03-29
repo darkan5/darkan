@@ -185,6 +185,7 @@ var AddNewPageProgressView = WindowView.extend({
     showFinishContent: function( ) {
         this.$el.find('.add-new-page-progress-text').html(_lang('PDF_PROGRESS_FINISHED'));
         this.$el.removeClass('animated pulse');
+        location.reload();
     },
 
     onAddPageFault: function(responce) {

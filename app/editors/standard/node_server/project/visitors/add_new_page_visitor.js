@@ -19,7 +19,7 @@ function AddNewPageVisitor(data, onResult, onFault) {
 AddNewPageVisitor.prototype.visit = function(project) {
 	var _that = this;
 
-    console.log('-------------------start adding new page');
+    console.log('-------------------start adding new page-----');
 
     try{
 

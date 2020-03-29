@@ -58,11 +58,13 @@ MapModel.prototype.addPageIdToList = function(newPageId, oldPageId){
     if(oldPageId){
 
         oldPageIndex = this.pages.indexOf(oldPageId) + 1;
-        this.pages.splice(oldPageIndex, 0, newPageId);
 
+        //this.pages.splice(oldPageIndex, 0, newPageId);
+        console.log("work");
+        this.pages.push(newPageId);
         console.log('oldPageId', oldPageId);
         console.log('oldPageIndex', oldPageIndex);
-        console.log(' pages',  this.pages);
+        console.log(' pageses',  this.pages);
 
     }else{
         this.pages.push(newPageId);
