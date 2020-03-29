@@ -177,7 +177,7 @@ Project.prototype.setProjectPermissions = function(data, onResult, onFault){
 
         var projectPath = path.join(ConfigController.get('PROJECTS_PATH'), userId, projectId);
 
-        wrench.chmodSyncRecursive(projectPath, 511);
+        wrench.chmodSyncRecursive(projectPath, 755);
         onResult({});
 
     }catch(ex){
