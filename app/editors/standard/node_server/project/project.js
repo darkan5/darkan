@@ -2053,7 +2053,7 @@ Project.prototype.preparePreview = function( data, onResult, onFault, onProggres
             errors.push(err);
         });
 
-         fs.chmod(dataToSaveToFileUrl + '.js', 511);
+         fs.chmod(dataToSaveToFileUrl + '.js', 511, () => {});
 
         onProggres({ status:'chmod 511' });
 
