@@ -18,8 +18,8 @@ use App\Modules\SocialAuth\SocialAuth;
 use App\Modules\User\SubdomainUserRepository;
 use App\Modules\Models\UserLogin;
 use App\Modules\Models\LmsUserPortal;
+use App\Modules\Models\LmsInfo;
 use App\Modules\Utils\Utils;
-
 class SubdomainLoginController extends LoginController {
 
 	/*
@@ -44,6 +44,8 @@ class SubdomainLoginController extends LoginController {
 
 	public function postLogin(Request $request)
 	{
+ 		$subdomain = substr($request->callbackurl,7,3);
+
 
 	    //pass through validation rules
 	    $this->validate($request, ['email' => 'required', 'password' => 'required']);
@@ -54,9 +56,11 @@ class SubdomainLoginController extends LoginController {
 	    // ];
 
 	    //$remember = $request->has('remember');
-
+		$getAdminPortal = User::where('subdomain',$subdomain)->first();
+		$getInfoLogin = LmsInfo::where('user_id',$getAdminPortal->id)->first();
 		if ($this->attemptLogin($request)){
-			
+		  
+		if($getInfoLogin->state){	
 			$user =  LmsUserPortal::where('user', '=', Auth::user()->id)
                 ->first();
 
@@ -73,6 +77,19 @@ class SubdomainLoginController extends LoginController {
             $this->addToUserLogin(Auth::user()->id);
 
 			return redirect()->intended($subdomainPath);
+		}
+		if($getInfoLogin->login){
+			 $subdomainPath = config('app.protocol_not_secure')
+                            . $subdomain
+                            . '.'
+                            . config('app.domain')
+                            . substr(config('app.folder'), 0, -1);
+			    $this->addToUserLogin(Auth::user()->id);
+
+                        return redirect()->intended($subdomainPath);
+			
+	
+			}
 		}
 		
 
@@ -104,21 +121,20 @@ class SubdomainLoginController extends LoginController {
 
     public function subdomainLogout(Request $request) 
     {
+    
+       //$user =  LmsUserPortal::where('user', '=', Auth::user()->id)->first();
+	//dd($user);
+	//	$owner = User::find($user->owner_id);
 
-    	$user =  LmsUserPortal::where('user', '=', Auth::user()->id)
-                ->first();
-
-		$owner = User::find($user->owner_id);
-
-        $subdomainPath = config('app.protocol_not_secure') 
-                        . $owner->subdomain
-                        . '.' 
-                        . config('app.domain')
-                        . substr(config('app.folder'), 0, -1);
-        die($subdomainPath);
-    	Session::flush();
-        Auth::logout();
-		return redirect()->intended($subdomainPath);
+        //$subdomainPath = config('app.protocol_not_secure') 
+          //              . $owner->subdomain
+          //              . '.' 
+          //              . config('app.domain')
+          //              . substr(config('app.folder'), 0, -1);
+        //die($subdomainPath);
+    	//Session::flush();
+        //Auth::logout();
+	//	return redirect()->intended($subdomainPath);
 
     }
 
