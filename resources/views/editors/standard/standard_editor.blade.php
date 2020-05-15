@@ -91,8 +91,8 @@ $stylesInputTextFile = get_data($url.'js/editors/standard/css/styles_inputtext.j
 		};
 
 
-		var stylesImage = <?= $stylesImageFile ?>;
-		var stylesText =<?= $stylesTextFile ?>;
+		var stylesImage = <?php echo $stylesImageFile ?>;
+		var stylesText = <?= $stylesTextFile ?>;
 		var stylesGradient = <?= $stylesGradientFile ?>;
 		var stylesQuestion = <?= $stylesQuestionFile ?>;
 		var stylesDnd = <?= $stylesDndFile ?>;
