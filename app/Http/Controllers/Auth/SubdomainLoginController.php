@@ -44,10 +44,12 @@ class SubdomainLoginController extends LoginController {
 
 	public function postLogin(Request $request)
 	{
- 		$subdomain = substr($request->callbackurl,7,3);
+ 		//dd($request->callbackurl);
+	   // $subdomain = substr($request->callbackurl,7,3);
+
+        $subdomain = $this->get_string_between($request->callbackurl,'//','.');
 
 
-	    //pass through validation rules
 	    $this->validate($request, ['email' => 'required', 'password' => 'required']);
 
 	    // $credentials = [
@@ -96,7 +98,14 @@ class SubdomainLoginController extends LoginController {
 	    //show error if invalid data entered
 	    return redirect()->back()->withErrors(Lang::get('login.loginPassDoNotMatch'))->withInput();
 	}
-
+    public function get_string_between($string, $start, $end){
+        $string = ' ' . $string;
+        $ini = strpos($string, $start);
+        if ($ini == 0) return '';
+        $ini += strlen($start);
+        $len = strpos($string, $end, $ini) - $ini;
+        return substr($string, $ini, $len);
+    }
 	public function postRegisterSubdomain(Request $request)
     {
         $validator = $this->registrar->validator($request->all());
@@ -119,22 +128,22 @@ class SubdomainLoginController extends LoginController {
         return redirect($callbackUrl);
     }
 
-    public function subdomainLogout(Request $request) 
+    public function subdomainLogout(Request $request)
     {
-    
-       //$user =  LmsUserPortal::where('user', '=', Auth::user()->id)->first();
-	//dd($user);
-	//	$owner = User::find($user->owner_id);
 
-        //$subdomainPath = config('app.protocol_not_secure') 
-          //              . $owner->subdomain
-          //              . '.' 
-          //              . config('app.domain')
-          //              . substr(config('app.folder'), 0, -1);
-        //die($subdomainPath);
-    	//Session::flush();
-        //Auth::logout();
-	//	return redirect()->intended($subdomainPath);
+       $user =  LmsUserPortal::where('user', '=', Auth::user()->id)->first();
+	dd($user);
+		$owner = User::find($user->owner_id);
+
+        $subdomainPath = config('app.protocol_not_secure')
+                        . $owner->subdomain
+                        . '.'
+                        . config('app.domain')
+                        . substr(config('app.folder'), 0, -1);
+        die($subdomainPath);
+    	Session::flush();
+        Auth::logout();
+		return redirect()->intended($subdomainPath);
 
     }
 
