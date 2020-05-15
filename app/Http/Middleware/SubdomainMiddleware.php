@@ -1,6 +1,7 @@
 <?php namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 
 class SubdomainMiddleware {
 
@@ -14,6 +15,11 @@ class SubdomainMiddleware {
     public function handle($request, Closure $next)
     {
         if ($this->isAllowedRoute($request->url())) {
+           
+            if(substr($request->url(),-17,17) == "/subdomain/logout"){
+                Auth::logout();    
+                //redirect('/subdomain/login');
+            }
             return $next($request);
         }
 
@@ -30,7 +36,8 @@ class SubdomainMiddleware {
                                     . '.' 
                                     . config('app.domain')
                                     . substr(config('app.folder'), 0, -1);
-
+        
+                                  
         if($acceptedSubdomainPath != $request->url()) {
 
             $host = $request->getHost();
