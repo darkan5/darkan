@@ -23,6 +23,7 @@
     "node-pngquant-native": "^1.0.4",
     "nodemailer": "^3.1.1",
     "pdf-image": "^1.1.0",
+    "socket-io": "^1.0.0",
     "socket.io": "^1.7.4",
     "squel": "^5.7.0",
     "underscore": "^1.8.3",
