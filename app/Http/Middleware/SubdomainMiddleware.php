@@ -14,6 +14,8 @@ class SubdomainMiddleware {
     public function handle($request, Closure $next)
     {
         if ($this->isAllowedRoute($request->url())) {
+          //  return redirect( $request->url());
+              //  dd($request->url());
             return $next($request);
         }
 
