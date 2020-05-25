@@ -132,7 +132,7 @@ class SubdomainLoginController extends LoginController {
     {
 
 
-       $user =  LmsUserPortal::where('user', '=', Auth::user()->id)->first();
+      // $user =  LmsUserPortal::where('user', '=', Auth::user()->id)->first();
 
 		$owner = User::find($user->owner_id);
 
