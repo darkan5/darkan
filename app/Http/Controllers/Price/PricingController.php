@@ -58,6 +58,8 @@ class PricingController extends Controller
             ->where('version_id', '=', 1)
             ->where('currency_id', '=', $currencyId)
             ->first()->cost;
+
+
         if(!$planCost){
             return Redirect::back()->withErrors(['Plan w wybranej walucie jest chwilowo niedostępny']);
         }

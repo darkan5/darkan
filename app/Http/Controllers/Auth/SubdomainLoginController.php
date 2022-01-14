@@ -131,16 +131,18 @@ class SubdomainLoginController extends LoginController {
     public function subdomainLogout(Request $request)
     {
 
-    //    $user =  LmsUserPortal::where('user', '=', Auth::user()->id)->first();
 
-	// 	$owner = User::find($user->owner_id);
+      // $user =  LmsUserPortal::where('user', '=', Auth::user()->id)->first();
+
+		$owner = User::find($user->owner_id);
+
 	    $subdomain = $this->get_string_between($request->url(),'//','.');
         $subdomainPath = config('app.protocol_not_secure')
                         . $subdomain
                         . '.'
                         . config('app.domain')
                         . substr(config('app.folder'), 0, -1);
-        //dd($subdomainPath);
+
     	Session::flush();
         Auth::logout();
 		return redirect()->intended($subdomainPath);

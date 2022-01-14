@@ -15,11 +15,13 @@ class SubdomainMiddleware {
     public function handle($request, Closure $next)
     {
         if ($this->isAllowedRoute($request->url())) {
+
            
             if(substr($request->url(),-17,17) == "/subdomain/logout"){
                 Auth::logout();    
                 //redirect('/subdomain/login');
             }
+
             return $next($request);
         }
 
