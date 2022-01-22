@@ -5,27 +5,10 @@
     // require_once 'php/library_tags.php';
 function get_data($url)
 {
- $ch = curl_init($url);
-$timeout = 5;
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0)");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_MAXREDIRS, 10);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-$data = curl_exec($ch);
-$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-if ($httpCode == 404) {
-curl_close($ch);
-return '404';
-} else {
-curl_close($ch);
-return $data;
+	return file_get_contents($url);
+
 }
-}
-$url = env('APP_IP_ADDRESS').'/';
+$url = base_path().'/';
 
 $stylesImageFile = get_data($url.'js/editors/standard/css/styles_image.json');
 $stylesTextFile = get_data($url.'js/editors/standard/css/styles_text.json');

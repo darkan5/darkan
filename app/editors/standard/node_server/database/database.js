@@ -32,6 +32,8 @@ function Database(socket) {
 	this.visitIntervalArray = [];
 
 	this.InstanceName = ConfigController.get('INSTANCE_NAME', false);
+	console.log("this.InstanceName", this.InstanceName);
+	console.log(process.env);
 
 
 	this.testDriveProjects = [
@@ -57,7 +59,7 @@ Database.prototype.mysqlConnect = function() {
 			//localhost
 			case 'localhost':
 				this.connection = this.mysql.createConnection({
-				     host     : 'localhost',
+				     host     : process.env.DB_HOST,
 				     user     : process.env.DB_USERNAME,
 				     password : process.env.DB_PASSWORD,
 				     database : process.env.DB_DATABASE
@@ -415,7 +417,7 @@ Database.prototype.verifyAccessToProject = function(projectID, userID, callback)
 
 	_that.query(projectDataQuery, function(projectData) {
 
-		console.log(projectData);
+		console.log("418,", projectData);
 
         if (!projectData || projectData.length == 0) {
         	console.log('projekt nie istnieje');
