@@ -1,0 +1,204 @@
+.darkan-embeded {
+    position: relative;
+    all: initial;
+}
+
+.darkan-embeded #skin {
+    top: 0px !important;
+}
+
+.darkan-clearfix {
+    clear: both;
+}
+
+.darkan-content #skin {
+    position: relative;
+    height: 100%;
+}
+
+.darkan-content * {
+    padding: 0px;
+    margin: 0px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.darkan-content .text-component * {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;    
+}
+
+.darkan-content {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font: 12px "Lato", sans-serif;
+    position: relative;
+}
+
+.darkan-content .qcl-container {
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+
+/*body, html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font: 12px "Lato", sans-serif;
+}*/
+.darkan-content #skin {
+    /*display: none;*/
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.darkan-content #skin, #stage {
+    /*width: 860px;*/
+/*    -webkit-transition: width 200ms ease-in-out;
+    -moz-transition: width 200ms ease-in-out;
+    -o-transition: width 200ms ease-in-out;
+    transition: width 200ms ease-in-out;*/
+}
+
+.darkan-content #stage {
+    position: relative;
+/*    width: 860px;
+    height: 500px;*/
+    margin: 0 auto;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.darkan-content #stage-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.darkan-content #page-load-progress {
+    display: table;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    z-index: 9999;
+    text-align: center;
+    background: rgba(255, 2555, 255, .95);
+}
+
+.darkan-content .sounds-container {
+    display: none;
+}
+
+.darkan-content .audio-manager {
+    display: none;
+}
+
+.darkan-content .mobilestart-btn:hover {
+    /*background-color: #64A5CF;*/
+    /*text-indent: 30px;*/
+}
+.darkan-content .mobilestart-btn {
+    position: relative;
+    top: calc(50% - 150px);
+    margin: 0 auto;
+    width: 300px;
+    /*background: #5082A5;*/
+    height: 300px;
+    /*color: #fff;*/
+    text-align: center;
+    line-height: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 120px;
+    text-align: center;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    background: url('images/mobile/play_button.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.darkan-content .mobilestart-overlay {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+}
+
+.darkan-content #stage-content{
+    -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+/*    -webkit-animation-timing-function: 
+    cubic-bezier(0, 0, 0, 1.74);
+          animation-timing-function: 
+            cubic-bezier(0, 0, 0, 1.74);
+    -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+    -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;*/
+}
+.darkan-content #stage-content[anim="showpage"] { 
+  -webkit-animation-name: showpage; 
+          animation-name: showpage; 
+}
+
+@-webkit-keyframes showpage {
+    0%   { 
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+            opacity: .1;
+    }
+    100% { 
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+            opacity: 1;
+    }
+}
+
+.darkan-content #previous[locked="true"],
+.darkan-content #next[locked="true"]
+{
+    opacity: .4;
+}
+
+.darkan-content .easy-loader {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #7FA2B8;
+    position: fixed;
+    z-index: 9999;
+    top: 81px;
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    background-image: url('images/loaders/easyloader.gif');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-animation-duration: .4s;
+       -moz-animation-duration: .4s;
+         -o-animation-duration: .4s;
+            animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}

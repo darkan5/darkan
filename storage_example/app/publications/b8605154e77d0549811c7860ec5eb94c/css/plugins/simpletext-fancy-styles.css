@@ -1,0 +1,198 @@
+.darkan-content .simpletext-sfs{
+    float: left;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #000000;
+    margin: 5px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 22px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.darkan-content .simpletext-sfs:hover{
+    border: 1px solid red;
+}
+
+.darkan-content .simpletext-sfs-reset{
+    /*font-family: 'Arial';*/
+    text-decoration: none;
+    letter-spacing: 0px;
+    text-shadow: none;
+}
+.darkan-content .simpletext-sfs-glowred{
+    text-shadow: horizontal-offset vertical-offset blur color;
+}
+.darkan-content .simpletext-sfs-heading{
+    /*font-family: 'MEgalopolisExtraRegular';*/
+    text-transform: uppercase;
+    text-shadow: -1px -1px 1px #000000, 1px 1px 1px #CCCCCC;
+}
+
+.darkan-content .simpletext-sfs-adobe{
+/*    font: normal normal 80px/90px LeagueGothic,"Helvetica Neue",Helvetica,sans-serif;*/
+    text-shadow: 0 2px 3px rgba(40,41,42,0.6),0 4px 0 rgba(150,150,150,0.5),0 9px 5px rgba(0,0,0,0.5);
+}
+
+
+.darkan-content .simpletext-sfs-heading2 {
+    /*font-family: Tahoma, Helvetica, Arial, Sans-Serif;*/
+    text-align: center;
+    text-shadow: 0px 2px 3px #555;
+}
+
+.darkan-content .simpletext-sfs-shadow1 {
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
+
+.darkan-content .simpletext-sfs-shadow2 {
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.darkan-content .simpletext-sfs-shadow3 {
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+.darkan-content .simpletext-sfs-vintage_retro {
+    text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;
+}
+
+.darkan-content .simpletext-sfs-neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.darkan-content .simpletext-sfs-inset {
+    text-shadow: 0px 2px 3px #666;
+}
+
+.darkan-content .simpletext-sfs-anaglyphic {
+    text-shadow: 8px 8px 0 rgba(255,0,180,0.5);
+}
+
+.darkan-content .simpletext-sfs-fire {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+}
+
+.darkan-content .simpletext-sfs-board_game {
+   text-shadow: 10px 10px 0 #ffd217, 20px 20px 0 #5ac7ff, 30px 30px 0 #ffd217, 40px 40px 0 #5ac7ff;
+}
+
+.darkan-content .simpletext-sfs-3D {
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.darkan-content .simpletext-sfs-letterpress {
+    color: #222;
+    text-shadow: 0px 2px 3px #555;
+}
+
+.darkan-content .simpletext-sfs-backshadow {
+    text-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.darkan-content .simpletext-sfs-inset_typo {
+    text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+.darkan-content .simpletext-sfs-apple_style {
+    text-shadow: 0px 1px 1px #fff;
+}
+
+.darkan-content .simpletext-sfs-photoshop_emboss {
+    text-shadow: 1px 1px white, -1px -1px #444;
+}
+
+.darkan-content .simpletext-sfs-drop_cap {
+    text-shadow: 10px 10px 0 rgba(255,255,255,0.07);
+}
+
+.darkan-content .simpletext-sfs-subtle_glow_white {
+    text-shadow: 0px 0px 3px #fff;
+}
+
+.darkan-content .simpletext-sfs-blur {
+    text-shadow: #fff 0 0 100px;
+}
+
+.darkan-content .simpletext-sfs-3D_lying {
+    text-shadow: 0 1px 0 #ccc,
+05
+ 0 2px 0 #c9c9c9,
+06
+ 0 3px 0 #bbb,
+07
+ 0 4px 0 #b9b9b9,
+08
+ 0 5px 0 #aaa,
+09
+ 0 6px 1px rgba(0,0,0,.1),
+10
+ 0 0 5px rgba(0,0,0,.1),
+11
+ 0 1px 3px rgba(0,0,0,.3),
+12
+ 0 3px 5px rgba(0,0,0,.2),
+13
+ 0 5px 10px rgba(0,0,0,.25),
+14
+ 0 10px 10px rgba(0,0,0,.2),
+15
+ 0 20px 20px rgba(0,0,0,.15);
+
+}
+
+.darkan-content .simpletext-sfs-cloudy {
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.6), 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 50px rgba(255,255,255,0.3), 0px 0px 180px rgba(255,255,255,0.3);
+}
+
+.darkan-content .simpletext-sfs-embossed {
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    opacity: 0.3;
+}
+
+.darkan-content .simpletext-sfs-another_3D {
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+} 
+
+
+.darkan-content .simpletext-sfs-relief {
+    text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+}
+
+.darkan-content .simpletext-sfs-two_toned_shadow {
+    font-weight: 900;
+    text-shadow:
+    0 1px #808d93,
+    -1px 0 #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5,
+    -4px 5px #808d93,
+    -5px 4px #cdd2d5,
+    -5px 6px #808d93,
+    -6px 5px #cdd2d5,
+    -6px 7px #808d93,
+    -7px 6px #cdd2d5,
+    -7px 8px #808d93,
+    -8px 7px #cdd2d5;
+}
+
+.darkan-content .simpletext-sfs-stereoscopic {
+    font-weight: 900;
+    text-shadow: -0.06em 0 red, 0.06em 0 cyan;
+}

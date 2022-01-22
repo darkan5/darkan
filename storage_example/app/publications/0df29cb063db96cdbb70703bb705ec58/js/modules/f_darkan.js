@@ -1,0 +1,1 @@
+var courseController = new CourseController();
