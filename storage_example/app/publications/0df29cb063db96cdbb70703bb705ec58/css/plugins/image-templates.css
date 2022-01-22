@@ -1,0 +1,135 @@
+/*
+*   CSS Templates for images
+*
+*
+*/
+
+.darkan-content .img-template{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.darkan-content .img-template:hover{
+    border: 1px solid red;
+}
+
+.darkan-content .img-template-default {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0px;
+    box-shadow: #000 0px 0px 0px 0px;
+}
+
+.darkan-content .img-template-one {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0px;
+    box-shadow: #ccc 1px 1px 5px 0px inset;
+}
+
+.darkan-content .img-template-two {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bbb;
+    border-radius: 4px;
+    -moz-box-shadow: #333 0px 3px 16px 21px inset;
+    -webkit-box-shadow: #333 0px 3px 16px 21px inset;
+    box-shadow: #333 0px 3px 16px 21px inset;
+}
+.darkan-content .img-container.img-template-two:after {
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -moz-box-shadow: #333 0px 3px 16px 21px inset;
+    -webkit-box-shadow: #333 0px 3px 16px 21px inset;
+    box-shadow: #333 0px 3px 16px 21px inset;
+}
+
+.darkan-content .img-template-three {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bbb;
+    border-radius: 4px;
+    -moz-box-shadow: #eee 0px 4px 6px 0px inset;
+    -webkit-box-shadow: #eee 0px 4px 6px 0px inset;
+    box-shadow: #eee 0px 4px 6px 0px inset;
+}
+.darkan-content .img-container.img-template-three:after {
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -moz-box-shadow: #eee 0px 4px 6px 0px inset;
+    -webkit-box-shadow: #eee 0px 4px 6px 0px inset;
+    box-shadow: #eee 0px 4px 6px 0px inset;
+}
+
+.darkan-content .img-template-four {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bbb;
+    border-radius: 0px;
+    box-shadow: #d3d3d3 6px 2px 6px 0px;
+}
+
+.darkan-content .img-template-five {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 10px 30px;
+    box-shadow: #ddd 3px 6px 9px 0px;
+}
+
+.darkan-content .img-template-six {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0px 50px 50px 0px;
+    box-shadow: #696969 2px 0px 3px 0px;
+}
+
+.darkan-content .img-template-seven {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 50px 0px 0px 50px;
+    box-shadow: #696969 -2px 0px 3px 0px;
+}
+
+.darkan-content .img-template-eight {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 50px 50px 0px 0px;
+    box-shadow: #696969 0px -2px 3px 0px;
+}
+
+.darkan-content .img-template-nine {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: #696969 0px -2px 3px 0px;
+}
+
+.darkan-content .img-template-ten {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 100%;
+    background-color: #ccc;
+    box-shadow: #000 0px 0px 0px 0px;
+}

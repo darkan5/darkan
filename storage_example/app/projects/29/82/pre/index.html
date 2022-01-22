@@ -1,0 +1,996 @@
+<!doctype html>
+<html>
+    
+    
+<head>
+    <meta http-equiv="Content-Type">
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+    <style type="text/css">
+    html, body { height: 100%; }
+    </style>
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/f_stage.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/f_components.css?r=001"  />
+
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/plugins/image-templates.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/plugins/question-dnd-templates.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/plugins/question-multi-templates.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/plugins/simpletext-fancy-styles.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/plugins/template-styles.css?r=001"  />
+
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/plugins/jsplumb.css?r=001"  />
+
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/js/libs/jplayer/skin/blue.monday/css/jplayer.blue.monday.css?r=001"  />
+
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/js/libs/perfect-scrollbar/css/perfect-scrollbar.min.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/js/libs/fancybox/jquery.fancybox.css?r=001"  />
+
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/animations/animate.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/animations/animations.css?r=001"  />
+
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/bootstrap.css?r=001"  />
+    <link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/windows.css?r=001"  />
+
+    <script src="js/lang.js?r=001"></script>
+
+    <script>
+        var darkanVersion = '001';
+
+        var __meta__ = {
+            userID: 1,
+            projectID: 372,
+            directLocation : '',
+            darkanContainer : '.darkan-content',
+            randomval: 1542338168465,
+        };
+
+        function getURLParameters()
+        {
+
+            url =  window.location.search.substring(0);
+
+            var result = {};
+                        var searchIndex = url.indexOf("?");
+                        if (searchIndex == -1 ) return result;
+            var sPageURL = url.substring(searchIndex +1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++)
+            {       
+                var sParameterName = sURLVariables[i].split('=');      
+                result[sParameterName[0]] = sParameterName[1];
+            }
+            return result;
+        }
+        var params = getURLParameters();
+        var my_skin = '';
+        for (var paramName in params) {
+            if (paramName == 'skin') {
+                my_skin = params[paramName];
+            }
+        }
+        var fileref=document.createElement("link");
+        fileref.setAttribute("rel", "stylesheet");
+        fileref.setAttribute("type", "text/css");
+        fileref.setAttribute("href", "http://darkan.local/js/editors/standard/skins/" + my_skin + "/css/animsstyles.css?r=001" );
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+
+        var language = 'pl';
+    </script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/scorm/SCORM_API_wrapper.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/language/lang.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/utils/html5shiv.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/utils/preload.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/jquery/jq11.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/jquery/jqui.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/jquery/jquery.swfobject.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/jquery/jqueryui-touchpunch.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/jplayer/jquery.jplayer.min.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/underscore/underscore.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/backbone/backbone.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/backbone/backbone.stickit.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/backbone/backbone.controller.js?r=001"></script>
+    
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js?r=001"></script>
+
+    <link href="http://darkan.local/js/editors/standard/content_template/js/libs/video-js/video-js.css?r=<?php echo $CFG['v'] ?>" rel="stylesheet" type="text/css">
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/video-js/video.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/video-js/vjs.youtube.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/video-js/vjs.vimeo.js?r=001"></script>
+    <script> videojs.options.flash.swf = "http://darkan.local/js/editors/standard/content_template/js/libs/video-js/video-js.swf";</script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/fancybox/jquery.fancybox.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/jsBezier-0.6.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/mottle-0.4.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/biltong-0.2.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/util.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/browser-util.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/dom-adapter.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/jsPlumb.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/endpoint.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/connection.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/anchors.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/defaults.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/connectors-bezier.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/connectors-statemachine.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/connectors-flowchart.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/connector-editors.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/renderers-svg.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/renderers-vml.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/base-library-adapter.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/connectlines/lib/jquery.jsPlumb.js?r=001"></script>
+
+
+
+    <!--[if !IE]><!--><link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/fonts.css?r=001"  /><!--<![endif]-->
+    <!--[if IE]><!--><link rel="stylesheet" href="http://darkan.local/js/editors/standard/content_template/css/fonts_ie.css?r=001"  /><!--<![endif]-->
+    <title>Darkan</title>    
+</head>
+
+<body style="margin:0">
+
+    <div class="darkan-content">
+   
+        <div id="skin">
+
+            <div class="topbar">
+            <div class="leftside"></div>
+            <div id="logo"></div>
+            <div class="middle">
+                <div id="pagename"></div>
+                </div>
+            <div class="rightside"></div>
+            <div id="toctop">
+            </div>
+        </div>
+        <div class="leftbar"></div>
+
+		
+        <div id="stage">
+            <div id="page-load-progress">
+                <figure>
+                    <figcaption class="page-load-progressbar-wrapper">
+                        <div class="page-load-progressbar">
+                            <div class="page-load-progressbar-inner"></div>
+                        </div>
+                    </figcaption>
+                    <figcaption class="page-load-progressbar-text">0%</figcaption>
+                </figure>
+            </div>
+
+            <div id="stage-content"></div>
+        </div>
+
+        <div class="rightbar"></div>
+
+        <div class="botbar">
+            <div class="leftside"></div>
+            <div class="middle">
+
+                <div id="menu">
+                    <button id="previous" tabindex="100" title="Poprzedni slajd"><div id="previousEcho"></div></button>
+                    <button id="next" tabindex="99" title="Następny slajd"><div id="nextEcho"></div></button>
+                </div>
+
+            </div>
+            <div class="rightside"></div>
+        </div>
+
+        </div>
+
+        <div class="mobilestart-overlay">
+            <div class="mobilestart-btn"></div>
+        </div>
+
+    </div>
+
+
+    <script id="audio-manager-template" type="text/template">
+        <div class="components-audios-container"></div>
+        <div class="pages-audios-container"></div>
+        <div class="project-audio-container"></div>
+    </script>
+
+
+    <!-- COMPONENTS TEMPLATE -->
+    <script id="component-template" type="text/template">
+        <div name="type"></div>
+        <label>Draggable: </label><span name="draggable"></span>
+        <label>Position X: </label><div name="position-x"></div>
+        <label>Position Y: </label><div name="position-y"></div>
+    </script>
+
+    <script id="quiz-result-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-gradient">
+                <div class="component-styles">
+                    <div class="text-component-inner component-inner"  style="background:<%=bgcolor%>;padding:<%=padding%>px">
+                        <%= contents %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="text-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-styles">
+                    <div class="component-inner text-component-inner component-gradient" style="padding:<%=padding%>px">
+                        <%= contents %>
+                    </div>
+                </div>
+                <div class="text-component-handle"></div>
+            </div>
+        </div>
+    </script>
+
+    <script id="forminputtext-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="forminputtext-component-inner component-inner">
+                    <input type="text" placeholder="<%= placeholder %>" value="<%- defaultValue %>" maxlength="<%- maxLength %>" style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;">
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="quizinputtext-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="quizinputtext-component-inner component-inner">
+                    <input class="quizinputtext-input" type="text" placeholder="<%= placeholder %>" value="<%- defaultValue %>" maxlength="<%- maxLength %>" style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;">
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="formtextarea-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="formtextarea-component-inner component-inner">
+                    <textarea style="font-size:<%= fontSize %>px;text-align:<%= textAlign %>;" maxlength="<%= maxLength %>"><%- defaultValue %></textarea>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="formselect-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="formselect-component-inner component-inner">
+                    <select class="form-select" style="font-size:<%=fontSize%>px;">
+                        <% _.each(formData.selectOptions, function(option, i) { %>
+                            <option value="<%-option.option%>" it="<%=i%>" <% if(option.startValue) { %>selected<% } %> ><%-option.option%></option>
+                        <% }) %>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="quizselect-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="quizselect-component-inner component-inner">
+                    <select class="form-select" style="font-size:<%=fontSize%>px;">
+                        <% _.each(formData.selectOptions, function(option, i) { %>
+                            <option value="<%-option.option%>" it="<%=i%>" <% if(option.startValue) { %>selected<% } %> ><%-option.option%></option>
+                        <% }) %>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="formupload-component-template" type="text/template">
+
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="uploadfopointlink-component-inner component-inner image-component-inner md-trigger">
+                    <div class="img-wrapper">
+
+                        <%
+                        var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+                        var minFileName = 'min' + imageFileName.match(patt1)[0];
+                        %>
+
+                        <img
+                                src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= minFileName %>"
+                                width="100%"
+                                height="100%"
+                                style="opacity:<%= opacity %>;"
+                                />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-wrapper"></div>
+    </script>
+
+    <script id="upload-file-form-template" type="text/template">
+        <form class="uploadfileform" style="display:none;" enctype="multipart/form-data" role="form" method="POST" action="">
+            <input class="" name="actionkey" value="<%-actionkey%>"/>
+            <input class="" name="hash" value="<%-hash%>"/>
+            <input class="" name="goodextensions" value="<%-goodExtensions%>"/>
+            <input class="changefile" type="file" name="dockfile" accept="<%-acceptTypeFormat%>"/>
+        </form>
+    </script>
+
+    <script id="formsubmit-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-styles">
+                    <div class="text-component-inner form-submit-component-inner component-inner"  style="background:<%=bgcolor%>;padding:<%=padding%>px">
+                        <%= contents %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="formradio-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-inner formradio-component-inner">
+                    <div class="input-wrapper" style="width:<%=inputSize%>px;"><input type="radio" name="<%=groupName%>" id="<%=actionkey%>" style="width:<%=inputSize%>px;height:<%=inputSize%>px;"></div>
+                    <label for="<%=actionkey%>">
+                        <div class="text-wrapper">
+                            <%=contents%>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="formcheckbox-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-inner formcheckbox-component-inner">
+                    <div class="input-wrapper" style="width:<%=inputSize%>px;"><input type="checkbox" id="<%=actionkey%>" style="width:<%=inputSize%>px;height:<%=inputSize%>px;"></div>
+                    <label for="<%=actionkey%>">
+                        <div class="text-wrapper">
+                            <%=contents%>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="iframe-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="iframe-component-inner component-inner">
+                    <iframe class="iframeObj" onload="this.blur()" <%= link !== '' ? 'src="' + link + '"' : '' %>></iframe>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="swf-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="swf-component-inner component-inner">
+                    <div class="swf-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    
+    <script id="quizselectone-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-inner quiz-component-inner">
+                    <div class="quiz-body">
+                        <% _.each(answers, function(option, i) { %>
+                            <div class="answer-wrapper block-answer" style="left:<%=option.left%>px;top:<%=option.top%>px">
+                                <div class="selectone-block-answer" it="<%= i %>"><%- option.text %></div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="drawedinfopointlink-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="drawedinfopointlink-component-inner component-inner"></div>
+            </div>
+        </div>
+    </script>
+
+    <script id="drawedinfopointdownload-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="drawedinfopointdownload-component-inner component-inner">
+                    <div class="snd-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="drawedinfopointpopup-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="drawedinfopointpopup-component-inner component-inner">
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="drawedinfopointgallery-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="drawedinfopointgallery-component-inner component-inner">
+                    <div class="snd-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="infopointpopup-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="infopointpopup-component-inner component-inner image-component-inner md-trigger" data-modal="modal-1">
+                    <div class="img-wrapper">
+
+                        <%
+
+                            var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+                            var minFileName = 'min' + imageFileName.match(patt1)[0];
+                        %>
+
+                        <img
+                                src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= minFileName %>"
+                                width="100%"
+                                height="100%"
+                                style="opacity:<%= opacity %>;"
+                                />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="infopointlink-component-template" type="text/template">
+
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="infopointlink-component-inner component-inner image-component-inner md-trigger">
+                    <div class="img-wrapper">
+
+                        <%
+                        var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+                        var minFileName = 'min' + imageFileName.match(patt1)[0];
+                        %>
+
+                        <img
+                                src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= minFileName %>"
+                                width="100%"
+                                height="100%"
+                                style="opacity:<%= opacity %>;"
+                                />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="infopointsound-component-template" type="text/template">
+
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="infopointsound-component-inner component-inner image-component-inner md-trigger">
+                    <div class="img-wrapper">
+
+                        <%
+                        var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+                        var minFileName = 'min' + imageFileName.match(patt1)[0];
+                        %>
+
+                        <img
+                                src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= minFileName %>"
+                                width="100%"
+                                height="100%"
+                                style="opacity:<%= opacity %>;"
+                                />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="infopointsoundcontrol-component-template" type="text/template">
+        <div class="component-styles">
+            <div class="component-inner image-component-inner infopointsound-component-inner">
+                <% if (typeof noskin === "undefined" || noskin == false) { %>
+                    <div id="audio-player-<%=actionkey.split('-')[1]%>"></div>
+                    <div id="jp-container-<%=actionkey.split('-')[1]%>" class="jp-audio" role="application" aria-label="media player">
+                        <div class="jp-type-single">
+                            <div class="jp-gui jp-interface">
+                                <div class="jp-controls">
+                                    <button class="jp-play" role="button" tabindex="0">play</button>
+                                    <button class="jp-stop" role="button" tabindex="0">stop</button>
+                                    
+                                    <div class="jp-progress">
+                                        <div class="jp-seek-bar">
+                                            <div class="jp-play-bar"></div>
+                                        </div>
+                                    </div>
+                                    <button class="jp-mute" role="button" tabindex="0">mute</button>
+                                    <div class="jp-volume-bar">
+                                        <div class="jp-volume-bar-value"></div>
+                                    </div>
+                                    <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+                                </div>
+                                <div class="jp-time-holder">
+                                    <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                                    <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                                    <div class="jp-toggles">
+                                        <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jp-no-solution">
+                                <span>Update Required</span>
+                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            </div>
+                        </div>
+                    </div>
+
+                <% } else { %>
+                    <audio controls>
+                        <source src="<%=__meta__.directLocation%>exported_view/<%= actionkey.split('-').pop()%>/audio/<%=actionkey%>/<%=sound%>" type="audio/mpeg">
+                    </audio>
+                <% } %>
+            </div>
+        </div>
+    </script>
+
+
+    <script id="infopointsoundrecord-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="infopointsoundrecord-component-inner component-inner">
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="infopointgallery-component-template" type="text/template">
+
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="infopointgallery-component-inner component-inner image-component-inner md-trigger">
+                    <div class="img-wrapper">
+
+                        <%
+                        var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+                        var minFileName = 'min' + imageFileName.match(patt1)[0];
+                        %>
+
+                        <img
+                                src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= minFileName %>"
+                                width="100%"
+                                height="100%"
+                                style="opacity:<%= opacity %>;"
+                                />
+                    </div>
+                    <div class="snd-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="infopointdownload-component-template" type="text/template">
+
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="infopointdownload-component-inner component-inner image-component-inner md-trigger">
+                    <div class="img-wrapper">
+
+                        <%
+                        var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+                        var minFileName = 'min' + imageFileName.match(patt1)[0];
+                        %>
+
+                        <img
+                                src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= minFileName %>"
+                                width="100%"
+                                height="100%"
+                                style="opacity:<%= opacity %>;"
+                                />
+                    </div>
+                    <a class="infopointdownload-link"
+                            href="exported_view/<%= actionkey.split('-').pop() %>/files/<%= actionkey %>/<%= fileToDownload %>"
+                            
+
+                            <%
+                                if(useNewDownloadFileName && useNewDownloadFileName){
+
+                                    var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+
+                                    if(newDownloadFileName && newDownloadFileName != ''){
+                                        var extension = fileToDownload.match(patt1)[0];
+
+                                        %>
+                                            download="<%-newDownloadFileName + extension  %>"
+                                        <%
+                                    }else{
+                                        %>
+                                            download
+                                        <%
+                                    }
+                                }else{
+                                    %>
+                                        download
+                                    <%
+                                }
+                            %>
+
+                            style="width:100%;height:100%;position:absolute;">
+                    </a>
+                    <div class="snd-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="scroller-component-template" type="text/template">
+    </script>
+
+    <script id="quiz-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-inner quiz-component-inner">
+                    <div class="quiz-body"  style="<%= backgroundColor !== '' ? 'background:' + backgroundColor + ';' : '' %><%= textColor !== '' ? 'color:' + textColor + ';' : '' %>">
+                        <% _.each(answers, function(option, i) { %>
+                            <div class="answer-wrapper" style="left:<%=option.left%>px;top:<%=option.top%>px">
+                                <label><input class="answer-checkbox" name="<%= actionkey %>" type="<%= multiselect ? 'checkbox' : 'radio' %>" it="<%= i %>"><span class="answer-text" style="font-size:<%=fontSize%>px;"><%= option.text %></span></label>
+                            </div>
+                        <% }); %>
+                    </div>
+                    <button class="quiz-submit-button" style="display:<%= buttonShow ? 'block' : 'none' %>;left:<%=submitButton.left%>px;top:<%=submitButton.top%>px;<%= buttonBackgroundColor !== '' ? 'background:' + buttonBackgroundColor + ';' : '' %><%= buttonTextColor !== '' ? 'color:' + buttonTextColor + ';' : '' %>"><%=submitButton.text%></button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="quizfillinblanks-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-styles">
+                    <div class="component-inner text-component-inner component-gradient" style="padding:<%=padding%>px">
+                        <%= contents %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="quizdnd-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-styles">
+                    <div class="text-component-inner quiz-dnd-component-inner component-inner"  style="background:<%=bgcolor%>;padding:<%=padding%>px">
+                        <%= contents %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="quizconnectlines-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-styles">
+                    <div class="text-component-inner quiz-connectlines-component-inner component-inner"  style="background:<%=bgcolor%>;padding:<%=padding%>px">
+                        <%= contents %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="crossword-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="crossword-component-inner">
+                    <% _.each(rows, function(row) { %><!--
+                        --><div rowid="<%= row %>" class="crossword-row"><!--
+                            --><% _.each(cols, function(col) { %><!--
+                                --><div class="crossword-cell-background" gender="<%= objs[row+'-'+col].type === 'question' ? objs[row+'-'+col].gender : '' %>" style="<% if (objs[row+'-'+col].type === 'answer' && objs[row+'-'+col].text === '') { %>visibility:hidden;<% } %>"><!--
+                                    --><div class="crossword-cell-password"></div><!--
+                                    --><textarea spellcheck="false" class="crossword-cell <%= objs[row+'-'+col].type === 'question' ? 'crossword-cell-question' : '' %>"  <%= objs[row+'-'+col].type === 'question' ? '' : 'maxlength="1"' %> cellid="<%= row + '-' + col %>" cellx="<%= col %>" celly="<%= row %>" celltype="<%= objs[row+'-'+col].type %>"></textarea><!--
+                                --></div><!--
+                            --><% }); %><!--
+                        --></div><!--
+                        --><div class="clear"></div>
+                    <% }); %>
+                    <div class="crossword-component-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="quizwordsearch-component-template" type="text/template">
+
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="quizwordsearch-component-inner"><!--
+                    --><% _.each(rows, function(row) { %><!--
+                        --><div rowid="<%= row %>" class="wordsearch-row"><!--
+                            --><% _.each(cols, function(col) { %><!--
+                                --><div class="wordsearch-cell-background"><!--
+                                    --><textarea spellcheck="false" readonly="readonly" class="wordsearch-cell"  maxlength="1" cellid="<%= row + '-' + col %>" cellx="<%= col %>" celly="<%= row %>" celltype="answers"><%= objs[row+'-'+col] %></textarea><!--
+                                --></div><!--
+                            --><% }); %><!--
+                        --></div><!--
+                    --><% }); %><!--
+                --></div>
+
+            </div>
+        </div>
+    </script>
+
+    <script id="image-component-template" type="text/template">
+
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="image-component-inner component-inner">
+                    <div class="img-wrapper">
+
+                        <%
+                            var patt1 = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+                            var minFileName = 'min' + imageFileName.match(patt1)[0];
+                        %>
+
+                        <img
+                            src="exported_view/<%= actionkey.split('-').pop() %>/images/<%= actionkey %>/<%= minFileName %>?r=1542338168465"
+                            width="100%" 
+
+                            height="100%"
+                            style="opacity:<%= opacity %>;" 
+                             />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="video-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="video-component-inner component-inner">
+                    <div class="video-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="timer-component-template" type="text/template">
+        <div class="component-flips">
+            <div class="component-transition">
+                <div class="component-styles">
+                    <div class="component-inner text-component-inner component-gradient" style="padding:<%=padding%>px">
+                        <%= contents %>
+                    </div>
+                </div>
+                <div class="text-component-handle"></div>
+            </div>
+        </div>
+    </script>
+
+    <script id="feedback-template" type="text/template"> 
+        <div class="window-top-bar"></div>
+        <input type="button" class='window-close-button'>
+        <div class="window-content">
+            <%=content%>
+        </div>
+    </script>
+
+
+    <script id="window-template" type="text/template"> 
+        <div class="window-top-bar"><%=title%></div>
+        <input type="button" class='window-close-button'>
+        <div class="window-content">
+            <%=content%>
+        </div>
+    </script>
+
+    <script id="toc-window-template" type="text/template"> 
+        <div class="window-top-bar"><%=lang[__lang]['TOC_TITLE']%></div>
+        <input type="button" class='window-close-button'>
+        <div class="window-content">
+            <ul class="toc-list">
+
+            </ul>
+        </div>
+    </script>
+
+    <script id="proggress-bar-window-template" type="text/template"> 
+        <div class="loader">
+            <div class="loader-bg">
+                <div class="text"></div>
+            </div>        
+            <div class="spiner-holder-one animate-0-25-a">
+                <div class="spiner-holder-two animate-0-25-b">
+                    <div class="loader-spiner" style=""></div>
+                </div>
+            </div>
+            <div class="spiner-holder-one animate-25-50-a">
+                <div class="spiner-holder-two animate-25-50-b">
+                    <div class="loader-spiner"></div>
+                </div>
+            </div>
+            <div class="spiner-holder-one animate-50-75-a">
+                <div class="spiner-holder-two animate-50-75-b">
+                    <div class="loader-spiner"></div>
+                </div>
+            </div>
+            <div class="spiner-holder-one animate-75-100-a">
+                <div class="spiner-holder-two animate-75-100-b">
+                    <div class="loader-spiner"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    
+    <script id="continue-window-template" type="text/template"> 
+        <div class="window-top-bar"><%=title%></div>
+
+        <%
+            if(showLessonLocationCloseButtonPopup){
+                %>
+                    <input type="button" class='window-close-button'>
+                <%
+            }
+        %>
+
+        <div class="window-content with-buttons">
+            <div class="popup-content">
+                <%=content%> 
+            </div>
+        </div>
+        <div class="popup-buttons-wrapper">
+            
+
+            <%
+                if(showLessonLocationCloseButtonPopup){
+                    %>
+                        <input type="button" class="popup-ok-button" value="Ok">
+                        <input type="button" class="popup-cancel-button" value="Anuluj">
+                    <%
+                }else{
+                    %>
+                        <input type="button" class="popup-ok-button popup-ok-button-2" value="Ok">
+                    <%
+                }
+            %>
+            
+        </div>
+    </script>
+
+    <!-- API -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/api/darkancourseaplicationapi.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/api/darkancoursecontroller.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/notify/bootstrap-notify.min.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/notify/notify.js?r=001"></script>
+
+    <!-- WEBSERVCE -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/webservice/webservice.js"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/webservice/fake/fake_webservice.js"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/webservice/node/node_webservice.js"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/webservice/php/php_webservice.js"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/webservice/data_access.js"></script>
+
+    <!-- WINNDOWS -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/window_model.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/window_view.js?r=001"></script>
+    <!-- FEEDBACKS -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/feedback/feedback_model.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/feedback/feedback_view.js?r=001"></script>
+    <!-- Continue window -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/continue/continue_model.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/continue/continue_view.js?r=001"></script>
+    <!-- toc window -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/toc/toc_model.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/toc/toc_view.js?r=001"></script>
+
+     <!-- LOADER -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/libs/loader/loader_window.js"></script>
+
+    <!-- PROGGRESS BAR -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/proggressbar/models/proggress_bar_model.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/proggressbar/views/proggress_bar_view.js?r=001"></script>
+
+    <!-- WINDOW FACTORY -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/windows/factory/window_factory.js?r=001"></script>
+
+    <!-- COMPONENTS VIEWS-->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/f_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/f_exercise-component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/text/f_text_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/image/f_image_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/video/f_video_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quiz/f_quiz_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quizselectone/f_quizselectone_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quizfillinblanks/f_quizfillinblanks_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quizdnd/f_quizdnd_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quizconnectlines/f_quizconnectlines_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/scroller/f_scroller_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/crossword/f_crossword_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/wordsearch/f_wordsearch_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/forminputtext/f_forminputtext_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/formupload/f_formupload_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quizinputtext/f_quizinputtext_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/formtextarea/f_formtextarea_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/formselect/f_formselect_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quizselect/f_quizselect_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/formsubmit/f_formsubmit_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/formcheckbox/f_formcheckbox_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/formradio/f_formradio_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/iframe/f_iframe_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/swf/f_swf_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/infopointpopup/f_infopointpopup_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/infopointlink/f_infopointlink_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/infopointsound/f_infopointsound_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/infopointsoundcontrol/f_infopointsoundcontrol_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/infopointsoundrecord/f_infopointsoundrecord_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/infopointgallery/f_infopointgallery_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/infopointdownload/f_infopointdownload_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/drawedinfopointlink/f_drawedinfopointlink_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/drawedinfopointdownload/f_drawedinfopointdownload_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/drawedinfopointgallery/f_drawedinfopointgallery_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/drawedinfopointpopup/f_drawedinfopointpopup_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/timer/f_timer_component_view.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/views/quizrezult/f_quiz_result_component_view.js?r=001"></script>
+
+    <!-- COMPONENTS FACTORY -->
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/components/factory/f_componentfactory.js?r=001"></script>
+
+
+    <script src="js/variables.js?r=1542338168465"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/utils/f_log.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/utils/f_log_mobile.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/utils/f_utils.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/audio/f_audio_manager.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/stage/f_sound_controller.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/stage/f_trigger_controller.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/models/f_componentmodel.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/models/f_timelinemodel.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/models/f_pagemodel.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/models/f_projectmodel.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/timeline/f_timeline.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/stage/f_stageview.js?r=001"></script>
+
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/scorm/f_scorm_controller.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/scorm/lms_scorm_controller.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/scorm/darkan_scorm_controller.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/scorm/fake_scorm_controller.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/skin/f_skin_controller.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/course_controller/f_course_controller.js?r=001"></script>
+    <script src="http://darkan.local/js/editors/standard/content_template/js/modules/f_darkan.js?r=001"></script>
+
+</body>
+ 
+    
+ 
+</html>
