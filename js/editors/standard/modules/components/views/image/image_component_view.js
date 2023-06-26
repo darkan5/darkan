@@ -299,8 +299,9 @@ var ImageComponentView = LoadedComponentView.extend({
             var r = '?r=' + this.model.get('rand');
 
 
-            var src = __meta__.projects_link + userId + '/' + projectId + '/pre/exported_view/' + pageId + '/images/' + actionkey + '/' + imageFileName + r;
-
+         var src = __meta__.projects_link + userId + '/' + projectId + '/pre/exported_view/' + pageId + '/images/' + actionkey + '/' + imageFileName + r;
+           
+         //var src = './images/' + actionkey + '/' + imageFileName + r;
             this.$el.find('img').attr('src', src);
         }
     },
@@ -332,7 +333,8 @@ var ImageComponentView = LoadedComponentView.extend({
 
                 _that.model.trigger('change', ['imageFileName', 'library']);
 
-                var src = __meta__.projects_link + __meta__.ownerID + '/' + __meta__.projectID + '/pre/exported_view/' + pageID + '/images/' + actionkey + '/' + data.fileName;
+               var src = __meta__.projects_link + __meta__.ownerID + '/' + __meta__.projectID + '/pre/exported_view/' + pageID + '/images/' + actionkey + '/' + data.fileName;
+               // var src = './' + pageID + '/images/' + actionkey + '/' + data.fileName;
                 _that.$el.find('.img-wrapper img').attr('src', src);
 
 

@@ -1,5 +1,6 @@
 module.exports = PageThumb;
 var path = require('path');
+const { exec } = require('child_process');
 var fs = require('fs.extra');
 var wkhtmltoimage = require('wkhtmltoimage');
 var ConfigController = require('../config_controller/config_controller.js');
@@ -24,6 +25,13 @@ PageThumb.prototype.createPageThumb = function(data, onResult, onFault, onChange
             errors.push(err);
         } else {
             try {
+
+                data.html = data.html.replace(/(<img src=")[^"]*(")/g, function(fullMatch, startTag, endTag) {
+                    let oldSrc = fullMatch.slice(startTag.length, -endTag.length); // Stara ścieżka
+                    let newSrc = oldSrc.replace(/.*images/, "images"); // Nowa ścieżka
+                    return startTag + newSrc + endTag; // Zwraca tag img z nowym src
+                });
+                    console.log('DATA: ', data);
 
                 var pagetThumb = _that.mergeContent(content, '<!--CUT-->', data.html);
 
@@ -73,7 +81,7 @@ PageThumb.prototype.createPageThumb = function(data, onResult, onFault, onChange
                     // }
 
 
-                    wkhtmltoimage.generate(pagetThumb, { width: width, height: height, output: thumbPath }, function() {
+                    wkhtmltoimage.generate("file://"+htmlPath, { width: width, height: height, output: thumbPath }, function() {
                         if(errors.length > 0){
                             onFault({errors:errors, error:'error'});
                         }else{
@@ -87,7 +95,16 @@ PageThumb.prototype.createPageThumb = function(data, onResult, onFault, onChange
                                 pageId: pageId
                             } );
                         }
+                        fs.chmod(thumbPath, 0o777, function(err) {
+                            if (err) {
+                              console.error(err);
+                            } else {
+                              console.log('The permissions for file "out.png" have been changed!');
+                            }
+                          });
                     });
+            
+
                 }
             } catch(ex) {
                 errors.push(ex);
