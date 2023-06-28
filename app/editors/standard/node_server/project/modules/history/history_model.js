@@ -8,12 +8,14 @@ var nodeDir = require('node-dir');
 var ProjectModel = require('../../../project/modules/project/s_project_model.js');
 var PageModel = require('../../../project/modules/pages/s_page_model.js');
 var CopyHistoryFiles = require('../../../project/modules/history/copy_history_files.js');
-
+var ConfigController = require('../../../config_controller/config_controller.js');
 //var pngquant = require('node-pngquant-native');
 //Użuć innej biblioteki niż pngquant
 var pngquant = {};
 
 var Jimp = require("jimp");
+
+
 
 
 module.exports = HistoryModel;
@@ -33,11 +35,17 @@ function HistoryModel(options) {
 
     options = options || {};
     this.updateOptions(options);
+
+    this.history_enabled = ConfigController.get('HISTORY_ENABLED', false);
 }
 
 HistoryModel.prototype = new Model();
 
 HistoryModel.prototype.add = function(action, params){
+
+    if (!this.history_enabled) {
+        return false
+    }
 
     var _that = this;
 
@@ -90,6 +98,10 @@ HistoryModel.prototype.add = function(action, params){
 }
 
 HistoryModel.prototype.goToHistoryItem = function(data, onResult, onFault){
+
+    if (!this.history_enabled) {
+        return false
+    }
 
     var _that = this;
 

@@ -24,7 +24,8 @@ CopyHistoryFiles.prototype = new Model();
 
 
 CopyHistoryFiles.prototype.copySitemaps = function(action, actions, params, meta){
-    dirPath = "../storage/app/projects/"+meta.userID+"/"+meta.projectID+"/history/" ;
+    // dirPath = "../storage/app/projects/"+meta.userID+"/"+meta.projectID+"/history/" ;
+    dirPath = "/var/www/darkan/storage/app/projects/"+meta.userID+"/"+meta.projectID+"/history/" ;
     function getDirectories(path) {
         return fsi.readdirSync(path).filter(function (file) {
             return fsi.statSync(path+'/'+file).isDirectory();
