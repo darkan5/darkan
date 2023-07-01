@@ -7,6 +7,7 @@ var fse = require('fs-extra');
 var PageModel = require('../../../project/modules/pages/s_page_model.js');
 var PageOptionsModel = require('../../../project/modules/pages/s_page_options_model.js');
 var MapModel = require('../../../project/modules/map/s_map_model.js');
+var ConfigController = require('../../../config_controller/config_controller.js');
 var _ = require('underscore');
 
 
@@ -20,6 +21,7 @@ function ProjectModel(options) {
 	this.options = new ProjectOptionsModel(options);
     this.collection = [];
 	this.mapModel = new MapModel();
+    this.history_enabled = ConfigController.get('HISTORY_ENABLED', false);
 }
 
 ProjectModel.prototype = new Model();
@@ -646,6 +648,10 @@ ProjectModel.prototype.deletePageFolderStructure = function(pageId){
 }
 
 ProjectModel.prototype.copyFileToHistory = function(filePath){
+
+    if (!this.history_enabled) {
+        return
+    }
 
     try{
     

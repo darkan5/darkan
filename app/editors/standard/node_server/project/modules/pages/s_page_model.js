@@ -29,6 +29,7 @@ function PageModel(options) {
 	this.type = 'page';
 
     this.projectVariables = [];
+    this.history_enabled = ConfigController.get('HISTORY_ENABLED', false);
 }
 
 PageModel.prototype = new Model();
@@ -1148,6 +1149,10 @@ PageModel.prototype.addFilesToComponent = function(component){
 }
 
 PageModel.prototype.copyFileToHistory = function(filePath){
+
+    if (!this.history_enabled) {
+        return
+    }
 
     try{
     

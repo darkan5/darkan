@@ -2,6 +2,7 @@ var path = require('path'),
     fs = require('fs.extra'),
     fse = require('fs-extra'),
     async = require('async'),
+    ConfigController = require('../../config_controller/config_controller.js'),
     Utils = require('../../utils/Utils.js'),
     ResponceFactory = require('../../responce/responce_factory.js'),
     PageModel = require('../../project/modules/pages/s_page_model.js');
@@ -15,6 +16,7 @@ function CopyComponentVisitor3(data, onResult, onFault) {
     this.onResult = onResult;
     this.onFault = onFault;
     this.data = data;
+    this.history_enabled = ConfigController.get('HISTORY_ENABLED', false);
 }
 
 CopyComponentVisitor3.prototype.visit = function(project) {
@@ -248,6 +250,10 @@ CopyComponentVisitor3.prototype.getHistoryExportedPath = function(){
 }
 
 CopyComponentVisitor3.prototype.copyFileToHistory = function(filePath){
+
+    if (!this.history_enabled) {
+        return
+    }
 
     try{
     

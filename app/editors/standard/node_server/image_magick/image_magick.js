@@ -20,6 +20,7 @@ function ImageMagick(socket) {
     this.DIRNAME = ConfigController.get('PROJECTS_PATH');
     this.libraryPath = ConfigController.get('LIBRARY_PATH');
     this.canCreateThumb = true;
+    this.history_enabled = ConfigController.get('HISTORY_ENABLED', false);
 }
 
 
@@ -70,6 +71,10 @@ ImageMagick.prototype.cropImage = function( data, onResult, onFault ) {
 };
 
 ImageMagick.prototype.copyFileToHistory = function(filePath){
+
+    if (!this.history_enabled) {
+        return
+    }
 
     try{
 

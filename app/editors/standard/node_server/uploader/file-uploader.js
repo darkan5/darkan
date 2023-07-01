@@ -12,9 +12,9 @@ var dateFormat = require('dateformat');
 function FileUploader(){
 
     // this.DIRNAME = path.join(__dirname, '../','../', 'projects');
-    this.DIRNAME = ConfigController.get('PROJECTS_PATH');;
-
+    this.DIRNAME = ConfigController.get('PROJECTS_PATH');
     this.targetFolder = 'images';
+    this.history_enabled = ConfigController.get('HISTORY_ENABLED', false);
 }
 
 FileUploader.prototype = new Model();
@@ -375,6 +375,10 @@ FileUploader.prototype.minimalizeFile = function( file ){
 }
 
 FileUploader.prototype.copyFileToHistory = function(filePath){
+
+    if (!this.history_enabled) {
+        return
+    }
     
     try{
     

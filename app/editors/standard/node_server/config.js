@@ -35,3 +35,5 @@ Config.MODULES_COMPONENTS_PATH = '/var/www/darkan/js/editors/standard/modules/co
 Config.LIBRARY_PATH = '/var/www/darkan/js/editors/standard/library/';
 
 Config.PROJECTS_THUMBS_PATH = '/var/www/darkan/storage/app/projectsthumbs/';
+
+Config.HISTORY_ENABLED = false;
