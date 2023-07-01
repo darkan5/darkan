@@ -115,7 +115,7 @@ ImageMagick.prototype.cropImage = function( data, onResult, onFault ) {
 
 ImageMagick.prototype.copyFileToHistory = function(filePath){
 
-    if (this.history_enabled) {
+    if (!this.history_enabled) {
         return
     }
 

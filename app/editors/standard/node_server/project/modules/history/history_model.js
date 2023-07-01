@@ -618,6 +618,10 @@ HistoryModel.prototype.createCopier = function(options){
 
 HistoryModel.prototype.changeBackProjectFiles = function( projectModel ){
 
+    if (!this.history_enabled) {
+        return false
+    }
+
     var _that = this;
 
     try{
@@ -666,6 +670,10 @@ HistoryModel.prototype.changeBackProjectFiles = function( projectModel ){
 }
 
 HistoryModel.prototype.changeBackPageFiles = function( page ){
+
+    if (!this.history_enabled) {
+        return false
+    }
 
     var _that = this;
 

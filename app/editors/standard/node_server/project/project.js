@@ -58,8 +58,7 @@ function Project(socket, sockets) {
     this.DIRNAME = ConfigController.get('PROJECTS_PATH');
     // this.publicPath = ConfigController.getPublicPath();
 
-
-    
+    this.history_enabled = ConfigController.get('HISTORY_ENABLED', false); 
 }
 
 Project.DIRNAME = ConfigController.get('PROJECTS_PATH');
@@ -2343,6 +2342,10 @@ console.log(imageFileDir);
 }
 
 Project.prototype.saveHistory = function( data, onResult, onFault ){
+
+    if (!this.history_enabled) {
+        return
+    }
 
     var _that = this;
 
