@@ -26,12 +26,11 @@ PageThumb.prototype.createPageThumb = function(data, onResult, onFault, onChange
         } else {
             try {
 
-                data.html = data.html.replace(/(<img src=")[^"]*(")/g, function(fullMatch, startTag, endTag) {
-                    let oldSrc = fullMatch.slice(startTag.length, -endTag.length); // Stara ścieżka
-                    let newSrc = oldSrc.replace(/.*images/, "images"); // Nowa ścieżka
-                    return startTag + newSrc + endTag; // Zwraca tag img z nowym src
+                data.html = data.html.replace(/(<img src=")(?!data:image\/png;base64)[^"]*(")/g, function(fullMatch, startTag, endTag) {
+                    let oldSrc = fullMatch.slice(startTag.length, -endTag.length);
+                    let newSrc = oldSrc.replace(/.*images/, "images");
+                    return startTag + newSrc + endTag;
                 });
-                    console.log('DATA: ', data);
 
                 var pagetThumb = _that.mergeContent(content, '<!--CUT-->', data.html);
 
