@@ -441,6 +441,8 @@ PageModel.prototype.getIdsFromLines = function(lines){
 
 PageModel.prototype.pasteComponents = function(data){
 
+    console.log('pasteComponents', data)
+
     var hash = data.hash; 
     var hashId = hash.hashId; 
     var hashName = hash.hashName; 
@@ -556,6 +558,8 @@ PageModel.prototype.deleteComponents = function(params){
 }
 
 PageModel.prototype.copyFoldersFromHash = function( data, hash){
+
+    console.log('copyFoldersFromHash', data, hash)
 
     var _that = this;
 
@@ -695,6 +699,8 @@ PageModel.prototype.copyFoldersFromHash = function( data, hash){
 
 PageModel.prototype.copyFoldersToHash = function( data, hashName){
 
+    console.log('copyFoldersToHash', data, hashName)
+
     var _that = this;
 
     if(!_.isString(hashName)){
@@ -711,6 +717,24 @@ PageModel.prototype.copyFoldersToHash = function( data, hashName){
     var hashDir = path.join(historyPath, hashName);
     var hashFile = path.join(hashDir, hashName + '.json');
 
+    
+    // ToDo: Delete all from historyPath, add this to: start session, end session
+    if (!this.history_enabled) {
+        var historyPathCopy = path.join(historyPath, 'copy');
+        console.log('historyPathCopy', historyPathCopy)
+        fse.rmSync(historyPathCopy, { recursive: true, force: true });
+        if (!fs.existsSync(historyPathCopy)){
+            fs.mkdirSync(historyPathCopy);
+        }
+
+        var historyPathDelete = path.join(historyPath, 'delete');
+        console.log('historyPathDelete', historyPathDelete)
+        fse.rmSync(historyPathDelete, { recursive: true, force: true });
+        if (!fs.existsSync(historyPathDelete)){
+            fs.mkdirSync(historyPathDelete);
+        } 
+    }
+ 
     if (!fs.existsSync(hashDir)){
         fs.mkdirSync(hashDir);
     }
@@ -756,6 +780,7 @@ PageModel.prototype.copyFoldersToHash = function( data, hashName){
                         var actionkey = component.actionkey;
 
                         if(dirName == actionkey){
+
                             fse.copySync(actualFolder, hashPath);
 
                             if(hashName == 'cut' || hashName == 'delete'){
@@ -1218,6 +1243,19 @@ PageModel.prototype.getHistoryExportedPath = function(){
     return dir;
 }
 
+PageModel.prototype.getHistoryExportedPathToDelete = function(){
+
+    var dir = false;
+
+    try{
+        dir =  path.join(this.projectDir, 'history', 'exported_view');
+    }catch (ex){
+        
+    }
+
+    return dir;
+}
+
 PageModel.prototype.getComponentByByActionkey = function(actionkey){
 
 	var lines = this.lines;
@@ -1534,13 +1572,13 @@ PageModel.prototype.changeComponentActionKeys = function(object, oldPageID, newP
 
     for (var item in object) {
 
-        console.log('changeComponentActionKeys', item);
+        // console.log('changeComponentActionKeys', item);
 
         if(_.isString(item)){
 
             var newActionkey = actionKeysMap[item];
 
-            console.log('newActionkey', newActionkey)
+            // console.log('newActionkey', newActionkey)
 
             if (!_.isUndefined(newActionkey)) {
 
